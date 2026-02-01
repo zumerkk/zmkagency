@@ -1,0 +1,76 @@
+.clients-section {
+    padding: 60px 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+.clients-title {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.clients-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-track {
+    display: flex;
+    gap: 100px;
+    /* Wider gap for text */
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    /* Slower for readability */
+}
+
+/* New text style for logos */
+.client-logo-text {
+    flex-shrink: 0;
+    color: var(--text-primary);
+    opacity: 0.6;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-family: var(--font-main);
+    /* System font for clean look */
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.client-logo-text:hover {
+    opacity: 1;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+
+    /* Adjusted for tripled array */
+}
+
+@media (max-width: 768px) {
+    .client-logo-text {
+        font-size: 16px;
+    }
+
+    .clients-track {
+        gap: 60px;
+    }
+}

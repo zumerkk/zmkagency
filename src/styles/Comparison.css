@@ -1,0 +1,97 @@
+.comparison-section {
+    padding: 120px 0;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    position: relative;
+}
+
+.comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comp-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.zmk-col {
+    color: var(--text-accent);
+    text-shadow: 0 0 15px rgba(var(--text-accent-rgb), 0.8);
+    font-size: 1.25em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Add a subtle column highlight */
+.comp-col.zmk-col::after,
+.comp-row .zmk-val::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    bottom: -10%;
+    left: -10px;
+    right: -10px;
+    background: linear-gradient(to bottom, rgba(var(--text-accent-rgb), 0.05), rgba(var(--text-accent-rgb), 0.15));
+    border-radius: 8px;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.comp-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+}
+
+.comp-row:last-child {
+    border-bottom: none;
+}
+
+.comp-feature {
+    color: #ddd;
+    font-weight: 500;
+}
+
+.standard-val {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.zmk-val {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .comp-header,
+    .comp-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .empty-col {
+        display: none;
+    }
+
+    .standard-col {
+        display: none;
+    }
+
+    .standard-val {
+        display: none;
+    }
+
+    /* Make mobile version just show feature + ZMK value or redesign needed for extreme small screens. 
+     For now, we assume tablet+ or just hide standard column on mobile to focus on ZMK strengths */
+}

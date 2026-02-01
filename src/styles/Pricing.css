@@ -1,0 +1,329 @@
+/* Pricing Page Styles */
+.pricing-page {
+    padding: 120px 0;
+    min-height: 100vh;
+    background: #050505;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.pricing-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.pricing-header h1 {
+    font-size: 4rem;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.pricing-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Toggle Switch */
+.pricing-switch-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.pricing-switch {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.switch-btn {
+    padding: 12px 30px;
+    border-radius: 40px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.switch-btn.active {
+    color: #fff;
+    background: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.popular {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.popular-tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.currency {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.period {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.card-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+    flex-grow: 1;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.features-list li svg {
+    flex-shrink: 0;
+    color: var(--primary-color);
+}
+
+.pricing-cta {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.pricing-cta:hover,
+.pricing-card.popular .pricing-cta {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 102, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .pricing-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+        margin: 20px 0;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Custom Quote Section */
+.custom-quote-section {
+    margin-top: 100px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.custom-quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, rgba(0, 102, 255, 0.15), transparent 60%);
+    pointer-events: none;
+}
+
+.custom-quote-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-quote-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-quote-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom-quote-form textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    font-size: 1rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+    min-height: 120px;
+}
+
+.custom-quote-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-quote-btn {
+    align-self: flex-end;
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-quote-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .custom-quote-section {
+        padding: 40px 20px;
+    }
+
+    .custom-quote-content h2 {
+        font-size: 2rem;
+    }
+
+    .custom-quote-btn {
+        width: 100%;
+        align-self: center;
+    }
+}

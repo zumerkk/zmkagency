@@ -1,0 +1,120 @@
+.testimonials-section {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+}
+
+.quote-icon {
+    font-size: 60px;
+    color: var(--text-accent);
+    opacity: 0.3;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ddd;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.testimonial-author h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: var(--text-accent);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.carousel-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: var(--text-accent);
+    border-color: var(--text-accent);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--text-accent);
+    width: 30px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 30px;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+    }
+
+    .carousel-btn {
+        display: none;
+        /* Hide arrows on mobile, rely on dots/swipe or just simplicity */
+    }
+}

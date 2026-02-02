@@ -33,6 +33,7 @@ export const content = {
             items: [
                 {
                     id: "software",
+                    isFeatured: true,
                     title: "Yazılım Geliştirme",
                     description: "Özel kurumsal çözümler, mobil uygulamalar ve büyüme odaklı ölçeklenebilir mimari.",
                     icon: "💻",
@@ -43,6 +44,7 @@ export const content = {
                 },
                 {
                     id: "web-seo",
+                    isFeatured: true,
                     title: "Web & SEO",
                     description: "Arama sıralamalarını domine eden ve dönüşüm sağlayan yüksek performanslı web siteleri.",
                     icon: "globe",
@@ -53,6 +55,7 @@ export const content = {
                 },
                 {
                     id: "social-media",
+                    isFeatured: true,
                     title: "Sosyal Medya Yönetimi",
                     description: "Tam kapsamlı yönetim. Sizi sıfırdan fenomene dönüştürecek viral stratejiler.",
                     icon: "iphone",
@@ -63,6 +66,7 @@ export const content = {
                 },
                 {
                     id: "production",
+                    isFeatured: true,
                     title: "Prodüksiyon Stüdyosu",
                     description: "Sinema kalitesinde reklamlar, kurumsal çekimler ve üst düzey görsel hikaye anlatımı.",
                     icon: "camera",
@@ -73,6 +77,7 @@ export const content = {
                 },
                 {
                     id: "brand",
+                    isFeatured: true,
                     title: "Marka Stratejisi & Kimlik",
                     description: "Logodan fazlası. Markanızın ruhunu, duruşunu ve kurumsal sesini sıfırdan inşa ediyoruz.",
                     icon: "art",
@@ -121,6 +126,7 @@ export const content = {
                 },
                 {
                     id: "consulting",
+                    isFeatured: true,
                     title: "Dijital Dönüşüm Danışmanlığı",
                     description: "İşletmenizi A'dan Z'ye dijitalleştirin. E-fatura, CRM, ERP entegrasyonları ve süreç yönetimi.",
                     icon: "briefcase",
@@ -128,6 +134,26 @@ export const content = {
                     detailText: "Teknoloji korkutucu olabilir, biz, işletmeniz için en doğru dijital haritayı çiziyoruz. Kağıt kalemden buluta geçiş, verimlilik artıran yazılımlar ve personel eğitimi ile şirketinizi 21. yüzyıla taşıyoruz.",
                     features: ["Dijital Olgunluk Analizi", "CRM & ERP Kurulumu", "E-Ticaret Entegrasyonu", "Personel Dijital Eğitimi"],
                     process: ["Analiz", "Strateji", "Entegrasyon", "Eğitim & Destek"]
+                },
+                {
+                    id: "ecommerce",
+                    title: "E-Ticaret & Pazaryeri",
+                    description: "Ürünlerinizi dünyaya satın. Shopify, İkas ve Pazaryeri (Trendyol, Amazon) kurulum ve yönetimi.",
+                    icon: "cart",
+                    detailTitle: "Global Mağazanız",
+                    detailText: "Sadece bir site değil, satış yapan bir makine kuruyoruz. Stok yönetiminden kargo entegrasyonuna, ödeme sistemlerinden kampanya kurgularına kadar uçtan uca e-ticaret danışmanlığı.",
+                    features: ["Altyapı Kurulumu (Shopify/İkas)", "Pazaryeri Entegrasyonu", "Stok & Sipariş Otomasyonu", "Dönüşüm Odaklı Tasarım"],
+                    process: ["Altyapı Seçimi", "Mağaza Kurulumu", "Ürün Girişi", "Lansman"]
+                },
+                {
+                    id: "pr",
+                    title: "PR & Influencer Marketing",
+                    description: "Markanızın sesini geniş kitlelere duyurun. Fenomen işbirlikleri ve basın bülteni yönetimi.",
+                    icon: "megaphone",
+                    detailTitle: "Kitlelerin Gücü",
+                    detailText: "Doğru kişi, doğru mesaj, doğru zaman. Markanızı hedef kitlenizin güvendiği yüzlerle buluşturuyoruz. Sadece reklam değil, tavsiye mekanizmasını çalıştırarak güven inşa ediyoruz.",
+                    features: ["Influencer Eşleşmesi", "Kampanya Yönetimi", "Basın Bülteni & PR", "Etkinlik Yönetimi"],
+                    process: ["Hedef Kitle Analizi", "Influencer Seçimi", "Kampanya Kurgusu", "Raporlama"]
                 }
             ],
             items2: []

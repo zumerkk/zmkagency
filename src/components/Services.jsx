@@ -34,7 +34,7 @@ const Services = ({ t }) => {
                 </div>
 
                 <div className="services-grid">
-                    {t.items.map((service, index) => {
+                    {t.items.filter(item => item.isFeatured).map((service, index) => {
                         // Dynamic link path based on service ID
                         const linkPath = `/services/${service.id}`;
                         const hasPage = true; // All services now have pages
@@ -50,6 +50,8 @@ const Services = ({ t }) => {
                                 case 'aperture': return '🚁'; // New icon for Drone
                                 case 'box': return '🧊'; // New icon for 3D
                                 case 'briefcase': return '💼'; // New icon for Consulting
+                                case 'cart': return '🛍️';
+                                case 'megaphone': return '📢';
                                 default: return '💻';
                             }
                         };

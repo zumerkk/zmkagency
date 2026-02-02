@@ -74,6 +74,12 @@ function App() {
             <Route path="/services/consulting" element={
               <ServiceDetail tService={t.services.items.find(i => i.id === 'consulting')} tContact={t.contact} />
             } />
+            <Route path="/services/ecommerce" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === 'ecommerce')} tContact={t.contact} />
+            } />
+            <Route path="/services/pr" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === 'pr')} tContact={t.contact} />
+            } />
 
             {/* All Services Page */}
             <Route path="/services" element={<ServicesPage t={t.services} tContact={t.contact} />} />

@@ -20,6 +20,8 @@ const ServicesPage = ({ t, tContact }) => {
             case 'aperture': return '🚁';
             case 'box': return '🧊';
             case 'briefcase': return '💼';
+            case 'cart': return '🛍️'; // E-commerce
+            case 'megaphone': return '📢'; // PR
             default: return '💻';
         }
     };

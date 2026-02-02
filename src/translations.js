@@ -10,11 +10,11 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "Sınırsız Büyüme.",
-            title2: "Dijital Hakimiyet.",
-            subtitle: "KOBİ’ler için performans odaklı reklam, web ve içerik üretimiyle 30 günde ölçülebilir büyüme. Kırıkkale'den dünyaya, sınırları zorlayın.",
-            ctaPrimary: "Hızlı Teklif Al",
-            ctaSecondary: "Hizmetlerimiz"
+            title1: "Sınırları Zorlayın.",
+            title2: "Efsaneleşin.",
+            subtitle: "Kırıkkale'nin dijital rönesansı başladı. Web Tasarım, Yazılım, Drone Çekimi ve Kurumsal Baskı hizmetleriyle sadece var olmayın, domine edin.",
+            ctaPrimary: "Gücünü Keşfet",
+            ctaSecondary: "Vizyonu İncele"
         },
         vision: {
             title: "Dijital Rönesansın Mimarları.",

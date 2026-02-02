@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <Helmet htmlAttributes={{ lang }} />
-      <div className="noise-overlay"></div>
+
       <ScrollToTop />
       <Navbar t={t.nav} lang={lang} toggleLang={toggleLang} />
 

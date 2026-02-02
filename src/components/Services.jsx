@@ -37,7 +37,6 @@ const Services = ({ t }) => {
                     {t.items.filter(item => item.isFeatured).map((service, index) => {
                         // Dynamic link path based on service ID
                         const linkPath = `/services/${service.id}`;
-                        const hasPage = true; // All services now have pages
 
                         const renderIcon = (icon) => {
                             switch (icon) {

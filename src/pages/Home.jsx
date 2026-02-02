@@ -10,6 +10,8 @@ import Comparison from '../components/Comparison';
 import WizardForm from '../components/WizardForm';
 import FloatingCTA from '../components/FloatingCTA';
 import Portfolio from '../components/Portfolio';
+import TrustBar from '../components/TrustBar';
+import LeadMagnet from '../components/LeadMagnet';
 
 const Home = ({ t }) => {
     const [showWizard, setShowWizard] = useState(false);
@@ -17,10 +19,11 @@ const Home = ({ t }) => {
     return (
         <>
             <SEO
-                title="Dijital Geleceğinizi İnşa Edin"
-                description="Kırıkkale'nin lider dijital ajansı ZMK AGENCY. Yazılım, Web Tasarım, Sosyal Medya ve Prodüksiyon hizmetleri."
+                title="Sınırsız Büyüme & Dijital Hakimiyet"
+                description="KOBİ’ler için performans odaklı reklam, web ve içerik üretimiyle 30 günde ölçülebilir büyüme. Kırıkkale'nin dijital dönüşüm merkezi."
             />
-            <Hero t={t.hero} />
+            <Hero t={t.hero} onCtaClick={() => setShowWizard(true)} />
+            <TrustBar />
             <Clients t={t.clients} />
             <div id="services">
                 <Services t={t.services} />
@@ -32,9 +35,8 @@ const Home = ({ t }) => {
             </div>
             {/* Testimonials removed as per Agency-Grade request */}
             <FAQ t={t.faq} />
-            <div id="contact">
-                <Contact t={t.contact} />
-            </div>
+            <LeadMagnet t={t} />
+
 
             <FloatingCTA t={t.ctaFloat} onClick={() => setShowWizard(true)} />
 

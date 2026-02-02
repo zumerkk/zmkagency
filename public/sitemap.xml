@@ -3,7 +3,7 @@
   <url>
     <loc>https://zmkagency.com/</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -13,69 +13,51 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/pricing</loc>
+    <loc>https://zmkagency.com/services</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/pricing</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/services/software</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/services/web-seo</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/services/social-media</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/services/production</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  <url>
+   <url>
     <loc>https://zmkagency.com/services/printing</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  <url>
+   <url>
     <loc>https://zmkagency.com/services/drone</loc>
     <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/services/3d-motion</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/services/consulting</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/legal/privacy</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/legal/terms</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

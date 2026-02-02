@@ -10,11 +10,11 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "Sınırları Zorlayın.",
-            title2: "Efsaneleşin.",
-            subtitle: "Kırıkkale'nin dijital rönesansı başladı. Web Tasarım, Yazılım, Drone Çekimi ve Kurumsal Baskı hizmetleriyle sadece var olmayın, domine edin.",
-            ctaPrimary: "Gücünü Keşfet",
-            ctaSecondary: "Vizyonu İncele"
+            title1: "Sınırsız Büyüme.",
+            title2: "Dijital Hakimiyet.",
+            subtitle: "KOBİ’ler için performans odaklı reklam, web ve içerik üretimiyle 30 günde ölçülebilir büyüme. Kırıkkale'den dünyaya, sınırları zorlayın.",
+            ctaPrimary: "Hızlı Teklif Al",
+            ctaSecondary: "Hizmetlerimiz"
         },
         vision: {
             title: "Dijital Rönesansın Mimarları.",
@@ -26,7 +26,6 @@ export const content = {
         },
         services: {
             title: "Beklentilerin Ötesinde.",
-            subtitle: "Pazar liderliği için tasarlanmış kapsamlı dijital çözümler.",
             subtitle: "Pazar liderliği için tasarlanmış kapsamlı dijital çözümler.",
             moreDetails: "İncele & Keşfet",
             viewAll: "Tüm Hizmetleri Gör",
@@ -380,7 +379,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             legal: "Yasal",
             privacy: "Gizlilik Politikası",
             terms: "Kullanım Koşulları",
-            address: "Yenişehir Kazım Karabekir caddesi No: 39/2 Kırıkkale",
+            address: "Yenişehir, Kazım Karabekir Cd. No: 39/2, 71200 Kırıkkale Merkez/Kırıkkale",
             copyright: "© 2026 ZMK AGENCY. Tüm hakları saklıdır."
         }
     },

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Hero.css';
 import heroBg from '../assets/hero-bg.png';
 
-const Hero = ({ t }) => {
+const Hero = ({ t, onCtaClick }) => {
     return (
         <section className="hero">
             <div className="hero-bg-container">
@@ -20,7 +20,7 @@ const Hero = ({ t }) => {
                     {t.subtitle}
                 </p>
                 <div className="hero-actions">
-                    <a href="#contact" className="btn-primary">{t.ctaPrimary}</a>
+                    <button onClick={onCtaClick} className="btn-primary">{t.ctaPrimary}</button>
                     <a href="#services" className="btn-secondary">{t.ctaSecondary}</a>
                 </div>
             </div>

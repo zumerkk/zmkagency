@@ -16,7 +16,7 @@
 *   **Format:**
 *   **Vibe:** "Success", "Luxury", "High-Tech", "Authority".
 *   **Format:**
-    *   **Reels (iPhone 15 PM):** Sinematik, 4K, ağır çekim ofis yaşamı, Audi A4 detayları, Patronun ofise giriş anları.
+    *   **Reels (iPhone 15 PM + Gimbal):** Sinematik, 4K, ağır çekim ofis yaşamı, Audi A4 detayları, Patronun ofise giriş anları.
     *   **Hikayeler:** Günlük akış, Patronun MacBook başında çalışma anları (Hızlı geçişler).
     *   **Profil:** Grid düzeni tek bir renk paletinde (Siyah/Beyaz/Neon Mavi) olmalı.
 
@@ -37,15 +37,17 @@
 
 ## 2. İÇERİK KONSEPTLERİ (Patron, Modeller & Otomobil)
 
-### Konsept A: "The Boss Entry" (Giriş) 🚔
+### Konsept A: "The Boss Entry" (Gimbal Masterclass) (Giriş) 🚔
 *   **Senaryo:** Siyah Audi A4 yavaşça yanaşır. Kapı açılır. Önce siyah deri botlar yere basar. Sonra güneş gözlüklü Patron iner. Kürklü deri ceketiyle yürürken modeller arkasında onu takip eder (Peaky Blinders Kırıkkale Edition).
-*   **Çekim:** iPhone 15 PM ile "Low Angle" (Alt açıdan) çekim. Ağır çekim (Slow Motion).
+*   **Çekim:** iPhone 15 PM **Gimbal üzerinde**. Yere çok yakın (Low Angle) başlayıp, Patron inerken yavaşça yukarı kalkan (Tilt Up) pürüzsüz hareket.
 *   **Müzik:** Gangsta's Paradise (Remix) veya ağır Techno.
 *   **Mesaj:** "Liderlik vizyon işidir."
 
-### Konsept B: "Visionary Workflow" (Vizyoner Çalışma) 💻
+### Konsept B: "Visionary Workflow" (Multi-Cam) 💻
 *   **Senaryo:** Patron direksiyonda veya arka koltukta MacBook ile çalışıyor. Güneş gözlüğü takılı. Audi A4 Kırıkkale sokaklarında süzülüyor.
-*   **Detay:** MacBook ekranında kodlar veya borsa grafikleri yansıyor.
+*   **Çekim Planı:**
+    *   **iPhone 11 (Tripod/Vantuz):** Ön cama yapışık, Patronu sürekli çeken geniş açı.
+    *   **iPhone 15 PM (Elde):** MacBook ekranındaki detayları, Patronun gözlüğündeki yansımayı çeken sanatsal açılar.
 *   **Mesaj:** "Dünya ofisimizdir. Sınır tanımıyoruz."
 
 ### Konsept C: "Power Couple & The Boss" (Ekip Ruhu) 🤝
@@ -53,26 +55,26 @@
 *   **Vibe:** Patron çözüm odaklıdır, diğerleri uygulayıcıdır.
 *   **Mesaj:** "ZMK: Çözümün Adresi."
 
-### Konsept D: Audi & DJI Osmo Action 🚗
-*   **Teknik:** DJI Osmo Action 6'yı Audi'nin kaputuna veya tavanına (Sunroof) yapıştırın.
-*   **Çekim:** Kırıkkale Millet Bulvarı veya çevre yolunda gece sürüşü. Neon ışıklar arabaya yansır.
+### Konsept D: Audi & Gimbal Roll 🚗
+*   **Teknik:** iPhone 15 Pro Max'i Gimbal'a takın. "Inception Mode" (Döndürme) veya pürüzsüz takip modunu açın.
+*   **Çekim:** Audi dururken çevresinde 360 derece pürüzsüz dönüş. Kırıkkale Millet Bulvarı'nda gece, araç içi ambiyans ışıklarıyla sinematik detaylar.
 *   **Kurgu:** Hızlı kesimlerle Patronun gözlükten yansıması -> Vites atışı -> Yola bakış.
 *   **Mesaj:** "Hız, Güç, Estetik. Web siteniz de böyle olmalı."
 
-### Konsept E: "Power Couple" (Güçlü Çift) 👫
+### Konsept E: "Power Couple Walk" (Gimbal Takip) 👫
 *   **Senaryo:** İki model arkadaşımız şık giyinir (Blazer ceket, gözlük). Ellerinde kahve, tempolu yürüyerek ofise girerler.
-*   **Çekim:** DJI Osmo Action 6 ile "takip" çekimi (kamerayı bir 3. kişi tutar veya selfie çubuğuyla alt açıdan).
+*   **Çekim:** Kameraman Gimbal ile geriye doğru yürürken modelleri çeker (Önden takip). iPhone 15 PM "Sinematik Mod" açık, arka plan flu.
 *   **Mesaj:** "Kırıkkale'de İstanbul havası estiriyoruz."
 *   **Müzik:** Kanye West - Power veya Deep House.
 
-### Konsept F: "POV: ZMK'da Bir Gün" (DJI Osmo Şov) 🎥
-*   **Teknik:** Kamerayı kafaya veya göğse takın (POV).
-*   **Akış:** Arabaya biniş -> Ofise giriş -> Bilgisayarı açış -> Toplantı masasına oturuş -> Kahve makinesi.
+### Konsept F: "POV: ZMK'da Bir Gün" (Sanal Gerçeklik) 🎥
+*   **Teknik:** iPhone 11'i Geniş Açı moduna alın. Göğüs hizasında sabit tutun (veya boynunuza asın).
+*   **Akış:** Arabaya biniş -> Ofise giriş -> Bilgisayarı açış -> Toplantı masasına oturuş -> Kahve makinesi. iPhone 11'in hafifliği sayesinde daha rahat hareket edersiniz.
 *   **Neden Tutar?:** İnsanlar "gözünden görmeyi" sever. DJI Osmo'nun stabilizasyonu burada "kaymak" gibi görüntü verir.
 
-### Konsept G: "iPhone vs Reality" (Eğitsel) 📱
-*   **İçerik:** Model arkadaşımız (kadın) iPhone 15 Pro Max ile bir ürünün fotoğrafını çeker.
-*   **Videoda:** Önce "Kötü açı" gösterilir, sonra "ZMK Dokunuşu" ile muhteşem sonuç gösterilir.
+### Konsept G: "iPhone vs Reality" (Eğitsel - Prodüksiyon Gücü) 📱
+*   **İçerik:** Model arkadaşımız (kadın) iPhone 15 ile bir ürünün fotoğrafını çeker. (Bunu iPhone 11 ile dışarıdan çekeriz - Backstage).
+*   **Videoda:** Önce "Sıradan Çekim", sonra iPhone 15 PM ile çekilmiş ve editlenmiş "ZMK Dokunuşu" sonucu.
 *   **Mesaj:** "Bizimle çalışırsanız böyle görünürsünüz."
 
 ### Konsept D: Kırıkkale Sokak Röportajı (Ters Köşe) 🎤

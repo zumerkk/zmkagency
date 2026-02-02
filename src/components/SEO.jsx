@@ -30,6 +30,47 @@ const SEO = ({ title, description, keywords, schema }) => {
             "latitude": 39.8468,
             "longitude": 33.5153
         },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Kırıkkale"
+            },
+            {
+                "@type": "City",
+                "name": "Ankara"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "İç Anadolu Bölgesi"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Dijital Ajans Hizmetleri",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kırıkkale Web Tasarım"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kırıkkale Sosyal Medya Yönetimi"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kırıkkale Drone Çekimi"
+                    }
+                }
+            ]
+        },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": [

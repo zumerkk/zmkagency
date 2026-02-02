@@ -14,8 +14,10 @@
 ### 👴 INSTAGRAM (Prestij & Vitrin)
 *   **Vibe:** "Success", "Luxury", "High-Tech".
 *   **Format:**
-    *   **Reels (iPhone 15 PM):** Sinematik, 4K, ağır çekim ofis yaşamı, kahve detayları, kod yazarken klavye sesleri (ASMR).
-    *   **Hikayeler:** Günlük akış.
+*   **Vibe:** "Success", "Luxury", "High-Tech", "Authority".
+*   **Format:**
+    *   **Reels (iPhone 15 PM):** Sinematik, 4K, ağır çekim ofis yaşamı, Audi A4 detayları, Patronun ofise giriş anları.
+    *   **Hikayeler:** Günlük akış, Patronun MacBook başında çalışma anları (Hızlı geçişler).
     *   **Profil:** Grid düzeni tek bir renk paletinde (Siyah/Beyaz/Neon Mavi) olmalı.
 
 ### 🕺 TIKTOK (Keşfet & Viral)
@@ -33,20 +35,42 @@
 
 ---
 
-## 2. İÇERİK KONSEPTLERİ (Model Çift & Ekipman Kullanımı)
+## 2. İÇERİK KONSEPTLERİ (Patron, Modeller & Otomobil)
 
-### Konsept A: "Power Couple" (Güçlü Çift) 👫
+### Konsept A: "The Boss Entry" (Giriş) 🚔
+*   **Senaryo:** Siyah Audi A4 yavaşça yanaşır. Kapı açılır. Önce siyah deri botlar yere basar. Sonra güneş gözlüklü Patron iner. Kürklü deri ceketiyle yürürken modeller arkasında onu takip eder (Peaky Blinders Kırıkkale Edition).
+*   **Çekim:** iPhone 15 PM ile "Low Angle" (Alt açıdan) çekim. Ağır çekim (Slow Motion).
+*   **Müzik:** Gangsta's Paradise (Remix) veya ağır Techno.
+*   **Mesaj:** "Liderlik vizyon işidir."
+
+### Konsept B: "Visionary Workflow" (Vizyoner Çalışma) 💻
+*   **Senaryo:** Patron direksiyonda veya arka koltukta MacBook ile çalışıyor. Güneş gözlüğü takılı. Audi A4 Kırıkkale sokaklarında süzülüyor.
+*   **Detay:** MacBook ekranında kodlar veya borsa grafikleri yansıyor.
+*   **Mesaj:** "Dünya ofisimizdir. Sınır tanımıyoruz."
+
+### Konsept C: "Power Couple & The Boss" (Ekip Ruhu) 🤝
+*   **Senaryo:** Modeller (Sarışın Kadın & Erkek) bir proje üzerinde tartışırken Patron odaya girer. Gözlüğünü çıkarır, MacBook'ta tek bir tuşa basar ve sorunu çözer. Herkes rahatlar.
+*   **Vibe:** Patron çözüm odaklıdır, diğerleri uygulayıcıdır.
+*   **Mesaj:** "ZMK: Çözümün Adresi."
+
+### Konsept D: Audi & DJI Osmo Action 🚗
+*   **Teknik:** DJI Osmo Action 6'yı Audi'nin kaputuna veya tavanına (Sunroof) yapıştırın.
+*   **Çekim:** Kırıkkale Millet Bulvarı veya çevre yolunda gece sürüşü. Neon ışıklar arabaya yansır.
+*   **Kurgu:** Hızlı kesimlerle Patronun gözlükten yansıması -> Vites atışı -> Yola bakış.
+*   **Mesaj:** "Hız, Güç, Estetik. Web siteniz de böyle olmalı."
+
+### Konsept E: "Power Couple" (Güçlü Çift) 👫
 *   **Senaryo:** İki model arkadaşımız şık giyinir (Blazer ceket, gözlük). Ellerinde kahve, tempolu yürüyerek ofise girerler.
 *   **Çekim:** DJI Osmo Action 6 ile "takip" çekimi (kamerayı bir 3. kişi tutar veya selfie çubuğuyla alt açıdan).
 *   **Mesaj:** "Kırıkkale'de İstanbul havası estiriyoruz."
 *   **Müzik:** Kanye West - Power veya Deep House.
 
-### Konsept B: "POV: ZMK'da Bir Gün" (DJI Osmo Şov) 🎥
+### Konsept F: "POV: ZMK'da Bir Gün" (DJI Osmo Şov) 🎥
 *   **Teknik:** Kamerayı kafaya veya göğse takın (POV).
 *   **Akış:** Arabaya biniş -> Ofise giriş -> Bilgisayarı açış -> Toplantı masasına oturuş -> Kahve makinesi.
 *   **Neden Tutar?:** İnsanlar "gözünden görmeyi" sever. DJI Osmo'nun stabilizasyonu burada "kaymak" gibi görüntü verir.
 
-### Konsept C: "iPhone vs Reality" (Eğitsel) 📱
+### Konsept G: "iPhone vs Reality" (Eğitsel) 📱
 *   **İçerik:** Model arkadaşımız (kadın) iPhone 15 Pro Max ile bir ürünün fotoğrafını çeker.
 *   **Videoda:** Önce "Kötü açı" gösterilir, sonra "ZMK Dokunuşu" ile muhteşem sonuç gösterilir.
 *   **Mesaj:** "Bizimle çalışırsanız böyle görünürsünüz."

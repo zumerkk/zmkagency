@@ -11,15 +11,7 @@ const Contact = ({ t }) => {
     });
     const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.type === 'textarea' ? 'message' : e.target.type]: e.target.value
-        });
-        // Check for textarea since e.target.type might be 'textarea' only in some browsers/versions or libraries, 
-        // strictly speaking standard HTML textarea type is 'textarea' but react event might differ. 
-        // Safer to use name attribute if set. Let's stick to simple mapping or name based.
-    };
+
 
     // Better handle change with name attribute
     const handleInput = (e) => {

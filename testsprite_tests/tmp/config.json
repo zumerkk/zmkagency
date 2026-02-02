@@ -1,0 +1,16 @@
+{
+  "executionArgs": {
+    "projectName": "zmk-agency",
+    "projectPath": "/Users/zumerkekillioglu/Desktop/ZMKAGENCY",
+    "testIds": [],
+    "additionalInstruction": "Run fully automated tests for main pages.",
+    "envs": {
+      "API_KEY": "sk-user-PQeb_qX_zMwe_e_RykQ2vaJqwaDwtn99I0aQcEsVejjlC61q348HuBZPxGZP7_7yN2cZZ7IGU2Ve8Kl16Rg3lH6jfktPrcZ29V6WkhOGA8flmUfnpWrDFKpMSOz70WIyWF4"
+    }
+  },
+  "status": "init",
+  "scope": "codebase",
+  "type": "frontend",
+  "localEndpoint": "http://localhost:5173/",
+  "serverPort": 57680
+}

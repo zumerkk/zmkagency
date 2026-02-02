@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check } from 'lucide-react';
 import '../styles/Pricing.css';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
 
 import SEO from '../components/SEO';
 import WizardForm from '../components/WizardForm';
@@ -11,7 +11,7 @@ import WizardForm from '../components/WizardForm';
 const Pricing = ({ t, wizardT }) => {
     // True = Monthly (Retainer), False = Project
     const [isRetainer, setIsRetainer] = useState(true);
-    const [quoteMessage, setQuoteMessage] = useState('');
+
     const [roiBudget, setRoiBudget] = useState(15000); // Default budget for simulator
     const [roiSector, setRoiSector] = useState(1.2); // Default multiplier (Service)
     const [wizardConfig, setWizardConfig] = useState({

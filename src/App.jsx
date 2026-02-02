@@ -12,6 +12,7 @@ import './index.css';
 const Home = lazy(() => import('./pages/Home'));
 const Vision = lazy(() => import('./pages/Vision'));
 const ServiceDetail = lazy(() => import('./pages/services/ServiceDetail'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const LegalPage = lazy(() => import('./pages/legal/LegalPage'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Login = lazy(() => import('./pages/admin/Login'));
@@ -61,6 +62,21 @@ function App() {
             <Route path="/services/production" element={
               <ServiceDetail tService={t.services.items.find(i => i.id === 'production')} tContact={t.contact} />
             } />
+            <Route path="/services/printing" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === 'printing')} tContact={t.contact} />
+            } />
+            <Route path="/services/drone" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === 'drone')} tContact={t.contact} />
+            } />
+            <Route path="/services/3d-motion" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === '3d-motion')} tContact={t.contact} />
+            } />
+            <Route path="/services/consulting" element={
+              <ServiceDetail tService={t.services.items.find(i => i.id === 'consulting')} tContact={t.contact} />
+            } />
+
+            {/* All Services Page */}
+            <Route path="/services" element={<ServicesPage t={t.services} tContact={t.contact} />} />
 
             {/* Legal Routes */}
             <Route path="/legal/privacy" element={

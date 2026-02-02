@@ -35,48 +35,58 @@ const Services = ({ t }) => {
 
                 <div className="services-grid">
                     {t.items.map((service, index) => {
-                        // Determine link path based on service ID
-                        let linkPath = "#";
-                        if (service.id === 'software') linkPath = "/services/software";
-                        if (service.id === 'web-seo') linkPath = "/services/web-seo";
-                        if (service.id === 'social-media') linkPath = "/services/social-media";
-                        if (service.id === 'production') linkPath = "/services/production";
-                        // For new services without pages yet, keep basic or add later
+                        // Dynamic link path based on service ID
+                        const linkPath = `/services/${service.id}`;
+                        const hasPage = true; // All services now have pages
 
-                        // Only show link for ones with pages, or all if we added generic handling. 
-                        // For now, only first 4 have pages.
-                        const hasPage = ['software', 'web-seo', 'social-media', 'production'].includes(service.id);
+                        const renderIcon = (icon) => {
+                            switch (icon) {
+                                case 'globe': return '🌐';
+                                case 'iphone': return '📱';
+                                case 'camera': return '🎥';
+                                case 'art': return '🎨';
+                                case 'chart': return '📈';
+                                case 'printer': return '🖨️'; // New icon for Printing
+                                case 'aperture': return '🚁'; // New icon for Drone
+                                case 'box': return '🧊'; // New icon for 3D
+                                case 'briefcase': return '💼'; // New icon for Consulting
+                                default: return '💻';
+                            }
+                        };
 
                         const CardContent = (
                             <>
                                 <div className="card-icon">
-                                    {service.icon === 'globe' ? '🌐' :
-                                        service.icon === 'iphone' ? '📱' :
-                                            service.icon === 'camera' ? '🎥' :
-                                                service.icon === 'art' ? '🎨' :
-                                                    service.icon === 'chart' ? '📈' : '💻'}
+                                    {renderIcon(service.icon)}
                                 </div>
                                 <h3>{service.title}</h3>
                                 <p>{service.description}</p>
                                 <div className="card-hover-effect"></div>
-                                {hasPage && (
-                                    <span style={{ fontSize: '12px', marginTop: '10px', display: 'inline-block', color: 'var(--text-accent)' }}>
-                                        {t.moreDetails} →
-                                    </span>
-                                )}
+                                <span style={{ fontSize: '12px', marginTop: '10px', display: 'inline-block', color: 'var(--text-accent)' }}>
+                                    {t.moreDetails} →
+                                </span>
                             </>
                         );
 
-                        return hasPage ? (
+                        return (
                             <Link to={linkPath} className="service-card glass-panel" key={index} style={{ '--delay': `${index * 0.1}s`, textDecoration: 'none', color: 'inherit', display: 'block' }}>
                                 {CardContent}
                             </Link>
-                        ) : (
-                            <div className="service-card glass-panel" key={index} style={{ '--delay': `${index * 0.1}s` }}>
-                                {CardContent}
-                            </div>
                         );
                     })}
+                </div>
+
+                {/* View All Services Button */}
+                <div style={{ textAlign: 'center', marginTop: '60px' }}>
+                    <Link to="/services" className="primary-btn" style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        padding: '15px 40px',
+                        fontSize: '18px'
+                    }}>
+                        {t.viewAll}
+                    </Link>
                 </div>
 
                 {/* Tech Stack Section to Show Dominance */}

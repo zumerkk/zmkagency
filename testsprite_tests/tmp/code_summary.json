@@ -1,0 +1,77 @@
+{
+    "tech_stack": [
+        "React",
+        "Vite",
+        "Firebase",
+        "Framer Motion",
+        "JavaScript",
+        "CSS"
+    ],
+    "features": [
+        {
+            "name": "Navigation",
+            "description": "Main navigation bar and routing",
+            "files": [
+                "src/App.jsx",
+                "src/main.jsx"
+            ]
+        },
+        {
+            "name": "Contact Form",
+            "description": "Form for users to send messages, data saved to Firebase",
+            "files": [
+                "src/components/Contact.jsx"
+            ]
+        },
+        {
+            "name": "Pricing Page",
+            "description": "Display pricing plans (Retainer/Project), ROI Simulator, and Custom Quote integration",
+            "files": [
+                "src/pages/Pricing.jsx"
+            ]
+        },
+        {
+            "name": "Wizard Form",
+            "description": "Multi-step wizard form for project quotes",
+            "files": [
+                "src/components/WizardForm.jsx"
+            ]
+        },
+        {
+            "name": "Lead Detail Modal",
+            "description": "Admin modal to view lead details",
+            "files": [
+                "src/components/admin/LeadDetailModal.jsx"
+            ]
+        },
+        {
+            "name": "Admin Dashboard",
+            "description": "Dashboard for admin users (Login, Lead management)",
+            "files": [
+                "src/pages/admin/Login.jsx",
+                "src/pages/admin/Dashboard.jsx"
+            ]
+        },
+        {
+            "name": "Service Detail",
+            "description": "Dynamic service detail pages",
+            "files": [
+                "src/pages/ServiceDetail.jsx"
+            ]
+        },
+        {
+            "name": "SEO Component",
+            "description": "Reusable SEO Helmet wrapper",
+            "files": [
+                "src/components/SEO.jsx"
+            ]
+        },
+        {
+            "name": "Firebase Config",
+            "description": "Firebase initialization and exports",
+            "files": [
+                "src/firebase.js"
+            ]
+        }
+    ]
+}

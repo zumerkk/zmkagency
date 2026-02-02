@@ -1,22 +1,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords }) => {
+const SEO = ({ title, description, keywords, schema }) => {
+    const location = useLocation();
     const siteTitle = "ZMK AGENCY";
     const finalTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-    const defaultDesc = "Kırıkkale'nin lider dijital ajansı. Web tasarım, yazılım, sosyal medya ve prodüksiyon hizmetleriyle markanızı geleceğe taşıyın.";
+    const defaultDesc = "Kırıkkale'nin lider dijital ajansı. Web tasarım, yazılım, drone çekimi, kurumsal baskı ve sosyal medya hizmetleriyle markanızı geleceğe taşıyın.";
+    const currentUrl = `https://zmkagency.com${location.pathname}`;
+
+    // Default LocalBusiness Schema
+    const defaultSchema = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "ZMK Agency",
+        "image": "https://zmkagency.com/logo.png",
+        "@id": "https://zmkagency.com",
+        "url": "https://zmkagency.com",
+        "telephone": "+905555555555", // Placeholder
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Yenişehir Kazım Karabekir caddesi No: 39/2",
+            "addressLocality": "Kırıkkale",
+            "postalCode": "71100",
+            "addressCountry": "TR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.8468,
+            "longitude": 33.5153
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/zmkagency"
+        ]
+    };
 
     return (
         <Helmet>
             <title>{finalTitle}</title>
             <meta name="description" content={description || defaultDesc} />
-            <meta name="keywords" content={keywords || "dijital ajans, kırıkkale yazılım, web tasarım, seo, sosyal medya, prodüksiyon, zmk agency"} />
+            <meta name="keywords" content={keywords || "kırıkkale reklam ajansı, kırıkkale yazılım, web tasarım kırıkkale, drone çekimi, kurumsal baskı, zmk agency, sosyal medya yönetimi"} />
+
+            <link rel="canonical" href={currentUrl} />
 
             {/* Open Graph / Social Media */}
             <meta property="og:title" content={finalTitle} />
             <meta property="og:description" content={description || defaultDesc} />
             <meta property="og:type" content="website" />
-            {/* Add og:image etc when real assets exist */}
+            <meta property="og:url" content={currentUrl} />
+            <meta property="og:site_name" content="ZMK Agency" />
+
+            {/* Structured Data */}
+            <script type="application/ld+json">
+                {JSON.stringify(schema || defaultSchema)}
+            </script>
         </Helmet>
     );
 };

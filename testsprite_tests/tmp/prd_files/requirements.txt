@@ -1,0 +1,14 @@
+
+Project: ZMK Agency
+Type: Digital Agency Website
+URL: https://zmkagency.com (Live)
+Goal: Ensure the website is fully functional, responsive, and aesthetically pleasing.
+Key Features to Test:
+- Homepage navigation and section loading
+- Services page and details
+- Pricing page toggle (Monthly/Project) and plan selection
+- Contact form submission
+- Pricing Wizard Form submission
+- Admin login (if applicable)
+- 404 Page
+Instructions: Verify all links, check for console errors, ensure forms validate input.

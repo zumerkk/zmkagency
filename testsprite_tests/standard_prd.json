@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "project": "ZMK Agency Website",
+    "date": "2026-01-31",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "ZMK Agency is a digital agency website designed to present services, pricing plans, and enable user inquiries through contact and quote forms, along with administrative lead management.",
+  "core_goals": [
+    "Provide an intuitive and smooth navigation experience throughout the website.",
+    "Offer detailed, clear pricing options including Retainer and Project plans with an ROI Simulator.",
+    "Enable potential clients to easily submit project inquiries via a multi-step wizard form and a contact form.",
+    "Support administrative functions such as login and lead management via a dedicated dashboard.",
+    "Ensure the website is responsive, visually appealing, and free of errors across all supported devices."
+  ],
+  "key_features": [
+    "Main navigation bar with seamless routing between Home, Services, Pricing, and Admin sections.",
+    "Service detail pages dynamically generated to provide comprehensive service information.",
+    "Pricing page featuring toggle between Monthly and Project plans, ROI Simulator, and Custom Quote integration.",
+    "Contact form saving user messages to Firebase for follow-up.",
+    "Multi-step wizard form to collect detailed project quote information from users.",
+    "Admin dashboard with secure login and lead detail modal for managing incoming leads.",
+    "Reusable SEO components for page metadata optimization.",
+    "Firebase backend integration for data storage and authentication."
+  ],
+  "user_flow_summary": [
+    "User visits homepage and navigates through main sections via the navigation bar.",
+    "User views detailed service descriptions on individual service pages.",
+    "User explores pricing plans, toggles plan types, uses the ROI Simulator, and submits requests for custom quotes through the Pricing Wizard Form.",
+    "User submits inquiries via the contact form which are saved to Firebase.",
+    "Admin logs in to the dashboard, views lead summaries, and opens lead detail modals for follow-up.",
+    "404 page displayed on invalid routes to guide users back to main content."
+  ],
+  "validation_criteria": [
+    "All navigation links function correctly without errors or broken routes.",
+    "Service detail pages load dynamically with correct content.",
+    "Pricing page toggle and plan selections operate smoothly and reflect accurate pricing information.",
+    "Contact and wizard forms validate user input before submission and save data successfully in Firebase.",
+    "Admin login authenticates users securely and dashboard operates without errors.",
+    "SEO metadata is present and correctly configured for all pages.",
+    "No console errors or warnings during normal website operation.",
+    "Responsive design works well on different screen sizes and devices.",
+    "404 page appears appropriately for invalid URLs."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "React",
+      "Vite",
+      "Firebase",
+      "Framer Motion",
+      "JavaScript",
+      "CSS"
+    ],
+    "features": [
+      {
+        "name": "Navigation",
+        "description": "Main navigation bar and routing",
+        "files": [
+          "src/App.jsx",
+          "src/main.jsx"
+        ]
+      },
+      {
+        "name": "Contact Form",
+        "description": "Form for users to send messages, data saved to Firebase",
+        "files": [
+          "src/components/Contact.jsx"
+        ]
+      },
+      {
+        "name": "Pricing Page",
+        "description": "Display pricing plans (Retainer/Project), ROI Simulator, and Custom Quote integration",
+        "files": [
+          "src/pages/Pricing.jsx"
+        ]
+      },
+      {
+        "name": "Wizard Form",
+        "description": "Multi-step wizard form for project quotes",
+        "files": [
+          "src/components/WizardForm.jsx"
+        ]
+      },
+      {
+        "name": "Lead Detail Modal",
+        "description": "Admin modal to view lead details",
+        "files": [
+          "src/components/admin/LeadDetailModal.jsx"
+        ]
+      },
+      {
+        "name": "Admin Dashboard",
+        "description": "Dashboard for admin users (Login, Lead management)",
+        "files": [
+          "src/pages/admin/Login.jsx",
+          "src/pages/admin/Dashboard.jsx"
+        ]
+      },
+      {
+        "name": "Service Detail",
+        "description": "Dynamic service detail pages",
+        "files": [
+          "src/pages/ServiceDetail.jsx"
+        ]
+      },
+      {
+        "name": "SEO Component",
+        "description": "Reusable SEO Helmet wrapper",
+        "files": [
+          "src/components/SEO.jsx"
+        ]
+      },
+      {
+        "name": "Firebase Config",
+        "description": "Firebase initialization and exports",
+        "files": [
+          "src/firebase.js"
+        ]
+      }
+    ]
+  }
+}

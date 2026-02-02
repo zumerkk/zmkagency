@@ -12,7 +12,7 @@ export const content = {
         hero: {
             title1: "Sınırları Zorlayın.",
             title2: "Efsaneleşin.",
-            subtitle: "Kırıkkale'nin dijital rönesansı başladı. Sadece var olmayın, domine edin.",
+            subtitle: "Kırıkkale'nin dijital rönesansı başladı. Web Tasarım, Yazılım, Drone Çekimi ve Kurumsal Baskı hizmetleriyle sadece var olmayın, domine edin.",
             ctaPrimary: "Gücünü Keşfet",
             ctaSecondary: "Vizyonu İncele"
         },
@@ -27,7 +27,9 @@ export const content = {
         services: {
             title: "Beklentilerin Ötesinde.",
             subtitle: "Pazar liderliği için tasarlanmış kapsamlı dijital çözümler.",
+            subtitle: "Pazar liderliği için tasarlanmış kapsamlı dijital çözümler.",
             moreDetails: "İncele & Keşfet",
+            viewAll: "Tüm Hizmetleri Gör",
             items: [
                 {
                     id: "software",
@@ -86,8 +88,49 @@ export const content = {
                     detailTitle: "Veri Odaklı Büyüme",
                     features: ["Dönüşüm Hunisi Analizi", "Kullanıcı Davranış Analizi", "A/B Testleri", "Büyüme Hacking"],
                     process: ["Veri Toplama", "Analiz", "Hipotez", "Test & Optimize"]
+                },
+                {
+                    id: "printing",
+                    title: "Kurumsal Baskı & Tasarım",
+                    description: "Markanızın fiziksel dünyadaki imzası. Tişört, araç giydirme, promosyon ve matbaa çözümleri.",
+                    icon: "printer",
+                    detailTitle: "Fiziksel Marka Hakimiyeti",
+                    detailText: "Dijitalde kurduğumuz dünyayı, fiziksel materyallere taşıyoruz. ZMK kalitesiyle üretilmiş kurumsal kıyafetler, araç giydirmeler ve promosyon ürünleri ile markanız sokakta, ofiste, her yerde görünür olsun. Sıradan baskı değil, prestij üretiyoruz.",
+                    features: ["Kurumsal Tekstil (Tişört, Polar, Şapka)", "Araç Giydirme & Cephe Kaplama", "Lüks Kartvizit & Matbaa", "Promosyon Ürünleri"],
+                    process: ["Tasarım & Mockup", "Numune Onayı", "Yüksek Kalite Baskı", "Teslimat & Uygulama"]
+                },
+                {
+                    id: "drone",
+                    title: "Drone & Havadan Görüntüleme",
+                    description: "Kırıkkale'yi göklerden fethedin. 4K/6K çözünürlükte sinematik hava çekimleri.",
+                    icon: "aperture",
+                    detailTitle: "Gökyüzünden Bakış",
+                    detailText: "Sıradan açıları unutun. Lisanslı pilotlarımız ve son teknoloji drone filomuzla, işletmenizi, fabrikanızı veya etkinliğinizi gökyüzünden sinematik bir dille anlatıyoruz. Emlak, inşaat, turizm ve kurumsal tanıtımlar için vazgeçilmez bir perspektif.",
+                    features: ["4K/6K Video Çekimi", "Havadan 360° Panaroma", "İnşaat İlerleme Takibi", "Etkinlik & Konser Çekimi"],
+                    process: ["Uçuş Planlama & İzinler", "Çekim (Raw/Log)", "Kurgu & Renk", "Teslim"]
+                },
+                {
+                    id: "3d-motion",
+                    title: "3D Tasarım & Animasyon",
+                    description: "Hayal gücünün sınırlarını zorlayan 3D modelleme, karakter tasarımı ve motion graphics.",
+                    icon: "box",
+                    detailTitle: "Boyutların Ötesinde",
+                    detailText: "Gerçekliğin yetmediği yerde 3D sanatımız devreye girer. Ürünlerinizi henüz üretilmeden fotorealistik olarak sunun, markanızı hareketli grafiklerle canlandırın. Metaverse ve yeni nesil medya için hazır olun.",
+                    features: ["Ürün Modelleme & Render", "Karakter Tasarımı", "Motion Graphics (Hareketli Grafik)", "Mimari Görselleştirme"],
+                    process: ["Konsept & Eskiz", "Modelleme & Doku", "Animasyon & Işık", "Render"]
+                },
+                {
+                    id: "consulting",
+                    title: "Dijital Dönüşüm Danışmanlığı",
+                    description: "İşletmenizi A'dan Z'ye dijitalleştirin. E-fatura, CRM, ERP entegrasyonları ve süreç yönetimi.",
+                    icon: "briefcase",
+                    detailTitle: "Geleceğe Adaptasyon",
+                    detailText: "Teknoloji korkutucu olabilir, biz, işletmeniz için en doğru dijital haritayı çiziyoruz. Kağıt kalemden buluta geçiş, verimlilik artıran yazılımlar ve personel eğitimi ile şirketinizi 21. yüzyıla taşıyoruz.",
+                    features: ["Dijital Olgunluk Analizi", "CRM & ERP Kurulumu", "E-Ticaret Entegrasyonu", "Personel Dijital Eğitimi"],
+                    process: ["Analiz", "Strateji", "Entegrasyon", "Eğitim & Destek"]
                 }
-            ]
+            ],
+            items2: []
         },
         about: {
             title: "Yeni Standart.",
@@ -267,6 +310,7 @@ export const content = {
                 { feature: "Raporlama & Şeffaflık", standard: "Ay Sonu PDF Raporu", zmk: "Canlı Müşteri Paneli (Dashboard)" },
                 { feature: "Fiyat Politikası", standard: "Gizli Maliyetler & Sürprizler", zmk: "Şeffaf & Ölçeklenebilir Paketler" },
                 { feature: "Hız & Performans", standard: "Ortalama (3-5 sn Yükleme)", zmk: "Işık Hızında (<1 sn Yükleme)" },
+                { feature: "SEO & Görünürlük", standard: "Temel Ayarlar", zmk: "Kırıkkale & Global Dominasyon" },
                 { feature: "Vizyon & Hedef", standard: "Sadece İş Teslimi", zmk: "Pazar Hakimiyeti & Büyüme" }
             ]
         },
@@ -343,6 +387,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             title: "Beyond Expectation.",
             subtitle: "Comprehensive digital solutions engineered for market leadership.",
             moreDetails: "More Details",
+            viewAll: "View All Services",
             items: [
                 {
                     id: "software",

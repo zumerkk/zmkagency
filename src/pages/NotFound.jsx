@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft } from 'lucide-react';
 import '../styles/Pricing.css'; // Reusing premium styles

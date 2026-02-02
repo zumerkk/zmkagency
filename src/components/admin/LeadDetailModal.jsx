@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Mail, Phone, Calendar, Tag, CheckCircle } from 'lucide-react';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LeadDetailModal = ({ lead, onClose, onMarkRead }) => {

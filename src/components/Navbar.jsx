@@ -76,6 +76,7 @@ const Navbar = ({ t, lang, toggleLang }) => {
           <li><a href="/#services" onClick={(e) => scrollToSection(e, 'services')}>{t.services}</a></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
           <li><Link to="/pricing" onClick={closeMobileMenu}>{t.pricing}</Link></li>
+          <li><Link to="/blog" onClick={closeMobileMenu}>Magazine</Link></li>
           <li><a href="/#contact" onClick={(e) => scrollToSection(e, 'contact')}>{t.contact}</a></li>
           <li>
             <button className="lang-toggle" onClick={() => { toggleLang(); closeMobileMenu(); }}>

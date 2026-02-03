@@ -161,8 +161,27 @@ export const content = {
             title: "Yeni Standart.",
             text: "ZMK AGENCY sadece bir dijital firma değil; biz Kırıkkale'nin dijital geleceğinin mimarlarıyız. Markanızı unutulmaz kılmak için silikon vadisi estetiğini kusursuz bir uygulama ile birleştiriyoruz. Bizimle çalışmak, bir hizmet almak değil, bir devrime ortak olmaktır.",
             sameAs: [
-                "https://www.instagram.com/agencyzmk/"
+                "https://www.instagram.com/agencyzmk/",
+                "https://www.youtube.com/@ZMKAGENCY",
+                "https://www.tiktok.com/@zmkagency",
+                "https://x.com/zmkagency"
             ],
+            socials: {
+                instagram: "https://www.instagram.com/agencyzmk/",
+                youtube: "https://www.youtube.com/@ZMKAGENCY",
+                tiktok: "https://www.tiktok.com/@zmkagency",
+                twitter: "https://x.com/zmkagency"
+            },
+            blog: {
+                title: "ZMK Magazine.",
+                subtitle: "Dijital dünyanın nabzını tutun. Trendler, analizler ve başarı hikayeleri.",
+                readMore: "Devamını Oku"
+            },
+            career: {
+                title: "Elit Lig'e Katılın.",
+                subtitle: "Sıradanlar için yerimiz yok. Tutkulu, obsesif ve vizyoner yetenekleri arıyoruz.",
+                cta: "Başvuru Yap"
+            },
             stats: {
                 focus: "Müşteri Odaklı",
                 rank: "Hedef Sıralama"

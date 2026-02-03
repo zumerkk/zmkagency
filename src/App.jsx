@@ -19,6 +19,7 @@ const Pricing = lazy(() => import('./pages/Pricing'));
 const Login = lazy(() => import('./pages/admin/Login'));
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
 const LocalLanding = lazy(() => import('./pages/LocalLanding')); // Local Landing Page
+const Blog = lazy(() => import('./pages/Blog')); // ZMK Magazine
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Loading Fallback Component
@@ -102,6 +103,9 @@ function App() {
                 element={<LocalLanding data={data} t={t} />}
               />
             ))}
+
+            {/* ZMK Magazine */}
+            <Route path="/blog" element={<Blog t={t} />} />
 
             {/* Admin Routes */}
             <Route path="/login" element={<Login />} />

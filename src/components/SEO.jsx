@@ -85,7 +85,10 @@ const SEO = ({ title, description, keywords, schema }) => {
             "closes": "18:00"
         },
         "sameAs": [
-            "https://www.instagram.com/agencyzmk/"
+            "https://www.instagram.com/agencyzmk/",
+            "https://www.youtube.com/@ZMKAGENCY",
+            "https://www.tiktok.com/@zmkagency",
+            "https://x.com/zmkagency"
         ]
     };
 

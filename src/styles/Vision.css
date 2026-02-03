@@ -1,0 +1,32 @@
+/* Vision Page Styles */
+.page-wrapper {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.vision-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vision-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .vision-title {
+        font-size: 3rem;
+    }
+
+    .vision-subtitle {
+        font-size: 1.2rem;
+    }
+}

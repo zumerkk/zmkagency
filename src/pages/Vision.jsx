@@ -1,5 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import CareerTeaser from '../components/CareerTeaser';
+import '../styles/Vision.css';
 // We can reuse styles or create new specific ones. Using inline for specific layout 
 // combined with global utility classes.
 
@@ -38,6 +41,8 @@ const Vision = ({ t }) => {
                     </div>
                 </div>
             </div>
+
+            <CareerTeaser t={t} />
         </>
     );
 };

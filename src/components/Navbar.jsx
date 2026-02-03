@@ -8,6 +8,8 @@ const Navbar = ({ t, lang, toggleLang }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -24,8 +26,29 @@ const Navbar = ({ t, lang, toggleLang }) => {
     };
   }, []);
 
+  // UseEffect to prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   // Helper to scroll to hash on home page, or navigate to page
   const scrollToSection = (e, sectionId) => {
+    closeMobileMenu(); // Close mobile menu if open
     if (isHome) {
       e.preventDefault();
       const element = document.getElementById(sectionId);
@@ -38,17 +61,24 @@ const Navbar = ({ t, lang, toggleLang }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={logo} alt="ZMK Agency" />
         </Link>
-        <ul className="navbar-links">
-          <li><Link to="/vision">{t.vision}</Link></li>
+
+        <div className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
+          <li><Link to="/vision" onClick={closeMobileMenu}>{t.vision}</Link></li>
           <li><a href="/#services" onClick={(e) => scrollToSection(e, 'services')}>{t.services}</a></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
-          <li><Link to="/pricing">{t.pricing}</Link></li>
+          <li><Link to="/pricing" onClick={closeMobileMenu}>{t.pricing}</Link></li>
           <li><a href="/#contact" onClick={(e) => scrollToSection(e, 'contact')}>{t.contact}</a></li>
           <li>
-            <button className="lang-toggle" onClick={toggleLang}>
+            <button className="lang-toggle" onClick={() => { toggleLang(); closeMobileMenu(); }}>
               {lang === 'tr' ? 'EN' : 'TR'}
             </button>
           </li>

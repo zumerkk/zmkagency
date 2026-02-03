@@ -119,5 +119,15 @@ video {
 @media (max-width: 768px) {
   .section-title {
     font-size: 2.5rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  body {
+    font-size: 16px;
+    /* Prevent IOS zoom on input focus */
   }
 }

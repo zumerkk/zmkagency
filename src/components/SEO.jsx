@@ -106,7 +106,7 @@ const SEO = ({ title, description, keywords, schema }) => {
 
             {/* Structured Data */}
             <script type="application/ld+json">
-                {JSON.stringify(schema || defaultSchema)}
+                {JSON.stringify(Array.isArray(schema) ? schema : (schema || defaultSchema))}
             </script>
         </Helmet>
     );

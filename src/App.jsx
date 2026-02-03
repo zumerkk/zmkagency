@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppWidget from './components/WhatsAppWidget';
 import { content } from './translations';
+import { localSeoData } from './data/localSeoData'; // SEO Data
 import './index.css';
 
 // Lazy Load Pages for Performance
@@ -17,6 +18,7 @@ const LegalPage = lazy(() => import('./pages/legal/LegalPage'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Login = lazy(() => import('./pages/admin/Login'));
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
+const LocalLanding = lazy(() => import('./pages/LocalLanding')); // Local Landing Page
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Loading Fallback Component
@@ -91,6 +93,15 @@ function App() {
             <Route path="/legal/terms" element={
               <LegalPage title={t.legal.termsTitle} text={t.legal.termsText} date={t.legal.lastUpdated} />
             } />
+
+            {/* Local SEO Landing Pages */}
+            {localSeoData.map((data) => (
+              <Route
+                key={data.slug}
+                path={`/${data.slug}`}
+                element={<LocalLanding data={data} t={t} />}
+              />
+            ))}
 
             {/* Admin Routes */}
             <Route path="/login" element={<Login />} />

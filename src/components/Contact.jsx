@@ -90,6 +90,7 @@ const Contact = ({ t }) => {
                 <div className="contact-info">
                     <p>{t.location}</p>
                     <a href="mailto:info@zmkagency.com">info@zmkagency.com</a>
+                    <a href="tel:+905413812114" style={{ marginTop: '10px', display: 'block' }}>0541 381 21 14</a>
                 </div>
             </div>
         </section>

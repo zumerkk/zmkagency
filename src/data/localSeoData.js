@@ -258,5 +258,80 @@ export const localSeoData = [
         faq: [
             { q: "Takipçi satın alıyor musunuz?", a: "Asla. Biz tamamen organik ve gerçek kitle büyümesine odaklanıyoruz. Bot takipçiler markanıza zarar verir." }
         ]
+    },
+    {
+        slug: "kirikkale-360-dijital-ajans",
+        title: "Kırıkkale 360° Dijital Marka Yönetim Ajansı",
+        description: "Sadece reklam değil, tam kapsamlı dijital dönüşüm. Web, Sosyal Medya, Prodüksiyon ve Yazılımın tek çatı altında yönetimi.",
+        heroTitle: "Markanız İçin\nTek Bir Merkez.",
+        heroSubtitle: "Dağınık hizmetlerden kurtulun. Kırıkkale'nin ilk 360 derece dijital ajansı ile tüm süreçleri profesyonelce yönetin.",
+        serviceName: "360° Marka Yönetimi",
+        proof: {
+            stat1: "Tek",
+            label1: "Muhatap",
+            stat2: "Tam",
+            label2: "Entegrasyon",
+            quote: "Bütün işlerimizi ZMK'ya devrettik, kafamız rahatladı.",
+            author: "Hüseyin B. - Fabrika Müdürü"
+        },
+        workflow: [
+            { step: "01", title: "Konsolidasyon", desc: "Tüm dijital varlıklarınızı tek merkeze topluyoruz." },
+            { step: "02", title: "Bütünlük", desc: "Tasarım, dil ve stratejide %100 uyum sağlıyoruz." },
+            { step: "03", title: "Yönetim", desc: "Web, sosyal medya ve reklamları senkronize yönetiyoruz." },
+            { step: "04", title: "Rapor", desc: "Her ay tüm kanalları içeren tek ve anlaşılır bir rapor sunuyoruz." }
+        ],
+        faq: [
+            { q: "Neden 360 derece çalışmalıyım?", a: "Farklı ajanslarla uğraşmak marka dilinizi bozar ve maliyeti artırır. Bütünleşik yönetim verimi %200 artırır." }
+        ]
+    },
+    {
+        slug: "kirikkale-mobil-uygulama-gelistirme",
+        title: "Kırıkkale Mobil Uygulama Geliştirme (iOS & Android)",
+        description: "Kırıkkale'de fikirlerinizi uygulamaya döküyoruz. Native ve Hybrid mobil uygulama geliştirme, UI/UX tasarımı.",
+        heroTitle: "Cebinizdeki\nMilyonluk Fikir.",
+        heroSubtitle: "Sadece bir uygulama değil, kullanıcıların telefonundan silmeyeceği deneyimler tasarlıyoruz.",
+        serviceName: "Mobil Uygulama Geliştirme",
+        proof: {
+            stat1: "iOS/Android",
+            label1: "Uyumlu",
+            stat2: "Hızlı",
+            label2: "Performans",
+            quote: "Uygulamamız beklediğimizden çok daha hızlı ve şık oldu.",
+            author: "Start-up Kurucusu"
+        },
+        workflow: [
+            { step: "01", title: "Prototip", desc: "Uygulamanın tıklanabilir demosunu hazırlıyoruz." },
+            { step: "02", title: "Kodlama", desc: "React Native veya Flutter ile çift platforma kodluyoruz." },
+            { step: "03", title: "Test", desc: "Tüm cihazlarda detaylı testler yapıyoruz." },
+            { step: "04", title: "Market", desc: "App Store ve Play Store yayın süreçlerini yönetiyoruz." }
+        ],
+        faq: [
+            { q: "Hem iPhone hem Android için oluyor mu?", a: "Evet, geliştirdiğimiz uygulamalar her iki platformda da sorunsuz çalışır." }
+        ]
+    },
+    {
+        slug: "kirikkale-kurumsal-kimlik-tasarimi",
+        title: "Kırıkkale Kurumsal Kimlik ve Logo Tasarımı",
+        description: "Markanızın imzası. Logo, kartvizit, antetli kağıt ve tüm kurumsal materyallerin profesyonel tasarımı.",
+        heroTitle: "Markanızın\nAsaletini Gösterin.",
+        heroSubtitle: "İlk izlenim için ikinci bir şansınız yoktur. Kurumsal kimliğinizle güven verin.",
+        serviceName: "Kurumsal Kimlik Tasarımı",
+        proof: {
+            stat1: "Özgün",
+            label1: "Tasarım",
+            stat2: "Tam",
+            label2: "Set",
+            quote: "Logomuz artık sektördeki gücümüzü yansıtıyor.",
+            author: "Mimarlık Ofisi"
+        },
+        workflow: [
+            { step: "01", title: "Analiz", desc: "Marka değerlerinizi ve hedef kitlenizi anlıyoruz." },
+            { step: "02", title: "Eskiz", desc: "Kağıt üzerinde onlarca farklı fikir üretiyoruz." },
+            { step: "03", title: "Dijital", desc: "Seçilen fikirleri dijital ortamda mükemmelleştiriyoruz." },
+            { step: "04", title: "Teslim", desc: "Baskıya hazır formatlarda teslim ediyoruz." }
+        ],
+        faq: [
+            { q: "Kaç farklı logo seçeneği sunuyorsunuz?", a: "Genellikle 3 farklı konsept sunuyoruz ve seçilen üzerinden revize yapıyoruz." }
+        ]
     }
 ];

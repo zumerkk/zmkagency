@@ -10,15 +10,15 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "Sınırları Zorlayın.",
-            title2: "Efsaneleşin.",
-            subtitle: "Kırıkkale'nin dijital rönesansı başladı. Web Tasarım, Yazılım, Drone Çekimi ve Kurumsal Baskı hizmetleriyle sadece var olmayın, domine edin.",
+            title1: "360° Dijital",
+            title2: "Hakimiyet.",
+            subtitle: "Kırıkkale'nin ilk ve tek 360° Dijital Dönüşüm Ajansı. Reklam, Yazılım, Medya ve Kurumsal Kimlik yönetimiyle markanızı zirveye taşıyoruz.",
             ctaPrimary: "Gücünü Keşfet",
             ctaSecondary: "Vizyonu İncele"
         },
         vision: {
-            title: "Dijital Rönesansın Mimarları.",
-            subtitle: "Gelecek, onu inşa edenlerin elinde şekillenir.",
+            title: "Kırıkkale'nin Teknoloji Üssü.",
+            subtitle: "Gelecek, onu bugünden inşa edenlerin olacak.",
             p1: "ZMK AGENCY olarak, sıradanlığa meydan okuyoruz. Bizim için teknoloji, sadece bir araç değil, bir sanat formudur. Kırıkkale'den dünyaya açılan bir kapı olarak, limitlerin sadece zihinde olduğuna inanıyoruz.",
             p2: "Her satır kod, her piksel ve her strateji, markanızı ölümsüzleştirmek için kurgulanır. Vasatlık bizim düşmanımızdır. Mükemmeliyet, tek standardımızdır.",
             stat1: "Sınırsız İnovasyon",
@@ -160,6 +160,9 @@ export const content = {
         about: {
             title: "Yeni Standart.",
             text: "ZMK AGENCY sadece bir dijital firma değil; biz Kırıkkale'nin dijital geleceğinin mimarlarıyız. Markanızı unutulmaz kılmak için silikon vadisi estetiğini kusursuz bir uygulama ile birleştiriyoruz. Bizimle çalışmak, bir hizmet almak değil, bir devrime ortak olmaktır.",
+            sameAs: [
+                "https://www.instagram.com/agencyzmk/"
+            ],
             stats: {
                 focus: "Müşteri Odaklı",
                 rank: "Hedef Sıralama"

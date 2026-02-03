@@ -51,6 +51,36 @@ body {
   /* Apple-like slight tightness */
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-gold);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  /* Gold tint */
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Noise Texture Overlay */
 .noise-overlay {
   position: fixed;

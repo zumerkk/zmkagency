@@ -28,7 +28,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 90%);
+    z-index: 1;
     /* Slight overlay to ensure text readability */
 }
 
@@ -95,81 +96,10 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Animations */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-subtitle,
-.hero-actions {
-    animation: fadeUp 1s var(--ease-out) forwards;
-}
-
-.hero-subtitle {
-    animation-delay: 0.8s;
-    /* Delayed after title reveal */
-    opacity: 0;
-}
-
-.hero-actions {
-    animation-delay: 1.0s;
-    opacity: 0;
-}
-
-/* Block Reveal Animation */
+/* Animations are handled by Framer Motion in Hero.jsx */
 .block-reveal {
-    position: relative;
     display: inline-block;
-    overflow: hidden;
-    opacity: 0;
-    animation: revealText 0s 0.1s forwards;
-    /* Instant opacity switch */
-}
-
-.block-reveal::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    /* Reveal color */
-    transform: translateX(-101%);
-    animation: revealBlock 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-.block-reveal.delay-1::after {
-    animation-delay: 0.2s;
-}
-
-/* Ensure text is hidden initially then visible */
-@keyframes revealText {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes revealBlock {
-    0% {
-        transform: translateX(-101%);
-    }
-
-    50% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(101%);
-    }
+    /* Framer Motion handles opacity and transform */
 }
 
 /* Mobile Responsive */

@@ -6,7 +6,7 @@ const SEO = ({ title, description, keywords, schema }) => {
     const location = useLocation();
     const siteTitle = "ZMK AGENCY";
     const finalTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-    const defaultDesc = "Kırıkkale'nin lider dijital ajansı. Web tasarım, yazılım, drone çekimi, kurumsal baskı ve sosyal medya hizmetleriyle markanızı geleceğe taşıyın.";
+    const defaultDesc = "Kırıkkale'nin lider 360° Dijital Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya yönetimi, dijital dönüşüm ve kurumsal kimlik hizmetleri.";
     const currentUrl = `https://zmkagency.com${location.pathname}`;
 
     // Default LocalBusiness Schema
@@ -17,7 +17,7 @@ const SEO = ({ title, description, keywords, schema }) => {
         "image": "https://zmkagency.com/logo.png",
         "@id": "https://zmkagency.com",
         "url": "https://zmkagency.com",
-        "telephone": "+905555555555", // Placeholder
+        "telephone": "+905413812114", // Updated Phone
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Yenişehir Kazım Karabekir caddesi No: 39/2",
@@ -85,7 +85,7 @@ const SEO = ({ title, description, keywords, schema }) => {
             "closes": "18:00"
         },
         "sameAs": [
-            "https://www.instagram.com/zmkagency"
+            "https://www.instagram.com/agencyzmk/"
         ]
     };
 

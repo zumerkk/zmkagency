@@ -67,7 +67,12 @@ const Footer = ({ t }) => {
                         { slug: 'kirikkale-emlak-cekimi-reklam', label: 'Emlak Medya' },
                         { slug: 'kirikkale-oto-galeri-dijital-pazarlama', label: 'Oto Galeri Reklam' },
                         { slug: 'kirikkale-grafik-tasarim-matbaa', label: 'Matbaa & Grafik' },
-                        { slug: 'kirikkale-seo-danismanligi', label: 'İleri Seviye SEO' }
+                        { slug: 'kirikkale-seo-danismanligi', label: 'İleri Seviye SEO' },
+                        { slug: 'kirikkale-saglik-turizmi-dijital-pazarlama', label: 'Sağlık & Klinik' },
+                        { slug: 'kirikkale-insaat-emlak-reklam-ajansi', label: 'İnşaat Lansman' },
+                        { slug: 'kirikkale-sanayi-uretim-dijital-donusum', label: 'Sanayi Dijital' },
+                        { slug: 'kirikkale-ozel-okul-kolej-reklam', label: 'Eğitim & Kolej' },
+                        { slug: 'kirikkale-avukat-hukuk-web-tasarim', label: 'Hukuk Web' }
                     ].map(link => (
                         <Link
                             key={link.slug}

@@ -508,5 +508,130 @@ export const localSeoData = [
         faq: [
             { q: "Raporlama nasıl yapılıyor?", a: "Google Search Console ve Data Studio verileriyle şeffaf rapor sunuyoruz." }
         ]
+    },
+    {
+        slug: "kirikkale-saglik-turizmi-dijital-pazarlama",
+        title: "Kırıkkale Sağlık Turizmi ve Klinik Reklam Ajansı",
+        description: "Doktorlar, klinikler ve hastaneler için hasta odaklı dijital pazarlama. Google Ads, Sosyal Medya ve Web Tasarım.",
+        heroTitle: "Randevu Defteriniz\nHiç Boş Kalmasın.",
+        heroSubtitle: "Sağlık sektörüne özel etik ve sonuç odaklı reklam stratejileriyle hasta sayınızı artırın.",
+        serviceName: "Sağlık Danışmanlığı",
+        proof: {
+            stat1: "+%200",
+            label1: "Hasta Artışı",
+            stat2: "Etik",
+            label2: "Reklam",
+            quote: "Klinik bilinirliğimiz Kırıkkale genelinde zirveye ulaştı.",
+            author: "Özel Diş Kliniği"
+        },
+        workflow: [
+            { step: "01", title: "Analiz", desc: "Kliniğinizin güçlü yönlerini ve hedef kitlesini belirliyoruz." },
+            { step: "02", title: "Web", desc: "Randevu odaklı, güven veren bir web sitesi tasarlıyoruz." },
+            { step: "03", title: "Reklam", desc: "Tedavi arayan hastalara Google ve sosyal medyada ulaşıyoruz." },
+            { step: "04", title: "Yönetim", desc: "Hasta yorumlarını ve itibarınızı profesyonelce yönetiyoruz." }
+        ],
+        faq: [
+            { q: "Sağlık bakanlığı mevzuatına uygun mu?", a: "Evet, tüm reklam çalışmalarımız sağlıkta tanıtım yönetmeliğine uygun hazırlanır." }
+        ]
+    },
+    {
+        slug: "kirikkale-insaat-emlak-reklam-ajansi",
+        title: "Kırıkkale İnşaat ve Konut Projesi Pazarlama",
+        description: "İnşaat firmaları için 3D görselleştirme, proje lansmanı ve konut satış reklamları.",
+        heroTitle: "Projelerinizi\nMaketten Satın.",
+        heroSubtitle: "Temel atılmadan satışları bitirin. İnşaat sektörüne özel prestijli dijital pazarlama.",
+        serviceName: "İnşaat Pazarlama",
+        proof: {
+            stat1: "Lansman",
+            label1: "Özel",
+            stat2: "Hızlı",
+            label2: "Satış",
+            quote: "Projemizin %60'ını daha kaba inşaattayken dijitalden sattık.",
+            author: "Müteahhit Firma"
+        },
+        workflow: [
+            { step: "01", title: "Lansman", desc: "Projeniz için görkemli bir dijital lansman planlıyoruz." },
+            { step: "02", title: "3D/Video", desc: "Projenizi bitmiş gibi gösteren etkileyici görseller hazırlıyoruz." },
+            { step: "03", title: "Lead", desc: "Yatırımcı ve ev alacak potansiyel müşterilerin form doldurmasını sağlıyoruz." },
+            { step: "04", title: "CRM", desc: "Gelen talepleri satış ekibinize yönlendiriyoruz." }
+        ],
+        faq: [
+            { q: "Katolog tasarımı yapıyor musunuz?", a: "Evet, hem dijital hem basılı lüks kataloglar tasarlıyoruz." }
+        ]
+    },
+    {
+        slug: "kirikkale-sanayi-uretim-dijital-donusum",
+        title: "Kırıkkale Sanayi ve Üretim Dijital Dönüşüm",
+        description: "Fabrikalar ve üreticiler için B2B dijital pazarlama, ihracat odaklı web sitesi ve kurumsal kimlik.",
+        heroTitle: "Üretim Gücünüzü\nDünyaya Duyurun.",
+        heroSubtitle: "Sadece Kırıkkale'ye değil, global pazara üretim yapın. B2B ihracat odaklı dijital çözümler.",
+        serviceName: "Sanayi & Üretim",
+        proof: {
+            stat1: "İhracat",
+            label1: "Odaklı",
+            stat2: "B2B",
+            label2: "Network",
+            quote: "Yurt dışından ilk siparişimizi web sitemiz üzerinden aldık.",
+            author: "Metal Üreticisi"
+        },
+        workflow: [
+            { step: "01", title: "Dil", desc: "Hedef pazarın diline (İngilizce, Arapça, Rusça) uygun içerik üretiyoruz." },
+            { step: "02", title: "Site", desc: "Ürünlerinizi detaylı sergileyen uluslararası standartta site kuruyoruz." },
+            { step: "03", title: "LinkedIn", desc: "Global satın almacılara LinkedIn üzerinden ulaşıyoruz." },
+            { step: "04", title: "Fuar", desc: "Dijital fuar katılımlarınızı yönetiyoruz." }
+        ],
+        faq: [
+            { q: "Devlet teşviklerinden yararlanabilir miyiz?", a: "Evet, e-ihracat ve dijital dönüşüm teşvikleri konusunda danışmanlık veriyoruz." }
+        ]
+    },
+    {
+        slug: "kirikkale-ozel-okul-kolej-reklam",
+        title: "Kırıkkale Eğitim Kurumları ve Kolej Reklam Ajansı",
+        description: "Özel okullar, kreşler ve kurslar için kayıt artırıcı dijital pazarlama ve kurumsal itibar yönetimi.",
+        heroTitle: "Geleceğin Liderlerini\nSiz Yetiştirin.",
+        heroSubtitle: "Kayıt döneminde kontenjanlarınızı doldurun. Velilere güven veren kurumsal iletişim stratejileri.",
+        serviceName: "Eğitim Pazarlama",
+        proof: {
+            stat1: "Tam",
+            label1: "Kapasite",
+            stat2: "Güven",
+            label2: "Endeksi",
+            quote: "Erken kayıt döneminde hedeflerimizi aştık.",
+            author: "Özel Kolej Müdürü"
+        },
+        workflow: [
+            { step: "01", title: "Hikaye", desc: "Okulunuzun eğitim felsefesini ve farklarını anlatıyoruz." },
+            { step: "02", title: "Tanıtım", desc: "Okul imkanlarını gösteren profesyonel tanıtım filmi çekiyoruz." },
+            { step: "03", title: "Lead", desc: "Kayıt görüşmesi için veli datası topluyoruz." },
+            { step: "04", title: "Etkinlik", desc: "Bursluluk sınavı vb. etkinliklerinizi duyuruyoruz." }
+        ],
+        faq: [
+            { q: "Sosyal medya yönetimi dahil mi?", a: "Evet, okul etkinliklerini ve başarılarını düzenli paylaşıyoruz." }
+        ]
+    },
+    {
+        slug: "kirikkale-avukat-hukuk-web-tasarim",
+        title: "Kırıkkale Avukat ve Hukuk Bürosu Web Tasarım",
+        description: "Avukatlar için TBB reklam yasağına uygun, prestijli ve kurumsal web sitesi tasarımı.",
+        heroTitle: "Hukuki Gücünüzü\nDijitale Yansıtın.",
+        heroSubtitle: "Müvekkillerinize güven veren, sade ve şık bir dijital kimlik.",
+        serviceName: "Hukuk Çözümleri",
+        proof: {
+            stat1: "Prestij",
+            label1: "Odaklı",
+            stat2: "Mobil",
+            label2: "Uyumlu",
+            quote: "Kurumsal kimliğimiz müvekkillerimiz nezdinde itibarımızı artırdı.",
+            author: "Hukuk Bürosu"
+        },
+        workflow: [
+            { step: "01", title: "Tasarım", desc: "Ağırbaşlı ve güven veren renklerle tasarım yapıyoruz." },
+            { step: "02", title: "İçerik", desc: "Uzmanlık alanlarınızı net bir dille ifade ediyoruz." },
+            { step: "03", title: "Makale", desc: "Hukuki makaleleriniz için blog altyapısı kuruyoruz." },
+            { step: "04", title: "Harita", desc: "Ofisinizin Google Haritalar kaydını optimize ediyoruz." }
+        ],
+        faq: [
+            { q: "Reklam yasağına uygun mu?", a: "Evet, tasarım ve içeriklerimiz tamamen reklam yasağı mevzuatına uygundur." }
+        ]
     }
 ];

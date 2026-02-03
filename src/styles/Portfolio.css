@@ -56,11 +56,37 @@
     font-size: 12px;
 }
 
+/* ULTRA Portfolio Hover Effects */
 .portfolio-item:hover .portfolio-thumb {
-    transform: translateY(-10px);
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-item .overlay {
+    background: rgba(0, 0, 0, 0.85);
+    /* Darker overlay */
+    backdrop-filter: blur(8px);
+    /* Premium Blur */
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.view-project {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 0.1s;
+    background: transparent;
+    border: 1px solid var(--text-accent);
+    color: var(--text-accent);
+}
+
+.portfolio-item:hover .view-project {
+    transform: translateY(0);
     opacity: 1;
 }
 

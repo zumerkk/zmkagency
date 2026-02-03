@@ -333,5 +333,180 @@ export const localSeoData = [
         faq: [
             { q: "Kaç farklı logo seçeneği sunuyorsunuz?", a: "Genellikle 3 farklı konsept sunuyoruz ve seçilen üzerinden revize yapıyoruz." }
         ]
+    },
+    {
+        slug: "kirikkale-drone-cekim-tanitim-filmi",
+        title: "Kırıkkale Drone Çekimi ve Tanıtım Filmi",
+        description: "İşletmenizi gökyüzünden tanıtın. 4K Drone çekimi, profesyonel kurgu ve kurumsal tanıtım filmi hizmetleri.",
+        heroTitle: "Markanıza\nYüksekten Bakın.",
+        heroSubtitle: "Sinematik drone çekimleri ve etkileyici kurgularla işletmenizin prestijini artırın.",
+        serviceName: "Drone ve Prodüksiyon",
+        proof: {
+            stat1: "4K",
+            label1: "Kalite",
+            stat2: "Hava",
+            label2: "Çekimi",
+            quote: "Fabrikamızın büyüklüğünü drone çekimiyle müşterilerimize gösterdik.",
+            author: "Sanayi Tesisi Müdürü"
+        },
+        workflow: [
+            { step: "01", title: "Senaryo", desc: "Etkileyici bir hikaye kurguluyoruz." },
+            { step: "02", title: "Çekim", desc: "Son teknoloji drone ve kameralarla çekim yapıyoruz." },
+            { step: "03", title: "Kurgu", desc: "Renk, ses ve efektlerle videoyu sinematik hale getiriyoruz." },
+            { step: "04", title: "Teslim", desc: "Sosyal medya ve web için optimize edilmiş formatlarda teslim." }
+        ],
+        faq: [
+            { q: "Hangi çözünürlükte çekim yapıyorsunuz?", a: "Tüm çekimlerimiz 4K UHD kalitesindedir." }
+        ]
+    },
+    {
+        slug: "kirikkale-siyasi-dijital-danismanlik",
+        title: "Kırıkkale Siyasi Dijital Danışmanlık ve Seçim Kampanyası",
+        description: "Seçimi dijitalde kazanın. Aday tanıtımı, sosyal medya yönetimi, algı yönetimi ve veri odaklı seçim stratejileri.",
+        heroTitle: "Seçim\nDijitalde Kazanılır.",
+        heroSubtitle: "Kırıkkale seçmenine en doğru mesajı, en etkili kanallardan ulaştırın.",
+        serviceName: "Siyasi Danışmanlık",
+        proof: {
+            stat1: "%100",
+            label1: "Gizlilik",
+            stat2: "Algı",
+            label2: "Yönetimi",
+            quote: "Sosyal medya kampanyamızla genç seçmene ulaştık.",
+            author: "Belediye Başkan Adayı"
+        },
+        workflow: [
+            { step: "01", title: "Analiz", desc: "Seçmen eğilimlerini ve bölgeyi analiz ediyoruz." },
+            { step: "02", title: "Söylem", desc: "Hedef kitleye uygun slogan ve vaatleri dijitalleştiriyoruz." },
+            { step: "03", title: "Kampanya", desc: "Reklam ve içeriklerle mesajınızı yayıyoruz." },
+            { step: "04", title: "Takip", desc: "Anlık tepkileri ölçüp stratejiyi güncelliyoruz." }
+        ],
+        faq: [
+            { q: "Gizlilik sözleşmesi yapıyor musunuz?", a: "Evet, siyasi çalışmalarda gizlilik en önemli prensibimizdir." }
+        ]
+    },
+    {
+        slug: "kirikkale-dijital-menu-tasarim",
+        title: "Kırıkkale QR Menü ve Restoran Dijitalleşme",
+        description: "Kafe ve restoranlar için QR menü, dijital sipariş sistemi ve sosyal medya yönetimi.",
+        heroTitle: "Menünüzü\nDijitalleştirin.",
+        heroSubtitle: "Temassız, hızlı ve yönetilebilir QR menü sistemleriyle müşteri deneyimini artırın.",
+        serviceName: "Restoran Çözümleri",
+        proof: {
+            stat1: "Hızlı",
+            label1: "Sipariş",
+            stat2: "Kolay",
+            label2: "Yönetim",
+            quote: "Fiyatları değiştirmek artık saniyeler sürüyor, baskı maliyeti bitti.",
+            author: "Cafe İşletmecisi"
+        },
+        workflow: [
+            { step: "01", title: "Tasarım", desc: "Mekan konseptine uygun arayüz tasarlıyoruz." },
+            { step: "02", title: "İçerik", desc: "Yemek fotoğrafları ve açıklamaları sisteme giriyoruz." },
+            { step: "03", title: "QR Kod", desc: "Masalarınız için özel QR kodlar üretiyoruz." },
+            { step: "04", title: "Yayın", desc: "Sistemi aktif edip personelinize eğitim veriyoruz." }
+        ],
+        faq: [
+            { q: "İnternet sitesi gerekiyor mu?", a: "Hayır, size özel bir sayfa üzerinden sistem çalışır." }
+        ]
+    },
+    {
+        slug: "kirikkale-emlak-cekimi-reklam",
+        title: "Kırıkkale Emlak Fotoğrafçılığı ve Dijital Pazarlama",
+        description: "Gayrimenkul satışlarını hızlandırın. Profesyonel konut çekimi, sanal tur ve emlak reklam yönetimi.",
+        heroTitle: "Gayrimenkulü\nHızlı Satın.",
+        heroSubtitle: "Profesyonel fotoğraflar ve doğru hedefli reklamlarla portföyünüzü bekletmeyin.",
+        serviceName: "Emlak Pazarlama",
+        proof: {
+            stat1: "2x",
+            label1: "Hızlı Satış",
+            stat2: "HD",
+            label2: "Görsel",
+            quote: "İlan fotoğrafları değişince arama sayısı 3 katına çıktı.",
+            author: "Emlak Ofisi Sahibi"
+        },
+        workflow: [
+            { step: "01", title: "Çekim", desc: "Geniş açı lenslerle profesyonel çekim yapıyoruz." },
+            { step: "02", title: "Edit", desc: "Fotoğrafları ışık ve renk düzenlemesinden geçiriyoruz." },
+            { step: "03", title: "İlan", desc: "Sahibinden vb. siteler için etkili açıklamalar yazıyoruz." },
+            { step: "04", title: "Reklam", desc: "Sosyal medyada bölge hedefli reklam çıkıyoruz." }
+        ],
+        faq: [
+            { q: "Video çekimi var mı?", a: "Evet, Reels formatında 'House Tour' videoları çekiyoruz." }
+        ]
+    },
+    {
+        slug: "kirikkale-oto-galeri-dijital-pazarlama",
+        title: "Kırıkkale Oto Galeri Web Sitesi ve Reklam",
+        description: "Oto galeriler için stok yönetimli web sitesi ve araç tanıtım videoları.",
+        heroTitle: "Galerinizi\nMarkalaştırın.",
+        heroSubtitle: "Stoklarınızı sahibinden'e mahkum etmeyin. Kendi sitenizden prestijli satış yapın.",
+        serviceName: "Oto Galeri Çözümleri",
+        proof: {
+            stat1: "Stok",
+            label1: "Yönetimi",
+            stat2: "Oto",
+            label2: "Market",
+            quote: "Kendi sitemizden araç kredisi başvurusu almaya başladık.",
+            author: "Galeri Sahibi"
+        },
+        workflow: [
+            { step: "01", title: "Site", desc: "Araç filtreleme özellikli web sitesi kuruyoruz." },
+            { step: "02", title: "Çekim", desc: "Araçları stüdyo kalitesinde fotoğraflandırıyoruz." },
+            { step: "03", title: "Reklam", desc: "Araç arayan kitleye özel reklam çalışmaları yapıyoruz." },
+            { step: "04", title: "CRM", desc: "Müşteri taleplerini toplayan sistem kuruyoruz." }
+        ],
+        faq: [
+            { q: "İlanları otomatik çekiyor mu?", a: "Evet, entegrasyon çözümlerimiz mevcuttur." }
+        ]
+    },
+    {
+        slug: "kirikkale-grafik-tasarim-matbaa",
+        title: "Kırıkkale Grafik Tasarım ve Matbaa Hizmetleri",
+        description: "Broşür, katalog, kartvizit ve bilboard tasarımı. Basılı ve dijital tüm görsel ihtiyaçlarınız.",
+        heroTitle: "Tasarımda\nFark Yaratın.",
+        heroSubtitle: "Göz alıcı tasarımlarla markanızın kalitesini kağıda döküyoruz.",
+        serviceName: "Grafik & Matbaa",
+        proof: {
+            stat1: "Baskı",
+            label1: "Kalitesi",
+            stat2: "Hızlı",
+            label2: "Teslim",
+            quote: "Kataloglarımız fuarın en çok ilgi çeken çalışması oldu.",
+            author: "Mobilya Üreticisi"
+        },
+        workflow: [
+            { step: "01", title: "Konsept", desc: "Tasarım dili oluşturuyoruz." },
+            { step: "02", title: "Tasarım", desc: "Profesyonel vektörel çizimler yapıyoruz." },
+            { step: "03", title: "Baskı", desc: "Anlaşmalı matbaalarımızda en kaliteli baskıyı alıyoruz." },
+            { step: "04", title: "Teslim", desc: "Ürünleri kapınıza kadar teslim ediyoruz." }
+        ],
+        faq: [
+            { q: "Logo tasarımı dahil mi?", a: "İsteğe bağlı olarak kurumsal kimlik setine dahil edilebilir." }
+        ]
+    },
+    {
+        slug: "kirikkale-seo-danismanligi",
+        title: "Kırıkkale Profesyonel SEO Danışmanlığı",
+        description: "Google'da üst sıralara çıkmak isteyenler için ileri seviye SEO teknikleri ve içerik stratejisi.",
+        heroTitle: "Aramalarda\nLider Olun.",
+        heroSubtitle: "Kalıcı başarı için teknik SEO, backlink ve içerik üçlüsünü birleştiriyoruz.",
+        serviceName: "İleri Seviye SEO",
+        proof: {
+            stat1: "Top 3",
+            label1: "Hedef",
+            stat2: "Uzman",
+            label2: "Analiz",
+            quote: "Organik trafiğimiz 6 ayda %400 arttı.",
+            author: "E-Ticaret Müdürü"
+        },
+        workflow: [
+            { step: "01", title: "Audit", desc: "Geniş kapsamlı site taraması." },
+            { step: "02", title: "Plan", desc: "6 aylık eylem planı hazırlığı." },
+            { step: "03", title: "İçerik", desc: "Semantik makale üretimi." },
+            { step: "04", title: "Otorite", desc: "Kaliteli backlink inşası." }
+        ],
+        faq: [
+            { q: "Raporlama nasıl yapılıyor?", a: "Google Search Console ve Data Studio verileriyle şeffaf rapor sunuyoruz." }
+        ]
     }
 ];

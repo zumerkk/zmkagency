@@ -245,99 +245,215 @@ export const content = {
         pricing: {
             title: "Yatırım Planları.",
             subtitle: "Maliyet değil, şirketinize değer katan stratejik yatırımlar.",
-            monthlyToggle: "Aylık Hizmetler (Retainer)",
-            projectToggle: "Proje Bazlı",
+            categories: [
+                { id: 'retainer', label: '360° Retainer' },
+                { id: 'webSoftware', label: 'Web & Yazılım' },
+                { id: 'marketingAds', label: 'Reklam & Pazarlama' },
+                { id: 'seoData', label: 'SEO & Veri' },
+                { id: 'production', label: 'Prodüksiyon' },
+                { id: 'branding', label: 'Marka & Kurumsal' }
+            ],
             currency: "₺",
             cta: "Planı Seç",
             popularTag: "En Çok Tercih Edilen",
-            retainer: [
-                {
-                    title: "Startup Growth",
-                    price: "15.000",
-                    period: "/ay",
-                    description: "Dijital varlığınızı oluşturmak ve yerel pazarda görünür olmak için temel paket.",
-                    features: [
-                        "Sosyal Medya Yönetimi (2 Platform)",
-                        "Haftalık 3 Post + 1 Reel",
-                        "Temel SEO Optimizasyonu",
-                        "Aylık Performans Raporu",
-                        "E-posta Desteği"
-                    ]
-                },
-                {
-                    title: "Scale Up",
-                    price: "30.000",
-                    period: "/ay",
-                    isPopular: true,
-                    description: "Hızlı büyüme ve pazar payı artışı hedefleyen işletmeler için agresif strateji.",
-                    features: [
-                        "Sosyal Medya Yönetimi (4 Platform)",
-                        "Haftalık 5 Post + 3 Reel",
-                        "İleri Düzey SEO & Blog",
-                        "Google & Meta Reklam Yönetimi",
-                        "Topluluk Yönetimi & Moderasyon",
-                        "15 Günde Bir Strateji Toplantısı"
-                    ]
-                },
-                {
-                    title: "Market Domination",
-                    price: "60.000+",
-                    period: "/ay",
-                    description: "Sektör lideri olmak isteyenler için tam kapsamlı dijital departman hizmeti.",
-                    features: [
-                        "Tüm Dijital Platformlar",
-                        "Günlük İçerik & Viral Prodüksiyon",
-                        "Ulusal SEO & Pr Çalışmaları",
-                        "Growth Hacking Stratejileri",
-                        "Kriz Yönetimi & İtibar Koruma",
-                        "7/24 VIP Destek Hattı"
-                    ]
-                }
-            ],
-            project: [
-                {
-                    title: "Landing Page",
-                    price: "20.000",
-                    period: "'den itibaren",
-                    description: "Tek ürün veya hizmet odaklı, yüksek dönüşüm sağlayan tek sayfa web sitesi.",
-                    features: [
-                        "Özel UX/UI Tasarım",
-                        "Next.js ile Ultra Hızlı Altyapı",
-                        "Mobile First Kodlama",
-                        "Temel SEO Ayarları",
-                        "İletişim Formu Entegrasyonu"
-                    ]
-                },
-                {
-                    title: "Corporate Identity",
-                    price: "45.000",
-                    period: "'den itibaren",
-                    isPopular: true,
-                    description: "Markanızın dijital dünyadaki prestijli evi. Çok sayfalı kurumsal yapı.",
-                    features: [
-                        "Kapsamlı Kurumsal Web Sitesi",
-                        "CMS (İçerik Yönetim Paneli)",
-                        "Blog & Haberler Modülü",
-                        "Çoklu Dil Altyapısı",
-                        "Gelişmiş Analitik Kurulumu",
-                        "1 Yıl Teknik Bakım Hediye"
-                    ]
-                },
-                {
-                    title: "E-Commerce / App",
-                    price: "120.000+",
-                    period: "'den itibaren",
-                    description: "Satış odaklı e-ticaret siteleri veya mobil uygulama projeleri.",
-                    features: [
-                        "Özel E-Ticaret / App Mimarisi",
-                        "Ödeme Sistemi Entegrasyonu",
-                        "Stok & Sipariş Yönetimi",
-                        "Kullanıcı Paneli & Üyelik",
-                        "Pazaryeri Entegrasyonları",
-                        "Siber Güvenlik Paketi"
-                    ]
-                }
-            ],
+            items: {
+                retainer: [
+                    {
+                        title: "Startup Growth",
+                        price: "25.000",
+                        period: "/ay",
+                        description: "Yeni girişimler için temel dijital varlık ve büyüme paketi.",
+                        techSpecs: "Sosyal Medya + Temel SEO",
+                        features: [
+                            "Sosyal Medya Yönetimi (2 Platform)",
+                            "Haftalık 3 Post + 1 Reel",
+                            "Temel SEO Optimizasyonu",
+                            "Aylık Performans Raporu",
+                            "E-posta Desteği"
+                        ]
+                    },
+                    {
+                        title: "Scale Up",
+                        price: "45.000",
+                        period: "/ay",
+                        isPopular: true,
+                        description: "Hızlı büyüme hedefleyen işletmeler için agresif strateji.",
+                        techSpecs: "Full S.Media + Ads + SEO",
+                        features: [
+                            "Sosyal Medya Yönetimi (4 Platform)",
+                            "Haftalık 5 Post + 3 Reel",
+                            "İleri Düzey SEO & Blog",
+                            "Google & Meta Reklam Yönetimi",
+                            "Topluluk Yönetimi & Moderasyon",
+                            "15 Günde Bir Strateji Toplantısı"
+                        ]
+                    },
+                    {
+                        title: "Market Domination",
+                        price: "80.000+",
+                        period: "/ay",
+                        description: "Sektör liderliği için tam kapsamlı dijital departman.",
+                        techSpecs: "7/24 Dedike Ekip",
+                        features: [
+                            "Tüm Dijital Platformlar",
+                            "Günlük İçerik & Viral Prodüksiyon",
+                            "Ulusal SEO & Pr Çalışmaları",
+                            "Growth Hacking Stratejileri",
+                            "Kriz Yönetimi & İtibar Koruma",
+                            "7/24 VIP Destek Hattı"
+                        ]
+                    }
+                ],
+                webSoftware: [
+                    {
+                        title: "Kurumsal Web Sitesi",
+                        price: "25.000",
+                        period: "'den itibaren",
+                        isPopular: true,
+                        description: "Markanızın dijital vitrini. Hızlı, güvenli ve mobil uyumlu.",
+                        techSpecs: "Next.js / React / Vercel",
+                        features: [
+                            "Özel UX/UI Tasarım",
+                            "CMS (İçerik Yönetimi)",
+                            "SEO Uyumlu Altyapı",
+                            "Hızlı Yükleme (<1sn)",
+                            "Çoklu Dil Desteği"
+                        ]
+                    },
+                    {
+                        title: "E-Ticaret Çözümleri",
+                        price: "60.000",
+                        period: "'den itibaren",
+                        description: "Satış odaklı, yüksek dönüşüm oranlı online mağazalar.",
+                        techSpecs: "Shopify / Custom Headless",
+                        features: [
+                            "Gelişmiş Stok & Sipariş Yönetimi",
+                            "Ödeme Sistemleri Entegrasyonu",
+                            "Pazaryeri Entegrasyonları",
+                            "Kampanya Modülleri",
+                            "Kullanıcı Paneli"
+                        ]
+                    },
+                    {
+                        title: "Özel Yazılım / App",
+                        price: "150.000+",
+                        period: "'den itibaren",
+                        description: "İş süreçlerinize özel web ve mobil uygulamalar.",
+                        techSpecs: "React Native / Node.js / AWS",
+                        features: [
+                            "iOS & Android Uygulama",
+                            "SaaS Geliştirme",
+                            "CRM / ERP Entegrasyonları",
+                            "Mikroservis Mimarisi",
+                            "Bulut Altyapısı"
+                        ]
+                    }
+                ],
+                marketingAds: [
+                    {
+                        title: "Google Ads (SEM)",
+                        price: "15.000",
+                        period: "/ay + Bütçe",
+                        description: "Arama sonuçlarında en tepede yer alın.",
+                        techSpecs: "Search + Display + Shopping",
+                        features: [
+                            "Anahtar Kelime Analizi",
+                            "Rakip Analizi",
+                            "Dönüşüm Kurulumu",
+                            "Negatif Kelime Optimizasyonu",
+                            "A/B Testleri"
+                        ]
+                    },
+                    {
+                        title: "Sosyal Medya Reklamları",
+                        price: "15.000",
+                        period: "/ay + Bütçe",
+                        description: "Hedef kitlenize nokta atışı ulaşın.",
+                        techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
+                        features: [
+                            "Hedef Kitle Segmentasyonu",
+                            "Retargeting Kurguları",
+                            "Kreatif Tasarım Desteği",
+                            "Pixel & CAPI Kurulumu",
+                            "ROAS Odaklı Yönetim"
+                        ]
+                    }
+                ],
+                seoData: [
+                    {
+                        title: "Lokal SEO Paketi",
+                        price: "15.000",
+                        period: "/ay",
+                        description: "Bölgenizdeki aramalarda haritalarda ve sonuçlarda ilk sıra.",
+                        techSpecs: "GMB + Local Citations",
+                        features: [
+                            "Google My Business Optimizasyonu",
+                            "Yerel Backlink Çalışması",
+                            "Yorum & İtibar Yönetimi",
+                            "Haftalık GMB Postları"
+                        ]
+                    },
+                    {
+                        title: "Ulusal / Global SEO",
+                        price: "35.000",
+                        period: "/ay",
+                        description: "Büyük ölçekli rekabet ve organik trafik artışı.",
+                        techSpecs: "Technical + Content + Off-page",
+                        features: [
+                            "Kapsamlı Teknik Audit",
+                            "İçerik Stratejisi & Blog",
+                            "Otoriter Backlink İnşası",
+                            "Rakip Gap Analizi",
+                            "Core Web Vitals İyileştirmesi"
+                        ]
+                    }
+                ],
+                production: [
+                    {
+                        title: "Tanıtım Filmi",
+                        price: "40.000",
+                        period: "'den itibaren",
+                        description: "Markanızı sinematik bir dille anlatın.",
+                        techSpecs: "4K Cinema Line + Drone",
+                        features: [
+                            "Senaryo & Kurgu",
+                            "Profesyonel Seslendirme",
+                            "Drone Çekimleri",
+                            "Renk & Ses Miksajı",
+                            "Sosyal Medya Teaserları"
+                        ]
+                    },
+                    {
+                        title: "Ürün Fotoğrafçılığı",
+                        price: "20.000",
+                        period: "'den itibaren",
+                        description: "E-ticaret ve katalog için profesyonel kareler.",
+                        techSpecs: "Stüdyo / Dış Çekim",
+                        features: [
+                            "Konsept Geliştirme",
+                            "Dekupaj & Retouch",
+                            "Model & Mekan Kullanımı",
+                            "Yüksek Çözünürlüklü Teslim"
+                        ]
+                    }
+                ],
+                branding: [
+                    {
+                        title: "Kurumsal Kimlik",
+                        price: "30.000",
+                        period: "'den itibaren",
+                        description: "Markanızın yüzünü profesyonelce tasarlayın.",
+                        techSpecs: "Vector + Print Ready",
+                        features: [
+                            "Logo Tasarımı",
+                            "Renk Paleti & Tipografi",
+                            "Kartvizit & Antetli Kağıt",
+                            "Brand Book (Kullanım Kılavuzu)",
+                            "Sosyal Medya Kit"
+                        ]
+                    }
+                ]
+            },
             customQuote: {
                 title: "Standartların Dışında?",
                 subtitle: "Hazır paketler sizi yansıtmıyorsa, hayalinizdeki projeyi anlatın. Size özel bir yol haritası çizelim.",
@@ -562,99 +678,215 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
         pricing: {
             title: "Investment Plans.",
             subtitle: "Strategic investments that add value, not just costs.",
-            monthlyToggle: "Monthly Retainer",
-            projectToggle: "Project Based",
+            categories: [
+                { id: 'retainer', label: '360° Retainer' },
+                { id: 'webSoftware', label: 'Web & Software' },
+                { id: 'marketingAds', label: 'Ads & Marketing' },
+                { id: 'seoData', label: 'SEO & Data' },
+                { id: 'production', label: 'Production' },
+                { id: 'branding', label: 'Brand & Identity' }
+            ],
             currency: "$",
             cta: "Select Plan",
             popularTag: "Most Popular",
-            retainer: [
-                {
-                    title: "Startup Growth",
-                    price: "500",
-                    period: "/mo",
-                    description: "Essential package to build digital presence and visibility in the local market.",
-                    features: [
-                        "Social Media Mgmt (2 Platforms)",
-                        "3 Posts + 1 Reel Weekly",
-                        "Basic SEO Optimization",
-                        "Monthly Performance Report",
-                        "Email Support"
-                    ]
-                },
-                {
-                    title: "Scale Up",
-                    price: "1,000",
-                    period: "/mo",
-                    isPopular: true,
-                    description: "Aggressive strategy for businesses targeting rapid growth and market share.",
-                    features: [
-                        "Social Media Mgmt (4 Platforms)",
-                        "5 Posts + 3 Reels Weekly",
-                        "Advanced SEO & Blog Content",
-                        "Google & Meta Ad Management",
-                        "Community Management",
-                        "Bi-weekly Strategy Meetings"
-                    ]
-                },
-                {
-                    title: "Market Domination",
-                    price: "2,500+",
-                    period: "/mo",
-                    description: "Full-service digital department for those who want to lead the industry.",
-                    features: [
-                        "All Digital Platforms",
-                        "Daily Content & Viral Production",
-                        "National SEO & PR Work",
-                        "Growth Hacking Strategies",
-                        "Crisis Mgmt & Reputation",
-                        "24/7 VIP Support Line"
-                    ]
-                }
-            ],
-            project: [
-                {
-                    title: "Landing Page",
-                    price: "800",
-                    period: "starting at",
-                    description: "High-converting single page website focused on one product or service.",
-                    features: [
-                        "Custom UX/UI Design",
-                        "Next.js Ultra-Fast Infra",
-                        "Mobile First Coding",
-                        "Basic SEO Setup",
-                        "Contact Form Integration"
-                    ]
-                },
-                {
-                    title: "Corporate Identity",
-                    price: "1,800",
-                    period: "starting at",
-                    isPopular: true,
-                    description: "Your brand's prestigious home offering a multi-page corporate structure.",
-                    features: [
-                        "Comprehensive Corporate Site",
-                        "CMS (Content Management)",
-                        "Blog & News Module",
-                        "Multi-language Infrastructure",
-                        "Advanced Analytics Setup",
-                        "1 Year Technical Support"
-                    ]
-                },
-                {
-                    title: "E-Commerce / App",
-                    price: "4,500+",
-                    period: "starting at",
-                    description: "Sales-focused e-commerce platforms or mobile application projects.",
-                    features: [
-                        "Custom E-Com / App Architecture",
-                        "Payment Gateway Integration",
-                        "Inventory & Order Mgmt",
-                        "User Panel & Membership",
-                        "Marketplace Integrations",
-                        "Cyber Security Package"
-                    ]
-                }
-            ],
+            items: {
+                retainer: [
+                    {
+                        title: "Startup Growth",
+                        price: "850",
+                        period: "/mo",
+                        description: "Essential package to build digital presence and visibility in the local market.",
+                        techSpecs: "Social Media + Basic SEO",
+                        features: [
+                            "Social Media Mgmt (2 Platforms)",
+                            "3 Posts + 1 Reel Weekly",
+                            "Basic SEO Optimization",
+                            "Monthly Performance Report",
+                            "Email Support"
+                        ]
+                    },
+                    {
+                        title: "Scale Up",
+                        price: "1,500",
+                        period: "/mo",
+                        isPopular: true,
+                        description: "Aggressive strategy for businesses targeting rapid growth and market share.",
+                        techSpecs: "Full S.Media + Ads + SEO",
+                        features: [
+                            "Social Media Mgmt (4 Platforms)",
+                            "5 Posts + 3 Reels Weekly",
+                            "Advanced SEO & Blog Content",
+                            "Google & Meta Ad Management",
+                            "Community Management",
+                            "Bi-weekly Strategy Meetings"
+                        ]
+                    },
+                    {
+                        title: "Market Domination",
+                        price: "3,000+",
+                        period: "/mo",
+                        description: "Full-service digital department for those who want to lead the industry.",
+                        techSpecs: "24/7 Dedicated Team",
+                        features: [
+                            "All Digital Platforms",
+                            "Daily Content & Viral Production",
+                            "National SEO & PR Work",
+                            "Growth Hacking Strategies",
+                            "Crisis Mgmt & Reputation",
+                            "24/7 VIP Support Line"
+                        ]
+                    }
+                ],
+                webSoftware: [
+                    {
+                        title: "Corporate Website",
+                        price: "1,000",
+                        period: "starting at",
+                        isPopular: true,
+                        description: "Your brand's digital showcase. Fast, secure, and mobile-first.",
+                        techSpecs: "Next.js / React / Vercel",
+                        features: [
+                            "Custom UX/UI Design",
+                            "CMS (Content Management)",
+                            "SEO Friendly Arch.",
+                            "Fast Loading (<1s)",
+                            "Multi-language Support"
+                        ]
+                    },
+                    {
+                        title: "E-Commerce Solutions",
+                        price: "2,500",
+                        period: "starting at",
+                        description: "Sales-focused, high conversion online stores.",
+                        techSpecs: "Shopify / Custom Headless",
+                        features: [
+                            "Advanced Inventory & Order Mgmt",
+                            "Payment Gateway Integration",
+                            "Marketplace Integrations",
+                            "Campaign Modules",
+                            "User Dashboard"
+                        ]
+                    },
+                    {
+                        title: "Custom Software / App",
+                        price: "5,000+",
+                        period: "starting at",
+                        description: "Web and mobile applications tailored to your business processes.",
+                        techSpecs: "React Native / Node.js / AWS",
+                        features: [
+                            "iOS & Android Apps",
+                            "SaaS Development",
+                            "CRM / ERP Integrations",
+                            "Microservices Architecture",
+                            "Cloud Infrastructure"
+                        ]
+                    }
+                ],
+                marketingAds: [
+                    {
+                        title: "Google Ads (SEM)",
+                        price: "500",
+                        period: "/mo + Budget",
+                        description: "Be at the top of search results.",
+                        techSpecs: "Search + Display + Shopping",
+                        features: [
+                            "Keyword Analysis",
+                            "Competitor Analysis",
+                            "Conversion Setup",
+                            "Negative Keyword Optimization",
+                            "A/B Testing"
+                        ]
+                    },
+                    {
+                        title: "Social Media Ads",
+                        price: "500",
+                        period: "/mo + Budget",
+                        description: "Reach your target audience with precision.",
+                        techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
+                        features: [
+                            "Audience Segmentation",
+                            "Retargeting Setup",
+                            "Creative Design Support",
+                            "Pixel & CAPI Setup",
+                            "ROAS Focused Management"
+                        ]
+                    }
+                ],
+                seoData: [
+                    {
+                        title: "Local SEO Package",
+                        price: "500",
+                        period: "/mo",
+                        description: "Rank first in maps and local search results.",
+                        techSpecs: "GMB + Local Citations",
+                        features: [
+                            "Google My Business Optimization",
+                            "Local Backlink Work",
+                            "Review & Reputation Mgmt",
+                            "Weekly GMB Posts"
+                        ]
+                    },
+                    {
+                        title: "National / Global SEO",
+                        price: "1,200",
+                        period: "/mo",
+                        description: "Large scale competition and organic traffic growth.",
+                        techSpecs: "Technical + Content + Off-page",
+                        features: [
+                            "Comprehensive Technical Audit",
+                            "Content Strategy & Blog",
+                            "Authoritative Backlink Building",
+                            "Competitor Gap Analysis",
+                            "Core Web Vitals Improvement"
+                        ]
+                    }
+                ],
+                production: [
+                    {
+                        title: "Commercial Film",
+                        price: "1,500",
+                        period: "starting at",
+                        description: "Tell your brand story with cinematic language.",
+                        techSpecs: "4K Cinema Line + Drone",
+                        features: [
+                            "Script & Editing",
+                            "Professional Voiceover",
+                            "Drone Shots",
+                            "Color & Sound Mixing",
+                            "Social Media Teasers"
+                        ]
+                    },
+                    {
+                        title: "Product Photography",
+                        price: "750",
+                        period: "starting at",
+                        description: "Professional shots for e-commerce and catalogs.",
+                        techSpecs: "Studio / Outdoor",
+                        features: [
+                            "Concept Development",
+                            "Decoupage & Retouch",
+                            "Model & Location Usage",
+                            "High Resolution Delivery"
+                        ]
+                    }
+                ],
+                branding: [
+                    {
+                        title: "Corporate Identity",
+                        price: "1,000",
+                        period: "starting at",
+                        description: "Professionally design the face of your brand.",
+                        techSpecs: "Vector + Print Ready",
+                        features: [
+                            "Logo Design",
+                            "Color Palette & Typography",
+                            "Business Card & Letterhead",
+                            "Brand Book",
+                            "Social Media Kit"
+                        ]
+                    }
+                ]
+            },
             customQuote: {
                 title: "Beyond Standards?",
                 subtitle: "If packages don't fit, describe your dream project. Let's draw a custom roadmap for you.",

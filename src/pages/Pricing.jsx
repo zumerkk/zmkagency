@@ -9,8 +9,8 @@ import SEO from '../components/SEO';
 import WizardForm from '../components/WizardForm';
 
 const Pricing = ({ t, wizardT }) => {
-    // True = Monthly (Retainer), False = Project
-    const [isRetainer, setIsRetainer] = useState(true);
+    // Categories: retainer, webSoftware, marketingAds, seoData, production, branding
+    const [activeCategory, setActiveCategory] = useState(t.categories?.[0]?.id || 'retainer');
 
     const [roiBudget, setRoiBudget] = useState(15000); // Default budget for simulator
     const [roiSector, setRoiSector] = useState(1.2); // Default multiplier (Service)
@@ -20,7 +20,7 @@ const Pricing = ({ t, wizardT }) => {
         source: 'Quick Quote'
     });
 
-    const activeData = isRetainer ? t.retainer : t.project;
+    // Removed unused activeData variable since we map directly from categories now
 
     const openWizardForPlan = (plan) => {
         setWizardConfig({
@@ -59,63 +59,85 @@ const Pricing = ({ t, wizardT }) => {
                         </motion.p>
                     </div>
 
-                    <div className="pricing-switch-container">
-                        <div className="pricing-switch">
+                    {/* Categories */}
+                    <div className="pricing-categories">
+                        {t.categories.map((cat) => (
                             <button
-                                className={`switch-btn ${isRetainer ? 'active' : ''}`}
-                                onClick={() => setIsRetainer(true)}
+                                key={cat.id}
+                                className={`category-btn ${activeCategory === cat.id ? 'active' : ''}`}
+                                onClick={() => setActiveCategory(cat.id)}
                             >
-                                {t.monthlyToggle}
+                                {cat.label}
                             </button>
-                            <button
-                                className={`switch-btn ${!isRetainer ? 'active' : ''}`}
-                                onClick={() => setIsRetainer(false)}
-                            >
-                                {t.projectToggle}
-                            </button>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="pricing-grid">
-                        {activeData.map((plan, idx) => (
-                            <motion.div
-                                key={idx}
-                                className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.1 + 0.3 }}
-                            >
-                                {plan.isPopular && <span className="popular-tag">{t.popularTag}</span>}
-
-                                <div className="card-header">
-                                    <h3>{plan.title}</h3>
-                                    <div className="price">
-                                        <span className="currency">{t.currency}</span>
-                                        {plan.price}
-                                        <span className="period">{plan.period}</span>
-                                    </div>
-                                </div>
-
-                                <p className="card-desc">{plan.description}</p>
-
-                                <ul className="features-list">
-                                    {plan.features.map((feature, fIdx) => (
-                                        <li key={fIdx}>
-                                            <Check size={18} />
-                                            <span>{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <button
-                                    className="pricing-cta"
-                                    onClick={() => openWizardForPlan(plan)}
+                        <AnimatePresence mode="wait">
+                            {t.items[activeCategory]?.map((plan, idx) => (
+                                <motion.div
+                                    key={`${activeCategory}-${idx}`}
+                                    className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
                                 >
-                                    {t.cta}
-                                </button>
-                            </motion.div>
-                        ))}
+                                    {plan.isPopular && <span className="popular-tag">{t.popularTag}</span>}
+
+                                    <div className="card-header">
+                                        <h3>{plan.title}</h3>
+                                        <div className="price">
+                                            <span className="currency">{t.currency}</span>
+                                            {plan.price}
+                                            <span className="period">{plan.period}</span>
+                                        </div>
+                                    </div>
+
+                                    <p className="card-desc">{plan.description}</p>
+
+                                    {/* Tech Specs for Developers/CTOs */}
+                                    {plan.techSpecs && (
+                                        <div className="tech-specs">
+                                            &lt; {plan.techSpecs} /&gt;
+                                        </div>
+                                    )}
+
+                                    <ul className="features-list">
+                                        {plan.features.map((feature, fIdx) => (
+                                            <li key={fIdx}>
+                                                <Check size={18} />
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    <button
+                                        className="pricing-cta"
+                                        onClick={() => openWizardForPlan(plan)}
+                                    >
+                                        {t.cta}
+                                    </button>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
                     </div>
+
+                    {/* PDF Download Section */}
+                    <motion.div
+                        className="pdf-download-section"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <p style={{ color: '#888', marginBottom: '20px' }}>
+                            {t.categories[0].id === 'retainer' ? "Detaylı hizmet listesi ve teknik şartnameler için:" : "For detailed service list and technical specifications:"}
+                        </p>
+                        <a href="#" className="pdf-download-btn" onClick={(e) => e.preventDefault()}>
+                            <span style={{ fontSize: '20px' }}>📄</span>
+                            {t.categories[0].id === 'retainer' ? "Fiyat Listesini İndir (PDF - 2026)" : "Download Price List (PDF - 2026)"}
+                        </a>
+                    </motion.div>
 
                     {/* ROI Simulator - Market Dominance Feature */}
                     <div className="roi-simulator glass-panel" style={{ margin: '80px 0', padding: '40px', textAlign: 'center' }}>
@@ -173,13 +195,13 @@ const Pricing = ({ t, wizardT }) => {
                             <div className="roi-results" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                                 <div className="roi-card" style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '10px' }}>
                                     <h3 style={{ fontSize: '36px', color: 'var(--text-accent)', marginBottom: '5px' }}>
-                                        {Math.floor(roiBudget * (isRetainer ? 1.5 : 0.05) * roiSector).toLocaleString()}
+                                        {Math.floor(roiBudget * (activeCategory === 'retainer' ? 1.5 : 0.05) * roiSector).toLocaleString()}
                                     </h3>
                                     <p style={{ fontSize: '14px', color: '#888' }}>Tahmini Erişim (Kişi)</p>
                                 </div>
                                 <div className="roi-card" style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '10px' }}>
                                     <h3 style={{ fontSize: '36px', color: '#a78bfa', marginBottom: '5px' }}>
-                                        {Math.floor(roiBudget * (isRetainer ? 0.08 : 0.003) * roiSector).toLocaleString()}
+                                        {Math.floor(roiBudget * (activeCategory === 'retainer' ? 0.08 : 0.003) * roiSector).toLocaleString()}
                                     </h3>
                                     <p style={{ fontSize: '14px', color: '#888' }}>Potansiyel Etkileşim</p>
                                 </div>

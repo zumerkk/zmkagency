@@ -30,40 +30,53 @@
     line-height: 1.6;
 }
 
-/* Toggle Switch */
-.pricing-switch-container {
+/* Category Tabs */
+.pricing-categories {
     display: flex;
     justify-content: center;
+    gap: 15px;
     margin-bottom: 60px;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
-.pricing-switch {
-    background: rgba(255, 255, 255, 0.05);
+.category-btn {
+    padding: 12px 25px;
+    border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    padding: 5px;
-    display: flex;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-
-.switch-btn {
-    padding: 12px 30px;
-    border-radius: 40px;
-    border: none;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--text-secondary);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(10px);
 }
 
-.switch-btn.active {
-    color: #fff;
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
     background: var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+    color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 102, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .pricing-categories {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+    }
+
+    .category-btn {
+        flex-shrink: 0;
+    }
 }
 
 /* Pricing Grid */
@@ -155,9 +168,21 @@
 .card-desc {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     line-height: 1.5;
+}
+
+.tech-specs {
+    background: rgba(0, 102, 255, 0.1);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0c4ff;
+    margin-bottom: 25px;
+    font-family: monospace;
 }
 
 .features-list {
@@ -313,17 +338,39 @@
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 768px) {
-    .custom-quote-section {
-        padding: 40px 20px;
-    }
+.custom-quote-btn {
+    width: 100%;
+    align-self: center;
+}
 
-    .custom-quote-content h2 {
-        font-size: 2rem;
-    }
 
-    .custom-quote-btn {
-        width: 100%;
-        align-self: center;
-    }
+/* PDF Download Section */
+.pdf-download-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pdf-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pdf-download-btn:hover {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
 }

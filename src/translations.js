@@ -6,6 +6,7 @@ export const content = {
             pricing: "Fiyatlar",
             studio: "Stüdyo",
             vision: "Vizyon",
+            portfolio: "Referanslar",
             contact: "İletişim",
             cta: "Bize Ulaşın"
         },
@@ -528,6 +529,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             pricing: "Pricing",
             studio: "Studio",
             vision: "Vision",
+            portfolio: "Work",
             contact: "Contact",
             cta: "Contact Us"
         },

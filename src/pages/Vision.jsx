@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import Clients from '../components/Clients';
+import Testimonials from '../components/Testimonials'; // Assuming this component exists or creating it if not? Wait, Home.jsx used to have it but user removed it?
+// Home.jsx said: {/* Testimonials removed as per Agency-Grade request */} - Wait check translations.
 import CareerTeaser from '../components/CareerTeaser';
 import '../styles/Vision.css';
 // We can reuse styles or create new specific ones. Using inline for specific layout 
@@ -41,6 +44,10 @@ const Vision = ({ t }) => {
                     </div>
                 </div>
             </div>
+
+            <Clients t={t.clients} />
+
+            <Testimonials t={t.testimonials} />
 
             <CareerTeaser t={t} />
         </>

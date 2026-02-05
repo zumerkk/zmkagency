@@ -73,17 +73,18 @@ const Navbar = ({ t, lang, toggleLang }) => {
 
         <ul className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
           <li><Link to="/vision" onClick={closeMobileMenu}>{t.vision}</Link></li>
+          <li><Link to="/portfolio" onClick={closeMobileMenu}>{t.portfolio}</Link></li>
           <li><a href="/#services" onClick={(e) => scrollToSection(e, 'services')}>{t.services}</a></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
           <li><Link to="/pricing" onClick={closeMobileMenu}>{t.pricing}</Link></li>
           <li><Link to="/blog" onClick={closeMobileMenu}>Magazine</Link></li>
-          <li><a href="/#contact" onClick={(e) => scrollToSection(e, 'contact')}>{t.contact}</a></li>
+          <li><Link to="/contact" onClick={closeMobileMenu}>{t.contact}</Link></li>
           <li>
             <button className="lang-toggle" onClick={() => { toggleLang(); closeMobileMenu(); }}>
               {lang === 'tr' ? 'EN' : 'TR'}
             </button>
           </li>
-          <li><a href="/#contact" onClick={(e) => scrollToSection(e, 'contact')} className="cta-button">{t.cta}</a></li>
+          <li><Link to="/contact" onClick={closeMobileMenu} className="cta-button">{t.cta}</Link></li>
         </ul>
       </div>
     </nav>

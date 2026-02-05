@@ -2,25 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords, schema }) => {
+const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType, breadcrumbs }) => {
     const location = useLocation();
     const siteTitle = "ZMK AGENCY";
-    const finalTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-    const defaultDesc = "Kırıkkale'nin lider 360° Dijital Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya yönetimi, dijital dönüşüm ve kurumsal kimlik hizmetleri.";
+    const finalTitle = title ? `${title} | ${siteTitle}` : "Kırıkkale Reklam Ajansı | Web Tasarım & Dijital Pazarlama | ZMK Agency";
+    const defaultDesc = "Kırıkkale'nin lider 360° Dijital Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya yönetimi, dijital dönüşüm ve kurumsal kimlik hizmetleri ile işletmenizi büyütün.";
+
     // URL Construction
     const baseUrl = 'https://zmkagency.com';
     const path = location.pathname;
-    const currentUrl = `${baseUrl}${path}`;
-
-    // Hreflang Logic
-    // If we had a language toggle in URL (e.g. /en/pricing), we would map it here. 
-    // Since it's currently SPA state-based, we point both x-default and current to base for now, 
-    // or if the router supports localized routes later, we adapt this.
-    // For now, valid hreflang for a single-url SPA serving multi-content is tricky, 
-    // so we set x-default to the main URL.
+    const currentUrl = canonical || `${baseUrl}${path}`;
+    const defaultImage = `${baseUrl}/og-image.jpg`;
+    const finalImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`) : defaultImage;
 
     // Robust LocalBusiness Schema
-    const defaultSchema = {
+    const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "ZMK Agency",
@@ -60,6 +56,19 @@ const SEO = ({ title, description, keywords, schema }) => {
         }
     };
 
+    // Construct Schema Array
+    let schemaList = [localBusinessSchema];
+    if (schema) {
+        if (Array.isArray(schema)) {
+            schemaList = [...schemaList, ...schema];
+        } else {
+            schemaList.push(schema);
+        }
+    }
+    if (breadcrumbs) {
+        schemaList.push(breadcrumbs);
+    }
+
     return (
         <Helmet>
             <title>{finalTitle}</title>
@@ -68,27 +77,26 @@ const SEO = ({ title, description, keywords, schema }) => {
 
             <link rel="canonical" href={currentUrl} />
             <link rel="alternate" hrefLang="tr" href={baseUrl + path} />
-            <link rel="alternate" hrefLang="en" href={baseUrl + path} />
             <link rel="alternate" hrefLang="x-default" href={baseUrl + path} />
 
             {/* Open Graph / Social Media */}
             <meta property="og:title" content={finalTitle} />
             <meta property="og:description" content={description || defaultDesc} />
-            <meta property="og:type" content="website" />
+            <meta property="og:type" content={ogType || "website"} />
             <meta property="og:url" content={currentUrl} />
             <meta property="og:site_name" content="ZMK Agency" />
             <meta property="og:locale" content="tr_TR" />
-            <meta property="og:image" content={`${baseUrl}/og-image.jpg`} />
+            <meta property="og:image" content={finalImage} />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={finalTitle} />
             <meta name="twitter:description" content={description || defaultDesc} />
-            <meta name="twitter:image" content={`${baseUrl}/og-image.jpg`} />
+            <meta name="twitter:image" content={finalImage} />
 
             {/* Structured Data */}
             <script type="application/ld+json">
-                {JSON.stringify(Array.isArray(schema) ? schema : (schema || defaultSchema))}
+                {JSON.stringify(schemaList)}
             </script>
         </Helmet>
     );

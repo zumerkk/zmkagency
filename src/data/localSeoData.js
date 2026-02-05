@@ -24,6 +24,13 @@ export const localSeoData = [
             { q: "Kırıkkale'deki diğer ajanslardan farkınız nedir?", a: "Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. Global standartlardaki tasarım dilimiz, veri odaklı stratejimiz ve sonuç garantili çalışma modelimizle Kırıkkale'de benzersiz bir hizmet sunuyoruz." },
             { q: "Hangi sektörlerle çalışıyorsunuz?", a: "İnşaat, sağlık, yeme-içme, e-ticaret ve üretim başta olmak üzere Kırıkkale'deki vizyoner tüm işletmelerle çalışıyoruz." },
             { q: "Süreç nasıl başlıyor?", a: "Önce ücretsiz bir strateji görüşmesi yapıyoruz. Hedeflerinizi dinleyip size en uygun yol haritasını çiziyoruz." }
+        ],
+        keywords: "kırıkkale reklam ajansı, kırıkkale dijital pazarlama, kırıkkale reklamcı, zmk agency kırıkkale, kırıkkale kurumsal kimlik",
+        ogImage: "/og-images/reklam-ajansi.jpg",
+        relatedLinks: [
+            { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -51,6 +58,13 @@ export const localSeoData = [
             { q: "Web siteleri mobil uyumlu mu?", a: "Kesinlikle. Tüm tasarımlarımız 'Mobile First' (Önce Mobil) prensibiyle hazırlanır." },
             { q: "SEO hizmeti dahil mi?", a: "Evet, tüm web projelerimizde temel teknik SEO (Hız, Meta etiketleri, Sitemap) standart olarak sunulur." },
             { q: "Yönetim paneli var mı?", a: "Evet, sitenizi kolayca güncelleyebileceğiniz, size özel ve kullanımı kolay bir yönetim paneli sunuyoruz." }
+        ],
+        keywords: "kırıkkale web tasarım, kırıkkale yazılım firması, kırıkkale web sitesi yapan yerler, kırıkkale e-ticaret sitesi",
+        ogImage: "/og-images/web-tasarim.jpg",
+        relatedLinks: [
+            { title: "SEO Hizmeti", slug: "kirikkale-seo" },
+            { title: "Yazılım Geliştirme", slug: "kirikkale-yazilim-gelistirme" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" }
         ]
     },
     {
@@ -77,6 +91,13 @@ export const localSeoData = [
         faq: [
             { q: "Hangi platformlarda reklam veriyorsunuz?", a: "Google Ads (Arama, Display), YouTube, Facebook, Instagram, TikTok ve LinkedIn." },
             { q: "Bütçem düşük, yine de çalışabilir miyiz?", a: "Evet, her bütçeye uygun ölçeklenebilir stratejilerimiz var. Önemli olan bütçenin büyüklüğü değil, doğru kullanılmasıdır." }
+        ],
+        keywords: "kırıkkale dijital pazarlama, kırıkkale internet reklamcılığı, zmk agency pazarlama, kırıkkale sosyal medya reklam",
+        ogImage: "/og-images/dijital-pazarlama.jpg",
+        relatedLinks: [
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" },
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" }
         ]
     },
     {
@@ -103,6 +124,13 @@ export const localSeoData = [
         faq: [
             { q: "Google reklamları hemen sonuç verir mi?", a: "Evet, reklamlar yayına girdiği an potansiyel müşteriler sitenize gelmeye başlar." },
             { q: "Rakiplerimi geçebilir miyim?", a: "Doğru strateji ve kalite puanı optimizasyonu ile daha düşük bütçelerle bile rakiplerinizi geçebilirsiniz." }
+        ],
+        keywords: "kırıkkale google ads, kırıkkale adwords uzmanı, kırıkkale google reklam verme, kırıkkale seo",
+        ogImage: "/og-images/google-ads.jpg",
+        relatedLinks: [
+            { title: "SEO Danışmanlığı", slug: "kirikkale-seo-danismanligi" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -129,6 +157,13 @@ export const localSeoData = [
         faq: [
             { q: "Çekim yapıyor musunuz?", a: "Evet, Kırıkkale içi işletmelere profesyonel fotoğraf ve Reels çekim hizmeti sunuyoruz." },
             { q: "Yorumlara cevap veriyor musunuz?", a: "Evet, markanız adına gelen yorum ve mesajları kurumsal dille yanıtlıyoruz." }
+        ],
+        keywords: "kırıkkale sosyal medya yönetimi, kırıkkale instagram yönetimi, kırıkkale medya ajansı, kırıkkale tanıtım filmi",
+        ogImage: "/og-images/sosyal-medya.jpg",
+        relatedLinks: [
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" },
+            { title: "Drone Çekimi", slug: "kirikkale-drone-cekim-tanitim-filmi" },
+            { title: "Grafik Tasarım", slug: "kirikkale-grafik-tasarim-matbaa" }
         ]
     },
     {
@@ -155,6 +190,13 @@ export const localSeoData = [
         faq: [
             { q: "Hangi dilleri kullanıyorsunuz?", a: "Modern teknolojileri (React, Node.js, Python, Flutter) tercih ediyoruz." },
             { q: "Yazılımın güvenliği nasıl sağlanıyor?", a: "SSL, şifreli veritabanı ve güncel güvenlik protokolleri kullanıyoruz." }
+        ],
+        keywords: "kırıkkale yazılım şirketi, kırıkkale mobil uygulama, kırıkkale crm yazılımı, özel yazılım kırıkkale",
+        ogImage: "/og-images/yazilim-gelistirme.jpg",
+        relatedLinks: [
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" }
         ]
     },
     {
@@ -181,6 +223,13 @@ export const localSeoData = [
         faq: [
             { q: "Trendyol ve Hepsiburada entegrasyonu yapıyor musunuz?", a: "Evet, tüm pazaryerleri ile siteniz arasında stok ve fiyat senkronizasyonu sağlıyoruz." },
             { q: "E-ihracat yapabilir miyim?", a: "Evet, döviz ile satış ve yurt dışı kargo altyapınızı kuruyoruz." }
+        ],
+        keywords: "kırıkkale e-ticaret sitesi, kırıkkale pazaryeri entegrasyonu, kırıkkale eticaret danışmanlığı, internetten satış",
+        ogImage: "/og-images/e-ticaret.jpg",
+        relatedLinks: [
+            { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" },
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" }
         ]
     },
     {
@@ -207,6 +256,13 @@ export const localSeoData = [
         faq: [
             { q: "SEO ne zaman sonuç verir?", a: "SEO uzun vadeli bir yatırımdır. Genellikle 3. aydan itibaren belirgin yükselişler başlar." },
             { q: "Garantili mi?", a: "Google algoritmaları sürekli değiştiği için %100 garanti verenlere inanmayın. Ancak biz kanıtlanmış yöntemlerle başarı oranımızı en üstte tutuyoruz." }
+        ],
+        keywords: "kırıkkale seo uzmanı, kırıkkale google sıra bulucu, kırıkkale seo fiyatları, kırıkkale arama motoru optimizasyonu",
+        ogImage: "/og-images/seo.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "İçerik Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" }
         ]
     },
     {
@@ -232,6 +288,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Küçük işletmeler için uygun mu?", a: "Evet, dijital dönüşüm sadece holdingler için değil, verimlilik isteyen her işletme içindir." }
+        ],
+        keywords: "kırıkkale dijital dönüşüm, kırıkkale kobi danışmanlığı, kırıkkale iş süreçleri yönetimi, dijitalleşme",
+        ogImage: "/og-images/dijital-donusum.jpg",
+        relatedLinks: [
+            { title: "Yazılım Geliştirme", slug: "kirikkale-yazilim-gelistirme" },
+            { title: "CRM Kurulumu", slug: "kirikkale-ozel-okul-kolej-reklam" }
         ]
     },
     {
@@ -257,6 +319,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Takipçi satın alıyor musunuz?", a: "Asla. Biz tamamen organik ve gerçek kitle büyümesine odaklanıyoruz. Bot takipçiler markanıza zarar verir." }
+        ],
+        keywords: "kırıkkale instagram reklam, kırıkkale sosyal medya yönetimi, kırıkkale fenomen, kırıkkale tanıtım",
+        ogImage: "/og-images/instagram.jpg",
+        relatedLinks: [
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" },
+            { title: "Drone Çekim", slug: "kirikkale-drone-cekim-tanitim-filmi" }
         ]
     },
     {
@@ -282,6 +350,13 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Neden 360 derece çalışmalıyım?", a: "Farklı ajanslarla uğraşmak marka dilinizi bozar ve maliyeti artırır. Bütünleşik yönetim verimi %200 artırır." }
+        ],
+        keywords: "kırıkkale reklam ajansı, kırıkkale tam hizmet ajansı, kırıkkale medya planlama, 360 derece pazarlama",
+        ogImage: "/og-images/360-ajans.jpg",
+        relatedLinks: [
+            { title: "Kurumsal Kimlik", slug: "kirikkale-kurumsal-kimlik-tasarimi" },
+            { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" }
         ]
     },
     {
@@ -307,6 +382,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Hem iPhone hem Android için oluyor mu?", a: "Evet, geliştirdiğimiz uygulamalar her iki platformda da sorunsuz çalışır." }
+        ],
+        keywords: "kırıkkale mobil uygulama yapanlar, kırıkkale ios android yazılım, kırıkkale app geliştirme",
+        ogImage: "/og-images/mobil-uygulama.jpg",
+        relatedLinks: [
+            { title: "Yazılım Geliştirme", slug: "kirikkale-yazilim-gelistirme" },
+            { title: "UI/UX Tasarım", slug: "kirikkale-web-tasarim" }
         ]
     },
     {
@@ -332,6 +413,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Kaç farklı logo seçeneği sunuyorsunuz?", a: "Genellikle 3 farklı konsept sunuyoruz ve seçilen üzerinden revize yapıyoruz." }
+        ],
+        keywords: "kırıkkale logo tasarımı, kırıkkale kurumsal kimlik, kırıkkale grafik tasarım, kartvizit tasarımı kırıkkale",
+        ogImage: "/og-images/kurumsal-kimlik.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Matbaa Hizmetleri", slug: "kirikkale-grafik-tasarim-matbaa" }
         ]
     },
     {
@@ -357,6 +444,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Hangi çözünürlükte çekim yapıyorsunuz?", a: "Tüm çekimlerimiz 4K UHD kalitesindedir." }
+        ],
+        keywords: "kırıkkale drone çekimi, kırıkkale havadan çekim, kırıkkale tanıtım filmi, fabrika tanıtım filmi",
+        ogImage: "/og-images/drone-cekim.jpg",
+        relatedLinks: [
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" },
+            { title: "Video Prodüksiyon", slug: "kirikkale-reklam-ajansi" }
         ]
     },
     {
@@ -382,6 +475,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Gizlilik sözleşmesi yapıyor musunuz?", a: "Evet, siyasi çalışmalarda gizlilik en önemli prensibimizdir." }
+        ],
+        keywords: "kırıkkale seçim kampanyası, kırıkkale siyasi danışmanlık, kırıkkale aday tanıtımı, seçim reklamları",
+        ogImage: "/og-images/siyasi-danismanlik.jpg",
+        relatedLinks: [
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" },
+            { title: "Reklam Yönetimi", slug: "kirikkale-dijital-pazarlama-ajansi" }
         ]
     },
     {
@@ -407,6 +506,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "İnternet sitesi gerekiyor mu?", a: "Hayır, size özel bir sayfa üzerinden sistem çalışır." }
+        ],
+        keywords: "kırıkkale qr menü, kırıkkale dijital menü, restoran sipariş sistemi, kafe menü tasarımı",
+        ogImage: "/og-images/dijital-menu.jpg",
+        relatedLinks: [
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" },
+            { title: "Grafik Tasarım", slug: "kirikkale-grafik-tasarim-matbaa" }
         ]
     },
     {
@@ -432,6 +537,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Video çekimi var mı?", a: "Evet, Reels formatında 'House Tour' videoları çekiyoruz." }
+        ],
+        keywords: "kırıkkale emlak fotoğrafçısı, kırıkkale gayrimenkul reklamı, ev çekimi kırıkkale, sanal tur",
+        ogImage: "/og-images/emlak-cekim.jpg",
+        relatedLinks: [
+            { title: "Drone Çekimi", slug: "kirikkale-drone-cekim-tanitim-filmi" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -457,6 +568,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "İlanları otomatik çekiyor mu?", a: "Evet, entegrasyon çözümlerimiz mevcuttur." }
+        ],
+        keywords: "kırıkkale oto galeri sitesi, kırıkkale araç çekimi, galeri reklamları, oto ilan sitesi",
+        ogImage: "/og-images/oto-galeri.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -482,6 +599,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Logo tasarımı dahil mi?", a: "İsteğe bağlı olarak kurumsal kimlik setine dahil edilebilir." }
+        ],
+        keywords: "kırıkkale matbaa, kırıkkale grafik tasarım, broşür baskı kırıkkale, katalog tasarımı",
+        ogImage: "/og-images/matbaa.jpg",
+        relatedLinks: [
+            { title: "Kurumsal Kimlik", slug: "kirikkale-kurumsal-kimlik-tasarimi" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" }
         ]
     },
     {
@@ -507,6 +630,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Raporlama nasıl yapılıyor?", a: "Google Search Console ve Data Studio verileriyle şeffaf rapor sunuyoruz." }
+        ],
+        keywords: "kırıkkale seo danışmanı, organik hit artırma, google sıralama yükseltme, site analizi",
+        ogImage: "/og-images/seo-danismanligi.jpg",
+        relatedLinks: [
+            { title: "İçerik Editörlüğü", slug: "kirikkale-reklam-ajansi" },
+            { title: "Web Yazılım", slug: "kirikkale-web-tasarim" }
         ]
     },
     {
@@ -532,6 +661,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Sağlık bakanlığı mevzuatına uygun mu?", a: "Evet, tüm reklam çalışmalarımız sağlıkta tanıtım yönetmeliğine uygun hazırlanır." }
+        ],
+        keywords: "kırıkkale sağlık turizmi, hastane tanıtım filmi, doktor web sitesi, klinik reklam ajansı",
+        ogImage: "/og-images/saglik-turizmi.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -557,6 +692,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Katolog tasarımı yapıyor musunuz?", a: "Evet, hem dijital hem basılı lüks kataloglar tasarlıyoruz." }
+        ],
+        keywords: "kırıkkale inşaat reklamları, konut projesi lansmanı, inşaat kataloğu, emlak pazarlama",
+        ogImage: "/og-images/insaat-reklam.jpg",
+        relatedLinks: [
+            { title: "3D Mimari Çizim", slug: "kirikkale-3d-motion" },
+            { title: "Drone Çekimi", slug: "kirikkale-drone-cekim-tanitim-filmi" }
         ]
     },
     {
@@ -582,6 +723,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Devlet teşviklerinden yararlanabilir miyiz?", a: "Evet, e-ihracat ve dijital dönüşüm teşvikleri konusunda danışmanlık veriyoruz." }
+        ],
+        keywords: "kırıkkale sanayi dijitalleşme, fabrika web sitesi, b2b pazarlama, ihracat danışmanlığı",
+        ogImage: "/og-images/sanayi-uretim.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Katalog Tasarım", slug: "kirikkale-grafik-tasarim-matbaa" }
         ]
     },
     {
@@ -607,6 +754,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Sosyal medya yönetimi dahil mi?", a: "Evet, okul etkinliklerini ve başarılarını düzenli paylaşıyoruz." }
+        ],
+        keywords: "kırıkkale kolej reklamları, özel okul tanıtımı, okul kayıt kampanyası, eğitim danışmanlığı",
+        ogImage: "/og-images/egitim-kurumlari.jpg",
+        relatedLinks: [
+            { title: "Tanıtım Filmi", slug: "kirikkale-drone-cekim-tanitim-filmi" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
         ]
     },
     {
@@ -632,6 +785,12 @@ export const localSeoData = [
         ],
         faq: [
             { q: "Reklam yasağına uygun mu?", a: "Evet, tasarım ve içeriklerimiz tamamen reklam yasağı mevzuatına uygundur." }
+        ],
+        keywords: "kırıkkale avukat web sitesi, hukuk bürosu tasarımı, avukat seo, hukuk reklam yasağı",
+        ogImage: "/og-images/avukat-web.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "SEO", slug: "kirikkale-seo" }
         ]
     }
 ];

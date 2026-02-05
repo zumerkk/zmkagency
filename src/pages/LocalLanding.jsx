@@ -8,47 +8,30 @@ import WizardForm from '../components/WizardForm';
 const LocalLanding = ({ data, t }) => {
     const [showWizard, setShowWizard] = useState(false);
 
-    // Schema generation
-    const faqSchema = {
+    // Breadcrumb Schema
+    const breadcrumbSchema = {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": data.faq.map(item => ({
-            "@type": "Question",
-            "name": item.q,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": item.a
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Anasayfa",
+                "item": "https://zmkagency.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hizmetler",
+                "item": "https://zmkagency.com/services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": data.title,
+                "item": `https://zmkagency.com/${data.slug}`
             }
-        }))
-    };
-
-    const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": data.serviceName,
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "ZMK Agency",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Yenişehir, Kazım Karabekir Cd. No: 39/2",
-                "addressLocality": "Kırıkkale",
-                "postalCode": "71200",
-                "addressCountry": "TR"
-            }
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Kırıkkale"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Paketler",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Başlangıç Paketi" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Profesyonel Paket" } }
-            ]
-        }
+        ]
     };
 
     return (
@@ -56,8 +39,11 @@ const LocalLanding = ({ data, t }) => {
             <SEO
                 title={data.title}
                 description={data.description}
-                keywords={`kırıkkale ${data.serviceName}, kırıkkale reklam, zmk agency`}
+                keywords={data.keywords || `kırıkkale ${data.serviceName}, kırıkkale reklam, zmk agency`}
                 schema={[faqSchema, serviceSchema]}
+                breadcrumbs={breadcrumbSchema}
+                canonical={`https://zmkagency.com/${data.slug}`}
+                ogImage={data.ogImage}
             />
 
             {/* Hero Section */}
@@ -107,7 +93,7 @@ const LocalLanding = ({ data, t }) => {
             {/* Workflow Section */}
             <section className="workflow-section">
                 <div className="container">
-                    <h2 className="section-title">Nasıl Çalışıyoruz?</h2>
+                    <h2 className="section-title">{data.serviceName} Süreci</h2>
                     <div className="workflow-steps">
                         {data.workflow.map((step, index) => (
                             <div key={index} className="step-card">
@@ -143,10 +129,35 @@ const LocalLanding = ({ data, t }) => {
                 </div>
             </section>
 
+            {/* Internal Linking / Related Services */}
+            {data.relatedLinks && data.relatedLinks.length > 0 && (
+                <section className="related-services-section" style={{ padding: '80px 0', background: '#0a0a0a' }}>
+                    <div className="container">
+                        <h2 className="section-title" style={{ marginBottom: '40px', fontSize: '2rem' }}>İlginizi Çekebilecek Diğer Hizmetler</h2>
+                        <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                            {data.relatedLinks.map((link, index) => (
+                                <a key={index} href={`/${link.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div className="related-card" style={{
+                                        padding: '25px',
+                                        background: 'linear-gradient(145deg, #111, #161616)',
+                                        border: '1px solid rgba(255,255,255,0.05)',
+                                        borderRadius: '16px',
+                                        transition: 'all 0.3s ease'
+                                    }}>
+                                        <h4 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#fff' }}>{link.title}</h4>
+                                        <p style={{ fontSize: '0.9rem', color: '#aaa' }}>İncele <ArrowRight size={14} style={{ display: 'inline', marginLeft: '5px' }} /></p>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* FAQ Section */}
             <section className="faq-section">
                 <div className="container">
-                    <h2 className="section-title">Sıkça Sorulan Sorular</h2>
+                    <h2 className="section-title">Merak Edilenler</h2>
                     <div className="faq-grid">
                         {data.faq.map((item, index) => (
                             <div key={index} className="faq-item">

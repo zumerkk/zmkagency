@@ -18,8 +18,8 @@ const Home = ({ t }) => {
     return (
         <>
             <SEO
-                title="Sınırları Zorlayın. Efsaneleşin."
-                description="Kırıkkale'nin dijital rönesansı başladı. ZMK AGENCY ile sadece var olmayın, domine edin."
+                title={t.hero.title1.includes('Push') ? "360° Digital Dominance" : "360° Dijital Hakimiyet"}
+                description={t.hero.subtitle}
             />
             <Hero t={t.hero} onCtaClick={() => setShowWizard(true)} />
 

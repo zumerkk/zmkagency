@@ -12,7 +12,7 @@ export const content = {
         hero: {
             title1: "360° Dijital",
             title2: "Hakimiyet.",
-            subtitle: "Kırıkkale'nin ilk ve tek 360° Dijital Dönüşüm Ajansı. Reklam, Yazılım, Medya ve Kurumsal Kimlik yönetimiyle markanızı zirveye taşıyoruz.",
+            subtitle: "Kırıkkale'nin lider 360° Dijital Reklam Ajansı. Web tasarım, sosyal medya yönetimi ve yazılım çözümleriyle markanızı büyütün.",
             ctaPrimary: "Gücünü Keşfet",
             ctaSecondary: "Vizyonu İncele"
         },
@@ -534,7 +534,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
         hero: {
             title1: "Push Boundaries.",
             title2: "Become Legendary.",
-            subtitle: "Kırıkkale's digital renaissance has begun. Don't just exist, dominate.",
+            subtitle: "Kırıkkale's premier Digital Agency. We offer web design, social media management, and custom software solutions to dominate your market.",
             ctaPrimary: "Discover Your Power",
             ctaSecondary: "Explore Vision"
         },

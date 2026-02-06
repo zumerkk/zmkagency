@@ -1,32 +1,204 @@
-/* Vision Page Styles */
-.page-wrapper {
-    background: var(--bg-primary);
-    color: var(--text-primary);
+/* Vision Page - Ultra Premium Styles */
+
+.vision-page {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    /* Ensure premium font stack */
 }
 
-.vision-title {
+/* Manifesto Section */
+.manifesto-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.manifesto-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.manifesto-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    /* Animated in */
+    transform: translateY(30px);
+    /* Animated in */
+    animation: fadeInUp 1s ease forwards 0.2s;
+}
+
+.manifesto-text {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    /* Animated in */
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+/* Scroll Triggered Reveal */
+.reveal-text {
+    background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0.2) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1s ease;
+}
+
+.reveal-text.visible {
+    background-position: 0 0;
+}
+
+/* Stats Section - Glassmorphism */
+.vision-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.8s;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px 30px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.stat-number {
     font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 40px;
-    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    background: linear-gradient(135deg, var(--accent-primary, #0070f3), var(--accent-secondary, #f81ce5));
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.vision-subtitle {
-    color: var(--text-secondary);
+.stat-label {
+    font-size: 1.2rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* DNA / Principles Section */
+.dna-section {
+    padding: 120px 0;
+    background: #050505;
+}
+
+.dna-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.dna-item {
+    padding: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.dna-item:hover {
+    border-left-color: #fff;
+}
+
+.dna-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.dna-title {
     font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 60px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.dna-desc {
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Background Elements */
+.bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 112, 243, 0.15), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(80px);
+}
+
+.bg-glow-top {
+    top: -200px;
+    right: -200px;
+}
+
+.bg-glow-bottom {
+    bottom: -200px;
+    left: -200px;
+    background: radial-gradient(circle, rgba(248, 28, 229, 0.1), transparent 70%);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    .vision-title {
+    .manifesto-title {
         font-size: 3rem;
     }
 
-    .vision-subtitle {
+    .manifesto-text {
         font-size: 1.2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
     }
 }

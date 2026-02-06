@@ -11,18 +11,18 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "360° Dijital",
-            title2: "Hakimiyet.",
-            subtitle: "Kırıkkale'nin lider 360° Dijital Reklam Ajansı. Web tasarım, sosyal medya yönetimi ve yazılım çözümleriyle markanızı büyütün.",
-            ctaPrimary: "Gücünü Keşfet",
-            ctaSecondary: "Vizyonu İncele"
+            title1: "Kırıkkale'nin Dijital",
+            title2: "Hakimiyeti.",
+            subtitle: "Kırıkkale'nin en büyük 360° Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya, prodüksiyon ve dijital dönüşümle markanızı zirveye taşıyoruz.",
+            ctaPrimary: "Teklif Alın",
+            ctaSecondary: "Hizmetlerimiz"
         },
         vision: {
-            title: "Kırıkkale'nin Teknoloji Üssü.",
-            subtitle: "Gelecek, onu bugünden inşa edenlerin olacak.",
-            p1: "ZMK AGENCY olarak, sıradanlığa meydan okuyoruz. Bizim için teknoloji, sadece bir araç değil, bir sanat formudur. Kırıkkale'den dünyaya açılan bir kapı olarak, limitlerin sadece zihinde olduğuna inanıyoruz.",
-            p2: "Her satır kod, her piksel ve her strateji, markanızı ölümsüzleştirmek için kurgulanır. Vasatlık bizim düşmanımızdır. Mükemmeliyet, tek standardımızdır.",
-            stat1: "Sınırsız İnovasyon",
+            title: "Kırıkkale'nin Teknoloji Merkezi.",
+            subtitle: "Bugünü değil, Kırıkkale'nin dijital geleceğini inşa ediyoruz.",
+            p1: "ZMK AGENCY olarak, Kırıkkale'de standartları yeniden belirliyoruz. Bizim için teknoloji ve reklam, sadece bir iş değil, şehrimizin markalarını dünyaya açan bir köprüdür.",
+            p2: "Sıradan sosyal medya postları veya hazır web siteleri değil; işletmenizin cirosunu artıran, Kırıkkale ve ötesinde size pazar liderliği kazandıran stratejiler üretiyoruz.",
+            stat1: "Yerel Hakimiyet",
             stat2: "Global Vizyon"
         },
         services: {
@@ -156,7 +156,23 @@ export const content = {
                     process: ["Hedef Kitle Analizi", "Influencer Seçimi", "Kampanya Kurgusu", "Raporlama"]
                 }
             ],
-            items2: []
+            items2: [
+                {
+                    title: "Kırıkkale Yerel Hakimiyet",
+                    description: "Şehrin dinamiklerini biliyoruz. Kırıkkale esnafını ve şirketlerini dijitalde nasıl büyüteceğimizi iyi analiz ediyoruz.",
+                    icon: "map"
+                },
+                {
+                    title: "Yüz Yüze İletişim",
+                    description: "Sanal bir bot değiliz. Kırıkkale'deki ofisimizde çayınızı içerken stratejinizi konuşuyoruz.",
+                    icon: "users"
+                },
+                {
+                    title: "Sonuç Odaklı Strateji",
+                    description: "Sadece 'güzel' işler değil, kasa defterinize yansıyan 'kazançlı' işler yapıyoruz.",
+                    icon: "trending"
+                }
+            ]
         },
         about: {
             title: "Yeni Standart.",

@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import Services from '../components/Services';
+import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
@@ -32,7 +33,7 @@ const Home = ({ t }) => {
             <div id="agency">
                 <About t={t.about} />
             </div>
-            {/* Testimonials removed as per Agency-Grade request */}
+            <Testimonials t={t.testimonials} />
             <FAQ t={t.faq} />
             <Contact t={t.contact} />
 

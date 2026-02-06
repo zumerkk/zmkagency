@@ -73,7 +73,7 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
         <Helmet>
             <title>{finalTitle}</title>
             <meta name="description" content={description || defaultDesc} />
-            <meta name="keywords" content={keywords || "kırıkkale reklam ajansı, web tasarım kırıkkale, zmk agency, dijital pazarlama ajansı, sosyal medya yönetimi, kurumsal kimlik, yazılım ajansı"} />
+            <meta name="keywords" content={keywords || "kırıkkale reklam ajansı, web tasarım kırıkkale, zmk agency, dijital pazarlama ajansı, sosyal medya yönetimi, kırıkkale yazılım firması, kurumsal kimlik, seo danışmanlığı, kırıkkale drone çekimi"} />
 
             <link rel="canonical" href={currentUrl} />
             <link rel="alternate" hrefLang="tr" href={baseUrl + path} />

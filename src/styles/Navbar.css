@@ -7,16 +7,19 @@
     /* Reduced specific height dependency */
     padding: 20px 0;
     z-index: 1000;
-    transition: all var(--transition-normal);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.3s, padding 0.3s;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 12px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar.navbar-hidden {
+    transform: translateY(-100%);
 }
 
 .navbar-container {

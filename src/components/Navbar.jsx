@@ -5,6 +5,8 @@ import logo from '../assets/ZMK AGENCY-logo.png';
 
 const Navbar = ({ t, lang, toggleLang }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -12,19 +14,30 @@ const Navbar = ({ t, lang, toggleLang }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
+      const currentScrollY = window.scrollY;
+
+      // Determine if scrolled (for background style)
+      if (currentScrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
+
+      // Determine direction for smart hide
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHidden(true); // Scrolling down -> hide
+      } else {
+        setHidden(false); // Scrolling up -> show
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   // UseEffect to prevent scrolling when mobile menu is open
   useEffect(() => {
@@ -59,7 +72,7 @@ const Navbar = ({ t, lang, toggleLang }) => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${hidden ? 'navbar-hidden' : ''}`}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={logo} alt="ZMK Agency" />

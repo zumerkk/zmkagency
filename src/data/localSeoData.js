@@ -25,7 +25,7 @@ export const localSeoData = [
             { q: "Hangi sektörlerle çalışıyorsunuz?", a: "İnşaat, sağlık, yeme-içme, e-ticaret ve üretim başta olmak üzere Kırıkkale'deki vizyoner tüm işletmelerle çalışıyoruz." },
             { q: "Süreç nasıl başlıyor?", a: "Önce ücretsiz bir strateji görüşmesi yapıyoruz. Hedeflerinizi dinleyip size en uygun yol haritasını çiziyoruz." }
         ],
-        keywords: "kırıkkale reklam ajansı, kırıkkale dijital pazarlama, kırıkkale reklamcı, zmk agency kırıkkale, kırıkkale kurumsal kimlik",
+        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, en iyi reklam ajansı kırıkkale, zmk agency iletişim, kurumsal kimlik kırıkkale",
         ogImage: "/og-images/reklam-ajansi.jpg",
         relatedLinks: [
             { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
@@ -38,7 +38,7 @@ export const localSeoData = [
         title: "Kırıkkale Web Tasarım & Yazılım | ZMK",
         description: "Kırıkkale'de Google uyumlu, hızlı ve modern web tasarım hizmetleri. Kurumsal web sitesi, e-ticaret ve mobil uygulama çözümleri.",
         heroTitle: "Kırıkkale'nin Dijital\nYüzünü Değiştiriyoruz.",
-        heroSubtitle: "Yavaş açılan, mobil uyumsuz siteleri unutun. Size Google'da kazanan, ziyaretçiyi müşteriye çeviren web siteleri kuruyoruz.",
+        heroSubtitle: "Yavaş, demode ve mobil uyumsuz siteleri çöpe atın. Size Kırıkkale'de Google'da kazanan, ziyaretçiyi müşteriye çeviren web siteleri kuruyoruz.",
         serviceName: "Web Tasarım & Yazılım",
         proof: {
             stat1: "<1sn",
@@ -59,7 +59,7 @@ export const localSeoData = [
             { q: "SEO hizmeti dahil mi?", a: "Evet, tüm web projelerimizde temel teknik SEO (Hız, Meta etiketleri, Sitemap) standart olarak sunulur." },
             { q: "Yönetim paneli var mı?", a: "Evet, sitenizi kolayca güncelleyebileceğiniz, size özel ve kullanımı kolay bir yönetim paneli sunuyoruz." }
         ],
-        keywords: "kırıkkale web tasarım, kırıkkale yazılım firması, kırıkkale web sitesi yapan yerler, kırıkkale e-ticaret sitesi",
+        keywords: "kırıkkale web tasarım, kırıkkale web yazılım, kırıkkale internet sitesi yapanlar, kırıkkale e-ticaret paketleri, mobil uyumlu web sitesi kırıkkale",
         ogImage: "/og-images/web-tasarim.jpg",
         relatedLinks: [
             { title: "SEO Hizmeti", slug: "kirikkale-seo" },

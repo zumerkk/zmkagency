@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight, MapPin, ShieldCheck, Zap } from 'lucide-react';
 import SEO from '../components/SEO';
+import Testimonials from '../components/Testimonials';
 import '../styles/LocalLanding.css';
 import WizardForm from '../components/WizardForm';
 
@@ -32,6 +33,45 @@ const LocalLanding = ({ data, t }) => {
                 "item": `https://zmkagency.com/${data.slug}`
             }
         ]
+    };
+
+    // GOD MODE SEO: FAQ Schema
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.faq.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.a
+            }
+        }))
+    };
+
+    // GOD MODE SEO: Service Schema
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": data.serviceName,
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "ZMK Agency",
+            "image": "https://zmkagency.com/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Yenişehir, Kazım Karabekir Cd. No: 39/2",
+                "addressLocality": "Kırıkkale",
+                "postalCode": "71200",
+                "addressCountry": "TR"
+            },
+            "priceRange": "₺₺₺"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Kırıkkale"
+        },
+        "description": data.description
     };
 
     return (
@@ -131,21 +171,15 @@ const LocalLanding = ({ data, t }) => {
 
             {/* Internal Linking / Related Services */}
             {data.relatedLinks && data.relatedLinks.length > 0 && (
-                <section className="related-services-section" style={{ padding: '80px 0', background: '#0a0a0a' }}>
+                <section className="related-services-section">
                     <div className="container">
-                        <h2 className="section-title" style={{ marginBottom: '40px', fontSize: '2rem' }}>İlginizi Çekebilecek Diğer Hizmetler</h2>
-                        <div className="service-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                        <h2 className="section-title">İlginizi Çekebilecek Diğer Hizmetler</h2>
+                        <div className="related-grid">
                             {data.relatedLinks.map((link, index) => (
-                                <a key={index} href={`/${link.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div className="related-card" style={{
-                                        padding: '25px',
-                                        background: 'linear-gradient(145deg, #111, #161616)',
-                                        border: '1px solid rgba(255,255,255,0.05)',
-                                        borderRadius: '16px',
-                                        transition: 'all 0.3s ease'
-                                    }}>
-                                        <h4 style={{ fontSize: '1.2rem', marginBottom: '10px', color: '#fff' }}>{link.title}</h4>
-                                        <p style={{ fontSize: '0.9rem', color: '#aaa' }}>İncele <ArrowRight size={14} style={{ display: 'inline', marginLeft: '5px' }} /></p>
+                                <a key={index} href={`/${link.slug}`} style={{ textDecoration: 'none' }}>
+                                    <div className="related-card">
+                                        <h4>{link.title}</h4>
+                                        <p>İncele <ArrowRight size={14} /></p>
                                     </div>
                                 </a>
                             ))}
@@ -168,6 +202,9 @@ const LocalLanding = ({ data, t }) => {
                     </div>
                 </div>
             </section>
+
+            {/* Testimonials for Local Trust */}
+            <Testimonials t={t.testimonials} />
 
             {/* Final CTA */}
             <section className="final-cta">

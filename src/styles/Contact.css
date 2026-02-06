@@ -1,8 +1,15 @@
-.contact-page {
-    padding-top: 120px;
-    /* Offset for navbar */
-    padding-bottom: 80px;
-    min-height: 100vh;
+/* Contact Section Premium Styles */
+.contact-section {
+    padding: 100px 0;
+    position: relative;
+    /* Clean, centered layout */
+}
+
+.contact-container {
+    max-width: 800px;
+    /* Limit width for better focus */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact-header {
@@ -10,128 +17,121 @@
     margin-bottom: 60px;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.contact-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Form Styles */
+.contact-form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.contact-info-card {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-}
-
-.info-item h3 {
-    font-size: 18px;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.info-item p,
-.info-item a {
-    font-size: 20px;
-    color: var(--text-primary);
-    line-height: 1.5;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.info-item a:hover {
-    color: var(--accent-primary);
-}
-
-.contact-socials {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-}
-
-.contact-socials a {
-    font-size: 16px;
-    color: var(--text-secondary);
-    position: relative;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.contact-socials a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--accent-primary);
-    transition: width 0.3s ease;
-}
-
-.contact-socials a:hover::after {
+.form-group {
     width: 100%;
 }
 
-.contact-socials a:hover {
-    color: var(--text-primary);
-}
-
-.contact-form-card {
-    padding: 40px;
-}
-
-.contact-form-page {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form-page .form-group input,
-.contact-form-page .form-group textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 16px 20px;
-    color: var(--text-primary);
-    font-size: 16px;
-    font-family: inherit;
+    padding: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
 }
 
-.contact-form-page .form-group input:focus,
-.contact-form-page .form-group textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
-    border-color: var(--accent-primary);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 0 4px rgba(0, 112, 243, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
-.full-width {
+.submit-btn {
     width: 100%;
-    padding: 18px;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.map-section {
     padding: 20px;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Glass Panel Reuse (if not global) */
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Contact Info Footer */
+.contact-info {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+}
+
+.contact-info p {
+    color: #888;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 5px 15px;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #aaa;
+}
+
+/* Glass Panel Reuse */
 .glass-panel {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-header h2 {
+        font-size: 2rem;
+    }
 }

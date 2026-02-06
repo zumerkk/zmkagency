@@ -1,7 +1,37 @@
+import React, { useState, Suspense, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import ScrollToTop from './components/ScrollToTop';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
+import { content } from './translations';
+import { localSeoData } from './data/localSeoData'; // SEO Data
+import './index.css';
 
-// ... (imports)
+// Lazy Load Pages for Performance
+const Home = lazy(() => import('./pages/Home'));
+const Vision = lazy(() => import('./pages/Vision'));
+const ServiceDetail = lazy(() => import('./pages/services/ServiceDetail'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const LegalPage = lazy(() => import('./pages/legal/LegalPage'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Login = lazy(() => import('./pages/admin/Login'));
+const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
+const LocalLanding = lazy(() => import('./pages/LocalLanding')); // Local Landing Page
+const Contact = lazy(() => import('./pages/Contact')); // Contact Page
+const PortfolioPage = lazy(() => import('./pages/PortfolioPage')); // Portfolio Page
+const Blog = lazy(() => import('./pages/Blog')); // ZMK Magazine
+const BlogDetail = lazy(() => import('./pages/BlogDetail')); // Blog Detail Page
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Loading Fallback Component
+const PageLoader = () => (
+  <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000', color: '#fff' }}>
+    <p>Loading ZMK Experience...</p>
+  </div>
+);
 
 function App() {
   const [lang, setLang] = useState('tr'); // Default to Turkish

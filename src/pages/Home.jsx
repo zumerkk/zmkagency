@@ -15,8 +15,11 @@ import Portfolio from '../components/Portfolio';
 
 import LocalDominance from '../components/LocalDominance';
 
+import { useNavigate } from 'react-router-dom';
+
 const Home = ({ t }) => {
     const [showWizard, setShowWizard] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <>
@@ -26,7 +29,7 @@ const Home = ({ t }) => {
             />
             <Hero t={t.hero} onCtaClick={() => setShowWizard(true)} />
 
-            <LocalDominance t={t.localDominance} onCtaClick={() => document.getElementById('pricing-grid')?.scrollIntoView({ behavior: 'smooth' })} />
+            <LocalDominance t={t.localDominance} onCtaClick={() => navigate('/pricing')} />
 
             <Clients t={t.clients} />
             <div id="services">

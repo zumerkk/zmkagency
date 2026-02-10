@@ -287,279 +287,278 @@ export const content = {
             cta: "Planı Seç",
             popularTag: "En Çok Tercih Edilen",
             items: {
-                items: {
-                    local: [
-                        {
-                            title: "Bölgesel Hakimiyet",
-                            price: "20.000",
-                            period: " (Tek Seferlik)",
-                            isPopular: true,
-                            description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
-                            techSpecs: "Site + Harita + Sosyal",
-                            features: [
-                                "Google Harita (Business) Kaydı & Optimizasyon",
-                                "One-Page (Tek Sayfa) Tanıtım Sitesi",
-                                "Instagram & Facebook Hesap Kurulumu",
-                                "Mekan Çekimi (30sn) & Fotoğraf",
-                                "QR Menü / Kartvizit Tasarımı"
-                            ]
-                        },
-                        {
-                            title: "Kırıkkale Lideri",
-                            price: "30.000",
-                            period: "/ay",
-                            description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
-                            techSpecs: "Aylık Tam Yönetim",
-                            features: [
-                                "Tüm Sosyal Medya Yönetimi (Post + Reels)",
-                                "Haftalık Düzenli Ziyaret & Çekim",
-                                "Google Reklam Yönetimi",
-                                "Harita Yorum & İtibar Yönetimi",
-                                "Aylık Kampanya Kurgusu"
-                            ]
-                        },
-                        {
-                            title: "Dijital Fabrika (Kurumsal)",
-                            price: "50.000+",
-                            period: " (Proje Bazlı)",
-                            description: "Fabrikalar ve büyük işletmeler için özel prodüksiyon ve tanıtım.",
-                            techSpecs: "Drone + 4K Prodüksiyon",
-                            features: [
-                                "Havadan Drone Çekimi (4K)",
-                                "Kurumsal Tanıtım Filmi",
-                                "Çok Dilli Web Sitesi",
-                                "Katalog & Broşür Tasarımı",
-                                "LinkedIn Yönetimi"
-                            ]
-                        }
-                    ],
-                    retainer: [
-                        {
-                            title: "Startup Growth",
-                            price: "25.000",
-                            period: "/ay",
-                            description: "Yeni girişimler için temel dijital varlık ve büyüme paketi.",
-                            techSpecs: "Sosyal Medya + Temel SEO",
-                            features: [
-                                "Sosyal Medya Yönetimi (2 Platform)",
-                                "Haftalık 3 Post + 1 Reel",
-                                "Temel SEO Optimizasyonu",
-                                "Aylık Performans Raporu",
-                                "E-posta Desteği"
-                            ]
-                        },
-                        {
-                            title: "Scale Up",
-                            price: "45.000",
-                            period: "/ay",
-                            isPopular: true,
-                            description: "Hızlı büyüme hedefleyen işletmeler için agresif strateji.",
-                            techSpecs: "Full S.Media + Ads + SEO",
-                            features: [
-                                "Sosyal Medya Yönetimi (4 Platform)",
-                                "Haftalık 5 Post + 3 Reel",
-                                "İleri Düzey SEO & Blog",
-                                "Google & Meta Reklam Yönetimi",
-                                "Topluluk Yönetimi & Moderasyon",
-                                "15 Günde Bir Strateji Toplantısı"
-                            ]
-                        },
-                        {
-                            title: "Market Domination",
-                            price: "80.000+",
-                            period: "/ay",
-                            description: "Sektör liderliği için tam kapsamlı dijital departman.",
-                            techSpecs: "7/24 Dedike Ekip",
-                            features: [
-                                "Tüm Dijital Platformlar",
-                                "Günlük İçerik & Viral Prodüksiyon",
-                                "Ulusal SEO & Pr Çalışmaları",
-                                "Growth Hacking Stratejileri",
-                                "Kriz Yönetimi & İtibar Koruma",
-                                "7/24 VIP Destek Hattı"
-                            ]
-                        }
-                    ],
-                    webSoftware: [
-                        {
-                            title: "Kurumsal Web Sitesi",
-                            price: "25.000",
-                            period: "'den itibaren",
-                            isPopular: true,
-                            description: "Markanızın dijital vitrini. Hızlı, güvenli ve mobil uyumlu.",
-                            techSpecs: "Next.js / React / Vercel",
-                            features: [
-                                "Özel UX/UI Tasarım",
-                                "CMS (İçerik Yönetimi)",
-                                "SEO Uyumlu Altyapı",
-                                "Hızlı Yükleme (<1sn)",
-                                "Çoklu Dil Desteği"
-                            ]
-                        },
-                        {
-                            title: "E-Ticaret Çözümleri",
-                            price: "60.000",
-                            period: "'den itibaren",
-                            description: "Satış odaklı, yüksek dönüşüm oranlı online mağazalar.",
-                            techSpecs: "Shopify / Custom Headless",
-                            features: [
-                                "Gelişmiş Stok & Sipariş Yönetimi",
-                                "Ödeme Sistemleri Entegrasyonu",
-                                "Pazaryeri Entegrasyonları",
-                                "Kampanya Modülleri",
-                                "Kullanıcı Paneli"
-                            ]
-                        },
-                        {
-                            title: "Özel Yazılım / App",
-                            price: "150.000+",
-                            period: "'den itibaren",
-                            description: "İş süreçlerinize özel web ve mobil uygulamalar.",
-                            techSpecs: "React Native / Node.js / AWS",
-                            features: [
-                                "iOS & Android Uygulama",
-                                "SaaS Geliştirme",
-                                "CRM / ERP Entegrasyonları",
-                                "Mikroservis Mimarisi",
-                                "Bulut Altyapısı"
-                            ]
-                        }
-                    ],
-                    marketingAds: [
-                        {
-                            title: "Google Ads (SEM)",
-                            price: "15.000",
-                            period: "/ay + Bütçe",
-                            description: "Arama sonuçlarında en tepede yer alın.",
-                            techSpecs: "Search + Display + Shopping",
-                            features: [
-                                "Anahtar Kelime Analizi",
-                                "Rakip Analizi",
-                                "Dönüşüm Kurulumu",
-                                "Negatif Kelime Optimizasyonu",
-                                "A/B Testleri"
-                            ]
-                        },
-                        {
-                            title: "Sosyal Medya Reklamları",
-                            price: "15.000",
-                            period: "/ay + Bütçe",
-                            description: "Hedef kitlenize nokta atışı ulaşın.",
-                            techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
-                            features: [
-                                "Hedef Kitle Segmentasyonu",
-                                "Retargeting Kurguları",
-                                "Kreatif Tasarım Desteği",
-                                "Pixel & CAPI Kurulumu",
-                                "ROAS Odaklı Yönetim"
-                            ]
-                        }
-                    ],
-                    seoData: [
-                        {
-                            title: "Lokal SEO Paketi",
-                            price: "15.000",
-                            period: "/ay",
-                            description: "Bölgenizdeki aramalarda haritalarda ve sonuçlarda ilk sıra.",
-                            techSpecs: "GMB + Local Citations",
-                            features: [
-                                "Google My Business Optimizasyonu",
-                                "Yerel Backlink Çalışması",
-                                "Yorum & İtibar Yönetimi",
-                                "Haftalık GMB Postları"
-                            ]
-                        },
-                        {
-                            title: "Ulusal / Global SEO",
-                            price: "35.000",
-                            period: "/ay",
-                            description: "Büyük ölçekli rekabet ve organik trafik artışı.",
-                            techSpecs: "Technical + Content + Off-page",
-                            features: [
-                                "Kapsamlı Teknik Audit",
-                                "İçerik Stratejisi & Blog",
-                                "Otoriter Backlink İnşası",
-                                "Rakip Gap Analizi",
-                                "Core Web Vitals İyileştirmesi"
-                            ]
-                        }
-                    ],
-                    production: [
-                        {
-                            title: "Tanıtım Filmi",
-                            price: "40.000",
-                            period: "'den itibaren",
-                            description: "Markanızı sinematik bir dille anlatın.",
-                            techSpecs: "4K Cinema Line + Drone",
-                            features: [
-                                "Senaryo & Kurgu",
-                                "Profesyonel Seslendirme",
-                                "Drone Çekimleri",
-                                "Renk & Ses Miksajı",
-                                "Sosyal Medya Teaserları"
-                            ]
-                        },
-                        {
-                            title: "Ürün Fotoğrafçılığı",
-                            price: "20.000",
-                            period: "'den itibaren",
-                            description: "E-ticaret ve katalog için profesyonel kareler.",
-                            techSpecs: "Stüdyo / Dış Çekim",
-                            features: [
-                                "Konsept Geliştirme",
-                                "Dekupaj & Retouch",
-                                "Model & Mekan Kullanımı",
-                                "Yüksek Çözünürlüklü Teslim"
-                            ]
-                        }
-                    ],
-                    branding: [
-                        {
-                            title: "Kurumsal Kimlik",
-                            price: "30.000",
-                            period: "'den itibaren",
-                            description: "Markanızın yüzünü profesyonelce tasarlayın.",
-                            techSpecs: "Vector + Print Ready",
-                            features: [
-                                "Logo Tasarımı",
-                                "Renk Paleti & Tipografi",
-                                "Kartvizit & Antetli Kağıt",
-                                "Brand Book (Kullanım Kılavuzu)",
-                                "Sosyal Medya Kit"
-                            ]
-                        }
-                    ]
-                },
-                customQuote: {
-                    title: "Standartların Dışında?",
-                    subtitle: "Hazır paketler sizi yansıtmıyorsa, hayalinizdeki projeyi anlatın. Size özel bir yol haritası çizelim.",
-                    placeholder: "Projenizden, hedeflerinizden ve bütçe aralığınızdan kısaca bahsedin...",
-                    cta: "Özel Teklif Al"
-                },
-                roi: {
-                    title: "Yatırım Getirisi Simülatörü",
-                    subtitle: "Dijital pazarlama harcama değil, yatırımdır. Potansiyelinizi hesaplayın."
-                }
-            },
-            comparison: {
-                title: "Neden ZMK?",
-                standard: "Diğer Ajanslar",
-                rows: [
-                    { feature: "Teknoloji Altyapısı", standard: "Yavaş Wordpress / Hazır Şablon", zmk: "Özel Kodlama / React / Next.js" },
-                    { feature: "Raporlama & Şeffaflık", standard: "Ay Sonu PDF Raporu", zmk: "Canlı Müşteri Paneli (Dashboard)" },
-                    { feature: "Fiyat Politikası", standard: "Gizli Maliyetler & Sürprizler", zmk: "Şeffaf & Ölçeklenebilir Paketler" },
-                    { feature: "Hız & Performans", standard: "Ortalama (3-5 sn Yükleme)", zmk: "Işık Hızında (<1 sn Yükleme)" },
-                    { feature: "SEO & Görünürlük", standard: "Temel Ayarlar", zmk: "Kırıkkale & Global Dominasyon" },
-                    { feature: "Vizyon & Hedef", standard: "Sadece İş Teslimi", zmk: "Pazar Hakimiyeti & Büyüme" }
+                local: [
+                    {
+                        title: "Bölgesel Hakimiyet",
+                        price: "20.000",
+                        period: " (Tek Seferlik)",
+                        isPopular: true,
+                        description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
+                        techSpecs: "Site + Harita + Sosyal",
+                        features: [
+                            "Google Harita (Business) Kaydı & Optimizasyon",
+                            "One-Page (Tek Sayfa) Tanıtım Sitesi",
+                            "Instagram & Facebook Hesap Kurulumu",
+                            "Mekan Çekimi (30sn) & Fotoğraf",
+                            "QR Menü / Kartvizit Tasarımı"
+                        ]
+                    },
+                    {
+                        title: "Kırıkkale Lideri",
+                        price: "30.000",
+                        period: "/ay",
+                        description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
+                        techSpecs: "Aylık Tam Yönetim",
+                        features: [
+                            "Tüm Sosyal Medya Yönetimi (Post + Reels)",
+                            "Haftalık Düzenli Ziyaret & Çekim",
+                            "Google Reklam Yönetimi",
+                            "Harita Yorum & İtibar Yönetimi",
+                            "Aylık Kampanya Kurgusu"
+                        ]
+                    },
+                    {
+                        title: "Dijital Fabrika (Kurumsal)",
+                        price: "50.000+",
+                        period: " (Proje Bazlı)",
+                        description: "Fabrikalar ve büyük işletmeler için özel prodüksiyon ve tanıtım.",
+                        techSpecs: "Drone + 4K Prodüksiyon",
+                        features: [
+                            "Havadan Drone Çekimi (4K)",
+                            "Kurumsal Tanıtım Filmi",
+                            "Çok Dilli Web Sitesi",
+                            "Katalog & Broşür Tasarımı",
+                            "LinkedIn Yönetimi"
+                        ]
+                    }
+                ],
+                retainer: [
+                    {
+                        title: "Startup Growth",
+                        price: "25.000",
+                        period: "/ay",
+                        description: "Yeni girişimler için temel dijital varlık ve büyüme paketi.",
+                        techSpecs: "Sosyal Medya + Temel SEO",
+                        features: [
+                            "Sosyal Medya Yönetimi (2 Platform)",
+                            "Haftalık 3 Post + 1 Reel",
+                            "Temel SEO Optimizasyonu",
+                            "Aylık Performans Raporu",
+                            "E-posta Desteği"
+                        ]
+                    },
+                    {
+                        title: "Scale Up",
+                        price: "45.000",
+                        period: "/ay",
+                        isPopular: true,
+                        description: "Hızlı büyüme hedefleyen işletmeler için agresif strateji.",
+                        techSpecs: "Full S.Media + Ads + SEO",
+                        features: [
+                            "Sosyal Medya Yönetimi (4 Platform)",
+                            "Haftalık 5 Post + 3 Reel",
+                            "İleri Düzey SEO & Blog",
+                            "Google & Meta Reklam Yönetimi",
+                            "Topluluk Yönetimi & Moderasyon",
+                            "15 Günde Bir Strateji Toplantısı"
+                        ]
+                    },
+                    {
+                        title: "Market Domination",
+                        price: "80.000+",
+                        period: "/ay",
+                        description: "Sektör liderliği için tam kapsamlı dijital departman.",
+                        techSpecs: "7/24 Dedike Ekip",
+                        features: [
+                            "Tüm Dijital Platformlar",
+                            "Günlük İçerik & Viral Prodüksiyon",
+                            "Ulusal SEO & Pr Çalışmaları",
+                            "Growth Hacking Stratejileri",
+                            "Kriz Yönetimi & İtibar Koruma",
+                            "7/24 VIP Destek Hattı"
+                        ]
+                    }
+                ],
+                webSoftware: [
+                    {
+                        title: "Kurumsal Web Sitesi",
+                        price: "25.000",
+                        period: "'den itibaren",
+                        isPopular: true,
+                        description: "Markanızın dijital vitrini. Hızlı, güvenli ve mobil uyumlu.",
+                        techSpecs: "Next.js / React / Vercel",
+                        features: [
+                            "Özel UX/UI Tasarım",
+                            "CMS (İçerik Yönetimi)",
+                            "SEO Uyumlu Altyapı",
+                            "Hızlı Yükleme (<1sn)",
+                            "Çoklu Dil Desteği"
+                        ]
+                    },
+                    {
+                        title: "E-Ticaret Çözümleri",
+                        price: "60.000",
+                        period: "'den itibaren",
+                        description: "Satış odaklı, yüksek dönüşüm oranlı online mağazalar.",
+                        techSpecs: "Shopify / Custom Headless",
+                        features: [
+                            "Gelişmiş Stok & Sipariş Yönetimi",
+                            "Ödeme Sistemleri Entegrasyonu",
+                            "Pazaryeri Entegrasyonları",
+                            "Kampanya Modülleri",
+                            "Kullanıcı Paneli"
+                        ]
+                    },
+                    {
+                        title: "Özel Yazılım / App",
+                        price: "150.000+",
+                        period: "'den itibaren",
+                        description: "İş süreçlerinize özel web ve mobil uygulamalar.",
+                        techSpecs: "React Native / Node.js / AWS",
+                        features: [
+                            "iOS & Android Uygulama",
+                            "SaaS Geliştirme",
+                            "CRM / ERP Entegrasyonları",
+                            "Mikroservis Mimarisi",
+                            "Bulut Altyapısı"
+                        ]
+                    }
+                ],
+                marketingAds: [
+                    {
+                        title: "Google Ads (SEM)",
+                        price: "15.000",
+                        period: "/ay + Bütçe",
+                        description: "Arama sonuçlarında en tepede yer alın.",
+                        techSpecs: "Search + Display + Shopping",
+                        features: [
+                            "Anahtar Kelime Analizi",
+                            "Rakip Analizi",
+                            "Dönüşüm Kurulumu",
+                            "Negatif Kelime Optimizasyonu",
+                            "A/B Testleri"
+                        ]
+                    },
+                    {
+                        title: "Sosyal Medya Reklamları",
+                        price: "15.000",
+                        period: "/ay + Bütçe",
+                        description: "Hedef kitlenize nokta atışı ulaşın.",
+                        techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
+                        features: [
+                            "Hedef Kitle Segmentasyonu",
+                            "Retargeting Kurguları",
+                            "Kreatif Tasarım Desteği",
+                            "Pixel & CAPI Kurulumu",
+                            "ROAS Odaklı Yönetim"
+                        ]
+                    }
+                ],
+                seoData: [
+                    {
+                        title: "Lokal SEO Paketi",
+                        price: "15.000",
+                        period: "/ay",
+                        description: "Bölgenizdeki aramalarda haritalarda ve sonuçlarda ilk sıra.",
+                        techSpecs: "GMB + Local Citations",
+                        features: [
+                            "Google My Business Optimizasyonu",
+                            "Yerel Backlink Çalışması",
+                            "Yorum & İtibar Yönetimi",
+                            "Haftalık GMB Postları"
+                        ]
+                    },
+                    {
+                        title: "Ulusal / Global SEO",
+                        price: "35.000",
+                        period: "/ay",
+                        description: "Büyük ölçekli rekabet ve organik trafik artışı.",
+                        techSpecs: "Technical + Content + Off-page",
+                        features: [
+                            "Kapsamlı Teknik Audit",
+                            "İçerik Stratejisi & Blog",
+                            "Otoriter Backlink İnşası",
+                            "Rakip Gap Analizi",
+                            "Core Web Vitals İyileştirmesi"
+                        ]
+                    }
+                ],
+                production: [
+                    {
+                        title: "Tanıtım Filmi",
+                        price: "40.000",
+                        period: "'den itibaren",
+                        description: "Markanızı sinematik bir dille anlatın.",
+                        techSpecs: "4K Cinema Line + Drone",
+                        features: [
+                            "Senaryo & Kurgu",
+                            "Profesyonel Seslendirme",
+                            "Drone Çekimleri",
+                            "Renk & Ses Miksajı",
+                            "Sosyal Medya Teaserları"
+                        ]
+                    },
+                    {
+                        title: "Ürün Fotoğrafçılığı",
+                        price: "20.000",
+                        period: "'den itibaren",
+                        description: "E-ticaret ve katalog için profesyonel kareler.",
+                        techSpecs: "Stüdyo / Dış Çekim",
+                        features: [
+                            "Konsept Geliştirme",
+                            "Dekupaj & Retouch",
+                            "Model & Mekan Kullanımı",
+                            "Yüksek Çözünürlüklü Teslim"
+                        ]
+                    }
+                ],
+                branding: [
+                    {
+                        title: "Kurumsal Kimlik",
+                        price: "30.000",
+                        period: "'den itibaren",
+                        description: "Markanızın yüzünü profesyonelce tasarlayın.",
+                        techSpecs: "Vector + Print Ready",
+                        features: [
+                            "Logo Tasarımı",
+                            "Renk Paleti & Tipografi",
+                            "Kartvizit & Antetli Kağıt",
+                            "Brand Book (Kullanım Kılavuzu)",
+                            "Sosyal Medya Kit"
+                        ]
+                    }
                 ]
             },
-            ctaFloat: "Hızlı Teklif Al",
-            // END MAGNUM OPUS
-            legal: {
-                privacyTitle: "Gizlilik Politikası",
-                termsTitle: "Kullanım Koşulları",
-                lastUpdated: "Son Güncelleme: 27 Ocak 2026",
-                privacyText: `ZMK AGENCY ("Şirket") olarak, gizliliğinize ve kişisel verilerinizin korunmasına en üst düzeyde önem veriyoruz. İşbu Gizlilik Politikası, web sitemizi ve hizmetlerimizi kullanımınız sırasında toplanan verilerin nasıl işlendiğini, saklandığını ve korunduğunu açıklamaktadır.
+            customQuote: {
+                title: "Standartların Dışında?",
+                subtitle: "Hazır paketler sizi yansıtmıyorsa, hayalinizdeki projeyi anlatın. Size özel bir yol haritası çizelim.",
+                placeholder: "Projenizden, hedeflerinizden ve bütçe aralığınızdan kısaca bahsedin...",
+                cta: "Özel Teklif Al"
+            },
+            roi: {
+                title: "Yatırım Getirisi Simülatörü",
+                subtitle: "Dijital pazarlama harcama değil, yatırımdır. Potansiyelinizi hesaplayın."
+            }
+        },
+        comparison: {
+            title: "Neden ZMK?",
+            standard: "Diğer Ajanslar",
+            rows: [
+                { feature: "Teknoloji Altyapısı", standard: "Yavaş Wordpress / Hazır Şablon", zmk: "Özel Kodlama / React / Next.js" },
+                { feature: "Raporlama & Şeffaflık", standard: "Ay Sonu PDF Raporu", zmk: "Canlı Müşteri Paneli (Dashboard)" },
+                { feature: "Fiyat Politikası", standard: "Gizli Maliyetler & Sürprizler", zmk: "Şeffaf & Ölçeklenebilir Paketler" },
+                { feature: "Hız & Performans", standard: "Ortalama (3-5 sn Yükleme)", zmk: "Işık Hızında (<1 sn Yükleme)" },
+                { feature: "SEO & Görünürlük", standard: "Temel Ayarlar", zmk: "Kırıkkale & Global Dominasyon" },
+                { feature: "Vizyon & Hedef", standard: "Sadece İş Teslimi", zmk: "Pazar Hakimiyeti & Büyüme" }
+            ]
+        },
+        ctaFloat: "Hızlı Teklif Al",
+        // END MAGNUM OPUS
+        legal: {
+            privacyTitle: "Gizlilik Politikası",
+            termsTitle: "Kullanım Koşulları",
+            lastUpdated: "Son Güncelleme: 27 Ocak 2026",
+            privacyText: `ZMK AGENCY ("Şirket") olarak, gizliliğinize ve kişisel verilerinizin korunmasına en üst düzeyde önem veriyoruz. İşbu Gizlilik Politikası, web sitemizi ve hizmetlerimizi kullanımınız sırasında toplanan verilerin nasıl işlendiğini, saklandığını ve korunduğunu açıklamaktadır.
 
 1. VERİ TOPLAMA VE KULLANIM
 Hizmetlerimizi en iyi şekilde sunabilmek adına, iletişim formları, çerezler ve analitik araçlar aracılığıyla sınırlı kişisel veri (Ad, E-posta, IP adresi vb.) toplamaktayız. Bu veriler, sadece size dönüş yapmak ve hizmet kalitemizi artırmak amacıyla kullanılır. Üçüncü şahıslarla asla izniniz olmadan paylaşılmaz.
@@ -572,7 +571,7 @@ Kullanıcı deneyiminizi iyileştirmek için sitemizde teknik ve analitik çerez
 
 4. HAKLARINIZ
 KVKK ve ilgili mevzuatlar uyarınca, verilerinizin silinmesini, güncellenmesini veya anonimleştirilmesini talep etme hakkına sahipsiniz.`,
-                termsText: `ZMK AGENCY web sitesini ve hizmetlerini kullanarak, aşağıdaki hüküm ve koşulları kabul etmiş sayılırsınız.
+            termsText: `ZMK AGENCY web sitesini ve hizmetlerini kullanarak, aşağıdaki hüküm ve koşulları kabul etmiş sayılırsınız.
 
 1. HİZMET KAPSAMI
 ZMK AGENCY, dijital pazarlama, yazılım geliştirme ve prodüksiyon hizmetleri sunar. Hizmetlerin detayları, taraflar arasında imzalanacak özel sözleşmelerle belirlenir. Web sitesindeki bilgiler bilgilendirme amaçlıdır.
@@ -585,414 +584,414 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
 
 4. DEĞİŞİKLİKLER
 Şirket, işbu koşulları dilediği zaman güncelleme hakkını saklı tutar. Değişiklikler sitede yayınlandığı andan itibaren yürürlüğe girer.`
-            },
-            footer: {
-                aboutText: "Dijital mükemmellik için kurumsal çözüm ortağınız.",
-                links: "Hızlı Erişim",
-                services: "Hizmetler",
-                legal: "Yasal",
-                privacy: "Gizlilik Politikası",
-                terms: "Kullanım Koşulları",
-                address: "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5, 71200 Kırıkkale Merkez/Kırıkkale",
-                copyright: "© 2026 ZMK AGENCY. Tüm hakları saklıdır."
+        },
+        footer: {
+            aboutText: "Dijital mükemmellik için kurumsal çözüm ortağınız.",
+            links: "Hızlı Erişim",
+            services: "Hizmetler",
+            legal: "Yasal",
+            privacy: "Gizlilik Politikası",
+            terms: "Kullanım Koşulları",
+            address: "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5, 71200 Kırıkkale Merkez/Kırıkkale",
+            copyright: "© 2026 ZMK AGENCY. Tüm hakları saklıdır."
+        }
+    },
+    en: {
+        nav: {
+            services: "Services",
+            agency: "Agency",
+            pricing: "Pricing",
+            studio: "Studio",
+            vision: "Vision",
+            portfolio: "Work",
+            contact: "Contact",
+            cta: "Contact Us"
+        },
+        hero: {
+            title1: "Push Boundaries.",
+            title2: "Become Legendary.",
+            subtitle: "Kırıkkale's premier Digital Agency. We offer web design, social media management, and custom software solutions to dominate your market.",
+            ctaPrimary: "Discover Your Power",
+            ctaSecondary: "Explore Vision"
+        },
+        vision: {
+            title: "Architects of the Renaissance.",
+            subtitle: "The future is shaped by those who build it.",
+            p1: "At ZMK AGENCY, we challenge the mundane. For us, technology is not just a tool, but an art form. As a gateway from Kırıkkale to the world, we believe limits exist only in the mind.",
+            p2: "Every line of code, every pixel, and every strategy is engineered to immortalize your brand. Mediocrity is our enemy. Perfection is our only standard.",
+            stat1: "Limitless Innovation",
+            stat2: "Global Vision"
+        },
+        services: {
+            title: "Beyond Expectation.",
+            subtitle: "Comprehensive digital solutions engineered for market leadership.",
+            moreDetails: "More Details",
+            viewAll: "View All Services",
+            items: [
+                {
+                    id: "software",
+                    title: "Software Development",
+                    description: "Custom enterprise solutions, mobile applications, and scalable architecture designed for growth.",
+                    icon: "💻",
+                    detailTitle: "Peak Software Engineering",
+                    detailText: "We build living, evolving software ecosystems tailored to your business DNA. No spaghetti code, just pure performance and security. We architecture systems ready for tomorrow's demands today.",
+                    features: ["Microservices Architecture", "Cloud-Native Solutions", "High Scalability", "Bank-Grade Security"],
+                    process: ["Analysis & Architecture", "Agile Development", "QA & Security", "DevOps & Scale"]
+                },
+                {
+                    id: "web-seo",
+                    title: "Web & SEO",
+                    description: "High-performance websites and strategic SEO to dominate search rankings and drive conversion.",
+                    icon: "globe",
+                    detailTitle: "Digital Dominance",
+                    detailText: "Web experiences that don't just look good, but crush competitors in search, load in milliseconds, and convert visitors to customers. We blend speed, aesthetics, and psychology into one powerful package.",
+                    features: ["Core Web Vitals Optimization", "Semantic SEO Structure", "Ultra-Fast Loading", "Conversion Focused UX"],
+                    process: ["UX/UI Design", "Frontend Magic", "Technical SEO", "Conversion Optimization"]
+                },
+                {
+                    id: "social-media",
+                    title: "Social Media Management",
+                    description: "Full-spectrum management. We take you from zero to phenomenon with viral strategies.",
+                    icon: "iphone",
+                    detailTitle: "Community & Culture Building",
+                    detailText: "We transform your brand from a logo into a movement. We don't just hack algorithms; we hack human psychology. We don't just post; we build culture.",
+                    features: ["Viral Content Strategy", "Community Management", "Influencer Collaborations", "Crisis Management"],
+                    process: ["Content Strategy", "Viral Production", "Community Management", "Analytics Reporting"]
+                },
+                {
+                    id: "production",
+                    title: "Production Studio",
+                    description: "Cinema-quality commercials, corporate shoots, and high-end visual storytelling.",
+                    icon: "camera",
+                    detailTitle: "Visual Storytelling",
+                    detailText: "We tell your brand's story with Hollywood-grade equipment and vision, creating blockbuster-level content. Every frame is a piece of art.",
+                    features: ["4K/8K Cinematic Shooting", "Drone & Aerial Imaging", "VFX & Motion Graphics", "Professional Sound Design"],
+                    process: ["Concept & Script", "Cinematic Shooting", "Post-Production (VFX)", "Color Grading"]
+                },
+                {
+                    id: "brand",
+                    title: "Brand Strategy & Identity",
+                    description: "More than a logo. We build your brand's soul, stance, and corporate voice from scratch.",
+                    icon: "art",
+                    detailTitle: "Building Corporate Soul",
+                    features: ["Logo & Identity", "Brand Voice & Tone", "Visual Language", "Rebranding"],
+                    process: ["Discovery", "Strategy", "Design", "Implementation"]
+                },
+                {
+                    id: "data",
+                    title: "Data Analytics & Growth",
+                    description: "Aggressive growth and performance marketing strategies based on data, not guesses.",
+                    icon: "chart",
+                    detailTitle: "Data-Driven Growth",
+                    features: ["Funnel Analysis", "User Behavior", "A/B Testing", "Growth Hacking"],
+                    process: ["Data Collection", "Analysis", "Hypothesis", "Test & Optimize"]
+                }
+            ]
+        },
+        about: {
+            title: "The New Standard.",
+            text: "ZMK AGENCY is not just a digital firm; we are the architects of Kırıkkale's digital future. We combine silicon-valley aesthetics with relentless execution to build brands that are impossible to ignore. Working with us is not a service; it's a partnership in revolution.",
+            stats: {
+                focus: "Client Focus",
+                rank: "Target Ranking"
             }
         },
-        en: {
-            nav: {
-                services: "Services",
-                agency: "Agency",
-                pricing: "Pricing",
-                studio: "Studio",
-                vision: "Vision",
-                portfolio: "Work",
-                contact: "Contact",
-                cta: "Contact Us"
-            },
-            hero: {
-                title1: "Push Boundaries.",
-                title2: "Become Legendary.",
-                subtitle: "Kırıkkale's premier Digital Agency. We offer web design, social media management, and custom software solutions to dominate your market.",
-                ctaPrimary: "Discover Your Power",
-                ctaSecondary: "Explore Vision"
-            },
-            vision: {
-                title: "Architects of the Renaissance.",
-                subtitle: "The future is shaped by those who build it.",
-                p1: "At ZMK AGENCY, we challenge the mundane. For us, technology is not just a tool, but an art form. As a gateway from Kırıkkale to the world, we believe limits exist only in the mind.",
-                p2: "Every line of code, every pixel, and every strategy is engineered to immortalize your brand. Mediocrity is our enemy. Perfection is our only standard.",
-                stat1: "Limitless Innovation",
-                stat2: "Global Vision"
-            },
-            services: {
-                title: "Beyond Expectation.",
-                subtitle: "Comprehensive digital solutions engineered for market leadership.",
-                moreDetails: "More Details",
-                viewAll: "View All Services",
-                items: [
+        contact: {
+            title: "Let's Talk.",
+            subtitle: "Ready to transform your brand? Get in touch.",
+            namePlaceholder: "Name",
+            emailPlaceholder: "Email",
+            messagePlaceholder: "Project Details",
+            submit: "Send Message",
+            location: "Kırıkkale, Turkey"
+        },
+        clients: {
+            title: "Trusted By"
+        },
+        // MAGNUM OPUS ADDITIONS EN
+        wizard: {
+            step1Title: "What are we building?",
+            step2Title: "Project Scale?",
+            step3Title: "Details & Contact",
+            next: "Continue",
+            back: "Back",
+            finish: "Start Project",
+            detailsPlaceholder: "Briefly describe your vision...",
+            contactPlaceholder: "Your Email",
+            namePlaceholder: "Full Name",
+            // Localized Options
+            typeOptions: ["Web & Mobile App", "Brand Identity", "Social Media", "Full Scale Transformation"],
+            budgetOptions: ["Startup (Entry)", "Business (Mid)", "Enterprise (High)", "Unlimited"]
+        },
+        faq: {
+            title: "Common Questions.",
+            items: [
+                { q: "Do you serve outside Kırıkkale?", a: "Absolutely. ZMK AGENCY is based in Kırıkkale, but digital has no borders. We have the infrastructure and vision to serve clients globally." },
+                { q: "How does the process work?", a: "No chaos, just system. First analysis, then strategy, then flawless execution. We offer transparent communication and reporting at every step." },
+                { q: "Why you?", a: "Simple: We don't just 'do jobs', we build brands. What others call 'extra', we offer as 'standard'. The comparison table below says it all." },
+                { q: "What about budget?", a: "We have solutions for every scale. From startup packages to massive corporate transformation projects, we have flexible and transparent pricing." }
+            ]
+        },
+        testimonials: {
+            title: "Success Stories.",
+            subtitle: "Our clients speak for us.",
+            items: [
+                { text: "Working with ZMK changed our company's digital destiny. Sales increased by 300% in the first quarter. Incredible vision for Kırıkkale.", author: "Ahmet Y.", position: "CEO, Yüksel Construction" },
+                { text: "They didn't just build a website, they built a living brand. We felt safe with their professionalism and 24/7 support.", author: "Selin K.", position: "Founder, Fashion Boutique" },
+                { text: "Our software infrastructure reached bank-grade security. The team's technical knowledge is at global standards.", author: "Mehmet T.", position: "CTO, TechStart" }
+            ]
+        },
+        portfolio: {
+            title: "Selected Works.",
+            subtitle: "Words fade, works remain.",
+            viewProject: "View Project",
+            items: [
+                { title: "Best Burger Cyprus", category: "Brand Identity", image: "/images/portfolio/best_burger.png" },
+                { title: "Sports Academy Management System", category: "Software & UX", image: "/images/portfolio/spor_akademi.png" },
+                { title: "IlanPort", category: "Web & Growth", image: "/images/portfolio/ilanport.png" }
+            ]
+        },
+        pricing: {
+            title: "Investment Plans.",
+            subtitle: "Strategic investments that add value, not just costs.",
+            categories: [
+                { id: 'retainer', label: '360° Retainer' },
+                { id: 'webSoftware', label: 'Web & Software' },
+                { id: 'marketingAds', label: 'Ads & Marketing' },
+                { id: 'seoData', label: 'SEO & Data' },
+                { id: 'production', label: 'Production' },
+                { id: 'branding', label: 'Brand & Identity' }
+            ],
+            currency: "$",
+            cta: "Select Plan",
+            popularTag: "Most Popular",
+            items: {
+                retainer: [
                     {
-                        id: "software",
-                        title: "Software Development",
-                        description: "Custom enterprise solutions, mobile applications, and scalable architecture designed for growth.",
-                        icon: "💻",
-                        detailTitle: "Peak Software Engineering",
-                        detailText: "We build living, evolving software ecosystems tailored to your business DNA. No spaghetti code, just pure performance and security. We architecture systems ready for tomorrow's demands today.",
-                        features: ["Microservices Architecture", "Cloud-Native Solutions", "High Scalability", "Bank-Grade Security"],
-                        process: ["Analysis & Architecture", "Agile Development", "QA & Security", "DevOps & Scale"]
+                        title: "Startup Growth",
+                        price: "850",
+                        period: "/mo",
+                        description: "Essential package to build digital presence and visibility in the local market.",
+                        techSpecs: "Social Media + Basic SEO",
+                        features: [
+                            "Social Media Mgmt (2 Platforms)",
+                            "3 Posts + 1 Reel Weekly",
+                            "Basic SEO Optimization",
+                            "Monthly Performance Report",
+                            "Email Support"
+                        ]
                     },
                     {
-                        id: "web-seo",
-                        title: "Web & SEO",
-                        description: "High-performance websites and strategic SEO to dominate search rankings and drive conversion.",
-                        icon: "globe",
-                        detailTitle: "Digital Dominance",
-                        detailText: "Web experiences that don't just look good, but crush competitors in search, load in milliseconds, and convert visitors to customers. We blend speed, aesthetics, and psychology into one powerful package.",
-                        features: ["Core Web Vitals Optimization", "Semantic SEO Structure", "Ultra-Fast Loading", "Conversion Focused UX"],
-                        process: ["UX/UI Design", "Frontend Magic", "Technical SEO", "Conversion Optimization"]
+                        title: "Scale Up",
+                        price: "1,500",
+                        period: "/mo",
+                        isPopular: true,
+                        description: "Aggressive strategy for businesses targeting rapid growth and market share.",
+                        techSpecs: "Full S.Media + Ads + SEO",
+                        features: [
+                            "Social Media Mgmt (4 Platforms)",
+                            "5 Posts + 3 Reels Weekly",
+                            "Advanced SEO & Blog Content",
+                            "Google & Meta Ad Management",
+                            "Community Management",
+                            "Bi-weekly Strategy Meetings"
+                        ]
                     },
                     {
-                        id: "social-media",
-                        title: "Social Media Management",
-                        description: "Full-spectrum management. We take you from zero to phenomenon with viral strategies.",
-                        icon: "iphone",
-                        detailTitle: "Community & Culture Building",
-                        detailText: "We transform your brand from a logo into a movement. We don't just hack algorithms; we hack human psychology. We don't just post; we build culture.",
-                        features: ["Viral Content Strategy", "Community Management", "Influencer Collaborations", "Crisis Management"],
-                        process: ["Content Strategy", "Viral Production", "Community Management", "Analytics Reporting"]
+                        title: "Market Domination",
+                        price: "3,000+",
+                        period: "/mo",
+                        description: "Full-service digital department for those who want to lead the industry.",
+                        techSpecs: "24/7 Dedicated Team",
+                        features: [
+                            "All Digital Platforms",
+                            "Daily Content & Viral Production",
+                            "National SEO & PR Work",
+                            "Growth Hacking Strategies",
+                            "Crisis Mgmt & Reputation",
+                            "24/7 VIP Support Line"
+                        ]
+                    }
+                ],
+                webSoftware: [
+                    {
+                        title: "Corporate Website",
+                        price: "1,000",
+                        period: "starting at",
+                        isPopular: true,
+                        description: "Your brand's digital showcase. Fast, secure, and mobile-first.",
+                        techSpecs: "Next.js / React / Vercel",
+                        features: [
+                            "Custom UX/UI Design",
+                            "CMS (Content Management)",
+                            "SEO Friendly Arch.",
+                            "Fast Loading (<1s)",
+                            "Multi-language Support"
+                        ]
                     },
                     {
-                        id: "production",
-                        title: "Production Studio",
-                        description: "Cinema-quality commercials, corporate shoots, and high-end visual storytelling.",
-                        icon: "camera",
-                        detailTitle: "Visual Storytelling",
-                        detailText: "We tell your brand's story with Hollywood-grade equipment and vision, creating blockbuster-level content. Every frame is a piece of art.",
-                        features: ["4K/8K Cinematic Shooting", "Drone & Aerial Imaging", "VFX & Motion Graphics", "Professional Sound Design"],
-                        process: ["Concept & Script", "Cinematic Shooting", "Post-Production (VFX)", "Color Grading"]
+                        title: "E-Commerce Solutions",
+                        price: "2,500",
+                        period: "starting at",
+                        description: "Sales-focused, high conversion online stores.",
+                        techSpecs: "Shopify / Custom Headless",
+                        features: [
+                            "Advanced Inventory & Order Mgmt",
+                            "Payment Gateway Integration",
+                            "Marketplace Integrations",
+                            "Campaign Modules",
+                            "User Dashboard"
+                        ]
                     },
                     {
-                        id: "brand",
-                        title: "Brand Strategy & Identity",
-                        description: "More than a logo. We build your brand's soul, stance, and corporate voice from scratch.",
-                        icon: "art",
-                        detailTitle: "Building Corporate Soul",
-                        features: ["Logo & Identity", "Brand Voice & Tone", "Visual Language", "Rebranding"],
-                        process: ["Discovery", "Strategy", "Design", "Implementation"]
+                        title: "Custom Software / App",
+                        price: "5,000+",
+                        period: "starting at",
+                        description: "Web and mobile applications tailored to your business processes.",
+                        techSpecs: "React Native / Node.js / AWS",
+                        features: [
+                            "iOS & Android Apps",
+                            "SaaS Development",
+                            "CRM / ERP Integrations",
+                            "Microservices Architecture",
+                            "Cloud Infrastructure"
+                        ]
+                    }
+                ],
+                marketingAds: [
+                    {
+                        title: "Google Ads (SEM)",
+                        price: "500",
+                        period: "/mo + Budget",
+                        description: "Be at the top of search results.",
+                        techSpecs: "Search + Display + Shopping",
+                        features: [
+                            "Keyword Analysis",
+                            "Competitor Analysis",
+                            "Conversion Setup",
+                            "Negative Keyword Optimization",
+                            "A/B Testing"
+                        ]
                     },
                     {
-                        id: "data",
-                        title: "Data Analytics & Growth",
-                        description: "Aggressive growth and performance marketing strategies based on data, not guesses.",
-                        icon: "chart",
-                        detailTitle: "Data-Driven Growth",
-                        features: ["Funnel Analysis", "User Behavior", "A/B Testing", "Growth Hacking"],
-                        process: ["Data Collection", "Analysis", "Hypothesis", "Test & Optimize"]
+                        title: "Social Media Ads",
+                        price: "500",
+                        period: "/mo + Budget",
+                        description: "Reach your target audience with precision.",
+                        techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
+                        features: [
+                            "Audience Segmentation",
+                            "Retargeting Setup",
+                            "Creative Design Support",
+                            "Pixel & CAPI Setup",
+                            "ROAS Focused Management"
+                        ]
+                    }
+                ],
+                seoData: [
+                    {
+                        title: "Local SEO Package",
+                        price: "500",
+                        period: "/mo",
+                        description: "Rank first in maps and local search results.",
+                        techSpecs: "GMB + Local Citations",
+                        features: [
+                            "Google My Business Optimization",
+                            "Local Backlink Work",
+                            "Review & Reputation Mgmt",
+                            "Weekly GMB Posts"
+                        ]
+                    },
+                    {
+                        title: "National / Global SEO",
+                        price: "1,200",
+                        period: "/mo",
+                        description: "Large scale competition and organic traffic growth.",
+                        techSpecs: "Technical + Content + Off-page",
+                        features: [
+                            "Comprehensive Technical Audit",
+                            "Content Strategy & Blog",
+                            "Authoritative Backlink Building",
+                            "Competitor Gap Analysis",
+                            "Core Web Vitals Improvement"
+                        ]
+                    }
+                ],
+                production: [
+                    {
+                        title: "Commercial Film",
+                        price: "1,500",
+                        period: "starting at",
+                        description: "Tell your brand story with cinematic language.",
+                        techSpecs: "4K Cinema Line + Drone",
+                        features: [
+                            "Script & Editing",
+                            "Professional Voiceover",
+                            "Drone Shots",
+                            "Color & Sound Mixing",
+                            "Social Media Teasers"
+                        ]
+                    },
+                    {
+                        title: "Product Photography",
+                        price: "750",
+                        period: "starting at",
+                        description: "Professional shots for e-commerce and catalogs.",
+                        techSpecs: "Studio / Outdoor",
+                        features: [
+                            "Concept Development",
+                            "Decoupage & Retouch",
+                            "Model & Location Usage",
+                            "High Resolution Delivery"
+                        ]
+                    }
+                ],
+                branding: [
+                    {
+                        title: "Corporate Identity",
+                        price: "1,000",
+                        period: "starting at",
+                        description: "Professionally design the face of your brand.",
+                        techSpecs: "Vector + Print Ready",
+                        features: [
+                            "Logo Design",
+                            "Color Palette & Typography",
+                            "Business Card & Letterhead",
+                            "Brand Book",
+                            "Social Media Kit"
+                        ]
                     }
                 ]
             },
-            about: {
-                title: "The New Standard.",
-                text: "ZMK AGENCY is not just a digital firm; we are the architects of Kırıkkale's digital future. We combine silicon-valley aesthetics with relentless execution to build brands that are impossible to ignore. Working with us is not a service; it's a partnership in revolution.",
-                stats: {
-                    focus: "Client Focus",
-                    rank: "Target Ranking"
-                }
+            customQuote: {
+                title: "Beyond Standards?",
+                subtitle: "If packages don't fit, describe your dream project. Let's draw a custom roadmap for you.",
+                placeholder: "Briefly describe your project, goals, and budget range...",
+                cta: "Get Custom Quote"
             },
-            contact: {
-                title: "Let's Talk.",
-                subtitle: "Ready to transform your brand? Get in touch.",
-                namePlaceholder: "Name",
-                emailPlaceholder: "Email",
-                messagePlaceholder: "Project Details",
-                submit: "Send Message",
-                location: "Kırıkkale, Turkey"
-            },
-            clients: {
-                title: "Trusted By"
-            },
-            // MAGNUM OPUS ADDITIONS EN
-            wizard: {
-                step1Title: "What are we building?",
-                step2Title: "Project Scale?",
-                step3Title: "Details & Contact",
-                next: "Continue",
-                back: "Back",
-                finish: "Start Project",
-                detailsPlaceholder: "Briefly describe your vision...",
-                contactPlaceholder: "Your Email",
-                namePlaceholder: "Full Name",
-                // Localized Options
-                typeOptions: ["Web & Mobile App", "Brand Identity", "Social Media", "Full Scale Transformation"],
-                budgetOptions: ["Startup (Entry)", "Business (Mid)", "Enterprise (High)", "Unlimited"]
-            },
-            faq: {
-                title: "Common Questions.",
-                items: [
-                    { q: "Do you serve outside Kırıkkale?", a: "Absolutely. ZMK AGENCY is based in Kırıkkale, but digital has no borders. We have the infrastructure and vision to serve clients globally." },
-                    { q: "How does the process work?", a: "No chaos, just system. First analysis, then strategy, then flawless execution. We offer transparent communication and reporting at every step." },
-                    { q: "Why you?", a: "Simple: We don't just 'do jobs', we build brands. What others call 'extra', we offer as 'standard'. The comparison table below says it all." },
-                    { q: "What about budget?", a: "We have solutions for every scale. From startup packages to massive corporate transformation projects, we have flexible and transparent pricing." }
-                ]
-            },
-            testimonials: {
-                title: "Success Stories.",
-                subtitle: "Our clients speak for us.",
-                items: [
-                    { text: "Working with ZMK changed our company's digital destiny. Sales increased by 300% in the first quarter. Incredible vision for Kırıkkale.", author: "Ahmet Y.", position: "CEO, Yüksel Construction" },
-                    { text: "They didn't just build a website, they built a living brand. We felt safe with their professionalism and 24/7 support.", author: "Selin K.", position: "Founder, Fashion Boutique" },
-                    { text: "Our software infrastructure reached bank-grade security. The team's technical knowledge is at global standards.", author: "Mehmet T.", position: "CTO, TechStart" }
-                ]
-            },
-            portfolio: {
-                title: "Selected Works.",
-                subtitle: "Words fade, works remain.",
-                viewProject: "View Project",
-                items: [
-                    { title: "Best Burger Cyprus", category: "Brand Identity", image: "/images/portfolio/best_burger.png" },
-                    { title: "Sports Academy Management System", category: "Software & UX", image: "/images/portfolio/spor_akademi.png" },
-                    { title: "IlanPort", category: "Web & Growth", image: "/images/portfolio/ilanport.png" }
-                ]
-            },
-            pricing: {
-                title: "Investment Plans.",
-                subtitle: "Strategic investments that add value, not just costs.",
-                categories: [
-                    { id: 'retainer', label: '360° Retainer' },
-                    { id: 'webSoftware', label: 'Web & Software' },
-                    { id: 'marketingAds', label: 'Ads & Marketing' },
-                    { id: 'seoData', label: 'SEO & Data' },
-                    { id: 'production', label: 'Production' },
-                    { id: 'branding', label: 'Brand & Identity' }
-                ],
-                currency: "$",
-                cta: "Select Plan",
-                popularTag: "Most Popular",
-                items: {
-                    retainer: [
-                        {
-                            title: "Startup Growth",
-                            price: "850",
-                            period: "/mo",
-                            description: "Essential package to build digital presence and visibility in the local market.",
-                            techSpecs: "Social Media + Basic SEO",
-                            features: [
-                                "Social Media Mgmt (2 Platforms)",
-                                "3 Posts + 1 Reel Weekly",
-                                "Basic SEO Optimization",
-                                "Monthly Performance Report",
-                                "Email Support"
-                            ]
-                        },
-                        {
-                            title: "Scale Up",
-                            price: "1,500",
-                            period: "/mo",
-                            isPopular: true,
-                            description: "Aggressive strategy for businesses targeting rapid growth and market share.",
-                            techSpecs: "Full S.Media + Ads + SEO",
-                            features: [
-                                "Social Media Mgmt (4 Platforms)",
-                                "5 Posts + 3 Reels Weekly",
-                                "Advanced SEO & Blog Content",
-                                "Google & Meta Ad Management",
-                                "Community Management",
-                                "Bi-weekly Strategy Meetings"
-                            ]
-                        },
-                        {
-                            title: "Market Domination",
-                            price: "3,000+",
-                            period: "/mo",
-                            description: "Full-service digital department for those who want to lead the industry.",
-                            techSpecs: "24/7 Dedicated Team",
-                            features: [
-                                "All Digital Platforms",
-                                "Daily Content & Viral Production",
-                                "National SEO & PR Work",
-                                "Growth Hacking Strategies",
-                                "Crisis Mgmt & Reputation",
-                                "24/7 VIP Support Line"
-                            ]
-                        }
-                    ],
-                    webSoftware: [
-                        {
-                            title: "Corporate Website",
-                            price: "1,000",
-                            period: "starting at",
-                            isPopular: true,
-                            description: "Your brand's digital showcase. Fast, secure, and mobile-first.",
-                            techSpecs: "Next.js / React / Vercel",
-                            features: [
-                                "Custom UX/UI Design",
-                                "CMS (Content Management)",
-                                "SEO Friendly Arch.",
-                                "Fast Loading (<1s)",
-                                "Multi-language Support"
-                            ]
-                        },
-                        {
-                            title: "E-Commerce Solutions",
-                            price: "2,500",
-                            period: "starting at",
-                            description: "Sales-focused, high conversion online stores.",
-                            techSpecs: "Shopify / Custom Headless",
-                            features: [
-                                "Advanced Inventory & Order Mgmt",
-                                "Payment Gateway Integration",
-                                "Marketplace Integrations",
-                                "Campaign Modules",
-                                "User Dashboard"
-                            ]
-                        },
-                        {
-                            title: "Custom Software / App",
-                            price: "5,000+",
-                            period: "starting at",
-                            description: "Web and mobile applications tailored to your business processes.",
-                            techSpecs: "React Native / Node.js / AWS",
-                            features: [
-                                "iOS & Android Apps",
-                                "SaaS Development",
-                                "CRM / ERP Integrations",
-                                "Microservices Architecture",
-                                "Cloud Infrastructure"
-                            ]
-                        }
-                    ],
-                    marketingAds: [
-                        {
-                            title: "Google Ads (SEM)",
-                            price: "500",
-                            period: "/mo + Budget",
-                            description: "Be at the top of search results.",
-                            techSpecs: "Search + Display + Shopping",
-                            features: [
-                                "Keyword Analysis",
-                                "Competitor Analysis",
-                                "Conversion Setup",
-                                "Negative Keyword Optimization",
-                                "A/B Testing"
-                            ]
-                        },
-                        {
-                            title: "Social Media Ads",
-                            price: "500",
-                            period: "/mo + Budget",
-                            description: "Reach your target audience with precision.",
-                            techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
-                            features: [
-                                "Audience Segmentation",
-                                "Retargeting Setup",
-                                "Creative Design Support",
-                                "Pixel & CAPI Setup",
-                                "ROAS Focused Management"
-                            ]
-                        }
-                    ],
-                    seoData: [
-                        {
-                            title: "Local SEO Package",
-                            price: "500",
-                            period: "/mo",
-                            description: "Rank first in maps and local search results.",
-                            techSpecs: "GMB + Local Citations",
-                            features: [
-                                "Google My Business Optimization",
-                                "Local Backlink Work",
-                                "Review & Reputation Mgmt",
-                                "Weekly GMB Posts"
-                            ]
-                        },
-                        {
-                            title: "National / Global SEO",
-                            price: "1,200",
-                            period: "/mo",
-                            description: "Large scale competition and organic traffic growth.",
-                            techSpecs: "Technical + Content + Off-page",
-                            features: [
-                                "Comprehensive Technical Audit",
-                                "Content Strategy & Blog",
-                                "Authoritative Backlink Building",
-                                "Competitor Gap Analysis",
-                                "Core Web Vitals Improvement"
-                            ]
-                        }
-                    ],
-                    production: [
-                        {
-                            title: "Commercial Film",
-                            price: "1,500",
-                            period: "starting at",
-                            description: "Tell your brand story with cinematic language.",
-                            techSpecs: "4K Cinema Line + Drone",
-                            features: [
-                                "Script & Editing",
-                                "Professional Voiceover",
-                                "Drone Shots",
-                                "Color & Sound Mixing",
-                                "Social Media Teasers"
-                            ]
-                        },
-                        {
-                            title: "Product Photography",
-                            price: "750",
-                            period: "starting at",
-                            description: "Professional shots for e-commerce and catalogs.",
-                            techSpecs: "Studio / Outdoor",
-                            features: [
-                                "Concept Development",
-                                "Decoupage & Retouch",
-                                "Model & Location Usage",
-                                "High Resolution Delivery"
-                            ]
-                        }
-                    ],
-                    branding: [
-                        {
-                            title: "Corporate Identity",
-                            price: "1,000",
-                            period: "starting at",
-                            description: "Professionally design the face of your brand.",
-                            techSpecs: "Vector + Print Ready",
-                            features: [
-                                "Logo Design",
-                                "Color Palette & Typography",
-                                "Business Card & Letterhead",
-                                "Brand Book",
-                                "Social Media Kit"
-                            ]
-                        }
-                    ]
-                },
-                customQuote: {
-                    title: "Beyond Standards?",
-                    subtitle: "If packages don't fit, describe your dream project. Let's draw a custom roadmap for you.",
-                    placeholder: "Briefly describe your project, goals, and budget range...",
-                    cta: "Get Custom Quote"
-                },
-                roi: {
-                    title: "ROI Simulator",
-                    subtitle: "Digital marketing is an investment, not an expense. Calculate your potential."
-                }
-            },
-            comparison: {
-                title: "Why ZMK?",
-                standard: "Other Agencies",
-                rows: [
-                    { feature: "Tech Infrastructure", standard: "Slow Wordpress / Templates", zmk: "Custom Code / React / Next.js" },
-                    { feature: "Reporting & Transparency", standard: "Monthly PDF Report", zmk: "Live Client Dashboard" },
-                    { feature: "Pricing Policy", standard: "Hidden Costs & Surprises", zmk: "Transparent & Scalable Plans" },
-                    { feature: "Speed & Performance", standard: "Average (3-5 sec Load)", zmk: "Lightning Fast (<1 sec Load)" },
-                    { feature: "Vision & Goal", standard: "Just Delivery", zmk: "Market Domination & Growth" }
-                ]
-            },
-            ctaFloat: "Get Fast Quote",
-            // END MAGNUM OPUS
-            legal: {
-                privacyTitle: "Privacy Policy",
-                termsTitle: "Terms of Service",
-                lastUpdated: "Last Updated: January 27, 2026",
-                privacyText: `At ZMK AGENCY ("Company"), we value your privacy and the protection of your personal data at the highest level. This Privacy Policy explains how data collected during your use of our website and services is processed, stored, and protected.
+            roi: {
+                title: "ROI Simulator",
+                subtitle: "Digital marketing is an investment, not an expense. Calculate your potential."
+            }
+        },
+        comparison: {
+            title: "Why ZMK?",
+            standard: "Other Agencies",
+            rows: [
+                { feature: "Tech Infrastructure", standard: "Slow Wordpress / Templates", zmk: "Custom Code / React / Next.js" },
+                { feature: "Reporting & Transparency", standard: "Monthly PDF Report", zmk: "Live Client Dashboard" },
+                { feature: "Pricing Policy", standard: "Hidden Costs & Surprises", zmk: "Transparent & Scalable Plans" },
+                { feature: "Speed & Performance", standard: "Average (3-5 sec Load)", zmk: "Lightning Fast (<1 sec Load)" },
+                { feature: "Vision & Goal", standard: "Just Delivery", zmk: "Market Domination & Growth" }
+            ]
+        },
+        ctaFloat: "Get Fast Quote",
+        // END MAGNUM OPUS
+        legal: {
+            privacyTitle: "Privacy Policy",
+            termsTitle: "Terms of Service",
+            lastUpdated: "Last Updated: January 27, 2026",
+            privacyText: `At ZMK AGENCY ("Company"), we value your privacy and the protection of your personal data at the highest level. This Privacy Policy explains how data collected during your use of our website and services is processed, stored, and protected.
 
 1. DATA COLLECTION AND USE
 In order to provide our services effectively, we collect limited personal data (Name, Email, IP address, etc.) through contact forms, cookies, and analytical tools. This data is used solely to respond to you and improve our service quality. It is never shared with third parties without your consent.
@@ -1005,7 +1004,7 @@ Technical and analytical cookies are used on our site to improve your user exper
 
 4. YOUR RIGHTS
 In accordance with GDPR and relevant regulations, you have the right to request the deletion, updating, or anonymization of your data.`,
-                termsText: `By using the ZMK AGENCY website and services, you agree to the following terms and conditions.
+            termsText: `By using the ZMK AGENCY website and services, you agree to the following terms and conditions.
 
 1. SCOPE OF SERVICE
 ZMK AGENCY provides digital marketing, software development, and production services. Details of services are determined by specific contracts to be signed between parties. Information on the website is for informational purposes.
@@ -1018,15 +1017,15 @@ We do not guarantee that the website will operate uninterrupted or error-free. W
 
 4. CHANGES
 The Company reserves the right to update these terms at any time. Changes become effective immediately upon posting on the site.`
-            },
-            footer: {
-                aboutText: "Your corporate partner for digital excellence.",
-                links: "Quick Links",
-                services: "Services",
-                legal: "Legal",
-                privacy: "Privacy Policy",
-                terms: "Terms of Service",
-                copyright: "© 2026 ZMK AGENCY. All rights reserved."
-            }
+        },
+        footer: {
+            aboutText: "Your corporate partner for digital excellence.",
+            links: "Quick Links",
+            services: "Services",
+            legal: "Legal",
+            privacy: "Privacy Policy",
+            terms: "Terms of Service",
+            copyright: "© 2026 ZMK AGENCY. All rights reserved."
         }
-    };
+    }
+};

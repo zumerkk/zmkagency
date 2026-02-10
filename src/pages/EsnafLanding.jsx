@@ -98,6 +98,17 @@ const EsnafLanding = ({ t }) => {
                             <p style={{ color: '#9ca3af', fontSize: '1.2rem' }}>{content.solution.description}</p>
 
                             <div className="package-price">
+                                {content.solution.originalPrice && (
+                                    <span style={{
+                                        textDecoration: 'line-through',
+                                        color: '#ef4444',
+                                        fontSize: '0.5em',
+                                        marginRight: '15px',
+                                        opacity: 0.8
+                                    }}>
+                                        {content.solution.originalPrice}
+                                    </span>
+                                )}
                                 {content.solution.price} <span>{content.solution.period}</span>
                             </div>
 

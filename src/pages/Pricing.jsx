@@ -88,6 +88,17 @@ const Pricing = ({ t, wizardT }) => {
                                     <div className="card-header">
                                         <h3>{plan.title}</h3>
                                         <div className="price">
+                                            {plan.originalPrice && (
+                                                <div style={{
+                                                    textDecoration: 'line-through',
+                                                    color: '#ef4444',
+                                                    fontSize: '0.9rem',
+                                                    marginBottom: '4px',
+                                                    fontWeight: '500'
+                                                }}>
+                                                    {plan.originalPrice} {t.currency}
+                                                </div>
+                                            )}
                                             <span className="currency">{t.currency}</span>
                                             {plan.price}
                                             <span className="period">{plan.period}</span>

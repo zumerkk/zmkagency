@@ -605,6 +605,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 badge: "Tek Çözüm Paketi",
                 title: "Bölgesel Hakimiyet Paketi",
                 price: "20.000₺",
+                originalPrice: "34.999₺",
                 period: "(Tek Seferlik)",
                 description: "Sadece bir web sitesi değil, eksiksiz bir dijital dükkan kurulumu.",
                 features: [

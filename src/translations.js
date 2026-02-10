@@ -291,6 +291,7 @@ export const content = {
                     {
                         title: "Bölgesel Hakimiyet",
                         price: "20.000",
+                        originalPrice: "34.999",
                         period: " (Tek Seferlik)",
                         isPopular: true,
                         description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
@@ -306,6 +307,7 @@ export const content = {
                     {
                         title: "Kırıkkale Lideri",
                         price: "30.000",
+                        originalPrice: "45.000",
                         period: "/ay",
                         description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
                         techSpecs: "Aylık Tam Yönetim",
@@ -320,6 +322,7 @@ export const content = {
                     {
                         title: "Dijital Fabrika (Kurumsal)",
                         price: "50.000+",
+                        originalPrice: "75.000",
                         period: " (Proje Bazlı)",
                         description: "Fabrikalar ve büyük işletmeler için özel prodüksiyon ve tanıtım.",
                         techSpecs: "Drone + 4K Prodüksiyon",

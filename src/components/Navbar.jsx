@@ -89,6 +89,7 @@ const Navbar = ({ t, lang, toggleLang }) => {
           <li><Link to="/portfolio" onClick={closeMobileMenu}>{t.portfolio}</Link></li>
           <li><a href="/#services" onClick={(e) => scrollToSection(e, 'services')}>{t.services}</a></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
+          <li><Link to="/esnaf-paket" onClick={closeMobileMenu} style={{ color: '#4ade80', fontWeight: 'bold' }}>Esnaf Paketi</Link></li>
           <li><Link to="/pricing" onClick={closeMobileMenu}>{t.pricing}</Link></li>
           <li><Link to="/blog" onClick={closeMobileMenu}>Magazine</Link></li>
           <li><Link to="/contact" onClick={closeMobileMenu}>{t.contact}</Link></li>

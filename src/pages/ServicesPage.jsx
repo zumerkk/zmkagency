@@ -40,7 +40,7 @@ const ServicesPage = ({ t, tContact }) => {
         }
     };
 
-    const services = t.items || [];
+    const services = [...(t.items || []), ...(t.items2 || [])];
 
     // Animation variants
     const container = {

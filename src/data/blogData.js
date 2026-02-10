@@ -99,7 +99,87 @@ export const blogData = [
         category: "E-Ticaret",
         date: "20 Aralık 2025",
         author: "E-Com Expert",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200",
         keywords: "kırıkkale e-ticaret, e-ticaret sitesi kurmak, dijital satış"
+    },
+    {
+        id: 6,
+        slug: "esnaf-dijitallesme-rehberi",
+        title: "Kırıkkale Esnafı İçin Dijitalleşme Rehberi",
+        excerpt: "Geleneksel esnaflıktan dijital mağazacılığa geçiş. İşinizi büyütmenin yeni yolları.",
+        content: `
+            <p>Değişen dünya düzeninde esnaflık da kabuk değiştiriyor. Artık dükkanınızın kapısı sadece sokağa değil, tüm dünyaya açılmalı.</p>
+            <h3>Nereden Başlamalı?</h3>
+            <p>İlk adım, işletmenizin Google Haritalar'da doğru ve güncel bilgilerle yer almasıdır. Ardından, mobil uyumlu bir web sitesi ile güven inşa etmelisiniz.</p>
+        `,
+        category: "Esnaf Özel",
+        date: "12 Şubat 2026",
+        author: "ZMK Yerel",
+        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200",
+        keywords: "esnaf dijitalleşme, kırıkkale esnaf, kobi destek"
+    },
+    {
+        id: 7,
+        slug: "google-harita-onemi",
+        title: "Müşteriler Sizi Neden Bulamıyor? Google Harita Gerçeği",
+        excerpt: "Navigasyonda yoksanız, ticarette de yoksunuz demektir. Harita kaydının ciroya etkisi.",
+        content: `
+            <p>Kırıkkale'de bir kafe arayan turist veya bir tesisatçı arayan ev sahibi, ilk iş olarak Google Haritalar'a bakıyor.</p>
+            <h3>Yorumların Gücü</h3>
+            <p>İşletmenize yapılan yorumlar, yeni müşterilerin kararını %90 oranında etkiliyor. ZMK olarak harita itibar yönetiminizi profesyonelce yapıyoruz.</p>
+        `,
+        category: "Yerel SEO",
+        date: "14 Şubat 2026",
+        author: "SEO Uzmanı",
+        image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200",
+        keywords: "google harita kaydı, yerel seo, işletme yorumları"
+    },
+    {
+        id: 8,
+        slug: "sosyal-medya-esnaf",
+        title: "Esnaflar İçin Sosyal Medya: Sadece Fotoğraf Atmak Yetmez",
+        excerpt: "Instagram vitrininizdir. Peki bu vitrini nasıl düzenlemelisiniz?",
+        content: `
+            <p>Rastgele çekilmiş karanlık fotoğraflar yerine, profesyonel çekimlerle ürünlerinizi parlatın.</p>
+            <h3>Etkileşim Sanatı</h3>
+            <p>Müşterilerinizle dm üzerinden kuracağınız samimi ve profesyonel iletişim, sadık müşteri kitlesi yaratır.</p>
+        `,
+        category: "Sosyal Medya",
+        date: "16 Şubat 2026",
+        author: "Sosyal Medya Ekibi",
+        image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=1200",
+        keywords: "esnaf instagram, sosyal medya yönetimi, kırıkkale reklam"
+    },
+    {
+        id: 9,
+        slug: "web-sitesi-gerekli-mi",
+        title: "Sadece Instagram Yetmez Mi? Neden Web Sitesi Şart?",
+        excerpt: "Instagram hesabınız kapanabilir. Web siteniz ise sizin dijital tapunuzdur.",
+        content: `
+            <p>Pazaryerleri ve sosyal medya platformları kiracı olduğunuz dükkanlardır. Web siteniz ise mülkü size ait olan mağazanızdır.</p>
+            <h3>Prestij Göstergesi</h3>
+            <p>Kurumsal bir e-posta adresi (info@sirketiniz.com) ve şık bir web sitesi, tedarikçileriniz ve müşterileriniz gözünde sizi bir üst lige taşır.</p>
+        `,
+        category: "Web Tasarım",
+        date: "18 Şubat 2026",
+        author: "Web Master",
+        image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200",
+        keywords: "kurumsal web sitesi, neden web sitesi, kırıkkale web tasarım"
+    },
+    {
+        id: 10,
+        slug: "drone-cekimi-farki",
+        title: "Mekanınızı Göklere Taşıyın: Drone Çekimi",
+        excerpt: "İşletmenizi kuş bakışı göstererek rakiplerinizden ayrışın.",
+        content: `
+            <p>Bir fabrika, düğün salonu veya büyük bir restoran... Mekanınızın büyüklüğünü ve ihtişamını yerden çekilen fotoğraflar anlatmaya yetmez.</p>
+            <h3>Sinematik Tanıtım</h3>
+            <p>4K drone çekimleri ile hazırlanan tanıtım filmleri, müşterilerinizi izlerken büyüler ve mekana gelme isteği uyandırır.</p>
+        `,
+        category: "Prodüksiyon",
+        date: "20 Şubat 2026",
+        author: "Drone Pilotu",
+        image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1200",
+        keywords: "kırıkkale drone çekimi, hava çekimi, mekan tanıtımı"
     }
 ];

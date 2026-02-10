@@ -36,6 +36,7 @@ const ServicesPage = ({ t, tContact }) => {
             case 'briefcase': return '💼';
             case 'cart': return '🛍️'; // E-commerce
             case 'megaphone': return '📢'; // PR
+            case 'smartphone': return '📱'; // Mobile App
             default: return '💻';
         }
     };
@@ -91,32 +92,48 @@ const ServicesPage = ({ t, tContact }) => {
                 </header>
 
                 {/* Services Grid */}
-                <motion.div
-                    className="services-grid"
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                >
-                    {services.map((service, index) => (
-                        <motion.div variants={itemVariant} key={index} style={{ height: '100%' }}>
-                            <Link
-                                to={`/services/${service.id}`}
-                                className="service-card"
-                            >
-                                <div className="service-content">
-                                    <div className="service-icon">
-                                        {renderIcon(service.icon)}
+                {services.length > 0 ? (
+                    <motion.div
+                        className="services-grid"
+                        variants={container}
+                        initial="hidden"
+                        animate="show"
+                    >
+                        {services.map((service, index) => (
+                            <motion.div variants={itemVariant} key={index} style={{ height: '100%' }}>
+                                {service.id ? (
+                                    <Link
+                                        to={`/services/${service.id}`}
+                                        className="service-card"
+                                    >
+                                        <div className="service-content">
+                                            <div className="service-icon">
+                                                {renderIcon(service.icon)}
+                                            </div>
+                                            <h3>{service.title}</h3>
+                                            <p>{service.description}</p>
+                                        </div>
+                                        <div className="service-footer">
+                                            {t.moreDetails} <span className="arrow-icon">→</span>
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <div className="service-card" style={{ cursor: 'default' }}>
+                                        <div className="service-content">
+                                            <div className="service-icon">
+                                                {renderIcon(service.icon)}
+                                            </div>
+                                            <h3>{service.title}</h3>
+                                            <p>{service.description}</p>
+                                        </div>
                                     </div>
-                                    <h3>{service.title}</h3>
-                                    <p>{service.description}</p>
-                                </div>
-                                <div className="service-footer">
-                                    {t.moreDetails} <span className="arrow-icon">→</span>
-                                </div>
-                            </Link>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                                )}
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                ) : (
+                    <div style={{ textAlign: 'center', padding: '50px' }}>Loading Services...</div>
+                )}
 
                 {/* Bottom CTA */}
                 <section style={{ paddingBottom: '80px' }}>

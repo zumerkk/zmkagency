@@ -154,6 +154,16 @@ export const content = {
                     detailText: "Doğru kişi, doğru mesaj, doğru zaman. Markanızı hedef kitlenizin güvendiği yüzlerle buluşturuyoruz. Sadece reklam değil, tavsiye mekanizmasını çalıştırarak güven inşa ediyoruz.",
                     features: ["Influencer Eşleşmesi", "Kampanya Yönetimi", "Basın Bülteni & PR", "Etkinlik Yönetimi"],
                     process: ["Hedef Kitle Analizi", "Influencer Seçimi", "Kampanya Kurgusu", "Raporlama"]
+                },
+                {
+                    id: "mobile-app",
+                    title: "Mobil Uygulama Geliştirme",
+                    description: "iOS ve Android dünyasında yerinizi alın. Yüksek performanslı Native ve Hybrid uygulamalar.",
+                    icon: "smartphone",
+                    detailTitle: "Cebinizdeki Güç",
+                    detailText: "Müşterilerinizin %90'ı mobilde. Onlara kusursuz bir mobil deneyim sunun. React Native ve Native teknolojilerle, marketlerde (App Store & Play Store) öne çıkan, hızlı ve güvenli uygulamalar geliştiriyoruz.",
+                    features: ["iOS & Android (Cross-Platform)", "UI/UX Mobil Tasarım", "App Store Optimizasyonu (ASO)", "Bildirim & Kullanıcı Yönetimi"],
+                    process: ["Prototip", "Kodlama", "Test", "Market Yayını"]
                 }
             ],
             items2: [

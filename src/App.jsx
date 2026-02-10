@@ -25,6 +25,7 @@ const PortfolioPage = lazy(() => import('./pages/PortfolioPage')); // Portfolio 
 const Blog = lazy(() => import('./pages/Blog')); // ZMK Magazine
 const BlogDetail = lazy(() => import('./pages/BlogDetail')); // Blog Detail Page
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ThankYou = lazy(() => import('./pages/ThankYou')); // Conversion Page
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -126,6 +127,8 @@ function App() {
               {/* Admin Routes */}
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<Dashboard />} />
+
+              <Route path="/thank-you" element={<ThankYou />} />
 
               {/* 404 Route */}
               <Route path="*" element={<NotFound />} />

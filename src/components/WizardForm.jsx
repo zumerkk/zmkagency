@@ -55,7 +55,11 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
             setIsSuccess(true);
             setTimeout(() => {
                 onClose();
-            }, 3000);
+                // Redirect to Thank You page if available (assuming passed via props or context, but here we can't easily access navigate without hook)
+                // Since this is a modal, reliable redirection might need parent handling or window.location
+                // But let's check if we can add useNavigate hook at top.
+                window.location.href = '/thank-you';
+            }, 2000);
         } catch (error) {
             console.error("Error submitting wizard: ", error);
             // Handle error state if needed, for now just log

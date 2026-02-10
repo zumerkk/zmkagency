@@ -259,10 +259,23 @@ export const content = {
                 { title: "IlanPort", category: "Web & Growth", image: "/images/portfolio/ilanport.png" }
             ]
         },
+        localDominance: {
+            badge: "Kırıkkale Esnafına Özel",
+            title: "Dükkanınız Artık Tüm Şehirde.",
+            subtitle: "Sadece bir web sitesi değil, müşteri getiren tam kapsamlı dijital çözümler. Haritada bulunun, Instagram'da parlayın.",
+            features: [
+                "Google Haritalarda İlk Sırada Çıkın",
+                "Profesyonel Mekan & Ürün Çekimi",
+                "Sosyal Medyada 'Sponsorlu' Reklamlar",
+                "Size Özel Web Sitesi"
+            ],
+            cta: "Esnaf Paketini İncele"
+        },
         pricing: {
             title: "Yatırım Planları.",
             subtitle: "Maliyet değil, şirketinize değer katan stratejik yatırımlar.",
             categories: [
+                { id: 'local', label: '🔥 Saha Kurtları (Esnaf)' },
                 { id: 'retainer', label: '360° Retainer' },
                 { id: 'webSoftware', label: 'Web & Yazılım' },
                 { id: 'marketingAds', label: 'Reklam & Pazarlama' },
@@ -274,6 +287,51 @@ export const content = {
             cta: "Planı Seç",
             popularTag: "En Çok Tercih Edilen",
             items: {
+                local: [
+                    {
+                        title: "Dijital Başlangıç",
+                        price: "10.000",
+                        period: " (Tek Seferlik)",
+                        description: "Kırıkkale esnafı için 'Görünür Olma' paketi. İnternette varlığınızı başlatın.",
+                        techSpecs: "Harita + Site + Sosyal",
+                        features: [
+                            "Google Harita (Business) Kaydı & Optimizasyon",
+                            "One-Page (Tek Sayfa) Tanıtım Sitesi",
+                            "Instagram & Facebook Hesap Açılışı",
+                            "Google 'İşletme Profili' Eğitimi",
+                            "QR Menü / Kartvizit Tasarımı"
+                        ]
+                    },
+                    {
+                        title: "Bölgesel Hakimiyet",
+                        price: "20.000",
+                        period: " (Tek Seferlik)",
+                        isPopular: true,
+                        description: "Rakiplerin önüne geçmek isteyen işletmeler için tam kapsamlı çözüm.",
+                        techSpecs: "Drone + Video + Ads",
+                        features: [
+                            "Her Şey Dahil Başlangıç Paketi",
+                            "Drone ile Mekan Çekimi (30sn)",
+                            "Profesyonel Fotoğraf Çekimi",
+                            "1 Aylık Google Reklam Yönetimi (Kurulum)",
+                            "Instagram İçin 3 Reels Videosu"
+                        ]
+                    },
+                    {
+                        title: "Kırıkkale Lideri",
+                        price: "15.000",
+                        period: "/ay",
+                        description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
+                        techSpecs: "Aylık Yönetim",
+                        features: [
+                            "Tüm Sosyal Medya Yönetimi",
+                            "Haftalık Düzenli Ziyaret & Çekim",
+                            "Google Harita Yorum & İtibar Yönetimi",
+                            "Aylık Kampanya Kurgusu",
+                            "Öncelikli Destek"
+                        ]
+                    }
+                ],
                 retainer: [
                     {
                         title: "Startup Growth",

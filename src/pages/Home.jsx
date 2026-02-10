@@ -13,6 +13,8 @@ import FloatingCTA from '../components/FloatingCTA';
 import Portfolio from '../components/Portfolio';
 
 
+import LocalDominance from '../components/LocalDominance';
+
 const Home = ({ t }) => {
     const [showWizard, setShowWizard] = useState(false);
 
@@ -23,6 +25,8 @@ const Home = ({ t }) => {
                 description={t.hero.subtitle}
             />
             <Hero t={t.hero} onCtaClick={() => setShowWizard(true)} />
+
+            <LocalDominance t={t.localDominance} onCtaClick={() => document.getElementById('pricing-grid')?.scrollIntoView({ behavior: 'smooth' })} />
 
             <Clients t={t.clients} />
             <div id="services">

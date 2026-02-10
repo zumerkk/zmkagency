@@ -1,0 +1,252 @@
+/* LocalDominance.css */
+.local-dominance-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.local-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.local-text h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    background: linear-gradient(to right, #fff, #888);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.local-text p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.badge-local {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.local-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.local-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.check-icon {
+    color: #4ade80;
+    /* Success green */
+}
+
+.cta-local {
+    padding: 16px 32px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-local:hover {
+    transform: translateY(-5px);
+}
+
+/* Visual Side */
+.local-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-card-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 24px;
+    padding: 30px;
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.card-header-sim {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header-sim .circle {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.card-header-sim .bar {
+    height: 15px;
+    width: 60%;
+    background: #333;
+    border-radius: 8px;
+}
+
+.map-sim {
+    height: 150px;
+    background: #222;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-image: radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.pin {
+    width: 12px;
+    height: 12px;
+    background: #666;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.pin.center {
+    width: auto;
+    height: auto;
+    background: none;
+    color: #ef4444;
+    /* Red pin */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    animation: bounce 2s infinite;
+}
+
+.pin.p1 {
+    top: 30%;
+    left: 30%;
+}
+
+.pin.p2 {
+    top: 70%;
+    left: 60%;
+}
+
+.stats-sim {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.stat-box .value {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.value.success {
+    color: #4ade80;
+}
+
+.review-card-float {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 16px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 3;
+}
+
+.review-card-float .stars {
+    color: #fbbf24;
+    /* Gold */
+    margin-bottom: 10px;
+}
+
+.review-card-float p {
+    font-size: 0.9rem;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-card-float span {
+    font-size: 0.8rem;
+    color: #888;
+    display: block;
+    text-align: right;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, -100%);
+    }
+
+    50% {
+        transform: translate(-50%, -120%);
+    }
+}
+
+@media (max-width: 900px) {
+    .local-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .local-features {
+        align-items: center;
+    }
+}

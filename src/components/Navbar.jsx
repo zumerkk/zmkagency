@@ -97,7 +97,17 @@ const Navbar = ({ t, lang, toggleLang }) => {
               {lang === 'tr' ? 'EN' : 'TR'}
             </button>
           </li>
-          <li><Link to="/contact" onClick={closeMobileMenu} className="cta-button">{t.cta}</Link></li>
+          <li>
+            <a
+              href="https://wa.me/905413812114"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+              onClick={closeMobileMenu}
+            >
+              {t.cta}
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

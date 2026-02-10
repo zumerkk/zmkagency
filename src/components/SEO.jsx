@@ -29,9 +29,9 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
         "email": "iletisim@zmkagency.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Yenişehir Kazım Karabekir caddesi No: 39/2",
+            "streetAddress": "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5",
             "addressLocality": "Kırıkkale",
-            "postalCode": "71100",
+            "postalCode": "71200",
             "addressCountry": "TR"
         },
         "geo": {

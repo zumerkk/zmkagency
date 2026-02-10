@@ -534,7 +534,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             legal: "Yasal",
             privacy: "Gizlilik Politikası",
             terms: "Kullanım Koşulları",
-            address: "Yenişehir, Kazım Karabekir Cd. No: 39/2, 71200 Kırıkkale Merkez/Kırıkkale",
+            address: "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5, 71200 Kırıkkale Merkez/Kırıkkale",
             copyright: "© 2026 ZMK AGENCY. Tüm hakları saklıdır."
         }
     },

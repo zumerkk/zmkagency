@@ -26,6 +26,7 @@ const Blog = lazy(() => import('./pages/Blog')); // ZMK Magazine
 const BlogDetail = lazy(() => import('./pages/BlogDetail')); // Blog Detail Page
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ThankYou = lazy(() => import('./pages/ThankYou')); // Conversion Page
+const EsnafLanding = lazy(() => import('./pages/EsnafLanding')); // Special Landing Page
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -129,6 +130,7 @@ function App() {
               <Route path="/admin" element={<Dashboard />} />
 
               <Route path="/thank-you" element={<ThankYou />} />
+              <Route path="/esnaf-paket" element={<EsnafLanding t={t} />} />
 
               {/* 404 Route */}
               <Route path="*" element={<NotFound />} />

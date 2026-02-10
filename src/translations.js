@@ -585,6 +585,50 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
 4. DEĞİŞİKLİKLER
 Şirket, işbu koşulları dilediği zaman güncelleme hakkını saklı tutar. Değişiklikler sitede yayınlandığı andan itibaren yürürlüğe girer.`
         },
+        esnafLanding: {
+            hero: {
+                badge: "Kırıkkale Esnafına Özel",
+                title: "Müşterileriniz Sizi Arıyor, Ama Bulamıyor.",
+                subtitle: "Her gün 5000+ kişi Kırıkkale'de hizmet arıyor. Sizin işletmeniz haritada yoksa, müşteriyi rakibiniz kapıyor.",
+                cta: "Hakimiyeti Ele Al"
+            },
+            problem: {
+                title: "İşletmenizin Dijital Check-Up Sonucu:",
+                items: [
+                    { icon: "Ghost", text: "Haritada Kaydınız Yok veya Yanlış Yerde." },
+                    { icon: "EyeOff", text: "Google Aramalarında Çıkmıyorsunuz." },
+                    { icon: "Smartphone", text: "Web Siteniz Mobilde Açılmıyor." },
+                    { icon: "TrendingDown", text: "Rakipleriniz Sizden Daha Profesyonel Görünüyor." }
+                ]
+            },
+            solution: {
+                badge: "Tek Çözüm Paketi",
+                title: "Bölgesel Hakimiyet Paketi",
+                price: "20.000₺",
+                period: "(Tek Seferlik)",
+                description: "Sadece bir web sitesi değil, eksiksiz bir dijital dükkan kurulumu.",
+                features: [
+                    "🚀 ZMK Business Web Sitesi (Tek Sayfa)",
+                    "📍 Google Harita (Business) Optimizasyonu",
+                    "📸 Mekan & Ürün Çekimi (Profesyonel Ekip)",
+                    "📱 Sosyal Medya Kurulumu & İlk İçerikler",
+                    "🎫 QR Menü veya Dijital Kartvizit"
+                ]
+            },
+            socialProof: {
+                title: "Kırıkkale'de Bizi Seçenler",
+                stat1: { value: "50+", label: "Mutlu İşletme" },
+                stat2: { value: "%300", label: "Görünürlük Artışı" }
+            },
+            urgency: {
+                text: "⚠️ Bu özel prodüksiyon paketi için ayda sadece 5 işletme kabul ediyoruz.",
+                subtext: "Şu an kalan kontenjan: 2"
+            },
+            ctaFinal: {
+                title: "Sıradan Olmaktan Sıkılmadınız Mı?",
+                btn: "Hemen Başvurun"
+            }
+        },
         footer: {
             aboutText: "Dijital mükemmellik için kurumsal çözüm ortağınız.",
             links: "Hızlı Erişim",

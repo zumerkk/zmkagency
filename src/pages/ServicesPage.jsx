@@ -41,24 +41,12 @@ const ServicesPage = ({ t, tContact }) => {
         }
     };
 
+    // Debugging
+    console.log("ServicesPage t:", t);
     const services = [...(t.items || []), ...(t.items2 || [])];
+    console.log("Services count:", services.length);
 
-    // Animation variants
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-
-    const itemVariant = {
-        hidden: { opacity: 0, y: 30 },
-        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } }
-    };
-
+    // Simplified animation
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -93,14 +81,16 @@ const ServicesPage = ({ t, tContact }) => {
 
                 {/* Services Grid */}
                 {services.length > 0 ? (
-                    <motion.div
-                        className="services-grid"
-                        variants={container}
-                        initial="hidden"
-                        animate="show"
-                    >
+                    <div className="services-grid">
                         {services.map((service, index) => (
-                            <motion.div variants={itemVariant} key={index} style={{ height: '100%' }}>
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                                style={{ height: '100%' }}
+                            >
                                 {service.id ? (
                                     <Link
                                         to={`/services/${service.id}`}
@@ -130,9 +120,11 @@ const ServicesPage = ({ t, tContact }) => {
                                 )}
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </div>
                 ) : (
-                    <div style={{ textAlign: 'center', padding: '50px' }}>Loading Services...</div>
+                    <div style={{ textAlign: 'center', padding: '50px', color: '#fff' }}>
+                        Loading Services... ({services.length})
+                    </div>
                 )}
 
                 {/* Bottom CTA */}

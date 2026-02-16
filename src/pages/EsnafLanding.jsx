@@ -25,11 +25,63 @@ const EsnafLanding = ({ t }) => {
         TrendingDown: TrendingDown
     };
 
+    // Structured data for esnaf package
+    const esnafSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": content.solution.title,
+        "description": content.solution.description,
+        "brand": {
+            "@type": "Brand",
+            "name": "ZMK Agency"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "20000",
+            "priceCurrency": "TRY",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/LimitedAvailability",
+            "seller": {
+                "@type": "ProfessionalService",
+                "name": "ZMK Agency"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": content.socialProof.stat1.value.replace('+', '')
+        }
+    };
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Esnaf Dijitalleşme Paketi nedir?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": content.solution.description + " Paket içeriği: " + content.solution.features.join(", ")
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Esnaf Paketi fiyatı nedir?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `${content.solution.price} ${content.solution.period}. Orijinal fiyat: ${content.solution.originalPrice}`
+                }
+            }
+        ]
+    };
+
     return (
         <>
             <SEO
                 title="Esnaf Dijitalleşme Paketi - ZMK Agency"
                 description="Kırıkkale esnafına özel web sitesi, harita kaydı ve sosyal medya yönetimi. Bölgesel hakimiyet paketi ile müşterilerinizi artırın."
+                schema={[esnafSchema, faqSchema]}
             />
 
             <div className="esnaf-landing">

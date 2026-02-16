@@ -33,11 +33,44 @@ const Pricing = ({ t, wizardT }) => {
         });
     };
 
+    // Build structured data for ALL pricing items (all categories)
+    const pricingSchema = {
+        "@context": "https://schema.org",
+        "@type": "OfferCatalog",
+        "name": "ZMK Agency Hizmet Fiyatları",
+        "description": t.subtitle,
+        "itemListElement": Object.entries(t.items).flatMap(([categoryId, plans]) =>
+            plans.map(plan => ({
+                "@type": "Offer",
+                "name": plan.title,
+                "description": plan.description,
+                "price": plan.price.replace(/[^0-9]/g, ''),
+                "priceCurrency": "TRY",
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "price": plan.price.replace(/[^0-9]/g, ''),
+                    "priceCurrency": "TRY",
+                    "unitText": plan.period
+                },
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": plan.title,
+                    "description": plan.description,
+                    "provider": {
+                        "@type": "ProfessionalService",
+                        "name": "ZMK Agency"
+                    }
+                }
+            }))
+        )
+    };
+
     return (
         <>
             <SEO
                 title={t.title}
                 description={t.subtitle}
+                schema={pricingSchema}
             />
             <section className="pricing-page">
 
@@ -251,6 +284,26 @@ const Pricing = ({ t, wizardT }) => {
                             </AnimatePresence>
                         </div>
                     </div>
+                </div>
+
+                {/* Hidden but crawlable: All pricing data for SEO (all categories rendered as semantic HTML) */}
+                <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+                    {Object.entries(t.items).map(([categoryId, plans]) => (
+                        <section key={categoryId}>
+                            <h2>{t.categories.find(c => c.id === categoryId)?.label || categoryId}</h2>
+                            {plans.map((plan, idx) => (
+                                <article key={idx} itemScope itemType="https://schema.org/Offer">
+                                    <h3 itemProp="name">{plan.title}</h3>
+                                    <p itemProp="description">{plan.description}</p>
+                                    <p>Fiyat: <span itemProp="price">{plan.price}</span> <span itemProp="priceCurrency">TRY</span> {plan.period}</p>
+                                    {plan.originalPrice && <p>Orijinal Fiyat: {plan.originalPrice} ₺</p>}
+                                    <ul>
+                                        {plan.features.map((f, fi) => <li key={fi}>{f}</li>)}
+                                    </ul>
+                                </article>
+                            ))}
+                        </section>
+                    ))}
                 </div>
             </section>
         </>

@@ -9,7 +9,7 @@ const Hero = ({ t, onCtaClick }) => {
             <div className="hero-bg-container">
                 <motion.img
                     src={heroBg}
-                    alt="Abstract Background"
+                    alt="ZMK Agency Kırıkkale Dijital Reklam Ajansı"
                     className="hero-bg-image"
                     initial={{ scale: 1.1, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}

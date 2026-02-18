@@ -218,7 +218,7 @@ export const content = {
             title: "Konuşalım.",
             subtitle: "Markanızı dönüştürmeye hazır mısınız? İletişime geçin.",
             namePlaceholder: "Adınız",
-            emailPlaceholder: "E-posta",
+            phonePlaceholder: "Telefon Numaranız",
             messagePlaceholder: "Proje Detayları",
             submit: "Gönder",
             location: "Kırıkkale, Türkiye"
@@ -235,7 +235,7 @@ export const content = {
             back: "Geri",
             finish: "Projeyi Başlat",
             detailsPlaceholder: "Projenizden kısaca bahsedin...",
-            contactPlaceholder: "E-postanız",
+            contactPlaceholder: "Telefon Numaranız",
             namePlaceholder: "Adınız Soyadınız",
             // Localized Options
             typeOptions: ["Web & Mobil App", "Marka Kimliği", "Sosyal Medya", "Tam Kapsamlı"],
@@ -758,7 +758,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             title: "Let's Talk.",
             subtitle: "Ready to transform your brand? Get in touch.",
             namePlaceholder: "Name",
-            emailPlaceholder: "Email",
+            phonePlaceholder: "Your Phone Number",
             messagePlaceholder: "Project Details",
             submit: "Send Message",
             location: "Kırıkkale, Turkey"
@@ -775,7 +775,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             back: "Back",
             finish: "Start Project",
             detailsPlaceholder: "Briefly describe your vision...",
-            contactPlaceholder: "Your Email",
+            contactPlaceholder: "Your Phone Number",
             namePlaceholder: "Full Name",
             // Localized Options
             typeOptions: ["Web & Mobile App", "Brand Identity", "Social Media", "Full Scale Transformation"],

@@ -8,7 +8,7 @@ import { MapPin, Mail, Phone, ArrowRight, CheckCircle, AlertCircle } from 'lucid
 const Contact = ({ t }) => {
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
+        phone: '',
         message: ''
     });
     const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
@@ -26,14 +26,14 @@ const Contact = ({ t }) => {
         try {
             await addDoc(collection(db, 'leads'), {
                 name: formData.name,
-                email: formData.email,
+                phone: formData.phone,
                 message: formData.message,
                 type: 'Contact Form',
                 status: 'New',
                 timestamp: serverTimestamp()
             });
             setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+            setFormData({ name: '', phone: '', message: '' });
             setTimeout(() => setStatus(''), 5000);
         } catch (error) {
             console.error("Error adding document: ", error);
@@ -121,15 +121,15 @@ const Contact = ({ t }) => {
                                     required
                                 />
                             </div>
-                            <div className={`form-group ${focusedField === 'email' ? 'focused' : ''}`}>
-                                <label>{t.emailPlaceholder || "E-POSTA"}</label>
+                            <div className={`form-group ${focusedField === 'phone' ? 'focused' : ''}`}>
+                                <label>{t.phonePlaceholder || "TELEFON"}</label>
                                 <input
-                                    type="email"
-                                    name="email"
+                                    type="tel"
+                                    name="phone"
                                     className="form-input"
-                                    value={formData.email}
+                                    value={formData.phone}
                                     onChange={handleInput}
-                                    onFocus={() => setFocusedField('email')}
+                                    onFocus={() => setFocusedField('phone')}
                                     onBlur={() => setFocusedField(null)}
                                     required
                                 />

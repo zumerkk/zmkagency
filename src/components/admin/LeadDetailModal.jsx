@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Mail, Phone, Calendar, Tag, CheckCircle } from 'lucide-react';
+import { X, Phone, Calendar, Tag, CheckCircle } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -81,9 +81,9 @@ const LeadDetailModal = ({ lead, onClose, onMarkRead }) => {
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                             <div style={{ background: 'rgba(255,255,255,0.03)', padding: '15px', borderRadius: '10px' }}>
                                 <label style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#666', fontSize: '12px', marginBottom: '8px' }}>
-                                    <Mail size={14} /> E-POSTA
+                                    <Phone size={14} /> TELEFON
                                 </label>
-                                <div style={{ color: '#fff' }}>{lead.email || '-'}</div>
+                                <div style={{ color: '#fff' }}>{lead.phone || '-'}</div>
                             </div>
                             <div style={{ background: 'rgba(255,255,255,0.03)', padding: '15px', borderRadius: '10px' }}>
                                 <label style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#666', fontSize: '12px', marginBottom: '8px' }}>
@@ -115,7 +115,7 @@ const LeadDetailModal = ({ lead, onClose, onMarkRead }) => {
 
                 {/* Footer Actions */}
                 <div style={{ padding: '20px 30px', background: 'rgba(255,255,255,0.02)', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', justifyContent: 'flex-end', gap: '15px' }}>
-                    <a href={`mailto:${lead.email}`} style={{
+                    <a href={`https://wa.me/${lead.phone ? lead.phone.replace(/[^0-9]/g, '') : ''}`} target="_blank" rel="noopener noreferrer" style={{
                         padding: '10px 20px',
                         background: 'rgba(255,255,255,0.1)',
                         color: '#fff',
@@ -126,7 +126,7 @@ const LeadDetailModal = ({ lead, onClose, onMarkRead }) => {
                         alignItems: 'center',
                         gap: '8px'
                     }}>
-                        <Mail size={16} /> Yanıtla
+                        <Phone size={16} /> WhatsApp
                     </a>
                     {lead.status === 'New' && (
                         <button onClick={() => onMarkRead(lead.id)} style={{

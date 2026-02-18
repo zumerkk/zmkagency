@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LeadMagnet = () => {
-    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here we would typically send this to an API
-        console.log("Lead Magnet Request:", email);
+        console.log("Lead Magnet Request:", phone);
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000);
-        setEmail('');
+        setPhone('');
     };
 
     return (
@@ -53,7 +53,7 @@ const LeadMagnet = () => {
                                     >
                                         <div className="text-5xl mb-4">🚀</div>
                                         <h4 className="text-xl font-bold text-white mb-2">Harika!</h4>
-                                        <p className="text-gray-400">Rehber e-posta adresinize gönderildi.</p>
+                                        <p className="text-gray-400">Rehber telefon numaranıza gönderildi.</p>
                                     </motion.div>
                                 ) : (
                                     <motion.form
@@ -66,11 +66,11 @@ const LeadMagnet = () => {
                                         <h4 className="text-lg font-medium text-white mb-4">Hemen İndirin</h4>
                                         <div>
                                             <input
-                                                type="email"
-                                                placeholder="E-posta adresiniz"
+                                                type="tel"
+                                                placeholder="Telefon numaranız"
                                                 required
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
+                                                value={phone}
+                                                onChange={(e) => setPhone(e.target.value)}
                                                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
                                             />
                                         </div>

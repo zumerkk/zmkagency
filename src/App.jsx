@@ -44,12 +44,15 @@ function App() {
     setLang(prev => prev === 'tr' ? 'en' : 'tr');
   };
 
+  // Hide public chrome on admin pages
+  const isAdmin = location.pathname.startsWith('/admin');
+
   return (
     <div className="App">
       <Helmet htmlAttributes={{ lang }} />
 
       <ScrollToTop />
-      <Navbar t={t.nav} lang={lang} toggleLang={toggleLang} />
+      {!isAdmin && <Navbar t={t.nav} lang={lang} toggleLang={toggleLang} />}
 
       <main>
         <Suspense fallback={<PageLoader />}>
@@ -125,8 +128,8 @@ function App() {
               <Route path="/blog" element={<Blog t={t} />} />
               <Route path="/blog/:slug" element={<BlogDetail />} />
 
-              {/* Admin Routes */}
-              <Route path="/login" element={<Login />} />
+              {/* Admin Routes — no Navbar/Footer shown */}
+              <Route path="/admin/login" element={<Login />} />
               <Route path="/admin" element={<Dashboard />} />
 
               <Route path="/thank-you" element={<ThankYou />} />
@@ -140,7 +143,7 @@ function App() {
         </Suspense>
       </main>
 
-      <Footer t={t.footer} />
+      {!isAdmin && <Footer t={t.footer} />}
     </div>
   );
 }

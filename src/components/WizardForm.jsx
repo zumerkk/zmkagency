@@ -44,7 +44,7 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
         try {
             await addDoc(collection(db, 'leads'), {
                 name: formData.name,
-                email: formData.contact,
+                phone: formData.contact,
                 message: `Bütçe: ${formData.budget} \nDetaylar: ${formData.details}`,
                 service: formData.type.join(', '),
                 budget: formData.budget,
@@ -187,7 +187,7 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         />
                                         <input
-                                            type="email"
+                                            type="tel"
                                             placeholder={t.contactPlaceholder}
                                             value={formData.contact}
                                             onChange={(e) => setFormData({ ...formData, contact: e.target.value })}

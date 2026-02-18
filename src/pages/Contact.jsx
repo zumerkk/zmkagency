@@ -13,7 +13,6 @@ const Contact = ({ t }) => {
 
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
         phone: '',
         message: ''
     });
@@ -37,7 +36,7 @@ const Contact = ({ t }) => {
                 timestamp: serverTimestamp()
             });
             setStatus('success');
-            setFormData({ name: '', email: '', phone: '', message: '' });
+            setFormData({ name: '', phone: '', message: '' });
             setTimeout(() => setStatus(''), 5000);
         } catch (error) {
             console.error("Error adding document: ", error);
@@ -155,32 +154,18 @@ const Contact = ({ t }) => {
                                     />
                                 </div>
 
-                                <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                                    <div className={`form-group ${focusedField === 'email' ? 'focused' : ''}`}>
-                                        <label>{contactData.emailPlaceholder || "E-POSTA"}</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            className="form-input"
-                                            value={formData.email}
-                                            onChange={handleInput}
-                                            onFocus={() => setFocusedField('email')}
-                                            onBlur={() => setFocusedField(null)}
-                                            required
-                                        />
-                                    </div>
-                                    <div className={`form-group ${focusedField === 'phone' ? 'focused' : ''}`}>
-                                        <label>TELEFON</label>
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            className="form-input"
-                                            value={formData.phone}
-                                            onChange={handleInput}
-                                            onFocus={() => setFocusedField('phone')}
-                                            onBlur={() => setFocusedField(null)}
-                                        />
-                                    </div>
+                                <div className={`form-group ${focusedField === 'phone' ? 'focused' : ''}`}>
+                                    <label>{contactData.phonePlaceholder || "TELEFON NUMARANIZ"}</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        className="form-input"
+                                        value={formData.phone}
+                                        onChange={handleInput}
+                                        onFocus={() => setFocusedField('phone')}
+                                        onBlur={() => setFocusedField(null)}
+                                        required
+                                    />
                                 </div>
 
                                 <div className={`form-group ${focusedField === 'message' ? 'focused' : ''}`}>

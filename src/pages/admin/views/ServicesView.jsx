@@ -1,95 +1,82 @@
-import React, { useEffect, useState } from 'react';
-import { Plus, Edit3, Trash2, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Plus, Edit3, Trash2, X, Search } from 'lucide-react';
+import { useFirestoreCRUD, showToast } from '../../../hooks/useFirestoreCRUD';
 
-const ServicesView = ({ api }) => {
-    const [services, setServices] = useState([]);
-    const [loading, setLoading] = useState(true);
+const EMPTY = { name: '', description: '', category: 'Web Geliştirme', priceType: 'Tek Seferlik', price: '', currency: 'TRY', scope: '', sla: '' };
+const CATEGORIES = ['Web Geliştirme', 'Mobil Uygulama', 'SEO', 'Sosyal Medya', 'Logo & Tasarım', 'Video & Animasyon', 'E-Ticaret', 'Danışmanlık', 'Diğer'];
+
+const ServicesView = () => {
     const [showModal, setShowModal] = useState(false);
-    const [editing, setEditing] = useState(null);
-    const [form, setForm] = useState({ name: '', description: '', scope: '', duration: '', unitPrice: '', currency: 'TRY', kdvRate: 20, category: 'Genel', order: 0 });
+    const [editId, setEditId] = useState(null);
+    const [form, setForm] = useState(EMPTY);
+    const [search, setSearch] = useState('');
+    const [catFilter, setCatFilter] = useState('all');
 
-    const fetchServices = () => {
-        setLoading(true);
-        api.get('/services').then(setServices).catch(console.error).finally(() => setLoading(false));
-    };
+    const filters = catFilter !== 'all' ? [{ field: 'category', op: '==', value: catFilter }] : [];
+    const { items: services, loading, add, update, remove } = useFirestoreCRUD('catalog_services', { filters, pageSize: 50 });
 
-    useEffect(() => { fetchServices(); }, []);
+    const displayed = search ? services.filter(s => s.name?.toLowerCase().includes(search.toLowerCase())) : services;
 
-    const openEdit = (svc) => {
-        setEditing(svc);
-        setForm({ name: svc.name, description: svc.description, scope: svc.scope, duration: svc.duration, unitPrice: svc.unitPrice, currency: svc.currency, kdvRate: svc.kdvRate, category: svc.category, order: svc.order || 0 });
-        setShowModal(true);
-    };
-
-    const openNew = () => {
-        setEditing(null);
-        setForm({ name: '', description: '', scope: '', duration: '', unitPrice: '', currency: 'TRY', kdvRate: 20, category: 'Genel', order: services.length + 1 });
-        setShowModal(true);
+    const openNew = () => { setForm(EMPTY); setEditId(null); setShowModal(true); };
+    const openEdit = (s) => {
+        setForm({ name: s.name || '', description: s.description || '', category: s.category || 'Web Geliştirme', priceType: s.priceType || 'Tek Seferlik', price: s.price || '', currency: s.currency || 'TRY', scope: s.scope || '', sla: s.sla || '' });
+        setEditId(s.id); setShowModal(true);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            if (editing) {
-                await api.put(`/services/${editing.id}`, form);
-            } else {
-                await api.post('/services', form);
-            }
+            const data = { ...form, price: Number(form.price) || 0 };
+            if (editId) { await update(editId, data); showToast('Hizmet güncellendi'); }
+            else { await add(data); showToast('Hizmet eklendi'); }
             setShowModal(false);
-            fetchServices();
-        } catch (err) {
-            alert('Hata: ' + err.message);
-        }
+        } catch { showToast('Hata oluştu', 'error'); }
     };
 
     const handleDelete = async (id) => {
         if (!confirm('Bu hizmeti silmek istediğinize emin misiniz?')) return;
-        try {
-            await api.del(`/services/${id}`);
-            fetchServices();
-        } catch (err) {
-            alert('Hata: ' + err.message);
-        }
+        try { await remove(id); showToast('Hizmet silindi'); } catch { showToast('Hata', 'error'); }
     };
 
-    const formatPrice = (price, currency) => {
-        const symbols = { TRY: '₺', EUR: '€', USD: '$' };
-        return `${symbols[currency] || currency}${Number(price).toLocaleString('tr-TR')}`;
+    const fmtPrice = (p, c = 'TRY') => {
+        const sym = { TRY: '₺', EUR: '€', USD: '$' };
+        return `${sym[c] || c}${Number(p || 0).toLocaleString('tr-TR')}`;
     };
+
+    const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
 
     return (
         <>
             <div className="admin-header">
-                <div>
-                    <h1>Hizmet Kataloğu</h1>
-                    <p className="admin-header-subtitle">{services.length} hizmet tanımlı</p>
-                </div>
-                <button className="admin-btn admin-btn-primary" onClick={openNew}><Plus size={16} /> Yeni Hizmet</button>
+                <div><h1>Hizmet Kataloğu</h1><p className="admin-header-subtitle">{displayed.length} hizmet</p></div>
+                <button className="admin-btn admin-btn-primary" onClick={openNew}><Plus size={15} /> Yeni Hizmet</button>
             </div>
 
-            {loading ? (
-                <div className="admin-loading"><div className="admin-spinner" /> Yükleniyor...</div>
+            <div className="admin-toolbar">
+                <div className="admin-search-bar"><Search size={15} color="#555" /><input placeholder="Hizmet ara..." value={search} onChange={e => setSearch(e.target.value)} /></div>
+                <select className="admin-select" value={catFilter} onChange={e => setCatFilter(e.target.value)}>
+                    <option value="all">Tüm Kategoriler</option>
+                    {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+            </div>
+
+            {loading ? <div className="admin-loading"><div className="admin-spinner" /> Yükleniyor...</div> : displayed.length === 0 ? (
+                <div className="admin-empty"><div className="admin-empty-icon">📦</div><p>Henüz hizmet eklenmemiş</p></div>
             ) : (
                 <div className="admin-table-wrapper">
                     <table className="admin-table">
-                        <thead>
-                            <tr><th>Hizmet</th><th>Kategori</th><th>Süre</th><th>Birim Fiyat</th><th>KDV</th><th style={{ width: 80 }}></th></tr>
-                        </thead>
+                        <thead><tr><th>Hizmet</th><th>Kategori</th><th>Fiyat Tipi</th><th>Fiyat</th><th style={{ width: 100 }}></th></tr></thead>
                         <tbody>
-                            {services.map(svc => (
-                                <tr key={svc.id}>
+                            {displayed.map(s => (
+                                <tr key={s.id}>
+                                    <td><strong>{s.name}</strong>{s.description && <div style={{ fontSize: '0.75rem', color: '#666', marginTop: 2 }}>{s.description.substring(0, 60)}{s.description.length > 60 ? '...' : ''}</div>}</td>
+                                    <td><span className="admin-badge admin-badge-info">{s.category}</span></td>
+                                    <td><span className="admin-badge admin-badge-neutral">{s.priceType}</span></td>
+                                    <td style={{ fontWeight: 600 }}>{fmtPrice(s.price, s.currency)}</td>
                                     <td>
-                                        <strong>{svc.name}</strong>
-                                        {svc.description && <div style={{ fontSize: '0.75rem', color: '#888', marginTop: '2px' }}>{svc.description}</div>}
-                                    </td>
-                                    <td><span className="admin-badge admin-badge-neutral">{svc.category}</span></td>
-                                    <td>{svc.duration || '-'}</td>
-                                    <td style={{ fontWeight: 600, color: '#dc2626' }}>{formatPrice(svc.unitPrice, svc.currency)}</td>
-                                    <td>%{svc.kdvRate}</td>
-                                    <td>
-                                        <div style={{ display: 'flex', gap: '4px' }}>
-                                            <button className="admin-btn-icon admin-btn-ghost" onClick={() => openEdit(svc)}><Edit3 size={14} /></button>
-                                            <button className="admin-btn-icon admin-btn-ghost" onClick={() => handleDelete(svc.id)}><Trash2 size={14} color="#ef4444" /></button>
+                                        <div style={{ display: 'flex', gap: 4 }}>
+                                            <button className="admin-btn admin-btn-sm admin-btn-ghost" onClick={() => openEdit(s)}><Edit3 size={14} /></button>
+                                            <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => handleDelete(s.id)}><Trash2 size={14} /></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -100,58 +87,39 @@ const ServicesView = ({ api }) => {
             )}
 
             {showModal && (
-                <div className="admin-modal-overlay" onClick={(e) => e.target === e.currentTarget && setShowModal(false)}>
+                <div className="admin-modal-overlay" onClick={e => e.target === e.currentTarget && setShowModal(false)}>
                     <div className="admin-modal">
-                        <div className="admin-modal-header">
-                            <h3>{editing ? 'Hizmet Düzenle' : 'Yeni Hizmet'}</h3>
-                            <button className="admin-btn-icon admin-btn-ghost" onClick={() => setShowModal(false)}><X size={18} /></button>
-                        </div>
+                        <div className="admin-modal-header"><h3>{editId ? 'Hizmet Düzenle' : 'Yeni Hizmet'}</h3><button className="admin-btn-icon admin-btn-ghost" onClick={() => setShowModal(false)}><X size={18} /></button></div>
                         <form onSubmit={handleSubmit}>
                             <div className="admin-modal-body">
-                                <div className="admin-form-group">
-                                    <label className="admin-label">Hizmet Adı *</label>
-                                    <input className="admin-input" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-                                </div>
-                                <div className="admin-form-group">
-                                    <label className="admin-label">Açıklama</label>
-                                    <textarea className="admin-textarea" value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
-                                </div>
-                                <div className="admin-form-group">
-                                    <label className="admin-label">Teslim Kapsamı</label>
-                                    <textarea className="admin-textarea" value={form.scope} onChange={(e) => setForm({ ...form, scope: e.target.value })} />
-                                </div>
+                                <div className="admin-form-group"><label className="admin-label">Hizmet Adı *</label><input className="admin-input" required value={form.name} onChange={e => set('name', e.target.value)} /></div>
+                                <div className="admin-form-group"><label className="admin-label">Açıklama</label><textarea className="admin-textarea" value={form.description} onChange={e => set('description', e.target.value)} /></div>
                                 <div className="admin-form-row">
-                                    <div className="admin-form-group">
-                                        <label className="admin-label">Süre</label>
-                                        <input className="admin-input" value={form.duration} onChange={(e) => setForm({ ...form, duration: e.target.value })} placeholder="Ör: 15-25 iş günü" />
+                                    <div className="admin-form-group"><label className="admin-label">Kategori</label>
+                                        <select className="admin-select" value={form.category} onChange={e => set('category', e.target.value)}>
+                                            {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                                        </select>
                                     </div>
-                                    <div className="admin-form-group">
-                                        <label className="admin-label">Kategori</label>
-                                        <select className="admin-select" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>
-                                            <option>Genel</option><option>Web</option><option>Reklam</option><option>SEO</option><option>İçerik</option><option>Danışmanlık</option>
+                                    <div className="admin-form-group"><label className="admin-label">Fiyat Tipi</label>
+                                        <select className="admin-select" value={form.priceType} onChange={e => set('priceType', e.target.value)}>
+                                            <option value="Tek Seferlik">Tek Seferlik</option><option value="Aylık">Aylık</option><option value="Yıllık">Yıllık</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div className="admin-form-row">
-                                    <div className="admin-form-group">
-                                        <label className="admin-label">Birim Fiyat *</label>
-                                        <input className="admin-input" type="number" required value={form.unitPrice} onChange={(e) => setForm({ ...form, unitPrice: e.target.value })} />
-                                    </div>
-                                    <div className="admin-form-group">
-                                        <label className="admin-label">Para Birimi</label>
-                                        <select className="admin-select" value={form.currency} onChange={(e) => setForm({ ...form, currency: e.target.value })}>
+                                    <div className="admin-form-group"><label className="admin-label">Fiyat</label><input className="admin-input" type="number" value={form.price} onChange={e => set('price', e.target.value)} /></div>
+                                    <div className="admin-form-group"><label className="admin-label">Para Birimi</label>
+                                        <select className="admin-select" value={form.currency} onChange={e => set('currency', e.target.value)}>
                                             <option value="TRY">₺ TRY</option><option value="EUR">€ EUR</option><option value="USD">$ USD</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div className="admin-form-group" style={{ maxWidth: '200px' }}>
-                                    <label className="admin-label">KDV Oranı (%)</label>
-                                    <input className="admin-input" type="number" value={form.kdvRate} onChange={(e) => setForm({ ...form, kdvRate: Number(e.target.value) })} />
-                                </div>
+                                <div className="admin-form-group"><label className="admin-label">Teslim Kapsamı</label><textarea className="admin-textarea" value={form.scope} onChange={e => set('scope', e.target.value)} placeholder="Bu hizmet kapsamında neler sunulacak..." /></div>
+                                <div className="admin-form-group"><label className="admin-label">SLA / Teslimat Süresi</label><input className="admin-input" value={form.sla} onChange={e => set('sla', e.target.value)} placeholder="Ör: 15 iş günü" /></div>
                             </div>
                             <div className="admin-modal-footer">
                                 <button type="button" className="admin-btn admin-btn-secondary" onClick={() => setShowModal(false)}>İptal</button>
-                                <button type="submit" className="admin-btn admin-btn-primary">{editing ? 'Güncelle' : 'Kaydet'}</button>
+                                <button type="submit" className="admin-btn admin-btn-primary">{editId ? 'Güncelle' : 'Kaydet'}</button>
                             </div>
                         </form>
                     </div>

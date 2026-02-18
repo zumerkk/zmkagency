@@ -1,9 +1,10 @@
 import React from 'react';
 import AdminGuard from '../../components/admin/AdminGuard';
 import AdminSidebar from '../../components/admin/AdminSidebar';
+import AdminTopbar from '../../components/admin/AdminTopbar';
 import '../../styles/Admin.css';
 
-const AdminLayout = ({ children, activeTab, setActiveTab, onLogout, overdueCount = 0 }) => {
+const AdminLayout = ({ children, activeTab, setActiveTab, onLogout, newLeadCount, userEmail, onQuickAdd }) => {
     return (
         <AdminGuard>
             <div className="admin-layout">
@@ -11,10 +12,16 @@ const AdminLayout = ({ children, activeTab, setActiveTab, onLogout, overdueCount
                     activeTab={activeTab}
                     setActiveTab={setActiveTab}
                     onLogout={onLogout}
-                    overdueCount={overdueCount}
+                    newLeadCount={newLeadCount}
                 />
                 <div className="admin-main">
-                    {children}
+                    <AdminTopbar
+                        onQuickAdd={onQuickAdd}
+                        userEmail={userEmail}
+                    />
+                    <div className="admin-content">
+                        {children}
+                    </div>
                 </div>
             </div>
         </AdminGuard>

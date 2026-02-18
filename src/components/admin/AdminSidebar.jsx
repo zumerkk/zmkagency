@@ -1,59 +1,79 @@
 import React from 'react';
-import { LayoutDashboard, Users, Briefcase, FolderKanban, FileText, FileSignature, CreditCard, Settings, LogOut, Bell } from 'lucide-react';
+import { LayoutDashboard, Inbox, Zap, DollarSign, MessageSquare, LogOut } from 'lucide-react';
 
-const AdminSidebar = ({ activeTab, setActiveTab, onLogout, overdueCount = 0 }) => {
-    const mainItems = [
-        { id: 'dashboard', label: 'Gösterge Paneli', icon: <LayoutDashboard size={18} /> },
-        { id: 'clients', label: 'Müşteriler', icon: <Users size={18} /> },
+const AdminSidebar = ({ activeTab, setActiveTab, onLogout }) => {
+    const menuItems = [
+        { id: 'overview', label: 'Özet Durum', icon: <LayoutDashboard size={20} /> },
+        { id: 'all', label: 'Tüm Mesajlar', icon: <Inbox size={20} /> },
+        { id: 'quote', label: 'Hızlı Teklifler', icon: <Zap size={20} /> },
+        { id: 'pricing', label: 'Fiyat Planları', icon: <DollarSign size={20} /> },
+        { id: 'contact', label: 'İletişim Mesajları', icon: <MessageSquare size={20} /> },
     ];
-
-    const workItems = [
-        { id: 'services', label: 'Hizmet Kataloğu', icon: <Briefcase size={18} /> },
-        { id: 'projects', label: 'Projeler', icon: <FolderKanban size={18} /> },
-    ];
-
-    const financeItems = [
-        { id: 'quotes', label: 'Teklifler', icon: <FileText size={18} /> },
-        { id: 'contracts', label: 'Sözleşmeler', icon: <FileSignature size={18} /> },
-        { id: 'payments', label: 'Ödemeler', icon: <CreditCard size={18} />, badge: overdueCount || null },
-    ];
-
-    const systemItems = [
-        { id: 'templates', label: 'Şablonlar', icon: <Settings size={18} /> },
-    ];
-
-    const renderSection = (title, items) => (
-        <>
-            <div className="admin-sidebar-section">{title}</div>
-            {items.map((item) => (
-                <button
-                    key={item.id}
-                    onClick={() => setActiveTab(item.id)}
-                    className={`admin-nav-item ${activeTab === item.id ? 'active' : ''}`}
-                >
-                    {item.icon}
-                    {item.label}
-                    {item.badge && <span className="nav-badge">{item.badge}</span>}
-                </button>
-            ))}
-        </>
-    );
 
     return (
-        <div className="admin-sidebar">
-            <div className="admin-sidebar-logo">
-                <h2>ZMK <span>ADMIN</span></h2>
+        <div style={{
+            width: '260px',
+            minHeight: '100vh',
+            background: '#050505',
+            borderRight: '1px solid rgba(255,255,255,0.05)',
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '20px',
+            position: 'fixed'
+        }}>
+            {/* Logo Area */}
+            <div style={{ marginBottom: '40px', paddingLeft: '10px' }}>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', letterSpacing: '-1px' }}>
+                    ZMK <span style={{ color: '#2997ff' }}>ADMIN</span>
+                </h2>
             </div>
 
-            <div className="admin-sidebar-nav">
-                {renderSection('ANA MENÜ', mainItems)}
-                {renderSection('İŞ YÖNETİMİ', workItems)}
-                {renderSection('FİNANS', financeItems)}
-                {renderSection('SİSTEM', systemItems)}
+            {/* Menu */}
+            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                {menuItems.map((item) => (
+                    <button
+                        key={item.id}
+                        onClick={() => setActiveTab(item.id)}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '12px',
+                            padding: '12px 15px',
+                            background: activeTab === item.id ? 'rgba(41, 151, 255, 0.1)' : 'transparent',
+                            color: activeTab === item.id ? '#2997ff' : '#888',
+                            border: 'none',
+                            borderRadius: '10px',
+                            cursor: 'pointer',
+                            textAlign: 'left',
+                            fontSize: '0.95rem',
+                            fontWeight: activeTab === item.id ? '600' : '400',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        {item.icon}
+                        {item.label}
+                    </button>
+                ))}
             </div>
 
-            <button onClick={onLogout} className="admin-nav-logout">
-                <LogOut size={18} />
+            {/* Logout */}
+            <button
+                onClick={onLogout}
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '12px 15px',
+                    color: '#ff4444',
+                    background: 'rgba(255, 68, 68, 0.05)',
+                    border: 'none',
+                    borderRadius: '10px',
+                    cursor: 'pointer',
+                    marginTop: 'auto',
+                    transition: 'background 0.2s'
+                }}
+            >
+                <LogOut size={20} />
                 Güvenli Çıkış
             </button>
         </div>

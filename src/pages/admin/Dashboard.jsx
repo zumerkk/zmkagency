@@ -7,16 +7,34 @@ import { CheckCircle } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import AdminSidebar from '../../components/admin/AdminSidebar';
 import LeadDetailModal from '../../components/admin/LeadDetailModal';
+import { useAdminApi } from '../../hooks/useAdminApi';
+
+// CRM Views
+import DashboardView from './views/DashboardView';
+import ClientsView from './views/ClientsView';
+import ClientDetailView from './views/ClientDetailView';
+import ServicesView from './views/ServicesView';
+import ProjectsView from './views/ProjectsView';
+import QuotesView from './views/QuotesView';
+import ContractsView from './views/ContractsView';
+import PaymentsView from './views/PaymentsView';
+import TemplatesView from './views/TemplatesView';
+
+// Firebase-based lead tabs
+const LEAD_TABS = ['overview', 'all', 'quote', 'pricing', 'contact'];
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
     const [leads, setLeads] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [activeTab, setActiveTab] = useState('overview'); // overview, all, quote, pricing, contact
+    const [activeTab, setActiveTab] = useState('overview');
     const [selectedLead, setSelectedLead] = useState(null);
+    const [selectedClientId, setSelectedClientId] = useState(null);
 
     const navigate = useNavigate();
+    const api = useAdminApi();
 
+    // Auth
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
@@ -28,6 +46,7 @@ const Dashboard = () => {
         return () => unsubscribe();
     }, [navigate]);
 
+    // Firebase Leads listener
     useEffect(() => {
         if (!user) return;
 
@@ -53,7 +72,18 @@ const Dashboard = () => {
         }
     };
 
-    // Filtering Logic
+    // CRM client detail navigation
+    const handleViewClient = (clientId) => {
+        setSelectedClientId(clientId);
+        setActiveTab('clientDetail');
+    };
+
+    const handleBackToClients = () => {
+        setSelectedClientId(null);
+        setActiveTab('clients');
+    };
+
+    // Filtering Logic for leads
     const filteredLeads = leads.filter(lead => {
         if (activeTab === 'overview') return false;
         if (activeTab === 'all') return true;
@@ -76,7 +106,35 @@ const Dashboard = () => {
         }).length
     };
 
+    const isLeadTab = LEAD_TABS.includes(activeTab);
+
     if (loading) return <div style={{ height: '100vh', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>Yükleniyor...</div>;
+
+    // Render CRM view
+    const renderCRMView = () => {
+        switch (activeTab) {
+            case 'dashboard':
+                return <DashboardView api={api} onViewClient={handleViewClient} />;
+            case 'clients':
+                return <ClientsView api={api} onViewClient={handleViewClient} />;
+            case 'clientDetail':
+                return <ClientDetailView api={api} clientId={selectedClientId} onBack={handleBackToClients} />;
+            case 'services':
+                return <ServicesView api={api} />;
+            case 'projects':
+                return <ProjectsView api={api} />;
+            case 'quotes':
+                return <QuotesView api={api} onViewClient={handleViewClient} />;
+            case 'contracts':
+                return <ContractsView api={api} />;
+            case 'payments':
+                return <PaymentsView api={api} />;
+            case 'templates':
+                return <TemplatesView api={api} />;
+            default:
+                return null;
+        }
+    };
 
     return (
         <div style={{ display: 'flex', minHeight: '100vh', background: '#000', color: '#f5f5f7', fontFamily: 'Inter, sans-serif' }}>
@@ -85,36 +143,43 @@ const Dashboard = () => {
 
             <div style={{ marginLeft: '260px', flex: 1, padding: '40px', overflowY: 'auto' }}>
 
-                {/* Header */}
-                <div style={{ marginBottom: '40px', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <h1 style={{ fontSize: '2rem', marginBottom: '10px' }}>
-                        {activeTab === 'overview' ? 'Özet Durum' :
-                            activeTab === 'all' ? 'Tüm Mesajlar' :
-                                activeTab === 'quote' ? 'Hızlı Teklifler' :
-                                    activeTab === 'pricing' ? 'Fiyat Talepleri' :
-                                        activeTab === 'contact' ? 'İletişim Mesajları' : 'Mesajlar'}
-                    </h1>
-                    <p style={{ color: '#666' }}>Yönetici Paneli • {user?.email}</p>
-                </div>
-
-                {/* OVERVIEW TAB */}
-                {activeTab === 'overview' && (
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
-                        <StatCard label="Toplam Mesaj" value={stats.total} />
-                        <StatCard label="Bugün Gelen" value={stats.today} color="#2997ff" />
-                        <StatCard label="Bekleyen" value={stats.new} color="#ff4444" />
-                        <StatCard label="Tamamlanan" value={stats.contacted} color="#00C851" />
-
-                        <div style={{ gridColumn: 'span 4', marginTop: '40px' }}>
-                            <h3 style={{ marginBottom: '20px', color: '#888' }}>Son Gelenler</h3>
-                            <LeadsTable leads={leads.slice(0, 5)} onSelect={setSelectedLead} />
+                {isLeadTab ? (
+                    <>
+                        {/* Header */}
+                        <div style={{ marginBottom: '40px', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                            <h1 style={{ fontSize: '2rem', marginBottom: '10px' }}>
+                                {activeTab === 'overview' ? 'Özet Durum' :
+                                    activeTab === 'all' ? 'Tüm Mesajlar' :
+                                        activeTab === 'quote' ? 'Hızlı Teklifler' :
+                                            activeTab === 'pricing' ? 'Fiyat Talepleri' :
+                                                activeTab === 'contact' ? 'İletişim Mesajları' : 'Mesajlar'}
+                            </h1>
+                            <p style={{ color: '#666' }}>Yönetici Paneli • {user?.email}</p>
                         </div>
-                    </div>
-                )}
 
-                {/* OTHER TABS */}
-                {activeTab !== 'overview' && (
-                    <LeadsTable leads={filteredLeads} onSelect={setSelectedLead} emptyMsg="Bu kategoride henüz mesaj yok." />
+                        {/* OVERVIEW TAB */}
+                        {activeTab === 'overview' && (
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+                                <StatCard label="Toplam Mesaj" value={stats.total} />
+                                <StatCard label="Bugün Gelen" value={stats.today} color="#2997ff" />
+                                <StatCard label="Bekleyen" value={stats.new} color="#ff4444" />
+                                <StatCard label="Tamamlanan" value={stats.contacted} color="#00C851" />
+
+                                <div style={{ gridColumn: 'span 4', marginTop: '40px' }}>
+                                    <h3 style={{ marginBottom: '20px', color: '#888' }}>Son Gelenler</h3>
+                                    <LeadsTable leads={leads.slice(0, 5)} onSelect={setSelectedLead} />
+                                </div>
+                            </div>
+                        )}
+
+                        {/* OTHER LEAD TABS */}
+                        {activeTab !== 'overview' && isLeadTab && (
+                            <LeadsTable leads={filteredLeads} onSelect={setSelectedLead} emptyMsg="Bu kategoride henüz mesaj yok." />
+                        )}
+                    </>
+                ) : (
+                    /* CRM Views */
+                    renderCRMView()
                 )}
 
             </div>
@@ -133,7 +198,7 @@ const Dashboard = () => {
     );
 };
 
-// Sub-components for cleaner code
+// Sub-components
 const StatCard = ({ label, value, color = '#fff' }) => (
     <div style={{ background: '#111', padding: '25px', borderRadius: '15px', border: '1px solid rgba(255,255,255,0.05)' }}>
         <h4 style={{ color: '#666', fontSize: '0.9rem', marginBottom: '10px', fontWeight: 'normal' }}>{label}</h4>

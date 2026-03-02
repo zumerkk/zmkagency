@@ -92,6 +92,31 @@ const Pricing = ({ t, wizardT }) => {
                         </motion.p>
                     </div>
 
+                    {/* Discount Badge */}
+                    {t.discountTag && (
+                        <motion.div
+                            className="discount-badge-banner"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            style={{
+                                background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+                                color: '#fff',
+                                padding: '12px 30px',
+                                borderRadius: '50px',
+                                fontSize: '1.1rem',
+                                fontWeight: '700',
+                                textAlign: 'center',
+                                margin: '0 auto 30px',
+                                display: 'inline-block',
+                                boxShadow: '0 4px 20px rgba(245, 158, 11, 0.4)',
+                                letterSpacing: '0.5px'
+                            }}
+                        >
+                            {t.discountTag}
+                        </motion.div>
+                    )}
+
                     {/* Categories */}
                     <div className="pricing-categories">
                         {t.categories.map((cat) => (

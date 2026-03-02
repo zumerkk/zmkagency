@@ -284,6 +284,7 @@ export const content = {
         pricing: {
             title: "Yatırım Planları.",
             subtitle: "Maliyet değil, şirketinize değer katan stratejik yatırımlar.",
+            discountTag: "🎉 Kuruluşa Özel %30 İndirim",
             categories: [
                 { id: 'local', label: '🔥 Saha Kurtları (Esnaf)' },
                 { id: 'retainer', label: '360° Retainer' },
@@ -300,8 +301,8 @@ export const content = {
                 local: [
                     {
                         title: "Bölgesel Hakimiyet",
-                        price: "20.000",
-                        originalPrice: "34.999",
+                        price: "14.000",
+                        originalPrice: "20.000",
                         period: " (Tek Seferlik)",
                         isPopular: true,
                         description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
@@ -316,8 +317,8 @@ export const content = {
                     },
                     {
                         title: "Kırıkkale Lideri",
-                        price: "30.000",
-                        originalPrice: "45.000",
+                        price: "21.000",
+                        originalPrice: "30.000",
                         period: "/ay",
                         description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
                         techSpecs: "Aylık Tam Yönetim",
@@ -331,8 +332,8 @@ export const content = {
                     },
                     {
                         title: "Dijital Fabrika (Kurumsal)",
-                        price: "50.000+",
-                        originalPrice: "75.000",
+                        price: "35.000+",
+                        originalPrice: "50.000",
                         period: " (Proje Bazlı)",
                         description: "Fabrikalar ve büyük işletmeler için özel prodüksiyon ve tanıtım.",
                         techSpecs: "Drone + 4K Prodüksiyon",
@@ -348,7 +349,8 @@ export const content = {
                 retainer: [
                     {
                         title: "Startup Growth",
-                        price: "25.000",
+                        price: "17.500",
+                        originalPrice: "25.000",
                         period: "/ay",
                         description: "Yeni girişimler için temel dijital varlık ve büyüme paketi.",
                         techSpecs: "Sosyal Medya + Temel SEO",
@@ -362,7 +364,8 @@ export const content = {
                     },
                     {
                         title: "Scale Up",
-                        price: "45.000",
+                        price: "31.500",
+                        originalPrice: "45.000",
                         period: "/ay",
                         isPopular: true,
                         description: "Hızlı büyüme hedefleyen işletmeler için agresif strateji.",
@@ -378,7 +381,8 @@ export const content = {
                     },
                     {
                         title: "Market Domination",
-                        price: "80.000+",
+                        price: "56.000+",
+                        originalPrice: "80.000",
                         period: "/ay",
                         description: "Sektör liderliği için tam kapsamlı dijital departman.",
                         techSpecs: "7/24 Dedike Ekip",
@@ -395,7 +399,8 @@ export const content = {
                 webSoftware: [
                     {
                         title: "Kurumsal Web Sitesi",
-                        price: "25.000",
+                        price: "17.500",
+                        originalPrice: "25.000",
                         period: "'den itibaren",
                         isPopular: true,
                         description: "Markanızın dijital vitrini. Hızlı, güvenli ve mobil uyumlu.",
@@ -410,7 +415,8 @@ export const content = {
                     },
                     {
                         title: "E-Ticaret Çözümleri",
-                        price: "60.000",
+                        price: "42.000",
+                        originalPrice: "60.000",
                         period: "'den itibaren",
                         description: "Satış odaklı, yüksek dönüşüm oranlı online mağazalar.",
                         techSpecs: "Shopify / Custom Headless",
@@ -424,7 +430,8 @@ export const content = {
                     },
                     {
                         title: "Özel Yazılım / App",
-                        price: "150.000+",
+                        price: "105.000+",
+                        originalPrice: "150.000",
                         period: "'den itibaren",
                         description: "İş süreçlerinize özel web ve mobil uygulamalar.",
                         techSpecs: "React Native / Node.js / AWS",
@@ -440,7 +447,8 @@ export const content = {
                 marketingAds: [
                     {
                         title: "Google Ads (SEM)",
-                        price: "15.000",
+                        price: "10.500",
+                        originalPrice: "15.000",
                         period: "/ay + Bütçe",
                         description: "Arama sonuçlarında en tepede yer alın.",
                         techSpecs: "Search + Display + Shopping",
@@ -454,7 +462,8 @@ export const content = {
                     },
                     {
                         title: "Sosyal Medya Reklamları",
-                        price: "15.000",
+                        price: "10.500",
+                        originalPrice: "15.000",
                         period: "/ay + Bütçe",
                         description: "Hedef kitlenize nokta atışı ulaşın.",
                         techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
@@ -470,7 +479,8 @@ export const content = {
                 seoData: [
                     {
                         title: "Lokal SEO Paketi",
-                        price: "15.000",
+                        price: "10.500",
+                        originalPrice: "15.000",
                         period: "/ay",
                         description: "Bölgenizdeki aramalarda haritalarda ve sonuçlarda ilk sıra.",
                         techSpecs: "GMB + Local Citations",
@@ -483,7 +493,8 @@ export const content = {
                     },
                     {
                         title: "Ulusal / Global SEO",
-                        price: "35.000",
+                        price: "24.500",
+                        originalPrice: "35.000",
                         period: "/ay",
                         description: "Büyük ölçekli rekabet ve organik trafik artışı.",
                         techSpecs: "Technical + Content + Off-page",
@@ -499,7 +510,8 @@ export const content = {
                 production: [
                     {
                         title: "Tanıtım Filmi",
-                        price: "40.000",
+                        price: "28.000",
+                        originalPrice: "40.000",
                         period: "'den itibaren",
                         description: "Markanızı sinematik bir dille anlatın.",
                         techSpecs: "4K Cinema Line + Drone",
@@ -513,7 +525,8 @@ export const content = {
                     },
                     {
                         title: "Ürün Fotoğrafçılığı",
-                        price: "20.000",
+                        price: "14.000",
+                        originalPrice: "20.000",
                         period: "'den itibaren",
                         description: "E-ticaret ve katalog için profesyonel kareler.",
                         techSpecs: "Stüdyo / Dış Çekim",
@@ -528,7 +541,8 @@ export const content = {
                 branding: [
                     {
                         title: "Kurumsal Kimlik",
-                        price: "30.000",
+                        price: "21.000",
+                        originalPrice: "30.000",
                         period: "'den itibaren",
                         description: "Markanızın yüzünü profesyonelce tasarlayın.",
                         techSpecs: "Vector + Print Ready",
@@ -615,10 +629,10 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 ]
             },
             solution: {
-                badge: "Tek Çözüm Paketi",
+                badge: "Kuruluşa Özel %30 İndirim",
                 title: "Bölgesel Hakimiyet Paketi",
-                price: "20.000₺",
-                originalPrice: "34.999₺",
+                price: "14.000₺",
+                originalPrice: "20.000₺",
                 period: "(Tek Seferlik)",
                 description: "Sadece bir web sitesi değil, eksiksiz bir dijital dükkan kurulumu.",
                 features: [
@@ -812,6 +826,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
         pricing: {
             title: "Investment Plans.",
             subtitle: "Strategic investments that add value, not just costs.",
+            discountTag: "🎉 Establishment Special – 30% Off",
             categories: [
                 { id: 'retainer', label: '360° Retainer' },
                 { id: 'webSoftware', label: 'Web & Software' },
@@ -827,7 +842,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 retainer: [
                     {
                         title: "Startup Growth",
-                        price: "850",
+                        price: "595",
+                        originalPrice: "850",
                         period: "/mo",
                         description: "Essential package to build digital presence and visibility in the local market.",
                         techSpecs: "Social Media + Basic SEO",
@@ -841,7 +857,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "Scale Up",
-                        price: "1,500",
+                        price: "1,050",
+                        originalPrice: "1,500",
                         period: "/mo",
                         isPopular: true,
                         description: "Aggressive strategy for businesses targeting rapid growth and market share.",
@@ -857,7 +874,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "Market Domination",
-                        price: "3,000+",
+                        price: "2,100+",
+                        originalPrice: "3,000",
                         period: "/mo",
                         description: "Full-service digital department for those who want to lead the industry.",
                         techSpecs: "24/7 Dedicated Team",
@@ -874,7 +892,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 webSoftware: [
                     {
                         title: "Corporate Website",
-                        price: "1,000",
+                        price: "700",
+                        originalPrice: "1,000",
                         period: "starting at",
                         isPopular: true,
                         description: "Your brand's digital showcase. Fast, secure, and mobile-first.",
@@ -889,7 +908,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "E-Commerce Solutions",
-                        price: "2,500",
+                        price: "1,750",
+                        originalPrice: "2,500",
                         period: "starting at",
                         description: "Sales-focused, high conversion online stores.",
                         techSpecs: "Shopify / Custom Headless",
@@ -903,7 +923,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "Custom Software / App",
-                        price: "5,000+",
+                        price: "3,500+",
+                        originalPrice: "5,000",
                         period: "starting at",
                         description: "Web and mobile applications tailored to your business processes.",
                         techSpecs: "React Native / Node.js / AWS",
@@ -919,7 +940,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 marketingAds: [
                     {
                         title: "Google Ads (SEM)",
-                        price: "500",
+                        price: "350",
+                        originalPrice: "500",
                         period: "/mo + Budget",
                         description: "Be at the top of search results.",
                         techSpecs: "Search + Display + Shopping",
@@ -933,7 +955,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "Social Media Ads",
-                        price: "500",
+                        price: "350",
+                        originalPrice: "500",
                         period: "/mo + Budget",
                         description: "Reach your target audience with precision.",
                         techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
@@ -949,7 +972,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 seoData: [
                     {
                         title: "Local SEO Package",
-                        price: "500",
+                        price: "350",
+                        originalPrice: "500",
                         period: "/mo",
                         description: "Rank first in maps and local search results.",
                         techSpecs: "GMB + Local Citations",
@@ -962,7 +986,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "National / Global SEO",
-                        price: "1,200",
+                        price: "840",
+                        originalPrice: "1,200",
                         period: "/mo",
                         description: "Large scale competition and organic traffic growth.",
                         techSpecs: "Technical + Content + Off-page",
@@ -978,7 +1003,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 production: [
                     {
                         title: "Commercial Film",
-                        price: "1,500",
+                        price: "1,050",
+                        originalPrice: "1,500",
                         period: "starting at",
                         description: "Tell your brand story with cinematic language.",
                         techSpecs: "4K Cinema Line + Drone",
@@ -992,7 +1018,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                     },
                     {
                         title: "Product Photography",
-                        price: "750",
+                        price: "525",
+                        originalPrice: "750",
                         period: "starting at",
                         description: "Professional shots for e-commerce and catalogs.",
                         techSpecs: "Studio / Outdoor",
@@ -1007,7 +1034,8 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 branding: [
                     {
                         title: "Corporate Identity",
-                        price: "1,000",
+                        price: "700",
+                        originalPrice: "1,000",
                         period: "starting at",
                         description: "Professionally design the face of your brand.",
                         techSpecs: "Vector + Print Ready",

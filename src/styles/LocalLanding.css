@@ -197,6 +197,69 @@
     position: relative;
 }
 
+/* SEO Long Content */
+.seo-content-section {
+    padding: 80px 0;
+    background: rgba(5, 5, 5, 0.8);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.seo-content-block {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.seo-content-block:last-child {
+    margin-bottom: 0;
+}
+
+.seo-content-block h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.seo-content-block h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
+.seo-content-block p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.seo-content-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.seo-content-block ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.seo-content-block ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--text-accent);
+    font-weight: 700;
+}
+
 /* Why Us */
 .why-us-section {
     padding: 80px 0;

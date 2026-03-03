@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Star, ArrowRight, MapPin, ShieldCheck, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Testimonials from '../components/Testimonials';
 import '../styles/LocalLanding.css';
@@ -55,22 +56,29 @@ const LocalLanding = ({ data, t }) => {
         "@type": "Service",
         "name": data.serviceName,
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": "ProfessionalService",
             "name": "ZMK Agency",
             "image": "https://zmkagency.com/logo.png",
+            "telephone": "+905413812114",
+            "url": "https://zmkagency.com",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Yenişehir, Kazım Karabekir Cd. No: 39/2",
+                "streetAddress": "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5",
                 "addressLocality": "Kırıkkale",
                 "postalCode": "71200",
                 "addressCountry": "TR"
             },
-            "priceRange": "₺₺₺"
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.8468,
+                "longitude": 33.5153
+            },
+            "priceRange": "$$"
         },
-        "areaServed": {
-            "@type": "City",
-            "name": "Kırıkkale"
-        },
+        "areaServed": [
+            { "@type": "City", "name": "Kırıkkale" },
+            { "@type": "City", "name": "Ankara" }
+        ],
         "description": data.description
     };
 
@@ -146,6 +154,26 @@ const LocalLanding = ({ data, t }) => {
                 </div>
             </section>
 
+            {/* Long-form SEO Content Section */}
+            {data.longContent && data.longContent.length > 0 && (
+                <section className="seo-content-section">
+                    <div className="container">
+                        {data.longContent.map((block, idx) => (
+                            <div key={idx} className="seo-content-block">
+                                {block.h2 && <h2>{block.h2}</h2>}
+                                {block.h3 && <h3>{block.h3}</h3>}
+                                {block.text && <p>{block.text}</p>}
+                                {block.list && (
+                                    <ul>
+                                        {block.list.map((item, i) => <li key={i}>{item}</li>)}
+                                    </ul>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
             {/* Why Us Section */}
             <section className="why-us-section">
                 <div className="container">
@@ -176,12 +204,12 @@ const LocalLanding = ({ data, t }) => {
                         <h2 className="section-title">İlginizi Çekebilecek Diğer Hizmetler</h2>
                         <div className="related-grid">
                             {data.relatedLinks.map((link, index) => (
-                                <a key={index} href={`/${link.slug}`} style={{ textDecoration: 'none' }}>
+                                <Link key={index} to={`/${link.slug}`} style={{ textDecoration: 'none' }}>
                                     <div className="related-card">
                                         <h4>{link.title}</h4>
                                         <p>İncele <ArrowRight size={14} /></p>
                                     </div>
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>

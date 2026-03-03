@@ -1,8 +1,8 @@
 export const localSeoData = [
     {
         slug: "kirikkale-reklam-ajansi",
-        title: "Kırıkkale Reklam Ajansı | ZMK Agency",
-        description: "Kırıkkale'nin en kapsamlı kreatif reklam ajansı. Marka stratejisi, dijital pazarlama, prodüksiyon ve web tasarım çözümleriyle işletmenizi zirveye taşıyoruz.",
+        title: "Kırıkkale Reklam Ajansı | #1 Dijital & Kreatif Ajans | ZMK Agency",
+        description: "Kırıkkale'nin 1 numaralı 360° reklam ajansı ✓ Web tasarım ✓ Sosyal medya ✓ Google Ads ✓ Prodüksiyon ✓ SEO — 50+ referans, ölçülebilir ROI. Ücretsiz strateji görüşmesi için hemen arayın.",
         heroTitle: "Kırıkkale'de Markanızla\nEfsaneleşin.",
         heroSubtitle: "Sıradan bir reklam ajansı değiliz. Kırıkkale'deki işletmenizin dijital kaderini değiştirecek stratejik ortağınızız.",
         serviceName: "Kırıkkale Reklam ve Pazarlama Hizmetleri",
@@ -20,12 +20,21 @@ export const localSeoData = [
             { step: "03", title: "Uygulama", desc: "Tasarım, prodüksiyon ve yazılım ekibimizle kusursuz bir operasyon yürütüyoruz." },
             { step: "04", title: "Dominasyon", desc: "Reklamlarınızı optimize ediyor, raporluyor ve pazar liderliğine oynuyor." }
         ],
-        faq: [
-            { q: "Kırıkkale'deki diğer ajanslardan farkınız nedir?", a: "Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. Global standartlardaki tasarım dilimiz, veri odaklı stratejimiz ve sonuç garantili çalışma modelimizle Kırıkkale'de benzersiz bir hizmet sunuyoruz." },
-            { q: "Hangi sektörlerle çalışıyorsunuz?", a: "İnşaat, sağlık, yeme-içme, e-ticaret ve üretim başta olmak üzere Kırıkkale'deki vizyoner tüm işletmelerle çalışıyoruz." },
-            { q: "Süreç nasıl başlıyor?", a: "Önce ücretsiz bir strateji görüşmesi yapıyoruz. Hedeflerinizi dinleyip size en uygun yol haritasını çiziyoruz." }
+        longContent: [
+            { h2: "Kırıkkale'de Neden Profesyonel Bir Reklam Ajansına İhtiyacınız Var?", text: "Kırıkkale, Ankara'ya sadece 80 kilometre mesafede, hızla büyüyen bir Anadolu şehri. Merkez, Yahşihan, Keskin, Balışeyh, Bahşılı ve Delice ilçeleriyle birlikte güçlü bir ticaret ağına sahip. Ancak şehirdeki işletmelerin büyük çoğunluğu hâlâ dijital dünyada yeterince görünür değil. Google'da 'Kırıkkale + sektörünüz' şeklinde arama yapıldığında, rakipleriniz mi çıkıyor yoksa siz mi? İşte bu sorunun cevabı, profesyonel bir reklam ajansıyla çalışmanın neden kritik olduğunu özetliyor." },
+            { h3: "Dijital Pazarlama ile Kırıkkale'de Fark Yaratın", text: "Geleneksel tabela ve broşür reklamcılığı artık tek başına yeterli değil. Kırıkkale'deki potansiyel müşterileriniz bir hizmete ihtiyaç duyduklarında ilk yaptıkları şey Google'da aramak. ZMK Agency olarak, Google Ads kampanyalarından sosyal medya yönetimine, SEO'dan profesyonel prodüksiyona kadar 360 derece dijital çözümler sunuyoruz." },
+            { h2: "ZMK Agency Kırıkkale'de Ne Gibi Hizmetler Sunar?", list: ["Marka Stratejisi & Kurumsal Kimlik Tasarımı — Logo, kartvizit, kurumsal dil ve görsel kimlik seti", "Web Tasarım & Geliştirme — React ve Next.js tabanlı, mobil uyumlu, SEO dostu web siteleri", "Sosyal Medya Yönetimi — Instagram, TikTok, LinkedIn içerik üretimi ve hesap yönetimi", "Google Ads & Meta Ads — Dönüşüm odaklı reklam kampanyaları ve bütçe optimizasyonu", "SEO (Arama Motoru Optimizasyonu) — Yerel ve ulusal SEO stratejileri", "Prodüksiyon & Drone Çekimi — 4K tanıtım filmleri, mekan çekimleri, ürün fotoğrafçılığı", "E-Ticaret Kurulumu — Shopify, İkas, Trendyol ve Hepsiburada entegrasyonları", "Dijital Dönüşüm Danışmanlığı — İş süreçlerinin dijitalleştirilmesi ve otomasyon"] },
+            { h2: "Kırıkkale'nin İlçelerinde de Yanınızdayız", text: "Kırıkkale Merkez dışında Yahşihan, Keskin, Delice, Bahşılı, Balışeyh, Çelebi, Sulakyurt ve Karakeçili ilçelerindeki işletmelere de hizmet veriyoruz. Yerel pazarın dinamiklerini bilen, yüz yüze görüşebileceğiniz bir ekip olarak Kırıkkale'nin her köşesindeki girişimcilerin dijital büyüme ortağıyız." },
+            { h2: "Neden ZMK Agency'yi Tercih Etmelisiniz?", list: ["Kırıkkale merkezli, yüz yüze iletişim imkânı", "50+ başarılı proje referansı", "Veri odaklı strateji — her kampanyada ölçülebilir ROI", "Global standartlarda tasarım ve yazılım kalitesi", "Şeffaf raporlama — canlı dashboard erişimi", "Tek muhatap — 360° hizmet, dağınık ajans yok"] }
         ],
-        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, en iyi reklam ajansı kırıkkale, zmk agency iletişim, kurumsal kimlik kırıkkale",
+        faq: [
+            { q: "Kırıkkale'deki diğer ajanslardan farkınız nedir?", a: "Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. Global standartlardaki tasarım dilimiz, veri odaklı stratejimiz ve sonuç garantili çalışma modelimizle Kırıkkale'de benzersiz bir hizmet sunuyoruz. Ayrıca tüm projelerimizde canlı müşteri paneli (dashboard) ile şeffaf raporlama sunuyoruz." },
+            { q: "Hangi sektörlerle çalışıyorsunuz?", a: "İnşaat, sağlık, yeme-içme, e-ticaret, üretim, eğitim, hukuk, emlak ve otomotiv başta olmak üzere Kırıkkale ve çevresindeki vizyoner tüm işletmelerle çalışıyoruz." },
+            { q: "Süreç nasıl başlıyor?", a: "Önce ücretsiz bir strateji görüşmesi yapıyoruz. Hedeflerinizi dinleyip, sektörünüzü ve rakiplerinizi analiz edip size en uygun yol haritasını çiziyoruz. Ardından teklif onaylandığında hemen uygulamaya geçiyoruz." },
+            { q: "Kırıkkale dışından da hizmet alabilir miyim?", a: "Kesinlikle. ZMK Agency Kırıkkale merkezli olsa da Ankara, İstanbul ve Türkiye genelindeki işletmelere de dijital hizmet sunmaktayız. Uzaktan çalışma altyapımız mevcuttur." },
+            { q: "Minimum bütçe ne kadar?", a: "Esnaf ve küçük işletmeler için 20.000₺'den başlayan 'Bölgesel Hakimiyet' paketimiz mevcuttur. Kurumsal projeler ise ihtiyaca göre özelleştirilir. İlk görüşme her zaman ücretsizdir." }
+        ],
+        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, en iyi reklam ajansı kırıkkale, zmk agency iletişim, kurumsal kimlik kırıkkale, kırıkkale reklam, kırıkkale ajans",
         ogImage: "/og-images/reklam-ajansi.jpg",
         relatedLinks: [
             { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
@@ -35,8 +44,8 @@ export const localSeoData = [
     },
     {
         slug: "kirikkale-web-tasarim",
-        title: "Kırıkkale Web Tasarım & Yazılım | ZMK",
-        description: "Kırıkkale'de Google uyumlu, hızlı ve modern web tasarım hizmetleri. Kurumsal web sitesi, e-ticaret ve mobil uygulama çözümleri.",
+        title: "Kırıkkale Web Tasarım & Yazılım | Mobil Uyumlu, SEO Dostu Siteler",
+        description: "Kırıkkale'de profesyonel web tasarım ✓ <1sn yükleme ✓ Mobil uyumlu ✓ SEO optimizasyonu ✓ Yönetim paneli — Kurumsal site, e-ticaret ve özel yazılım. Ücretsiz teklif alın.",
         heroTitle: "Kırıkkale'nin Dijital\nYüzünü Değiştiriyoruz.",
         heroSubtitle: "Yavaş, demode ve mobil uyumsuz siteleri çöpe atın. Size Kırıkkale'de Google'da kazanan, ziyaretçiyi müşteriye çeviren web siteleri kuruyoruz.",
         serviceName: "Web Tasarım & Yazılım",
@@ -54,12 +63,20 @@ export const localSeoData = [
             { step: "03", title: "Kodlama", desc: "React ve Next.js altyapısı ile ultra hızlı kodlama." },
             { step: "04", title: "SEO & Lansman", desc: "Google optimizasyonu ve yayın süreci." }
         ],
-        faq: [
-            { q: "Web siteleri mobil uyumlu mu?", a: "Kesinlikle. Tüm tasarımlarımız 'Mobile First' (Önce Mobil) prensibiyle hazırlanır." },
-            { q: "SEO hizmeti dahil mi?", a: "Evet, tüm web projelerimizde temel teknik SEO (Hız, Meta etiketleri, Sitemap) standart olarak sunulur." },
-            { q: "Yönetim paneli var mı?", a: "Evet, sitenizi kolayca güncelleyebileceğiniz, size özel ve kullanımı kolay bir yönetim paneli sunuyoruz." }
+        longContent: [
+            { h2: "Kırıkkale'de Web Sitesi Yaptırmanın Önemi", text: "Günümüzde bir işletmenin web sitesi olmadan var olması neredeyse imkansız. Kırıkkale'deki potansiyel müşterileriniz bir ürün veya hizmet aradığında ilk baktıkları yer Google. Web siteniz yoksa veya yavaş, eski ve mobil uyumsuzsa, müşteri rakibinize gidiyor demektir. ZMK Agency olarak Kırıkkale'de işletmenizin dijital vitrini olacak, hızlı ve arama motorlarında üst sıralarda yer alacak profesyonel web siteleri tasarlıyoruz." },
+            { h3: "WordPress vs Özel Kodlama: Hangisi Sizin İçin Doğru?", text: "Çoğu ajans hazır WordPress şablonları kullanır — yavaş, güvensiz ve hepsi birbirine benzer. Biz ise React ve Next.js gibi modern teknolojilerle sıfırdan özel kod yazıyoruz. Sonuç: 1 saniyenin altında yükleme hızı, Google PageSpeed'de 90+ puan, kusursuz mobil deneyim ve rakiplerinizden net bir fark." },
+            { h2: "Kırıkkale Web Tasarım Hizmetlerimiz", list: ["Kurumsal Web Sitesi — Şirketinizin dijital kartviziti, yönetim paneli dahil", "E-Ticaret Sitesi — Ürünlerinizi online satın, ödeme ve kargo entegrasyonu", "Landing Page — Esnaf ve KOBİ'ler için ekonomik çözüm", "Mobil Uygulama — iOS ve Android için native ve hybrid uygulamalar", "SEO Optimizasyonu — Web sitenizin Google'da üst sıralarda çıkması", "Bakım & Destek — Yayın sonrası sürekli teknik destek ve güncelleme"] },
+            { h2: "Web Tasarımda Neler Dahil?", list: ["Responsive (mobil uyumlu) tasarım — tüm cihazlarda mükemmel görünüm", "SSL sertifikası — güvenli bağlantı, HTTPS", "Google Analytics ve Search Console entegrasyonu", "Sitemap ve robots.txt optimizasyonu", "Hız optimizasyonu — Core Web Vitals uyumlu", "İletişim formu ve WhatsApp entegrasyonu"] }
         ],
-        keywords: "kırıkkale web tasarım, kırıkkale web yazılım, kırıkkale internet sitesi yapanlar, kırıkkale e-ticaret paketleri, mobil uyumlu web sitesi kırıkkale",
+        faq: [
+            { q: "Web siteleri mobil uyumlu mu?", a: "Kesinlikle. Tüm tasarımlarımız 'Mobile First' prensibiyle hazırlanır. Telefondan, tabletten ve bilgisayardan mükemmel görünür." },
+            { q: "SEO hizmeti dahil mi?", a: "Evet, tüm web projelerimizde temel teknik SEO (Hız, Meta etiketleri, Sitemap, robots.txt, Schema markup) standart olarak sunulur." },
+            { q: "Yönetim paneli var mı?", a: "Evet, sitenizi kolayca güncelleyebileceğiniz, size özel ve kullanımı kolay bir yönetim paneli sunuyoruz." },
+            { q: "Web sitesi ne kadar sürede teslim edilir?", a: "Tek sayfalık siteler 1-2 hafta, kurumsal siteler 3-4 hafta, e-ticaret projeleri 4-6 hafta içinde tamamlanır." },
+            { q: "Kırıkkale web tasarım fiyatları ne kadar?", a: "Tek sayfalık tanıtım siteleri 25.000₺'den, kurumsal web siteleri 40.000₺'den başlar. Esnaf paketi ise 20.000₺'dir. Detaylı teklif için bizi arayın." }
+        ],
+        keywords: "kırıkkale web tasarım, kırıkkale web yazılım, kırıkkale internet sitesi yapanlar, kırıkkale e-ticaret paketleri, mobil uyumlu web sitesi kırıkkale, kırıkkale web sitesi fiyatları",
         ogImage: "/og-images/web-tasarim.jpg",
         relatedLinks: [
             { title: "SEO Hizmeti", slug: "kirikkale-seo" },

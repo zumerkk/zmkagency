@@ -181,5 +181,205 @@ export const blogData = [
         author: "Drone Pilotu",
         image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1200",
         keywords: "kırıkkale drone çekimi, hava çekimi, mekan tanıtımı"
+    },
+    {
+        id: 11,
+        slug: "kirikkale-google-ads-rehberi",
+        title: "Kırıkkale'de Google Ads ile İlk Sayfada Çıkmanın Yolları",
+        excerpt: "Google reklamları doğru yapıldığında her harcanan lira 5x geri dönüyor. Kırıkkale'ye özel Google Ads rehberi.",
+        content: `
+            <p>Google Ads, Kırıkkale'deki işletmeler için en hızlı müşteri kazanma aracıdır. Doğru anahtar kelime seçimi, kalite puanı optimizasyonu ve lokasyon hedeflemesi ile bütçenizi en verimli şekilde kullanabilirsiniz.</p>
+            <h3>Kırıkkale İçin Doğru Anahtar Kelimeler</h3>
+            <p>'Kırıkkale + hizmetiniz' formatındaki aramalar, satın alma niyeti yüksek müşterileri yakalamanızı sağlar. Örneğin 'Kırıkkale tesisatçı' arayan kişi, hemen hizmet almak istiyor demektir.</p>
+            <h3>Kalite Puanı Neden Önemli?</h3>
+            <p>Google, reklamınızın kullanıcıya uygunluğunu 1-10 arasında puanlar. Yüksek kalite puanı = düşük tıklama maliyeti = aynı bütçeyle daha fazla müşteri.</p>
+        `,
+        category: "Google Ads",
+        date: "22 Şubat 2026",
+        author: "Ads Uzmanı",
+        image: "https://images.unsplash.com/photo-1553895501-af9e282e7fc1?q=80&w=1200",
+        keywords: "kırıkkale google ads, google reklam kırıkkale, adwords kırıkkale"
+    },
+    {
+        id: 12,
+        slug: "kurumsal-kimlik-neden-onemli",
+        title: "Kurumsal Kimlik Neden Bu Kadar Önemli? Markanızın Değerini 10x Artırın",
+        excerpt: "Logo, renk paleti ve tipografi — bunlar markanızın sessiz satış temsilcileridir.",
+        content: `
+            <p>Birçok işletme 'Logo bir şekil, ne fark eder?' diye düşünür. Oysa kurumsal kimlik, müşterilerinizin ilk izlenimini oluşturur ve marka güvenini inşa eder.</p>
+            <h3>Profesyonel vs Amatör</h3>
+            <p>Amatör bir logo ve tutarsız renkler, müşterilerinize 'biz işimizi ciddiye almıyoruz' mesajı verir. Profesyonel bir kurumsal kimlik ise güven, kalite ve tutarlılık sinyali yollar.</p>
+        `,
+        category: "Marka",
+        date: "24 Şubat 2026",
+        author: "Tasarım Ekibi",
+        image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200",
+        keywords: "kurumsal kimlik, kırıkkale logo tasarımı, marka stratejisi"
+    },
+    {
+        id: 13,
+        slug: "kirikkale-seo-stratejileri",
+        title: "Kırıkkale'de SEO ile Üst Sıralara Çıkmanın 7 Yolu",
+        excerpt: "Reklam bütçesi harcamadan müşteri kazanmak mümkün. SEO ile organik büyüme stratejileri.",
+        content: `
+            <p>SEO (Arama Motoru Optimizasyonu), reklam bütçesi harcamadan Google'da üst sıralarda çıkmanızı sağlayan kalıcı bir stratejidir. Özellikle Kırıkkale gibi yerel pazarlarda, doğru SEO çalışmaları sizi rakiplerinizden ayırt eder.</p>
+            <h3>Yerel SEO Nedir?</h3>
+            <p>Yerel SEO, 'Kırıkkale + hizmetiniz' gibi aramalarda üst sıralarda çıkmanızı hedefler. Google Business Profile optimizasyonu, NAP tutarlılığı ve yerel backlink'ler bu stratejinin temel taşlarıdır.</p>
+            <h3>Teknik SEO Kontrol Listeniz</h3>
+            <p>Sayfa hızı, mobil uyumluluk, SSL sertifikası, sitemap.xml, robots.txt ve schema markup — bunlar teknik SEO'nun olmazsa olmazlarıdır.</p>
+        `,
+        category: "SEO",
+        date: "26 Şubat 2026",
+        author: "SEO Uzmanı",
+        image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1200",
+        keywords: "kırıkkale seo, arama motoru optimizasyonu, yerel seo kırıkkale"
+    },
+    {
+        id: 14,
+        slug: "kirikkale-sanayi-dijitallesme",
+        title: "Kırıkkale Sanayi Bölgesi İçin Dijitalleşme Fırsatları",
+        excerpt: "Kırıkkale OSB'deki fabrikalar için B2B dijital pazarlama ve ihracat stratejileri.",
+        content: `
+            <p>Kırıkkale, MKE ve savunma sanayi ile bilinen güçlü bir üretim merkezidir. Ancak birçok fabrika, dijital dünyada yeterince görünür değil. İhracat yapan veya yapmak isteyen üreticiler için dijital varlık artık zorunluluktur.</p>
+            <h3>B2B Web Sitesi Olmazsa Olmazları</h3>
+            <p>Çok dilli içerik, ürün kataloğu, sertifikalar sayfası ve talep formu — uluslararası alıcıların güvenini kazanmanın temelleridir.</p>
+        `,
+        category: "Sanayi",
+        date: "28 Şubat 2026",
+        author: "B2B Stratejist",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200",
+        keywords: "kırıkkale sanayi dijitalleşme, fabrika web sitesi, b2b pazarlama kırıkkale"
+    },
+    {
+        id: 15,
+        slug: "kirikkale-restoran-dijital-pazarlama",
+        title: "Kırıkkale Restoran ve Kafeler İçin Dijital Pazarlama Rehberi",
+        excerpt: "QR menü, Instagram yönetimi ve Google Harita optimizasyonu ile doluluk oranınızı artırın.",
+        content: `
+            <p>Kırıkkale'deki restoranlar ve kafeler için dijital pazarlama artık seçenek değil, zorunluluk. QR menü ile basım maliyetlerinden tasarruf edin, Instagram ile yeni müşteriler kazanın.</p>
+            <h3>Google Harita'da İlk 3'e Girin</h3>
+            <p>'Kırıkkale restoran' aramasında üst sıralarda çıkmak, boş masalarınızı dolduracak en etkili yöntemdir.</p>
+        `,
+        category: "Yerel SEO",
+        date: "01 Mart 2026",
+        author: "Yerel Pazarlama",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200",
+        keywords: "kırıkkale restoran pazarlama, kafe dijital menü, qr menü kırıkkale"
+    },
+    {
+        id: 16,
+        slug: "tiktok-isletmeler-icin",
+        title: "TikTok İşletmeler İçin: 2026'da Viral Olmanın Formülü",
+        excerpt: "TikTok sadece gençlerin platformu değil. İşletmeler için satış kanalı olarak nasıl kullanılır?",
+        content: `
+            <p>TikTok, dünyada en hızlı büyüyen sosyal medya platformudur. Kısa videolar ile ürünlerinizi milyonlara ulaştırabilirsiniz — üstelik reklam bütçesi harcamadan.</p>
+            <h3>Kısa Video Trendleri</h3>
+            <p>Ürün tanıtımı, behind-the-scenes, müşteri hikayesi ve eğitim içerikleri en çok etkileşim alan format türleridir.</p>
+        `,
+        category: "Sosyal Medya",
+        date: "02 Mart 2026",
+        author: "Social Team",
+        image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1200",
+        keywords: "tiktok pazarlama, kısa video stratejisi, viral içerik"
+    },
+    {
+        id: 17,
+        slug: "kirikkale-saglik-sektoru-dijital",
+        title: "Kırıkkale Sağlık Sektörü İçin Dijital Pazarlama: Hasta Sayınızı Artırın",
+        excerpt: "Doktorlar, klinikler ve hastaneler için etik ve etkili dijital varlık stratejileri.",
+        content: `
+            <p>Kırıkkale'deki özel klinikler ve doktorlar için dijital pazarlama, hasta sayısını artırmanın en sürdürülebilir yoludur. Ancak sağlık sektörü, reklam yasağı mevzuatı nedeniyle özel dikkat gerektirir.</p>
+            <h3>SEO ile Hasta Çekimi</h3>
+            <p>'Kırıkkale diş hekimi', 'Kırıkkale göz doktoru' gibi aramalarda üst sıralarda çıkmak, reklam yasağına takılmadan organik hasta kazanmanızı sağlar.</p>
+        `,
+        category: "Sağlık",
+        date: "03 Mart 2026",
+        author: "Sağlık Stratejist",
+        image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200",
+        keywords: "kırıkkale klinik reklam, doktor web sitesi, sağlık seo"
+    },
+    {
+        id: 18,
+        slug: "google-business-profile-rehberi",
+        title: "Google İşletme Profili Optimizasyonu: Adım Adım Rehber",
+        excerpt: "Google Harita'da üst sıralara çıkmak için yapmanız gereken her şey bu rehberde.",
+        content: `
+            <p>Google İşletme Profili (eski adıyla Google My Business), yerel SEO'nun en kritik bileşenidir. Doğru optimize edildiğinde, müşteriler sizi aradığında haritada ilk çıkan siz olursunuz.</p>
+            <h3>Profil Tamamlama Oranı</h3>
+            <p>Google, profili %100 tamamlanmış işletmeleri aramada üst sıralarda gösterir. Çalışma saatleri, fotoğraflar, hizmet listesi ve açıklama — hepsini eksiksiz doldurun.</p>
+            <h3>Yorum Stratejisi</h3>
+            <p>Pozitif yorumlar, harita sıralamanızı doğrudan etkiler. Memnun müşterilerinizden düzenli olarak yorum isteyin ve her yoruma profesyonelce cevap verin.</p>
+        `,
+        category: "Yerel SEO",
+        date: "03 Mart 2026",
+        author: "SEO Uzmanı",
+        image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=1200",
+        keywords: "google business profile, google harita kaydı, yerel seo"
+    },
+    {
+        id: 19,
+        slug: "kirikkale-egitim-kurumlari-reklam",
+        title: "Kırıkkale Özel Okullar ve Kurslar İçin Kayıt Dönemi Pazarlaması",
+        excerpt: "Kayıt döneminde kontenjanlarınızı doldurmak için dijital pazarlama stratejileri.",
+        content: `
+            <p>Kırıkkale'deki özel okullar, kurslar ve kreşler için kayıt dönemi, yılın en kritik zamanıdır. Doğru zamanda, doğru mesajla, doğru velilere ulaşmak kontenjanlarınızı doldurur.</p>
+            <h3>Hedef Kitle: Veliler</h3>
+            <p>25-45 yaş arası anneler, karar vericilerin %70'ini oluşturur. Instagram ve Facebook'ta bu kitleye özel reklam kampanyaları oluşturun.</p>
+        `,
+        category: "Eğitim",
+        date: "03 Mart 2026",
+        author: "Eğitim Pazarlama",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200",
+        keywords: "kırıkkale özel okul reklam, kayıt dönemi pazarlama, eğitim kurumu tanıtım"
+    },
+    {
+        id: 20,
+        slug: "web-sitesi-hizi-onemi",
+        title: "Web Sitesi Hızı Neden Paranızı Etkiliyor? Core Web Vitals Rehberi",
+        excerpt: "Yavaş site = kayıp müşteri. Google'ın hız kriterlerini anlayın ve rekabette öne geçin.",
+        content: `
+            <p>Google, 2021'den beri sayfa hızını bir sıralama faktörü olarak kullanıyor. LCP (Largest Contentful Paint), INP (Interaction to Next Paint) ve CLS (Cumulative Layout Shift) — bu üç metrik web sitenizin Google'daki performansını belirliyor.</p>
+            <h3>Hızlı Site = Daha Fazla Satış</h3>
+            <p>Araştırmalar, sayfa yükleme süresinin her 1 saniye artmasının dönüşüm oranını %7 düşürdüğünü gösteriyor. ZMK Agency olarak tüm sitelerimiz 1 saniyenin altında yüklenir.</p>
+        `,
+        category: "Web & Yazılım",
+        date: "03 Mart 2026",
+        author: "Tech Team",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
+        keywords: "core web vitals, web sitesi hızı, sayfa yükleme süresi"
+    },
+    {
+        id: 21,
+        slug: "kirikkale-emlak-dijital-pazarlama",
+        title: "Kırıkkale Emlak Sektörü için Dijital Pazarlama Stratejileri",
+        excerpt: "Konut projelerinden kiralık dairelere — emlak satışlarını dijitalle hızlandırın.",
+        content: `
+            <p>Kırıkkale'de emlak sektörü hızla büyüyor. Yeni konut projeleri, ticari alanlar ve kiralık daireler — hepsi için dijital pazarlama artık olmazsa olmaz.</p>
+            <h3>Profesyonel Fotoğrafçılık</h3>
+            <p>İlan fotoğraflarınız, potansiyel alıcının kararını %90 oranında etkiler. Geniş açı lens ve profesyonel aydınlatma ile çekilen fotoğraflar, arama sayısını 3 katına çıkarır.</p>
+            <h3>Sanal Tur ile Fark Yaratın</h3>
+            <p>360° sanal tur, alıcıların mekana gitmeden incelemesini sağlar. Özellikle şehir dışından gelen yatırımcılar için büyük kolaylık.</p>
+        `,
+        category: "Emlak",
+        date: "03 Mart 2026",
+        author: "Emlak Stratejist",
+        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200",
+        keywords: "kırıkkale emlak reklamı, konut projesi pazarlama, emlak fotoğrafçısı"
+    },
+    {
+        id: 22,
+        slug: "yapay-zeka-dijital-pazarlama",
+        title: "Yapay Zeka ile Dijital Pazarlama: 2026 ve Sonrası",
+        excerpt: "ChatGPT, Midjourney ve AI Ads — yapay zekayı pazarlamada nasıl kullanmalısınız?",
+        content: `
+            <p>2026 yılı, yapay zekanın dijital pazarlamayı kökten değiştirdiği yıl olarak tarih yazacak. İçerik üretiminden reklam optimizasyonuna, müşteri hizmetlerinden veri analizine kadar AI araçları devrim yaratıyor.</p>
+            <h3>AI Destekli İçerik Üretimi</h3>
+            <p>Yapay zeka araçları, blog yazıları, sosyal medya metinleri ve reklam kopyaları üretimini hızlandırır. Ancak insan dokunuşu olmadan yapay zeka içeriği yetersiz kalır — strateji her zaman insandan gelmelidir.</p>
+        `,
+        category: "Strateji",
+        date: "03 Mart 2026",
+        author: "ZMK Strategist",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200",
+        keywords: "yapay zeka pazarlama, ai reklam, chatgpt dijital pazarlama"
     }
 ];

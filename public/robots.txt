@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /login
+Disallow: /thank-you
 
 Sitemap: https://zmkagency.com/sitemap.xml

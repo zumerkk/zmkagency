@@ -1,150 +1,641 @@
-/* Services Page - Apex Design */
+/* ─── SERVICES PAGE ─── */
 
 .services-page-wrapper {
-    background-color: #050505;
-    background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 60%);
-    min-height: 100vh;
-    padding-top: 140px;
-    padding-bottom: 100px;
+    background: #000;
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
 }
 
-.services-hero {
+/* ─── HERO ─── */
+.sp-hero {
+    padding: 160px 20px 80px;
     text-align: center;
-    margin-bottom: 100px;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
     position: relative;
-    z-index: 2;
+    overflow: hidden;
 }
 
-.services-hero h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
+.sp-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 102, 255, 0.08), transparent 70%);
+    pointer-events: none;
+}
+
+.sp-hero-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.sp-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
-    letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    background-clip: text;
 }
 
-.services-hero p {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: rgba(255, 255, 255, 0.6);
+.sp-hero-sub {
+    font-size: 1.15rem;
+    color: #888;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 32px;
     line-height: 1.6;
 }
 
-/* 3D Solution Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-bottom: 120px;
-    perspective: 1000px;
-    /* Enable 3D space */
+.sp-hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.service-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 40px;
+.sp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.sp-btn-primary {
+    background: #fff;
+    color: #000;
+}
+
+.sp-btn-primary:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+}
+
+.sp-btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sp-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ─── CATEGORY TABS ─── */
+.sp-categories {
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.sp-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sp-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.sp-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sp-tab:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ccc;
+}
+
+.sp-tab.active {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+.sp-tab-icon {
+    font-size: 1rem;
+}
+
+/* ─── SERVICES GRID ─── */
+.sp-services-grid-section {
+    padding: 0 20px 80px;
+}
+
+.sp-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.sp-service-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
     height: 100%;
-    min-height: 380px;
-    backdrop-filter: blur(10px);
 }
 
-.service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
-}
-
-/* Card Glow Effect */
-.service-card::before {
+.sp-service-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
-    z-index: 1;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.5), transparent);
     opacity: 0;
-    transition: opacity 0.5s;
-    pointer-events: none;
+    transition: opacity 0.4s ease;
 }
 
-.service-card:hover::before {
+.sp-service-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sp-service-card:hover::before {
     opacity: 1;
 }
 
-.service-icon {
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    display: inline-block;
-    filter: grayscale(100%) opacity(0.8);
-    transition: all 0.5s ease;
+.sp-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
 }
 
-.service-card:hover .service-icon {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.1);
-}
-
-.service-content h3 {
-    font-size: 1.8rem;
+.sp-service-card h3 {
+    font-size: 1.3rem;
     font-weight: 700;
-    color: #fff;
-    margin-bottom: 15px;
-    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
 }
 
-.service-content p {
-    color: rgba(255, 255, 255, 0.6);
+.sp-card-desc {
+    font-size: 0.9rem;
+    color: #888;
     line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-.service-footer {
+.sp-card-includes {
+    margin-bottom: 20px;
+}
+
+.sp-includes-label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sp-card-includes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sp-card-includes li {
+    font-size: 0.85rem;
+    color: #aaa;
+    padding: 4px 0;
+}
+
+.sp-card-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-accent, #0066ff);
+    margin-bottom: 16px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sp-card-cta {
     display: flex;
     align-items: center;
-    font-weight: 600;
+    gap: 8px;
     font-size: 0.9rem;
+    font-weight: 600;
     color: #fff;
-    margin-top: auto;
+    padding-top: 8px;
+    transition: gap 0.3s ease;
 }
 
-.arrow-icon {
-    margin-left: 10px;
+.sp-service-card:hover .sp-card-cta {
+    gap: 14px;
+}
+
+.sp-card-cta .arrow {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover .arrow-icon {
-    transform: translateX(5px);
+.sp-service-card:hover .sp-card-cta .arrow {
+    transform: translateX(4px);
 }
 
+/* ─── SECTION TITLES ─── */
+.sp-section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.sp-section-sub {
+    text-align: center;
+    color: #888;
+    font-size: 1.05rem;
+    margin-bottom: 48px;
+}
+
+/* ─── PROCESS ─── */
+.sp-process {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sp-process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.sp-process-step {
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sp-process-step:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
+}
+
+.sp-step-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-accent, #0066ff);
+    margin-bottom: 12px;
+    opacity: 0.6;
+}
+
+.sp-process-step h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sp-process-step p {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* ─── LOCAL ADVANTAGE ─── */
+.sp-local {
+    padding: 80px 20px;
+}
+
+.sp-local-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 102, 255, 0.02));
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.sp-local-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--text-accent, #0066ff);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sp-local-card h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.sp-local-card>p {
+    font-size: 1rem;
+    color: #888;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.sp-local-features {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sp-local-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* ─── FAQ ─── */
+.sp-faq {
+    padding: 80px 20px;
+}
+
+.sp-faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sp-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+}
+
+.sp-faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.sp-faq-question:hover {
+    color: var(--text-accent, #0066ff);
+}
+
+.sp-faq-toggle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #666;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.sp-faq-answer {
+    overflow: hidden;
+}
+
+.sp-faq-answer p {
+    padding: 0 0 20px;
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.7;
+}
+
+/* ─── FOOTER CTA ─── */
+.sp-footer-cta {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 102, 255, 0.03), transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sp-footer-cta h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.sp-footer-cta p {
+    font-size: 1.05rem;
+    color: #888;
+    margin-bottom: 32px;
+}
+
+/* ─── SERVICE DETAIL PAGE ─── */
+.sp-back-link {
+    display: inline-block;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+    transition: color 0.3s;
+}
+
+.sp-back-link:hover {
+    color: #fff;
+}
+
+.sp-detail-block {
+    margin-bottom: 48px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+}
+
+.sp-detail-block h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sp-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sp-detail-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #ccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sp-detail-list li:last-child {
+    border-bottom: none;
+}
+
+.sp-check {
+    color: var(--text-accent, #0066ff);
+    font-weight: 700;
+}
+
+.sp-includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.sp-include-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.sp-detail-faq {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sp-detail-faq summary {
+    padding: 16px 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+    list-style: none;
+    transition: color 0.3s;
+}
+
+.sp-detail-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.sp-detail-faq summary::after {
+    content: '+';
+    float: right;
+    font-size: 1.3rem;
+    color: #666;
+    font-weight: 300;
+}
+
+.sp-detail-faq[open] summary::after {
+    content: '−';
+}
+
+.sp-detail-faq summary:hover {
+    color: var(--text-accent, #0066ff);
+}
+
+.sp-detail-faq p {
+    padding: 0 0 16px;
+    color: #888;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-    .services-page-wrapper {
-        padding-top: 100px;
+    .sp-hero {
+        padding: 120px 16px 60px;
     }
 
-    .services-grid {
+    .sp-services-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
-    .service-card {
-        min-height: auto;
+    .sp-process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sp-local-card {
+        padding: 32px 20px;
+    }
+
+    .sp-local-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sp-service-card {
+        padding: 24px;
+    }
+
+    .sp-detail-block {
+        padding: 24px 16px;
+    }
+
+    .sp-includes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sp-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-tabs {
+        gap: 4px;
+    }
+
+    .sp-tab {
+        padding: 8px 12px;
+        font-size: 0.8rem;
     }
 }

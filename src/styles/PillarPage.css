@@ -1,0 +1,396 @@
+/* ─── PILLAR PAGE STYLES ─── */
+
+.pillar-page-wrapper {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* ─── HERO ─── */
+.pillar-hero {
+    padding: 140px 0 80px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 102, 255, 0.06) 0%, transparent 100%);
+}
+
+.pillar-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 60%, #0066ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pillar-hero-badge {
+    display: inline-block;
+    background: rgba(0, 102, 255, 0.12);
+    border: 1px solid rgba(0, 102, 255, 0.25);
+    color: #4d94ff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+.pillar-hero-sub {
+    font-size: 1.1rem;
+    color: #999;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ─── CONTENT ─── */
+.pillar-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.pillar-section {
+    margin-bottom: 64px;
+}
+
+.pillar-section h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.pillar-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 24px 0 10px;
+    color: #ddd;
+}
+
+.pillar-section h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.pillar-section p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.pillar-section strong {
+    color: #fff;
+}
+
+.pillar-section em {
+    color: #ff6b6b;
+}
+
+.pillar-inline-link {
+    color: #4d94ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.pillar-inline-link:hover {
+    color: #80b3ff;
+}
+
+/* ─── FEATURE LIST ─── */
+.pillar-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px;
+}
+
+.pillar-feature-list li {
+    padding: 8px 0;
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+/* ─── SERVICES GRID ─── */
+.pillar-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.pillar-service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-service-card:hover {
+    border-color: rgba(0, 102, 255, 0.4);
+    background: rgba(0, 102, 255, 0.05);
+    transform: translateY(-4px);
+}
+
+.pillar-service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px;
+}
+
+.pillar-service-card p {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.pillar-card-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-accent, #0066ff);
+    margin-bottom: 8px;
+}
+
+.pillar-card-arrow {
+    font-size: 0.8rem;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.pillar-service-card:hover .pillar-card-arrow {
+    color: #4d94ff;
+}
+
+/* ─── TWO COLUMN ─── */
+.pillar-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.pillar-col-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.pillar-col-card p {
+    font-size: 0.9rem;
+}
+
+/* ─── WHY ZMK ─── */
+.pillar-highlight {
+    background: rgba(0, 102, 255, 0.04);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.pillar-why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pillar-why-item {
+    text-align: center;
+    padding: 16px;
+}
+
+.pillar-why-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.pillar-why-item h4 {
+    margin-bottom: 4px;
+}
+
+.pillar-why-item p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ─── LOCAL LINKS ─── */
+.pillar-local-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.pillar-local-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.pillar-local-card:hover {
+    border-color: rgba(0, 102, 255, 0.4);
+    color: #fff;
+    background: rgba(0, 102, 255, 0.08);
+}
+
+/* ─── FAQ ─── */
+.pillar-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pillar-faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.pillar-faq-item:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pillar-faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.pillar-faq-toggle {
+    color: #666;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.pillar-faq-a {
+    padding: 0 20px 16px;
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.7;
+}
+
+/* ─── CTA SECTION ─── */
+.pillar-cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.08), rgba(16, 185, 129, 0.08));
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    border-radius: 20px;
+    padding: 48px 32px;
+}
+
+.pillar-cta-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.pillar-btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.pillar-btn-primary {
+    background: #0066ff;
+    color: #fff;
+    border: none;
+}
+
+.pillar-btn-primary:hover {
+    background: #0052cc;
+    transform: translateY(-2px);
+}
+
+.pillar-btn-secondary {
+    background: #25D366;
+    color: #fff;
+    border: none;
+}
+
+.pillar-btn-secondary:hover {
+    background: #1da851;
+}
+
+.pillar-btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pillar-btn-outline:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .pillar-hero {
+        padding: 120px 0 60px;
+    }
+
+    .pillar-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pillar-highlight {
+        padding: 24px 16px;
+    }
+
+    .pillar-cta-section {
+        padding: 32px 16px;
+    }
+
+    .pillar-cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pillar-btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pillar-why-grid {
+        grid-template-columns: 1fr;
+    }
+}

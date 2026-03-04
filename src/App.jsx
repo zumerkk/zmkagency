@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
@@ -14,6 +14,7 @@ import './index.css';
 const Home = lazy(() => import('./pages/Home'));
 const Vision = lazy(() => import('./pages/Vision'));
 const ServiceDetail = lazy(() => import('./pages/services/ServiceDetail'));
+const NewServiceDetail = lazy(() => import('./pages/services/NewServiceDetail'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const LegalPage = lazy(() => import('./pages/legal/LegalPage'));
 const Pricing = lazy(() => import('./pages/Pricing'));
@@ -27,6 +28,7 @@ const BlogDetail = lazy(() => import('./pages/BlogDetail')); // Blog Detail Page
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ThankYou = lazy(() => import('./pages/ThankYou')); // Conversion Page
 const EsnafLanding = lazy(() => import('./pages/EsnafLanding')); // Special Landing Page
+const PillarPage = lazy(() => import('./pages/PillarPage')); // SEO Pillar Page
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -66,42 +68,9 @@ function App() {
               <Route path="/contact" element={<Contact t={t} />} />
               <Route path="/portfolio" element={<PortfolioPage t={t} />} />
 
-              {/* Service Routes */}
-              <Route path="/services/software" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'software')} tContact={t.contact} />
-              } />
-              <Route path="/services/web-seo" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'web-seo')} tContact={t.contact} />
-              } />
-              <Route path="/services/social-media" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'social-media')} tContact={t.contact} />
-              } />
-              <Route path="/services/production" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'production')} tContact={t.contact} />
-              } />
-              <Route path="/services/brand" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'brand')} tContact={t.contact} />
-              } />
-              <Route path="/services/data" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'data')} tContact={t.contact} />
-              } />
-              <Route path="/services/printing" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'printing')} tContact={t.contact} />
-              } />
-              <Route path="/services/drone" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'drone')} tContact={t.contact} />
-              } />
-              <Route path="/services/3d-motion" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === '3d-motion')} tContact={t.contact} />
-              } />
-              <Route path="/services/consulting" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'consulting')} tContact={t.contact} />
-              } />
-              <Route path="/services/ecommerce" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'ecommerce')} tContact={t.contact} />
-              } />
-              <Route path="/services/pr" element={
-                <ServiceDetail tService={t.services.items.find(i => i.id === 'pr')} tContact={t.contact} />
+              {/* New Service Detail Pages (slug-based) */}
+              <Route path="/services/:slug" element={
+                <NewServiceDetail tContact={t.contact} />
               } />
 
               {/* All Services Page */}
@@ -114,6 +83,9 @@ function App() {
               <Route path="/legal/terms" element={
                 <LegalPage title={t.legal.termsTitle} text={t.legal.termsText} date={t.legal.lastUpdated} />
               } />
+
+              {/* Pillar Page */}
+              <Route path="/kirikkale-dijital-cozumler" element={<PillarPage t={t} />} />
 
               {/* Local SEO Landing Pages */}
               {localSeoData.map((data) => (
@@ -130,6 +102,7 @@ function App() {
 
               {/* Admin Routes — no Navbar/Footer shown */}
               <Route path="/admin/login" element={<Login />} />
+              <Route path="/login" element={<Navigate to="/admin/login" replace />} />
               <Route path="/admin" element={<Dashboard />} />
 
               <Route path="/thank-you" element={<ThankYou />} />

@@ -65,12 +65,22 @@ const Pricing = ({ t, wizardT }) => {
         )
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://zmkagency.com" },
+            { "@type": "ListItem", "position": 2, "name": "Fiyatlar", "item": "https://zmkagency.com/pricing" }
+        ]
+    };
+
     return (
         <>
             <SEO
-                title={t.title}
-                description={t.subtitle}
-                schema={pricingSchema}
+                title="Kırıkkale Web Sitesi & Reklam Fiyatları 2026"
+                description="Şeffaf fiyatlandırma: kurumsal site 12.500₺, e-ticaret 35.000₺, sosyal medya yönetimi 7.500₺/ay. 31 Mart'a kadar özel kampanya."
+                keywords="kırıkkale web sitesi fiyatları, kırıkkale reklam fiyatları, kırıkkale seo fiyatları, dijital ajans fiyatları 2026"
+                schema={[pricingSchema, breadcrumbSchema]}
             />
             <section className="pricing-page">
 
@@ -146,21 +156,68 @@ const Pricing = ({ t, wizardT }) => {
                                     <div className="card-header">
                                         <h3>{plan.title}</h3>
                                         <div className="price">
-                                            {plan.originalPrice && (
+                                            {plan.bundlePrice && (
                                                 <div style={{
-                                                    textDecoration: 'line-through',
-                                                    color: '#ef4444',
-                                                    fontSize: '0.9rem',
-                                                    marginBottom: '4px',
-                                                    fontWeight: '500'
+                                                    display: 'flex',
+                                                    gap: '15px',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    marginBottom: '10px',
+                                                    flexWrap: 'wrap'
                                                 }}>
-                                                    {plan.originalPrice} {t.currency}
+                                                    <div style={{
+                                                        background: 'rgba(16, 185, 129, 0.15)',
+                                                        border: '1px solid rgba(16, 185, 129, 0.3)',
+                                                        borderRadius: '12px',
+                                                        padding: '8px 14px',
+                                                        textAlign: 'center'
+                                                    }}>
+                                                        <div style={{ fontSize: '0.7rem', color: '#10b981', fontWeight: '600', marginBottom: '2px' }}>Paketle Birlikte</div>
+                                                        <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#10b981' }}>{t.currency}{plan.bundlePrice}</div>
+                                                    </div>
+                                                    <div style={{
+                                                        background: 'rgba(255,255,255,0.05)',
+                                                        border: '1px solid rgba(255,255,255,0.1)',
+                                                        borderRadius: '12px',
+                                                        padding: '8px 14px',
+                                                        textAlign: 'center'
+                                                    }}>
+                                                        <div style={{ fontSize: '0.7rem', color: '#888', fontWeight: '600', marginBottom: '2px' }}>Tek Başına</div>
+                                                        <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#fff' }}>{t.currency}{plan.price}</div>
+                                                    </div>
                                                 </div>
                                             )}
-                                            <span className="currency">{t.currency}</span>
-                                            {plan.price}
-                                            <span className="period">{plan.period}</span>
+                                            {!plan.bundlePrice && (
+                                                <>
+                                                    <span className="currency">{t.currency}</span>
+                                                    {plan.price}
+                                                    <span className="period">{plan.period}</span>
+                                                </>
+                                            )}
+                                            {plan.bundlePrice && (
+                                                <span className="period">{plan.period}</span>
+                                            )}
                                         </div>
+                                        {plan.campaignBadge && (
+                                            <div style={{
+                                                background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+                                                color: '#fff',
+                                                padding: '4px 12px',
+                                                borderRadius: '20px',
+                                                fontSize: '0.75rem',
+                                                fontWeight: '700',
+                                                display: 'inline-block',
+                                                marginTop: '8px',
+                                                letterSpacing: '0.3px'
+                                            }}>
+                                                🔥 {plan.campaignBadge}
+                                            </div>
+                                        )}
+                                        {plan.bundleNote && (
+                                            <p style={{ fontSize: '0.7rem', color: '#10b981', marginTop: '6px', fontStyle: 'italic' }}>
+                                                * {plan.bundleNote}
+                                            </p>
+                                        )}
                                     </div>
 
                                     <p className="card-desc">{plan.description}</p>
@@ -321,7 +378,7 @@ const Pricing = ({ t, wizardT }) => {
                                     <h3 itemProp="name">{plan.title}</h3>
                                     <p itemProp="description">{plan.description}</p>
                                     <p>Fiyat: <span itemProp="price">{plan.price}</span> <span itemProp="priceCurrency">TRY</span> {plan.period}</p>
-                                    {plan.originalPrice && <p>Orijinal Fiyat: {plan.originalPrice} ₺</p>}
+                                    {plan.bundlePrice && <p>Paketle Birlikte: {plan.bundlePrice} ₺</p>}
                                     <ul>
                                         {plan.features.map((f, fi) => <li key={fi}>{f}</li>)}
                                     </ul>

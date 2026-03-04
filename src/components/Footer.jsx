@@ -12,16 +12,34 @@ const Footer = ({ t }) => {
                     <p className="footer-desc">
                         {t.aboutText}
                     </p>
-                    {t.address && <p className="footer-address" style={{ marginTop: '15px', color: '#888', fontSize: '13px' }}>{t.address}</p>}
+                    {/* NAP Block — Schema.org Microdata for Local SEO */}
+                    <div itemScope itemType="https://schema.org/LocalBusiness" style={{ marginTop: '15px', fontSize: '13px', color: '#888', lineHeight: '1.8' }}>
+                        <meta itemProp="name" content="ZMK Agency" />
+                        <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                            <span itemProp="streetAddress">Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5</span><br />
+                            <span itemProp="addressLocality">Kırıkkale</span>, <span itemProp="postalCode">71200</span> <span itemProp="addressCountry">TR</span>
+                        </div>
+                        <div style={{ marginTop: '6px' }}>
+                            📞 <a href="tel:+905413812114" itemProp="telephone" style={{ color: '#888', textDecoration: 'none' }}>0541 381 21 14</a>
+                        </div>
+                        <div>
+                            ✉️ <a href="mailto:iletisim@zmkagency.com" itemProp="email" style={{ color: '#888', textDecoration: 'none' }}>iletisim@zmkagency.com</a>
+                        </div>
+                        <div style={{ marginTop: '4px', fontSize: '12px', color: '#666' }}>
+                            🕐 Pzt–Cmt: 09:00–19:00
+                        </div>
+                    </div>
                 </div>
 
                 <div className="footer-col">
                     <h4>{t.services}</h4>
                     <ul>
-                        <li><Link to="/services/software">Software Development</Link></li>
-                        <li><Link to="/services/web-seo">Web & SEO</Link></li>
-                        <li><Link to="/services/social-media">Social Media</Link></li>
-                        <li><Link to="/services/production">Production</Link></li>
+                        <li><Link to="/services/kurumsal-web-sitesi">Kurumsal Web Sitesi</Link></li>
+                        <li><Link to="/services/e-ticaret">E-Ticaret Çözümleri</Link></li>
+                        <li><Link to="/services/google-ads">Google Ads</Link></li>
+                        <li><Link to="/services/sosyal-medya">Sosyal Medya</Link></li>
+                        <li><Link to="/services/lokal-seo">SEO Hizmeti</Link></li>
+                        <li><Link to="/services/kurumsal-kimlik">Kurumsal Kimlik</Link></li>
                     </ul>
                 </div>
 
@@ -29,6 +47,9 @@ const Footer = ({ t }) => {
                     <h4>{t.links}</h4>
                     <ul>
                         <li><Link to="/vision">{t.vision || "Vision"}</Link></li>
+                        <li><Link to="/kirikkale-dijital-cozumler">Kırıkkale Dijital Çözümler</Link></li>
+                        <li><Link to="/pricing">Fiyatlar</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
                         <li><a href="/#agency">Agency</a></li>
                         <li><a href="/#contact">Contact</a></li>
                     </ul>

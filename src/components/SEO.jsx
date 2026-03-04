@@ -56,8 +56,47 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
         }
     };
 
+    // WebSite + SearchAction Schema (for Google sitelinks search box)
+    const webSiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ZMK Agency",
+        "alternateName": "ZMK AGENCY",
+        "url": baseUrl,
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${baseUrl}/services?q={search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+        }
+    };
+
+    // Organization Schema
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZMK Agency",
+        "url": baseUrl,
+        "logo": `${baseUrl}/logo.png`,
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+905413812114",
+            "contactType": "customer service",
+            "availableLanguage": ["Turkish", "English"]
+        },
+        "sameAs": [
+            "https://www.instagram.com/agencyzmk/",
+            "https://www.youtube.com/@ZMKAGENCY",
+            "https://www.tiktok.com/@zmkagency",
+            "https://x.com/zmkagency",
+            "https://www.linkedin.com/company/zmkagency"
+        ]
+    };
+
     // Construct Schema Array
-    let schemaList = [localBusinessSchema];
+    let schemaList = [localBusinessSchema, webSiteSchema, organizationSchema];
     if (schema) {
         if (Array.isArray(schema)) {
             schemaList = [...schemaList, ...schema];

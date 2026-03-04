@@ -97,6 +97,25 @@ const Contact = ({ t }) => {
                                 <p>+90 541 381 21 14</p>
                             </div>
                         </a>
+
+                        {/* Google Maps Embed */}
+                        <div className="contact-map-wrapper" style={{
+                            borderRadius: '16px',
+                            overflow: 'hidden',
+                            border: '1px solid rgba(255,255,255,0.08)',
+                            marginTop: '8px'
+                        }}>
+                            <iframe
+                                title="ZMK Agency Kırıkkale Ofis"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.5!2d33.519!3d39.846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDUwJzQ1LjYiTiAzM8KwMzEnMDguNCJF!5e0!3m2!1str!2str!4v1709540000000!5m2!1str!2str"
+                                width="100%"
+                                height="200"
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)', opacity: 0.8 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
                     </motion.div>
 
                     {/* Right Column: Glass Form */}

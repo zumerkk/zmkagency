@@ -244,10 +244,12 @@ export const content = {
         faq: {
             title: "Akıllardaki Sorular.",
             items: [
-                { q: "Kırıkkale dışına hizmet veriyor musunuz?", a: "Kesinlikle. ZMK AGENCY, Kırıkkale merkezli olsa da, dijitalin sınırları yoktur. Türkiye'nin ve dünyanın her yerine hizmet verebilecek altyapı ve vizyona sahibiz." },
-                { q: "Süreç nasıl işliyor?", a: "Kaos yok, sistem var. Önce analiz, sonra strateji, ardından kusursuz uygulama. Her adımda şeffaf iletişim ve raporlama sunuyoruz." },
-                { q: "Neden diğerleri değil de siz?", a: "Cevabı basit: Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. Başkalarının 'ekstra' dediği standartları biz 'temel' olarak sunuyoruz. Aşağıdaki karşılaştırma tablosu her şeyi anlatıyor." },
-                { q: "Bütçe aralıklarınız nedir?", a: "Her ölçeğe uygun çözümlerimiz var. Startup paketlerinden, dev kurumsal dönüşüm projelerine kadar esnek ve şeffaf bir fiyatlandırma politikamız var." }
+                { q: "Kırıkkale dışına hizmet veriyor musunuz?", a: "Kesinlikle. ZMK AGENCY, Kırıkkale merkezli olsa da, dijitalin sınırları yoktur. Türkiye'nin ve dünyanın her yerine hizmet verebilecek altyapı ve vizyona sahibiz. Ankara, İstanbul ve diğer şehirlerden de müşterilerimiz mevcut." },
+                { q: "İş süreçleriniz nasıl işliyor?", a: "Kaos yok, sistem var. Önce detaylı analiz ve müşteri brifingi, sonra strateji sunumu, ardından kusursuz uygulama. Her adımda şeffaf iletişim ve canlı raporlama paneli sunuyoruz. Proje yönetimi Agile metodolojisiyle yürütülür." },
+                { q: "Neden diğer ajanslar değil de ZMK?", a: "Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. WordPress şablonlar yerine React/Next.js ile özel kodlama, gizli maliyetler yerine şeffaf fiyatlandırma, PDF raporlar yerine canlı müşteri paneli sunuyoruz. Başkalarının 'ekstra' dediği standartları biz 'temel' olarak sunuyoruz." },
+                { q: "Fiyat aralıklarınız nedir?", a: "Her ölçeğe uygun çözümlerimiz var. Esnaf paketleri 9.999₺'den, kurumsal web siteleri 12.500₺'den, 360° retainer paketleri 11.500₺/ay'dan başlıyor. Tüm paketlerimiz şeffaf ve ölçeklenebilir. Detaylar için Fiyatlar sayfamızı inceleyebilirsiniz." },
+                { q: "Teslim süresi ne kadar?", a: "Projenin kapsamına göre değişir: Tek sayfa web sitesi 3-5 iş günü, kurumsal web sitesi 10-15 iş günü, e-ticaret sitesi 15-25 iş günü, özel yazılım projesi 4-12 hafta. Her proje öncesi net bir zaman çizelgesi sunuyoruz." },
+                { q: "Kampanya sonrası destek sağlıyor musunuz?", a: "Evet, tüm projelerimiz sonrasında teknik destek ve bakım hizmeti sunuyoruz. Retainer paketlerde 7/24 destek dahildir. Tek seferlik projelerde ise 3 ay ücretsiz teknik destek sağlıyoruz. Ayrıca canlı müşteri panelimiz üzerinden kampanya performanslarınızı anlık takip edebilirsiniz." }
             ]
         },
         testimonials: {
@@ -274,10 +276,11 @@ export const content = {
             title: "Dükkanınız Artık Tüm Şehirde.",
             subtitle: "Sadece bir web sitesi değil, müşteri getiren tam kapsamlı dijital çözümler. Haritada bulunun, Instagram'da parlayın.",
             features: [
-                "Google Haritalarda İlk Sırada Çıkın",
-                "Profesyonel Mekan & Ürün Çekimi",
-                "Sosyal Medyada 'Sponsorlu' Reklamlar",
-                "Size Özel Web Sitesi"
+                "Profesyonel Mekân ve Ürün Çekimi",
+                "Sosyal Medyada Sponsorlu Reklam Kampanyaları",
+                "Size Özel, SEO Uyumlu Web Sitesi",
+                "Sosyal Medya İçerik Yönetimi",
+                "Aylık Raporlama ve Müşteri Paneli"
             ],
             cta: "Esnaf Paketini İncele"
         },

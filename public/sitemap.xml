@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Pages -->
+
+  <!-- ═══════════════ CORE PAGES ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/</loc>
     <lastmod>2026-03-04</lastmod>
@@ -22,14 +23,8 @@
   </url>
   <url>
     <loc>https://zmkagency.com/vision</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/portfolio</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
@@ -39,13 +34,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://zmkagency.com/portfolio</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://zmkagency.com/blog</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Pillar Page -->
+  <!-- ═══════════════ PILLAR PAGE ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/kirikkale-dijital-cozumler</loc>
     <lastmod>2026-03-04</lastmod>
@@ -53,7 +54,7 @@
     <priority>1</priority>
   </url>
 
-  <!-- Service Detail Pages (new slugs) -->
+  <!-- ═══════════════ SERVICE DETAIL PAGES ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/services/kurumsal-web-sitesi</loc>
     <lastmod>2026-03-04</lastmod>
@@ -61,25 +62,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/e-ticaret</loc>
+    <loc>https://zmkagency.com/services/e-ticaret-cozumleri</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/ozel-yazilim</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/services/google-ads</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zmkagency.com/services/sosyal-medya</loc>
+    <loc>https://zmkagency.com/services/ozel-yazilim-app</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -91,7 +80,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/ulusal-seo</loc>
+    <loc>https://zmkagency.com/services/ulusal-global-seo</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -103,31 +92,43 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/urun-fotografi</loc>
+    <loc>https://zmkagency.com/services/urun-fotografciligi</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/kurumsal-kimlik</loc>
+    <loc>https://zmkagency.com/services/reklam-yonetimi-google</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/services/reklam-yonetimi-sosyal</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/services/360-retainer-startup-growth</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/retainer-360</loc>
+    <loc>https://zmkagency.com/services/360-retainer-market-domination</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zmkagency.com/services/dijital-danismanlik</loc>
+    <loc>https://zmkagency.com/services/marka-kurumsal</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Local SEO Landing Pages -->
+  <!-- ═══════════════ LOCAL SEO LANDING PAGES (25) ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/kirikkale-reklam-ajansi</loc>
     <lastmod>2026-03-04</lastmod>
@@ -279,7 +280,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Esnaf Landing -->
+  <!-- ═══════════════ ESNAF LANDING ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/esnaf-paket</loc>
     <lastmod>2026-03-04</lastmod>
@@ -287,69 +288,172 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- ═══════════════ BLOG POSTS (27 total) ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/blog/kirikkale-dijital-pazarlama-trendleri</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/neden-360-derece-reklam-ajansi</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/kirikkale-web-tasarim-rehberi</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/sosyal-medya-yonetimi-ipuclari</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/e-ticaret-basari-sirrlari</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/esnaf-dijitallesme-rehberi</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/google-harita-onemi</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/sosyal-medya-esnaf</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/web-sitesi-gerekli-mi</loc>
-    <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zmkagency.com/blog/drone-cekimi-farki</loc>
     <lastmod>2026-02-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-google-ads-rehberi</loc>
+    <lastmod>2026-02-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kurumsal-kimlik-neden-onemli</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-seo-stratejileri</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-sanayi-dijitallesme</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-restoran-dijital-pazarlama</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/tiktok-isletmeler-icin</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-saglik-sektoru-dijital</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/google-business-profile-rehberi</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-egitim-kurumlari-reklam</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/web-sitesi-hizi-onemi</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-emlak-dijital-pazarlama</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/yapay-zeka-dijital-pazarlama</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- NEW 5 blog posts -->
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-reklam-ajansi-secme-rehberi</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-yazilim-firmalari-rehberi</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-google-birinci-sayfa</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-instagram-reklam-rehberi</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zmkagency.com/blog/kirikkale-web-sitesi-fiyatlari-2026</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Legal -->
+  <!-- ═══════════════ LEGAL ═══════════════ -->
   <url>
     <loc>https://zmkagency.com/legal/privacy</loc>
     <lastmod>2026-01-01</lastmod>

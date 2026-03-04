@@ -381,5 +381,270 @@ export const blogData = [
         author: "ZMK Strategist",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200",
         keywords: "yapay zeka pazarlama, ai reklam, chatgpt dijital pazarlama"
+    },
+    {
+        id: 23,
+        slug: "kirikkale-reklam-ajansi-secme-rehberi",
+        title: "Kırıkkale'de Reklam Ajansı Seçerken Dikkat Edilmesi Gereken 7 Kriter",
+        excerpt: "Yanlış ajans seçimi hem paranızı hem de zamanınızı çar-çur eder. İşte Kırıkkale'de doğru reklam ajansı bulmanın formülü.",
+        content: `
+            <p>Kırıkkale'de reklam ajansı arayanların sayısı her geçen gün artıyor. Dijital dönüşüm hızlandıkça, işletmeler profesyonel destek almak zorunda kalıyor. Ancak doğru ajansı seçmek, en az reklam yapmak kadar kritik bir karar.</p>
+
+            <h2>Neden Doğru Ajans Seçimi Bu Kadar Önemli?</h2>
+            <p>Yanlış bir ajansla çalışmak sadece bütçe kaybı değil, aynı zamanda zaman kaybı ve itibar riski anlamına gelir. Kırıkkale gibi yerel pazarlarda itibarınız her şeydir — bir kez kötü bir deneyim yaşarsanız, toparlanması çok zor olabilir.</p>
+
+            <h3>1. Referans ve Portföyü İnceleyin</h3>
+            <p>Ajansın daha önce hangi firmalarla çalıştığını, hangi sektörlerde deneyimi olduğunu mutlaka araştırın. Kırıkkale'de yerel referanslar özellikle önemlidir — aynı pazarı tanıyan bir ajans, stratejileri daha isabetli oluşturur.</p>
+
+            <h3>2. 360° Hizmet Sunuyor mu?</h3>
+            <p>Web tasarımı bir yere, sosyal medyayı başka bir yere, SEO'yu ayrı bir freelancer'a yaptırmak markanızın tutarlılığını bozar. İdeal ajans, tüm dijital kanalları tek çatı altında yönetmelidir. <a href="/services">ZMK Agency olarak 12+ dijital hizmeti entegre şekilde sunuyoruz.</a></p>
+
+            <h3>3. Şeffaf Fiyatlandırma Politikası</h3>
+            <p>Gizli maliyetler, belirsiz fiyatlar ve "sonradan konuşuruz" yaklaşımı kırmızı bayraktır. İyi bir ajans, <a href="/pricing">fiyatlarını açıkça paylaşır</a> ve her kalemin ne anlama geldiğini anlatır.</p>
+
+            <h3>4. Ölçülebilir Sonuçlar Vaat Ediyor mu?</h3>
+            <p>"Çok güzel postlar atarız" yeterli değildir. Ajansınız size aylık raporlarla kaç kişiye ulaştığınızı, kaç müşteri kazandığınızı ve ROI'nizi gösterebilmelidir.</p>
+
+            <h3>5. Yerel Pazar Bilgisi</h3>
+            <p>Kırıkkale'nin dinamiklerini bilen bir ajans, İstanbul tabanlı büyük bir ajansa göre çok daha etkili olabilir. Mahalle kültürünü, esnaf zihniyetini ve yerel rekabet ortamını tanımak büyük avantajdır.</p>
+
+            <h3>6. Teknoloji ve Altyapı</h3>
+            <p>Modern teknolojiler kullanan ajanslar daha hızlı, güvenli ve performanslı çözümler üretir. WordPress'e bağımlı ajanslardan kaçının — React, Next.js gibi modern teknolojiler çok daha üstün performans sunar.</p>
+
+            <h3>7. İletişim ve Ulaşılabilirlik</h3>
+            <p>Ajansınıza ulaşamıyorsanız, çalışmanın bir anlamı yoktur. Hızlı dönüş, düzenli toplantı ve proaktif yaklaşım olmazsa olmazdır.</p>
+
+            <h2>Sonuç: Kırıkkale'de Doğru Ajansı Bulun</h2>
+            <p>Bu 7 kriteri göz önünde bulundurarak Kırıkkale'deki reklam ajanslarını değerlendirin. <strong>ZMK Agency olarak tüm bu kriterleri fazlasıyla karşılıyoruz</strong> — şeffaf fiyatlandırma, 360° hizmet, yerel referanslar ve ölçülebilir sonuçlar. <a href="/contact">Ücretsiz strateji görüşmesi için bize ulaşın.</a></p>
+        `,
+        category: "Reklam",
+        date: "04 Mart 2026",
+        author: "ZMK Strategist",
+        image: "/images/blog-reklam-ajans.png",
+        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, reklam ajansı seçme"
+    },
+    {
+        id: 24,
+        slug: "kirikkale-yazilim-firmalari-rehberi",
+        title: "Kırıkkale'de Yazılım Firması Seçimi: 2026 Teklif Karşılaştırma Rehberi",
+        excerpt: "Kurumsal web sitesinden mobil uygulamaya, e-ticaret'ten ERP'ye — Kırıkkale'de yazılım yaptırmak hakkında bilmeniz gereken her şey.",
+        content: `
+            <p>Kırıkkale'de yazılım sektörü hızla büyüyor. Artık sadece büyükşehirlerdeki firmalar değil, Anadolu'daki yazılım şirketleri de uluslararası kalitede hizmet sunuyor. Peki Kırıkkale'de yazılım yaptırmak istediğinizde nelere dikkat etmelisiniz?</p>
+
+            <h2>Kırıkkale'de Yazılım Ne Kadara Mal Olur?</h2>
+            <p>Yazılım fiyatları, projenin kapsamına göre büyük farklılıklar gösterir. İşte 2026 yılı itibariyle Kırıkkale'deki güncel fiyat aralıkları:</p>
+
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                    <th style="text-align:left; padding:12px;">Hizmet</th>
+                    <th style="text-align:right; padding:12px;">Fiyat Aralığı</th>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Kurumsal Web Sitesi</td>
+                    <td style="text-align:right; padding:12px;">9.000₺ – 25.000₺</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">E-Ticaret Sitesi</td>
+                    <td style="text-align:right; padding:12px;">20.000₺ – 80.000₺</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Mobil Uygulama</td>
+                    <td style="text-align:right; padding:12px;">50.000₺ – 200.000₺+</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Özel Yazılım / SaaS</td>
+                    <td style="text-align:right; padding:12px;">85.000₺ – 500.000₺+</td>
+                </tr>
+            </table>
+
+            <h3>Ucuz mu Kaliteli mi?</h3>
+            <p>5.000₺'ye web sitesi yaptıranlar, genellikle 6 ay sonra siteyi yeniden yaptırmak zorunda kalır. Ucuz çözümler genellikle hazır şablon, yavaş hosting ve SEO uyumsuz altyapı anlamına gelir.</p>
+
+            <h3>Modern Teknolojiler Fark Yaratır</h3>
+            <p><a href="/services/kurumsal-web-sitesi">ZMK Agency olarak React ve Next.js</a> kullanıyoruz. Bu teknolojiler WordPress'e göre 10 kat daha hızlı yüklenir, daha güvenlidir ve SEO uyumludur.</p>
+
+            <h3>Teklif Karşılaştırma İpuçları</h3>
+            <p>En az 3 firmadan teklif alın ve şu soruları sorun:</p>
+            <ul>
+                <li>Hangi teknoloji kullanıyorsunuz? (WordPress vs Modern framework)</li>
+                <li>Hosting ve domain dahil mi?</li>
+                <li>SEO altyapısı uyumlu mu?</li>
+                <li>Kaynak kodları bana mı ait?</li>
+                <li>Bakım ve destek süreci nasıl?</li>
+            </ul>
+
+            <h2>Neden ZMK Agency?</h2>
+            <p>Kırıkkale merkezli olmanın avantajıyla yüz yüze toplantı imkanı sunuyoruz. Modern teknolojiler, <a href="/pricing">şeffaf fiyatlandırma</a> ve 50+ referans ile güvenle çalışabilirsiniz. <a href="/contact">Hemen teklif alın.</a></p>
+        `,
+        category: "Web & Yazılım",
+        date: "04 Mart 2026",
+        author: "Tech Team",
+        image: "/images/blog-yazilim-firma.png",
+        keywords: "kırıkkale yazılım, kırıkkale yazılım firması, kırıkkale web sitesi fiyatları, yazılım geliştirme kırıkkale"
+    },
+    {
+        id: 25,
+        slug: "kirikkale-google-birinci-sayfa",
+        title: "Kırıkkale'de Google'da 1. Sayfaya Çıkmanın 5 Adımı",
+        excerpt: "Reklam bütçesi harcamadan, organik aramalarda Kırıkkale'nin 1 numarası olun. Adım adım SEO stratejisi.",
+        content: `
+            <p>"Kırıkkale yazılım", "Kırıkkale reklam ajansı", "Kırıkkale web tasarım" — bu aramalarda 1. sayfada mısınız? Eğer değilseniz, her gün potansiyel müşteri kaybediyorsunuz. İşte Kırıkkale'de Google'da 1. sayfaya çıkmanın kanıtlanmış 5 adımı.</p>
+
+            <h2>Adım 1: Google İşletme Profilinizi Mükemmelleştirin</h2>
+            <p>Yerel aramalarda haritada çıkmak, organik sıralamadan bile önemlidir. Google İşletme Profilinizi (GBP) %100 doldurun:</p>
+            <ul>
+                <li>✅ Doğru kategori seçimi (ana + ikincil kategoriler)</li>
+                <li>✅ Haftalık GBP paylaşımları</li>
+                <li>✅ 50+ profesyonel fotoğraf yükleme</li>
+                <li>✅ Tüm hizmetleri listeleme</li>
+                <li>✅ Düzenli yorum toplama ve yanıtlama</li>
+            </ul>
+
+            <h2>Adım 2: Web Sitenizi SEO Uyumlu Hale Getirin</h2>
+            <p>Web sitenizin teknik altyapısı, Google'ın sizi anlaması için kritiktir. Schema markup, hızlı yükleme (<1sn), mobil uyumluluk ve doğru başlık hiyerarşisi (H1-H2-H3) olmazsa olmazdır.</p>
+            <p><a href="/services/lokal-seo">ZMK Agency Lokal SEO hizmetimiz</a> ile tüm teknik optimizasyonları sizin için yapıyoruz.</p>
+
+            <h2>Adım 3: Hedef Kelimelerinize Odaklanın</h2>
+            <p>"Kırıkkale + hizmetiniz" formatındaki aramalara odaklanın. Örnek hedef kelimeler:</p>
+            <ul>
+                <li>Kırıkkale yazılım</li>
+                <li>Kırıkkale reklam ajansı</li>
+                <li>Kırıkkale web tasarım</li>
+                <li>Kırıkkale dijital pazarlama</li>
+                <li>Kırıkkale sosyal medya yönetimi</li>
+            </ul>
+            <p>Her hedef kelime için benzersiz, kapsamlı içerik oluşturun. <a href="/kirikkale-dijital-cozumler">Kırıkkale dijital çözümler sayfamız</a> buna mükemmel bir örnektir.</p>
+
+            <h2>Adım 4: Kaliteli İçerik Üretin</h2>
+            <p>Blog yazıları, rehberler ve vaka analizleri hem Google'a hem ziyaretçilerinize değer katar. Haftada en az 1-2 blog yazısı yayınlayın — SEO odaklı, özgün ve derinlikli içerikler.</p>
+
+            <h2>Adım 5: Yerel Backlink'ler Kazanın</h2>
+            <p>Kırıkkale Ticaret Odası, yerel dizinler, iş ortaklarınızın siteleri ve sektörel portallar — bu kaynaklardan gelen backlink'ler Google'a "bu işletme Kırıkkale'de güvenilir" sinyali verir.</p>
+
+            <h2>Ne Kadar Sürede Sonuç Alınır?</h2>
+            <p>Lokal SEO genellikle 4-8 haftada ilk sonuçları verir. Organik sıralama için 3-6 ay sabırlı olmalısınız. Ancak doğru stratejiyle Kırıkkale gibi yerel pazarlarda rekabet düşük olduğu için sonuçlar İstanbul'a göre çok daha hızlı gelir.</p>
+
+            <p><strong><a href="/contact">ZMK Agency olarak Kırıkkale'de Google 1. sıraya çıkmanızda size rehberlik ediyoruz. Ücretsiz SEO analizi için iletişime geçin.</a></strong></p>
+        `,
+        category: "SEO",
+        date: "04 Mart 2026",
+        author: "SEO Uzmanı",
+        image: "/images/blog-seo-google.png",
+        keywords: "kırıkkale seo, kırıkkale google birinci sayfa, kırıkkale yerel seo, google sıralama kırıkkale"
+    },
+    {
+        id: 26,
+        slug: "kirikkale-instagram-reklam-rehberi",
+        title: "Kırıkkale İşletmeleri İçin Instagram Reklam Rehberi: A'dan Z'ye",
+        excerpt: "Kırıkkale'de Instagram reklamlarıyla müşteri kazanmanın sırları. Hedef kitle, bütçe, kreatif ve ölçüm stratejileri.",
+        content: `
+            <p>Instagram, Kırıkkale'deki işletmeler için en güçlü müşteri kazanma kanallarından biridir. 18-55 yaş arası neredeyse herkes Instagram kullanıyor. Ama "paylaşım yapmak" ile "reklam vermek" arasında dağlar kadar fark var.</p>
+
+            <h2>Neden Instagram Reklamları?</h2>
+            <p>Organik paylaşımlar artık takipçilerinizin sadece %5-10'una ulaşıyor. Reklam vermeden büyümek neredeyse imkansız. Ancak doğru stratejiye reklam bütçesi sizi 10x büyütebilir.</p>
+
+            <h3>Hedef Kitle Belirleme</h3>
+            <p>Kırıkkale'de Instagram reklamı verirken lokasyon hedeflemesi kritiktir. Şehir merkezi, Yahşihan, Keskin ve çevre ilçeler — hedef kitlenizi doğru tanımlayın.</p>
+            <ul>
+                <li>📍 Lokasyon: Kırıkkale + yarıçap (10-25 km)</li>
+                <li>👥 Yaş: Hizmetinize göre 18-65</li>
+                <li>💡 İlgi alanları: Sektörünüze göre ayarlanmalı</li>
+                <li>🔄 Retargeting: Web sitenizi ziyaret eden ama dönüşüm yapmayanlara yeniden ulaşın</li>
+            </ul>
+
+            <h3>Bütçe Stratejisi</h3>
+            <p>Kırıkkale'de Instagram reklamları İstanbul'a göre çok daha ucuzdur. Günlük 50-100₺ bütçeyle bile etkili sonuçlar alabilirsiniz. Minimum aylık 3.000₺ reklam bütçesi öneriyoruz.</p>
+
+            <h3>Kreatif İpuçları</h3>
+            <p>Video içerikler, carousel postlar ve hikaye reklamları en yüksek etkileşimi alır. İşte Kırıkkale'de işe yarayan formatlar:</p>
+            <ul>
+                <li>🎬 15 saniyelik ürün/hizmet tanıtım videosu</li>
+                <li>📸 Önceki/sonraki kaydırmalı (carousel) görseller</li>
+                <li>💬 Müşteri yorumu paylaşımları</li>
+                <li>🔥 Kampanya ve indirim duyuruları</li>
+            </ul>
+
+            <h3>Ölçüm ve Optimizasyon</h3>
+            <p>Her kampanyanın CPC (tıklama başına maliyet), CPL (lead başına maliyet) ve ROAS (reklam harcama getirisi) metriklerini takip edin. <a href="/services/sosyal-medya">ZMK Agency olarak</a> aylık detaylı raporlarla şeffaf sonuçlar sunuyoruz.</p>
+
+            <h2>Sonuç</h2>
+            <p>Instagram reklamları doğru yapıldığında Kırıkkale'deki işletmenizi kısa sürede büyütür. Yanlış yapıldığında ise bütçeniz boşa gider. Profesyonel yönetim için <a href="/contact">bize ulaşın</a>.</p>
+        `,
+        category: "Sosyal Medya",
+        date: "04 Mart 2026",
+        author: "Social Team",
+        image: "/images/blog-instagram-reklam.png",
+        keywords: "kırıkkale instagram reklam, kırıkkale sosyal medya reklamı, instagram ads kırıkkale"
+    },
+    {
+        id: 27,
+        slug: "kirikkale-web-sitesi-fiyatlari-2026",
+        title: "Kırıkkale Web Sitesi Fiyatları 2026: Detaylı Karşılaştırma",
+        excerpt: "Kurumsal siteden e-ticaret'e, özel yazılımdan landing page'e — 2026 güncel fiyatları ve nelere dikkat etmeniz gerektiğini öğrenin.",
+        content: `
+            <p>Kırıkkale'de web sitesi yaptırmak isteyenlerin ilk sorusu "Ne kadara mal olur?" oluyor. Bu rehberde 2026 güncel fiyatlarını, nelerin fiyata dahil olduğunu ve doğru seçimi nasıl yapacağınızı detaylıca anlatıyoruz.</p>
+
+            <h2>2026 Kırıkkale Web Sitesi Fiyat Tablosu</h2>
+
+            <h3>🌐 Kurumsal Web Sitesi: 12.500₺'den başlayan</h3>
+            <p>5-10 sayfalık, markanızı tanıtan ve iletişim formu içeren profesyonel web sitesi. <strong>Dahil olanlar:</strong> Özel tasarım, mobil uyumluluk, SEO altyapısı, SSL, hosting (1 yıl), CMS paneli.</p>
+
+            <h3>🛒 E-Ticaret Sitesi: 35.000₺'den başlayan</h3>
+            <p>Ürün yönetimi, ödeme entegrasyonu (iyzico, PayTR), kargo takibi ve pazaryeri bağlantısı dahil. Trendyol, N11 entegrasyonları ekstra talep edilebilir.</p>
+
+            <h3>📱 Mobil Uygulama: 85.000₺'den başlayan</h3>
+            <p>iOS ve Android'e tek kod tabanından uygulama. React Native ile hızlı geliştirme ve düşük maliyet.</p>
+
+            <h3>🎯 Landing Page / Tek Sayfa: 5.000₺'den başlayan</h3>
+            <p>Kampanya, etkinlik veya ürün lansmanı için tek sayfalık, dönüşüm odaklı mini site.</p>
+
+            <h2>WordPress vs Modern Teknolojiler</h2>
+            <p>Kırıkkale'deki birçok ajans hâlâ WordPress kullanıyor. İşte WordPress ile modern teknolojiler arasındaki farklar:</p>
+
+            <table style="width:100%; border-collapse:collapse; margin:20px 0;">
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                    <th style="text-align:left; padding:12px;">Özellik</th>
+                    <th style="text-align:center; padding:12px;">WordPress</th>
+                    <th style="text-align:center; padding:12px;">React / Next.js</th>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Yükleme Hızı</td>
+                    <td style="text-align:center; padding:12px;">3-6 saniye</td>
+                    <td style="text-align:center; padding:12px; color:#10b981;">&lt;1 saniye ✓</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Güvenlik</td>
+                    <td style="text-align:center; padding:12px;">Düşük (eklenti açıkları)</td>
+                    <td style="text-align:center; padding:12px; color:#10b981;">Yüksek ✓</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">SEO Performansı</td>
+                    <td style="text-align:center; padding:12px;">Orta</td>
+                    <td style="text-align:center; padding:12px; color:#10b981;">Mükemmel ✓</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <td style="padding:12px;">Ölçeklenebilirlik</td>
+                    <td style="text-align:center; padding:12px;">Sınırlı</td>
+                    <td style="text-align:center; padding:12px; color:#10b981;">Sınırsız ✓</td>
+                </tr>
+            </table>
+
+            <h2>Dikkat Edilmesi Gerekenler</h2>
+            <ul>
+                <li>🔍 SEO uyumlu olduğundan emin olun</li>
+                <li>📱 Mobil uyumluluk mutlaka test edilmelidir</li>
+                <li>🔒 SSL sertifikası dahil mi kontrol edin</li>
+                <li>📊 Google Analytics ve Search Console entegrasyonu isteyin</li>
+                <li>💻 Kaynak kodlarının size ait olacağını sözleşmeye yazdırın</li>
+            </ul>
+
+            <h2>ZMK Agency Fark Yaratan Çözümler</h2>
+            <p>Modern teknoloji, <a href="/pricing">şeffaf fiyatlandırma</a> ve Kırıkkale'de yüz yüze hizmet avantajı. <a href="/services/kurumsal-web-sitesi">Kurumsal web sitesi hizmetimiz</a> hakkında detaylı bilgi alın.</p>
+        `,
+        category: "Web & Yazılım",
+        date: "04 Mart 2026",
+        author: "Web Master",
+        image: "/images/blog-web-fiyat.png",
+        keywords: "kırıkkale web sitesi fiyatları, kırıkkale web tasarım fiyat, web sitesi yaptırmak kırıkkale, web yazılım fiyatları 2026"
     }
 ];

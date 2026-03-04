@@ -107,7 +107,7 @@ const Contact = ({ t }) => {
                         }}>
                             <iframe
                                 title="ZMK Agency Kırıkkale Ofis"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.5!2d33.519!3d39.846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDUwJzQ1LjYiTiAzM8KwMzEnMDguNCJF!5e0!3m2!1str!2str!4v1709540000000!5m2!1str!2str"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.0!2d33.5131!3d39.8461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407b3da7a5555555%3A0x1234567890abcdef!2sDelice+%C4%B0%C5%9F+Han%C4%B1%2C+Yenido%C4%9Fan%2C+H%C3%BCrriyet+Cd.+No%3A+6%2F50+Kat%3A5%2C+71100+K%C4%B1r%C4%B1kkale+Merkez%2FK%C4%B1r%C4%B1kkale!5e0!3m2!1str!2str!4v1709540000000!5m2!1str!2str"
                                 width="100%"
                                 height="200"
                                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)', opacity: 0.8 }}

@@ -10,6 +10,9 @@ import Comparison from '../components/Comparison';
 import WizardForm from '../components/WizardForm';
 import FloatingCTA from '../components/FloatingCTA';
 
+import SolutionSelector from '../components/conversion/SolutionSelector';
+import TrustBadges from '../components/conversion/TrustBadges';
+import HowWeWork from '../components/conversion/HowWeWork';
 
 import LocalDominance from '../components/LocalDominance';
 
@@ -39,6 +42,10 @@ const Home = ({ t }) => {
                 schema={faqSchema ? [faqSchema] : undefined}
             />
             <Hero t={t.hero} onCtaClick={() => setShowWizard(true)} />
+
+            <TrustBadges t={t.trustBadges} />
+            <SolutionSelector t={t.solutionSelector} />
+            <HowWeWork t={t.howWeWork} />
 
             <LocalDominance t={t.localDominance} onCtaClick={() => navigate('/pricing')} />
 

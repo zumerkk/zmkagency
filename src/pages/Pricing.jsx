@@ -220,7 +220,31 @@ const Pricing = ({ t, wizardT }) => {
                                         )}
                                     </div>
 
-                                    <p className="card-desc">{plan.description}</p>
+                                    <div className="target-audience" style={{
+                                        background: 'rgba(255,255,255,0.03)',
+                                        padding: '12px',
+                                        borderRadius: '8px',
+                                        marginBottom: '15px',
+                                        fontSize: '13px',
+                                        color: '#bbb',
+                                        borderLeft: '3px solid var(--text-accent)'
+                                    }}>
+                                        <strong style={{ display: 'block', color: '#fff', marginBottom: '4px' }}>🎯 Optimizasyon:</strong>
+                                        {plan.description}
+                                    </div>
+
+                                    {/* Delivery Time (Computed heuristically) */}
+                                    <div className="delivery-time" style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        fontSize: '13px',
+                                        color: '#aaa',
+                                        marginBottom: '20px'
+                                    }}>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        Süre: {plan.period.includes('ay') ? 'Aylık Sürekli Hizmet' : (plan.price.includes('9.999') ? '3-5 İş Günü' : 'Proje Başlangıcında Belirlenir')}
+                                    </div>
 
                                     {/* Tech Specs for Developers/CTOs */}
                                     {plan.techSpecs && (
@@ -229,6 +253,7 @@ const Pricing = ({ t, wizardT }) => {
                                         </div>
                                     )}
 
+                                    <h4 style={{ fontSize: '14px', marginBottom: '10px', color: '#fff', opacity: 0.9 }}>Neler Teslim Ediyoruz?</h4>
                                     <ul className="features-list">
                                         {plan.features.map((feature, fIdx) => (
                                             <li key={fIdx}>

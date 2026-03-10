@@ -14,6 +14,8 @@ const Contact = ({ t }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
+        service: '',
+        budget: '',
         message: ''
     });
     const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
@@ -168,8 +170,48 @@ const Contact = ({ t }) => {
                                     />
                                 </div>
 
+                                <div className={`form-group ${focusedField === 'service' ? 'focused' : ''}`}>
+                                    <label>İLGİLENDİĞİNİZ HİZMET</label>
+                                    <select
+                                        name="service"
+                                        className="form-input"
+                                        style={{ backgroundColor: 'transparent', color: '#fff' }}
+                                        value={formData.service}
+                                        onChange={handleInput}
+                                        onFocus={() => setFocusedField('service')}
+                                        onBlur={() => setFocusedField(null)}
+                                        required
+                                    >
+                                        <option value="" disabled>Seçiniz...</option>
+                                        <option value="Web / Yazılım" style={{ color: '#000' }}>Web / Yazılım</option>
+                                        <option value="Sosyal Medya" style={{ color: '#000' }}>Sosyal Medya</option>
+                                        <option value="Reklam & SEO" style={{ color: '#000' }}>Reklam & SEO</option>
+                                        <option value="Tümü (Büyüme)" style={{ color: '#000' }}>Tüm Hizmetler (Büyüme)</option>
+                                    </select>
+                                </div>
+
+                                <div className={`form-group ${focusedField === 'budget' ? 'focused' : ''}`}>
+                                    <label>AYLIK REKLAM / PROJE BÜTÇESİ</label>
+                                    <select
+                                        name="budget"
+                                        className="form-input"
+                                        style={{ backgroundColor: 'transparent', color: '#fff' }}
+                                        value={formData.budget}
+                                        onChange={handleInput}
+                                        onFocus={() => setFocusedField('budget')}
+                                        onBlur={() => setFocusedField(null)}
+                                        required
+                                    >
+                                        <option value="" disabled>Seçiniz...</option>
+                                        <option value="10.000₺ - 25.000₺" style={{ color: '#000' }}>10.000₺ - 25.000₺</option>
+                                        <option value="25.000₺ - 50.000₺" style={{ color: '#000' }}>25.000₺ - 50.000₺</option>
+                                        <option value="50.000₺ - 100.000₺+" style={{ color: '#000' }}>50.000₺ - 100.000₺+</option>
+                                        <option value="Sadece Proje (Tek Seferlik)" style={{ color: '#000' }}>Sadece Proje (Tek Seferlik)</option>
+                                    </select>
+                                </div>
+
                                 <div className={`form-group ${focusedField === 'message' ? 'focused' : ''}`}>
-                                    <label>{contactData.messagePlaceholder || "PROJE DETAYLARI"}</label>
+                                    <label>{contactData.messagePlaceholder || "PROJE DETAYLARI VE HEDEFLERİNİZ"}</label>
                                     <textarea
                                         name="message"
                                         className="form-textarea"

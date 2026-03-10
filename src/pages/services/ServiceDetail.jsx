@@ -30,20 +30,37 @@ const ServiceDetail = ({ tService, tContact }) => {
                         <h2 className="section-title" style={{ fontSize: '32px', marginBottom: '30px' }}>{tService.detailTitle}</h2>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '40px' }}>{tService.detailText}</p>
 
-                        {/* NEW: Capabilities / Features List */}
+                        {/* DELIVERABLES LIST (NELER TESLİM EDİYORUZ) */}
                         {tService.features && (
-                            <div>
-                                <h3 style={{ fontSize: '20px', marginBottom: '20px', color: 'var(--text-primary)' }}>CAPABILITIES</h3>
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                            <div className="deliverables-container" style={{
+                                background: 'rgba(255, 255, 255, 0.02)',
+                                padding: '30px',
+                                borderRadius: '15px',
+                                borderLeft: '4px solid var(--text-accent)'
+                            }}>
+                                <h3 style={{ fontSize: '22px', marginBottom: '25px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-accent)" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    Neler Teslim Edeceğiz?
+                                </h3>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
                                     {tService.features.map((feature, idx) => (
                                         <div key={idx} style={{
                                             display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '10px',
-                                            color: 'var(--text-secondary)'
+                                            alignItems: 'flex-start',
+                                            gap: '12px',
+                                            color: 'var(--text-secondary)',
+                                            fontSize: '16px'
                                         }}>
-                                            <span style={{ color: 'var(--text-accent)' }}>✓</span>
-                                            {feature}
+                                            <div style={{
+                                                background: 'rgba(37, 211, 102, 0.1)',
+                                                borderRadius: '50%',
+                                                padding: '4px',
+                                                display: 'flex',
+                                                marginTop: '2px'
+                                            }}>
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            </div>
+                                            <span style={{ flex: 1 }}>{feature}</span>
                                         </div>
                                     ))}
                                 </div>

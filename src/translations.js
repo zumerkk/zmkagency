@@ -11,11 +11,43 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "Kırıkkale'nin Dijital",
-            title2: "Hakimiyeti.",
-            subtitle: "Kırıkkale'nin en büyük 360° Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya, prodüksiyon ve dijital dönüşümle markanızı zirveye taşıyoruz.",
-            ctaPrimary: "Teklif Alın",
-            ctaSecondary: "Hizmetlerimiz"
+            title1: "Sadece Tasarım Değil,",
+            title2: "Müşteri Kazandıran Sistemler.",
+            subtitle: "Standart temalara, gizli maliyetlere ve sonuçsuz reklamlara veda edin. İşletmenizi internetin bir sonraki seviyesine taşıyacak strateji, yazılım ve performans pazarlamasını tek elden yönetin.",
+            ctaPrimary: "Ücretsiz Analiz Al",
+            ctaSecondary: "WhatsApp'tan Yaz",
+            microStats: ["Sözleşmeli Süreç", "Kırıkkale Merkezli", "Tüm Türkiye'ye Hizmet", "Şeffaf Raporlama"]
+        },
+        trustBadges: {
+            title: "Kanıtlanmış Güvenilirlik",
+            items: [
+                { title: "Sözleşmeli Çalışma", desc: "Gizli şartlar yok, her detay imza altında." },
+                { title: "Canlı Raporlama", desc: "Bütçenizin nereye gittiğini anlık görün." },
+                { title: "Net Teslim Süresi", desc: "Gecikme yok, zamanında ve eksiksiz teslim." },
+                { title: "Sürekli Destek", desc: "Sorunlar için her an yanınızdayız." }
+            ]
+        },
+        solutionSelector: {
+            title: "Tereddüt Etmeyin,",
+            subtitle: "İşletmenize en uygun hedefi seçin ve büyüme yol haritanızı hemen çizelim.",
+            items: [
+                { id: "esnaf", title: "Yerel Esnaf/Mağaza", desc: "Kırıkkale'de haritada görünmek ve daha çok müşteri çekmek istiyorum.", action: "Bölgesel Paketler" },
+                { id: "kurumsal", title: "Büyüyen Kurumsal Firma", desc: "Şirketim için premium vizyon ve güçlü kurumsal kimlik arıyorum.", action: "Dijital Fabrika" },
+                { id: "yazilim", title: "Yazılım / Otomasyon", desc: "İş süreçlerimi hızlandırıp otomatize edecek bir sistem lazım.", action: "Özel Yazılımlar" },
+                { id: "reklam", title: "Google'da Üste Çıkmak", desc: "Satışlarımı, ciromu ve web sitesi trafiğimi artırmak istiyorum.", action: "Growth Paketleri" }
+            ]
+        },
+        howWeWork: {
+            title: "Başarıya Giden Profesyonel Akış",
+            subtitle: "Sürpriz maliyet, belirsiz süreç yok. Her adımınız şeffaf ve ölçülebilir.",
+            steps: [
+                { title: "1. Ön Görüşme", desc: "Hedeflerinizi dinliyor ve size özel bir dijital büyüme vizyonu çiziyoruz." },
+                { title: "2. Keşif & Analiz", desc: "Rakipleri analiz ediyor, potansiyel fırsatları ve zayıflıkları belirliyoruz." },
+                { title: "3. Strateji ve Plan", desc: "Hangi kanalların size en yüksek ROI'yi getireceğini projelendiriyoruz." },
+                { title: "4. Tasarım & Kurulum", desc: "Estetik, ikna edici ve teknolojik olarak en güçlü sistemleri inşa ediyoruz." },
+                { title: "5. Yayın & Optimizasyon", desc: "Sistemi hayata geçirip, veriye dayalı anlık iyileştirmeler yapıyoruz." },
+                { title: "6. Raporlama & Büyütme", desc: "Sürekli ölçümleyerek cironuzu ve görünürlüğünüzü her geçen ay katlıyoruz." }
+            ]
         },
         vision: {
             title: "Kırıkkale'nin Teknoloji Merkezi.",
@@ -562,14 +594,14 @@ export const content = {
         },
         comparison: {
             title: "Neden ZMK?",
-            standard: "Diğer Ajanslar",
+            standard: "Klasik Ajanslar",
             rows: [
-                { feature: "Teknoloji Altyapısı", standard: "Yavaş Wordpress / Hazır Şablon", zmk: "Özel Kodlama / React / Next.js" },
-                { feature: "Raporlama & Şeffaflık", standard: "Ay Sonu PDF Raporu", zmk: "Canlı Müşteri Paneli (Dashboard)" },
-                { feature: "Fiyat Politikası", standard: "Gizli Maliyetler & Sürprizler", zmk: "Şeffaf & Ölçeklenebilir Paketler" },
-                { feature: "Hız & Performans", standard: "Ortalama (3-5 sn Yükleme)", zmk: "Işık Hızında (<1 sn Yükleme)" },
-                { feature: "SEO & Görünürlük", standard: "Temel Ayarlar", zmk: "Kırıkkale & Global Dominasyon" },
-                { feature: "Vizyon & Hedef", standard: "Sadece İş Teslimi", zmk: "Pazar Hakimiyeti & Büyüme" }
+                { feature: "Altyapı", standard: "Hazır Tema & Şablon", zmk: "Size Özel Geliştirilmiş Sistem" },
+                { feature: "Sosyal Medya", standard: "Rastgele, Amaçsız Paylaşım", zmk: "Stratejik & Büyüme Odaklı İçerik" },
+                { feature: "Maliyet", standard: "Gizli Ücretler & Ekstralar", zmk: "Net Kapsam & Şeffaf Fiyatlandırma" },
+                { feature: "Odak", standard: "Sadece İşi Teslim Etmek", zmk: "Cironuzu & İşinizi Büyütmek" },
+                { feature: "İletişim", standard: "Pasif & Ulaşması Zor", zmk: "Aktif & Kesintisiz Süreç Takibi" },
+                { feature: "Raporlama", standard: "Veri Yetersiz / Rapor Yok", zmk: "Canlı Panel & Performans Verisi" }
             ]
         },
         ctaFloat: "Hızlı Teklif Al",
@@ -673,11 +705,43 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             cta: "Contact Us"
         },
         hero: {
-            title1: "Push Boundaries.",
-            title2: "Become Legendary.",
-            subtitle: "Kırıkkale's premier Digital Agency. We offer web design, social media management, and custom software solutions to dominate your market.",
-            ctaPrimary: "Discover Your Power",
-            ctaSecondary: "Explore Vision"
+            title1: "Not Just Design,",
+            title2: "Systems That Win Customers.",
+            subtitle: "Say goodbye to standard templates, hidden costs, and ineffective ads. Manage the strategy, software, and performance marketing that will take your business to the next level.",
+            ctaPrimary: "Get Free Analysis",
+            ctaSecondary: "Message on WhatsApp",
+            microStats: ["Contracted Process", "Based in Kırıkkale", "Serving Nationwide", "Transparent Reporting"]
+        },
+        trustBadges: {
+            title: "Proven Reliability",
+            items: [
+                { title: "Contracted Work", desc: "No hidden terms, every detail under signature." },
+                { title: "Live Reporting", desc: "See where your budget goes instantly." },
+                { title: "Clear Delivery Time", desc: "No delays, on-time and complete delivery." },
+                { title: "Continuous Support", desc: "We are with you at any moment for issues." }
+            ]
+        },
+        solutionSelector: {
+            title: "Find Your Best Solution,",
+            subtitle: "Undecided? Choose your focus and let's draw your growth roadmap.",
+            items: [
+                { id: "esnaf", title: "Local Store", desc: "I want to attract more customers locally.", action: "Local Packages" },
+                { id: "kurumsal", title: "Growing Corporate", desc: "I am looking for premium vision and identity.", action: "Digital Factory" },
+                { id: "yazilim", title: "Software / Automation", desc: "I need a system to automate my processes.", action: "Custom Software" },
+                { id: "reklam", title: "Performance Ads", desc: "I want to increase my sales and web traffic.", action: "Growth Packages" }
+            ]
+        },
+        howWeWork: {
+            title: "Professional Flow to Success",
+            subtitle: "No surprise costs. Everything is clear and measurable.",
+            steps: [
+                { title: "1. Initial Meeting", desc: "We listen to your goals and draw a custom vision." },
+                { title: "2. Analysis", desc: "We analyze competitors and determine opportunities." },
+                { title: "3. Strategy", desc: "We plan channels for the highest ROI." },
+                { title: "4. Design & Build", desc: "We build aesthetically and technologically robust systems." },
+                { title: "5. Launch", desc: "We deploy and make data-driven instant improvements." },
+                { title: "6. Reporting", desc: "We constantly measure to multiply your revenue." }
+            ]
         },
         vision: {
             title: "Architects of the Renaissance.",

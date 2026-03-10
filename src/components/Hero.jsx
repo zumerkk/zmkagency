@@ -59,7 +59,9 @@ const Hero = ({ t, onCtaClick }) => {
                         {t.ctaPrimary}
                     </motion.button>
                     <motion.a
-                        href="#services"
+                        href="https://wa.me/905000000000?text=Merhaba,%20dijital%20dönüşüm%20için%20bilgi%20almak%20istiyorum."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-secondary"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -70,6 +72,22 @@ const Hero = ({ t, onCtaClick }) => {
                         {t.ctaSecondary}
                     </motion.a>
                 </div>
+
+                {t.microStats && (
+                    <motion.div
+                        className="hero-micro-stats"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                    >
+                        {t.microStats.map((stat, idx) => (
+                            <span key={idx} className="micro-stat-item">
+                                <svg className="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                                {stat}
+                            </span>
+                        ))}
+                    </motion.div>
+                )}
             </div>
         </section>
     );

@@ -68,11 +68,38 @@ const BlogDetail = () => {
                             style={{
                                 fontSize: '18px',
                                 lineHeight: '1.8',
-                                color: '#e0e0e0'
+                                color: '#e0e0e0',
+                                marginBottom: '40px'
                             }}
                         />
 
-                        {/* Inline styles for content typography would be better in CSS, but relying on global/reset for now + adding key styles in CSS later if needed */}
+                        {/* LEAD MAGNET / CTA */}
+                        <div style={{
+                            background: 'linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(0, 0, 0, 0.8))',
+                            border: '1px solid rgba(37, 211, 102, 0.3)',
+                            borderRadius: '24px',
+                            padding: '40px',
+                            textAlign: 'center',
+                            marginTop: '60px',
+                            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+                        }}>
+                            <h3 style={{ fontSize: '24px', color: '#fff', marginBottom: '15px' }}>Zamanınızı Uygulamaya Değil, İşinizi Büyütmeye Ayırın</h3>
+                            <p style={{ color: '#ccc', marginBottom: '25px', fontSize: '16px', lineHeight: '1.6' }}>Rehberi okudunuz, ancak stratejiyi kusursuz bir şekilde hayata geçirecek profesyonel bir ekibe mi ihtiyacınız var? Sizin için "Saha Kurtları" olarak devreye girelim.</p>
+                            <Link to="/contact" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '10px',
+                                padding: '15px 30px',
+                                background: '#25D366',
+                                color: '#000',
+                                borderRadius: '12px',
+                                fontWeight: 'bold',
+                                fontSize: '16px',
+                                textDecoration: 'none'
+                            }}>
+                                Ücretsiz Proje Analizi İsteyin
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </article>

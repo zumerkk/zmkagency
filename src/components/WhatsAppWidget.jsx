@@ -51,6 +51,27 @@ const WhatsAppWidget = () => {
             role="button"
             aria-label="Chat on WhatsApp"
         >
+            <div style={{
+                position: 'absolute',
+                right: '75px',
+                background: '#fff',
+                color: '#000',
+                padding: '8px 16px',
+                borderRadius: '20px',
+                fontSize: '14px',
+                fontWeight: '600',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                opacity: 0.9,
+                pointerEvents: 'none'
+            }}>
+                <span style={{ display: 'inline-block', width: '8px', height: '8px', background: '#25D366', borderRadius: '50%', animation: 'pulse 2s infinite' }}></span>
+                Ücretsiz Analiz İsteyin
+            </div>
+
             <MessageCircle size={32} />
             {/* Notification Badge */}
             <div style={{
@@ -63,6 +84,13 @@ const WhatsAppWidget = () => {
                 borderRadius: '50%',
                 border: '2px solid #000'
             }}></div>
+            <style>{`
+                @keyframes pulse {
+                    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+                    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+                    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+                }
+            `}</style>
         </div>
     );
 };

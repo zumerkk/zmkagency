@@ -124,6 +124,15 @@ const services = [
         icon: '👑',
         includes: ['Tüm Platformlar', 'Growth Hacking', '7/24 VIP Destek'],
         price: '49.999₺/ay'
+    },
+    {
+        id: 'zmk-spesiyel-paket',
+        category: 'retainer',
+        title: 'Dijital Kalkındırma Paketi',
+        description: 'Kırıkkale esnafına özel; Web Sitesi + SEO + Sosyal Medya + Reklam + Profesyonel Çekim.',
+        icon: '🚀',
+        includes: ['One-Page Web', 'Google & Meta Ads', 'Aylık Prodüksiyon'],
+        price: '19.999₺/ay'
     }
 ];
 

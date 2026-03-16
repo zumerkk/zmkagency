@@ -338,7 +338,7 @@ export const content = {
                         title: "Bölgesel Hakimiyet",
                         price: "9.999",
                         period: " (Tek Seferlik)",
-                        isPopular: true,
+                        isPopular: false,
                         campaignBadge: "31 Mart'a kadar",
                         description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
                         techSpecs: "Site + Harita + Sosyal",
@@ -348,6 +348,22 @@ export const content = {
                             "Instagram & Facebook Hesap Kurulumu",
                             "Mekan Çekimi (30sn) & Fotoğraf",
                             "QR Menü / Kartvizit Tasarımı"
+                        ]
+                    },
+                    {
+                        title: "ZMK Spesiyel (Kalkındırma)",
+                        price: "19.999",
+                        period: "/ay",
+                        isPopular: true,
+                        campaignBadge: "Şehre Özel Fiyat",
+                        description: "Kırıkkale esnafına özel 360° tam kapsamlı dijital dönüşüm ve reklam paketi.",
+                        techSpecs: "Sosyal + Ads + Maps + Site",
+                        features: [
+                            "Dönüşüm Odaklı Özel Web Sitesi",
+                            "Google Harita Kaydı & Aylık SEO Optimizasyonu",
+                            "Google & Meta (Instagram/FB) Reklam Yönetimi",
+                            "Tüm Sosyal Medya Platformlarının Yönetimi",
+                            "Aylık Profesyonel Mekan ve Ürün Çekimi"
                         ]
                     },
                     {
@@ -606,6 +622,24 @@ export const content = {
         },
         ctaFloat: "Hızlı Teklif Al",
         // END MAGNUM OPUS
+        specialPackage: {
+            badge: "🔥 Sınırlı Kontenjan",
+            title: "Dijital Kalkındırma Paketi",
+            subtitle: "ZMK Spesiyel: Şehrin En Kapsamlı Dijital Büyüme Hareketi",
+            description: "Esnaf ve KOBİ'lerimiz için Kırıkkale'nin pazar dinamiklerine özel kurgulanmış, en uygun fiyatlı ve en yüksek getirili 360° dijital dönüşüm paketi. Kırıkkale pazarındaki yüksek fiyatlara inat, kaliteyi ulaşılabilir kılıyoruz.",
+            price: "19.999",
+            currency: "₺",
+            period: "/ay",
+            features: [
+                "🚀 Dönüşüm Odaklı Web Sitesi (One-Page Hediye)",
+                "📍 Google Harita Kaydı & Aylık Optimizasyon",
+                "🎯 Google & Meta Reklam Yönetimi",
+                "📱 Tüm Sosyal Medya Yönetimi (Insta, TikTok)",
+                "📸 Profesyonel Mekan & Ürün Çekimi"
+            ],
+            cta: "Hemen Başvur",
+            secondaryCta: "Detaylı Bilgi"
+        },
         legal: {
             privacyTitle: "Gizlilik Politikası",
             termsTitle: "Kullanım Koşulları",
@@ -1130,6 +1164,24 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
         },
         ctaFloat: "Get Fast Quote",
         // END MAGNUM OPUS
+        specialPackage: {
+            badge: "🔥 Limited Quota",
+            title: "Digital Development Package",
+            subtitle: "ZMK Special: The City's Most Comprehensive Digital Growth Movement",
+            description: "A 360° digital transformation package tailored for local businesses, offering the most affordable price and the highest return. We make premium quality accessible against market high prices.",
+            price: "19,999",
+            currency: "₺",
+            period: "/mo",
+            features: [
+                "🚀 Conversion-Focused Website (One-Page Free)",
+                "📍 Google Maps Setup & Monthly Optimization",
+                "🎯 Google & Meta Ads Management",
+                "📱 Full Social Media Management (Insta, TikTok)",
+                "📸 Professional Location & Product Shooting"
+            ],
+            cta: "Apply Now",
+            secondaryCta: "Learn More"
+        },
         legal: {
             privacyTitle: "Privacy Policy",
             termsTitle: "Terms of Service",

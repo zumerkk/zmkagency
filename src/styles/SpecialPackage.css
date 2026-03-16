@@ -1,0 +1,217 @@
+.special-package-section {
+    padding: 100px 0;
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(10, 10, 12, 1) 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.special-package-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(236, 72, 153, 0.1) 40%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+    pointer-events: none;
+    animation: sp-pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes sp-pulse {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+.sp-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(25, 25, 35, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.02);
+    text-align: center;
+    overflow: hidden;
+}
+
+.sp-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+}
+
+.sp-badge-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.sp-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(90deg, rgba(236,72,153,0.2) 0%, rgba(99,102,241,0.2) 100%);
+    border: 1px solid rgba(236,72,153,0.3);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.sp-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #a5a5b0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sp-subtitle {
+    font-size: 1.25rem;
+    color: #ec4899;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.sp-desc {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.sp-price-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 2.5rem;
+}
+
+.sp-currency {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+.sp-price {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.sp-period {
+    font-size: 1.1rem;
+    color: #a1a1aa;
+    margin-left: 0.5rem;
+}
+
+.sp-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+.sp-feature-item {
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sp-feature-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateX(5px);
+}
+
+.sp-cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sp-cta-group a {
+    text-decoration: none;
+}
+
+.sp-btn-primary {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.7);
+}
+
+.sp-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -10px rgba(99, 102, 241, 0.9);
+}
+
+.sp-btn-secondary {
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sp-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+    .sp-features {
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sp-title {
+        font-size: 2rem;
+    }
+    .sp-price {
+        font-size: 3.5rem;
+    }
+    .sp-card {
+        padding: 2rem 1.5rem;
+    }
+}

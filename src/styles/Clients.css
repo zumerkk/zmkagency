@@ -1,26 +1,31 @@
 /* ═══════════════════════════════════════
-   CLIENTS — APPLE STYLE MARQUEE
+   CLIENTS — ULTRA-MUTED MARQUEE
    ═══════════════════════════════════════ */
 
 .clients-section {
-    padding: 60px 0;
+    padding: 48px 0;
     background: #000;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.clients-title {
-    text-align: center;
-    font-size: 0.7rem;
+.clients-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.clients-label {
+    font-size: 0.65rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #3a3a3c;
+    color: #2a2a2c;
+    text-align: center;
     margin-bottom: 24px;
 }
 
-.clients-slider {
-    width: 100%;
+.clients-marquee {
     overflow: hidden;
     mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
@@ -28,27 +33,26 @@
 
 .clients-track {
     display: flex;
-    gap: 48px;
-    animation: marquee 25s linear infinite;
+    gap: 64px;
+    animation: clientsScroll 25s linear infinite;
     width: max-content;
 }
 
-.client-logo-text {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #3a3a3c;
-    letter-spacing: 2px;
+.client-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    color: #1c1c1e;
     white-space: nowrap;
-    flex-shrink: 0;
-    transition: color 0.3s;
+    transition: color 0.4s;
 }
 
-.client-logo-text:hover {
-    color: #86868b;
+.client-name:hover {
+    color: #3a3a3c;
 }
 
-@keyframes marquee {
+@keyframes clientsScroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-33.33%); }
 }

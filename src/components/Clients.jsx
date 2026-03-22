@@ -11,16 +11,13 @@ const clients = [
 
 const Clients = ({ t }) => {
     return (
-        <section className="clients-section">
-            <div className="container">
-                <p className="clients-title">{t.title}</p>
-                <div className="clients-slider">
+        <section className="clients-section" aria-label="Müşteriler">
+            <div className="clients-inner">
+                <p className="clients-label">{t.title}</p>
+                <div className="clients-marquee">
                     <div className="clients-track">
-                        {/* Double the logos for seamless loop. Tripled here to ensure enough width for text. */}
                         {[...clients, ...clients, ...clients].map((client, index) => (
-                            <div key={index} className="client-logo-text">
-                                {client}
-                            </div>
+                            <span key={index} className="client-name">{client}</span>
                         ))}
                     </div>
                 </div>

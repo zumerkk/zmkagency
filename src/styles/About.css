@@ -1,59 +1,87 @@
 /* ═══════════════════════════════════════
-   ABOUT — APPLE STYLE
+   ABOUT — CINEMATIC SPLIT LAYOUT
    ═══════════════════════════════════════ */
 
-.apple-about {
-    padding: 120px 0;
+.about-section {
+    padding: 140px 0;
     background: #000;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    position: relative;
+    overflow: hidden;
 }
 
-.apple-about-inner {
-    max-width: 1120px;
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent);
+}
+
+.about-inner {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+.about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1.3fr;
     gap: 80px;
     align-items: center;
 }
 
-.apple-about-eyebrow {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #86868b;
-    margin-bottom: 12px;
-}
-
-.apple-about-h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    color: #f5f5f7;
-    margin-bottom: 20px;
-}
-
-.apple-about-text {
-    font-size: 1.05rem;
-    color: #86868b;
-    line-height: 1.7;
-    margin-bottom: 40px;
-}
-
-.apple-about-stats {
-    display: flex;
-    gap: 48px;
-}
-
-.apple-about-stat {
+/* ─── Visual Side ─── */
+.about-visual {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.apple-about-stat-num {
-    font-size: 2.5rem;
+.about-logo-frame {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.about-logo-glow {
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(41, 151, 255, 0.06) 0%, transparent 70%);
+    border-radius: 60px;
+    filter: blur(30px);
+    pointer-events: none;
+}
+
+.about-logo-frame img {
+    width: 90px;
+    height: auto;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.about-metrics {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.about-metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #f5f5f7;
     letter-spacing: -2px;
@@ -61,57 +89,85 @@
     margin-bottom: 6px;
 }
 
-.apple-about-stat-label {
-    font-size: 0.8rem;
+.metric-label {
+    font-size: 0.75rem;
     color: #86868b;
     font-weight: 400;
 }
 
-/* Logo Card */
-.apple-about-visual {
-    display: flex;
-    justify-content: center;
+.about-metric-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.06);
 }
 
-.apple-about-logo-card {
-    width: 240px;
-    height: 240px;
+/* ─── Text Side ─── */
+.about-eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2997ff;
+    margin-bottom: 16px;
+}
+
+.about-headline {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #f5f5f7;
+    margin-bottom: 20px;
+    line-height: 1.05;
+}
+
+.about-body {
+    font-size: 1.05rem;
+    color: #86868b;
+    line-height: 1.75;
+    margin-bottom: 32px;
+}
+
+.about-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.about-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    color: #86868b;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.apple-about-logo-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.apple-about-logo-card img {
-    width: 100px;
-    height: auto;
-    opacity: 0.8;
+.about-social-link:hover {
+    background: rgba(41, 151, 255, 0.08);
+    border-color: rgba(41, 151, 255, 0.2);
+    color: #2997ff;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-    .apple-about-inner {
+    .about-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
+        text-align: center;
     }
 
-    .apple-about-visual {
-        order: -1;
-    }
-
-    .apple-about-logo-card {
+    .about-logo-frame {
         width: 160px;
         height: 160px;
     }
 
-    .apple-about-stats {
-        gap: 32px;
+    .about-socials {
+        justify-content: center;
     }
 }

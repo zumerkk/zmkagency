@@ -1,29 +1,82 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import '../styles/About.css';
 import logo from '../assets/ZMK AGENCY-logo.png';
 
 const About = ({ t }) => {
     return (
-        <section id="agency" className="apple-about">
-            <div className="apple-about-inner">
-                <div className="apple-about-content">
-                    <p className="apple-about-eyebrow">Hakkımızda</p>
-                    <h2 className="apple-about-h2">{t.title}</h2>
-                    <p className="apple-about-text">{t.text}</p>
-                    <div className="apple-about-stats">
-                        <div className="apple-about-stat">
-                            <span className="apple-about-stat-num">100%</span>
-                            <span className="apple-about-stat-label">{t.stats.focus}</span>
+        <section id="agency" className="about-section" aria-label="Hakkımızda">
+            <div className="about-inner">
+                <div className="about-grid">
+                    {/* Visual */}
+                    <motion.div
+                        className="about-visual"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <div className="about-logo-frame">
+                            <div className="about-logo-glow"></div>
+                            <img src={logo} alt="ZMK Agency" />
                         </div>
-                        <div className="apple-about-stat">
-                            <span className="apple-about-stat-num">#1</span>
-                            <span className="apple-about-stat-label">{t.stats.rank}</span>
+                        <div className="about-metrics">
+                            <div className="about-metric">
+                                <span className="metric-value">100%</span>
+                                <span className="metric-label">{t.stats.focus}</span>
+                            </div>
+                            <div className="about-metric-divider"></div>
+                            <div className="about-metric">
+                                <span className="metric-value">#1</span>
+                                <span className="metric-label">{t.stats.rank}</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="apple-about-visual">
-                    <div className="apple-about-logo-card">
-                        <img src={logo} alt="ZMK Agency" />
+                    </motion.div>
+
+                    {/* Text */}
+                    <div className="about-text">
+                        <motion.span
+                            className="about-eyebrow"
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            Agency
+                        </motion.span>
+                        <motion.h2
+                            className="about-headline"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                        >
+                            {t.title}
+                        </motion.h2>
+                        <motion.p
+                            className="about-body"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            {t.text}
+                        </motion.p>
+                        <motion.div
+                            className="about-socials"
+                            initial={{ opacity: 0, y: 15 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            {t.socials && Object.entries(t.socials).map(([key, url]) => (
+                                <a key={key} href={url} target="_blank" rel="noopener noreferrer" className="about-social-link" aria-label={key}>
+                                    {key === 'instagram' && '◎'}
+                                    {key === 'youtube' && '▶'}
+                                    {key === 'tiktok' && '♪'}
+                                    {key === 'twitter' && '𝕏'}
+                                </a>
+                            ))}
+                        </motion.div>
                     </div>
                 </div>
             </div>

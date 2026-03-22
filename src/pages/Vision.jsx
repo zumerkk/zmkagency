@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import Clients from '../components/Clients';
 import CareerTeaser from '../components/CareerTeaser';
@@ -7,8 +7,6 @@ import '../styles/Vision.css';
 
 const Vision = ({ t }) => {
     const vision = t.vision;
-    const { scrollYProgress } = useScroll();
-    const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
     return (
         <>
@@ -17,104 +15,144 @@ const Vision = ({ t }) => {
                 description={vision.subtitle}
             />
 
-            <div className="vision-page">
-                {/* Background Atmosphere */}
-                <div className="bg-glow bg-glow-top"></div>
-
-                {/* Manifesto Header */}
-                <section className="manifesto-section">
-                    <div className="container manifesto-container">
-                        <motion.h1
-                            className="manifesto-title"
-                            initial={{ opacity: 0, y: 50 }}
+            <div className="apple-vision">
+                {/* ═══ MANIFESTO HERO ═══ */}
+                <section className="av-manifesto">
+                    <div className="av-manifesto-inner">
+                        <motion.p
+                            className="av-eyebrow"
+                            initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            Vizyon
+                        </motion.p>
+                        <motion.h1
+                            className="av-h1"
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.1 }}
                         >
                             {vision.title}
                         </motion.h1>
                         <motion.p
-                            className="manifesto-text"
-                            initial={{ opacity: 0, y: 30 }}
+                            className="av-subtitle"
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
                         >
                             {vision.subtitle}
                         </motion.p>
                     </div>
                 </section>
 
-                {/* The Core Beliefs (Manifesto Text) */}
-                <section className="container" style={{ paddingBottom: '100px' }}>
-                    <div className="glass-panel" style={{ padding: '60px', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                            <p style={{ fontSize: '1.5rem', lineHeight: '1.8', marginBottom: '30px', color: '#ccc' }}>
-                                {vision.p1}
-                            </p>
-                            <p style={{ fontSize: '1.5rem', lineHeight: '1.8', color: '#fff', fontWeight: '500' }}>
-                                {vision.p2}
-                            </p>
-                        </div>
+                {/* ═══ CORE TEXT ═══ */}
+                <section className="av-core">
+                    <div className="av-core-inner">
+                        <motion.p
+                            className="av-core-p1"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7 }}
+                        >
+                            {vision.p1}
+                        </motion.p>
+                        <motion.p
+                            className="av-core-p2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7, delay: 0.15 }}
+                        >
+                            {vision.p2}
+                        </motion.p>
                     </div>
                 </section>
 
-                {/* Stats / Impact */}
-                <section className="container">
-                    <div className="vision-stats">
+                {/* ═══ STATS ═══ */}
+                <section className="av-stats">
+                    <div className="av-stats-inner">
                         <motion.div
-                            className="stat-card"
-                            whileHover={{ scale: 1.05 }}
+                            className="av-stat-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                         >
-                            <span className="stat-number">∞</span>
-                            <span className="stat-label">{vision.stat1}</span>
+                            <span className="av-stat-num">∞</span>
+                            <span className="av-stat-label">{vision.stat1}</span>
                         </motion.div>
                         <motion.div
-                            className="stat-card"
-                            whileHover={{ scale: 1.05 }}
+                            className="av-stat-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
                         >
-                            <span className="stat-number">Global</span>
-                            <span className="stat-label">{vision.stat2}</span>
+                            <span className="av-stat-num">Global</span>
+                            <span className="av-stat-label">{vision.stat2}</span>
                         </motion.div>
                         <motion.div
-                            className="stat-card"
-                            whileHover={{ scale: 1.05 }}
+                            className="av-stat-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
                         >
-                            <span className="stat-number">%100</span>
-                            <span className="stat-label">Kırıkkale Dominasyonu</span>
+                            <span className="av-stat-num">%100</span>
+                            <span className="av-stat-label">Kırıkkale Dominasyonu</span>
                         </motion.div>
                     </div>
                 </section>
 
-                {/* Our DNA */}
-                <section className="dna-section">
-                    <div className="container">
-                        <h2 className="section-title" style={{ textAlign: 'center' }}>Ajans DNA'sı</h2>
-                        <div className="dna-grid">
-                            <div className="dna-item">
-                                <span className="dna-icon">💎</span>
-                                <h3 className="dna-title">Premium Standart</h3>
-                                <p className="dna-desc">Ortalama işler bizim için yok hükmündedir. Her pikselde mükemmellik ararız.</p>
-                            </div>
-                            <div className="dna-item">
-                                <span className="dna-icon">🚀</span>
-                                <h3 className="dna-title">Hız ve Performans</h3>
-                                <p className="dna-desc">Dijital dünyada yavaş olan kaybeder. En son teknolojileri kullanırız.</p>
-                            </div>
-                            <div className="dna-item">
-                                <span className="dna-icon">🤝</span>
-                                <h3 className="dna-title">Şeffaf Ortaklık</h3>
-                                <p className="dna-desc">Gizli maliyetler yok. Kırıkkale esnafıyla el sıkışarak, güvenle çalışırız.</p>
-                            </div>
+                {/* ═══ DNA ═══ */}
+                <section className="av-dna">
+                    <div className="av-dna-inner">
+                        <p className="av-eyebrow" style={{ textAlign: 'center', marginBottom: 12 }}>DNA</p>
+                        <h2 className="av-section-h2">Ajans DNA'sı</h2>
+                        <div className="av-dna-grid">
+                            <motion.div
+                                className="av-dna-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                            >
+                                <span className="av-dna-icon">◈</span>
+                                <h3>Premium Standart</h3>
+                                <p>Ortalama işler bizim için yok hükmündedir. Her pikselde mükemmellik ararız.</p>
+                            </motion.div>
+                            <motion.div
+                                className="av-dna-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.08 }}
+                            >
+                                <span className="av-dna-icon">⬡</span>
+                                <h3>Hız ve Performans</h3>
+                                <p>Dijital dünyada yavaş olan kaybeder. En son teknolojileri kullanırız.</p>
+                            </motion.div>
+                            <motion.div
+                                className="av-dna-card"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.16 }}
+                            >
+                                <span className="av-dna-icon">◉</span>
+                                <h3>Şeffaf Ortaklık</h3>
+                                <p>Gizli maliyetler yok. Kırıkkale esnafıyla el sıkışarak, güvenle çalışırız.</p>
+                            </motion.div>
                         </div>
                     </div>
-                    <div className="bg-glow bg-glow-bottom"></div>
                 </section>
 
-                <div style={{ padding: '80px 0' }}>
+                {/* ═══ CLIENTS ═══ */}
+                <div style={{ padding: '60px 0' }}>
                     <Clients t={t.clients} />
                 </div>
 
+                {/* ═══ CAREER ═══ */}
                 <CareerTeaser t={t} />
             </div>
         </>

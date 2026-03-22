@@ -1,97 +1,100 @@
+/* ═══════════════════════════════════════
+   COMPARISON — APPLE STYLE
+   ═══════════════════════════════════════ */
+
 .comparison-section {
     padding: 120px 0;
-    background: radial-gradient(circle at center, #111 0%, #000 100%);
-    position: relative;
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .comparison-table {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .comp-header {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-weight: bold;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.comp-col {
+    padding: 20px 24px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #86868b;
+}
+
+.empty-col {
+    /* empty */
 }
 
 .zmk-col {
-    color: var(--text-accent);
-    text-shadow: 0 0 15px rgba(var(--text-accent-rgb), 0.8);
-    font-size: 1.25em;
-    position: relative;
-    z-index: 1;
+    color: #2997ff;
+    text-align: center;
 }
 
-/* Add a subtle column highlight */
-.comp-col.zmk-col::after,
-.comp-row .zmk-val::after {
-    content: '';
-    position: absolute;
-    top: -10%;
-    bottom: -10%;
-    left: -10px;
-    right: -10px;
-    background: linear-gradient(to bottom, rgba(var(--text-accent-rgb), 0.05), rgba(var(--text-accent-rgb), 0.15));
-    border-radius: 8px;
-    z-index: -1;
-    filter: blur(10px);
+.standard-col {
+    text-align: center;
+    color: #48484a;
 }
 
 .comp-row {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.2s;
 }
 
-.comp-row:last-child {
-    border-bottom: none;
+.comp-row:hover {
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .comp-feature {
-    color: #ddd;
+    padding: 16px 24px;
+    font-size: 0.9rem;
+    color: #d1d1d6;
     font-weight: 500;
 }
 
+.comp-val {
+    padding: 16px 24px;
+    font-size: 0.85rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .standard-val {
-    color: #888;
-    font-size: 0.9em;
+    color: #48484a;
 }
 
 .zmk-val {
-    color: #fff;
-    font-weight: bold;
+    color: #30d158;
+    font-weight: 600;
 }
 
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
-
     .comp-header,
     .comp-row {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.2fr 0.9fr 0.9fr;
     }
 
-    .empty-col {
-        display: none;
+    .comp-col,
+    .comp-feature,
+    .comp-val {
+        padding: 14px 12px;
+        font-size: 0.8rem;
     }
-
-    .standard-col {
-        display: none;
-    }
-
-    .standard-val {
-        display: none;
-    }
-
-    /* Make mobile version just show feature + ZMK value or redesign needed for extreme small screens. 
-     For now, we assume tablet+ or just hide standard column on mobile to focus on ZMK strengths */
 }

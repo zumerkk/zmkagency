@@ -1,204 +1,205 @@
-/* Vision Page - Ultra Premium Styles */
+/* ═══════════════════════════════════════
+   VISION PAGE — APPLE KEYNOTE STYLE
+   ═══════════════════════════════════════ */
 
-.vision-page {
-    background-color: #000;
-    color: #fff;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    /* Ensure premium font stack */
+.apple-vision {
+    background: #000;
+    color: #f5f5f7;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Manifesto Section */
-.manifesto-section {
-    min-height: 100vh;
+/* ─── Manifesto Hero ─── */
+.av-manifesto {
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.manifesto-container {
-    max-width: 1000px;
-    margin: 0 auto;
     text-align: center;
+    padding: 120px 24px 80px;
 }
 
-.manifesto-title {
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 40px;
-    background: linear-gradient(to right, #fff, #888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    /* Animated in */
-    transform: translateY(30px);
-    /* Animated in */
-    animation: fadeInUp 1s ease forwards 0.2s;
-}
-
-.manifesto-text {
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 60px;
+.av-manifesto-inner {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    /* Animated in */
-    transform: translateY(30px);
-    animation: fadeInUp 1s ease forwards 0.5s;
 }
 
-/* Scroll Triggered Reveal */
-.reveal-text {
-    background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0.2) 50%);
-    background-size: 200% 100%;
-    background-position: 100% 0;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-position 1s ease;
-}
-
-.reveal-text.visible {
-    background-position: 0 0;
-}
-
-/* Stats Section - Glassmorphism */
-.vision-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 80px 20px;
-    opacity: 0;
-    animation: fadeInUp 1s ease forwards 0.8s;
-}
-
-.stat-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 50px 30px;
-    border-radius: 30px;
-    text-align: center;
-    transition: transform 0.4s ease, border-color 0.4s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.04);
-}
-
-.stat-number {
-    font-size: 4rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--accent-primary, #0070f3), var(--accent-secondary, #f81ce5));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.stat-label {
-    font-size: 1.2rem;
-    color: #888;
-    text-transform: uppercase;
+.av-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 2px;
-}
-
-/* DNA / Principles Section */
-.dna-section {
-    padding: 120px 0;
-    background: #050505;
-}
-
-.dna-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.dna-item {
-    padding: 20px;
-    border-left: 2px solid rgba(255, 255, 255, 0.1);
-    transition: border-color 0.3s ease;
-}
-
-.dna-item:hover {
-    border-left-color: #fff;
-}
-
-.dna-icon {
-    font-size: 2rem;
+    text-transform: uppercase;
+    color: #86868b;
     margin-bottom: 20px;
+}
+
+.av-h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, #f5f5f7, #86868b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.av-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #86868b;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ─── Core Text ─── */
+.av-core {
+    padding: 0 24px 120px;
+}
+
+.av-core-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.av-core-p1 {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: #86868b;
+    margin-bottom: 24px;
+}
+
+.av-core-p2 {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: #f5f5f7;
+    font-weight: 500;
+}
+
+/* ─── Stats ─── */
+.av-stats {
+    padding: 0 24px 120px;
+}
+
+.av-stats-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.av-stat-card {
+    padding: 48px 32px;
+    background: #0a0a0a;
+    text-align: center;
+    transition: background 0.35s;
+}
+
+.av-stat-card:hover {
+    background: #111;
+}
+
+.av-stat-num {
     display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #f5f5f7;
+    margin-bottom: 8px;
 }
 
-.dna-title {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 15px;
+.av-stat-label {
+    font-size: 0.85rem;
+    color: #86868b;
+    font-weight: 400;
 }
 
-.dna-desc {
-    color: #888;
-    line-height: 1.6;
+/* ─── DNA ─── */
+.av-dna {
+    padding: 0 24px 120px;
 }
 
-/* Background Elements */
-.bg-glow {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 112, 243, 0.15), transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(80px);
+.av-dna-inner {
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
-.bg-glow-top {
-    top: -200px;
-    right: -200px;
+.av-section-h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    color: #f5f5f7;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
-.bg-glow-bottom {
-    bottom: -200px;
-    left: -200px;
-    background: radial-gradient(circle, rgba(248, 28, 229, 0.1), transparent 70%);
+.av-dna-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.av-dna-card {
+    padding: 48px 32px;
+    background: #0a0a0a;
+    text-align: center;
+    transition: background 0.35s;
 }
 
+.av-dna-card:hover {
+    background: #111;
+}
+
+.av-dna-icon {
+    font-size: 1.4rem;
+    color: #2997ff;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.av-dna-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f5f5f7;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+.av-dna-card p {
+    font-size: 0.85rem;
+    color: #86868b;
+    line-height: 1.55;
+}
+
+/* ─── Responsive ─── */
 @media (max-width: 768px) {
-    .manifesto-title {
-        font-size: 3rem;
+    .av-manifesto {
+        min-height: 70vh;
     }
 
-    .manifesto-text {
-        font-size: 1.2rem;
+    .av-core-inner {
+        padding: 32px 24px;
     }
 
-    .stat-number {
-        font-size: 3rem;
+    .av-core-p1,
+    .av-core-p2 {
+        font-size: 1.15rem;
+    }
+
+    .av-stats-inner,
+    .av-dna-grid {
+        grid-template-columns: 1fr;
     }
 }

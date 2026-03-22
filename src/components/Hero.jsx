@@ -1,94 +1,92 @@
 import React from 'react';
 import '../styles/Hero.css';
 import { motion } from 'framer-motion';
-import heroBg from '../assets/hero-bg.png';
+import { Link } from 'react-router-dom';
 
 const Hero = ({ t, onCtaClick }) => {
     return (
-        <section className="hero">
-            <div className="hero-bg-container">
-                <motion.img
-                    src={heroBg}
-                    alt="ZMK Agency Kırıkkale Dijital Reklam Ajansı"
-                    className="hero-bg-image"
-                    initial={{ scale: 1.1, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                />
-                <div className="hero-overlay"></div>
-            </div>
+        <section className="apple-hero">
+            {/* Subtle ambient glow */}
+            <div className="apple-hero-glow"></div>
 
-            <div className="hero-content container">
-                <h1 className="hero-title">
-                    <motion.span
-                        className="block-reveal"
-                        initial={{ y: 100, opacity: 0, rotateX: 20 }}
-                        animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                        transition={{ duration: 0.8, ease: "circOut" }}
-                    >
-                        {t.title1}
-                    </motion.span>
-                    <br />
-                    <motion.span
-                        className="block-reveal"
-                        initial={{ y: 100, opacity: 0, rotateX: 20 }}
-                        animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "circOut" }}
-                    >
-                        {t.title2}
-                    </motion.span>
-                </h1>
+            <div className="apple-hero-content">
                 <motion.p
-                    className="hero-subtitle"
+                    className="apple-hero-eyebrow"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    ZMK Agency — Kırıkkale
+                </motion.p>
+
+                <motion.h1
+                    className="apple-hero-h1"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                >
+                    <span className="apple-hero-white">{t.title1}</span>
+                    <br />
+                    <span className="apple-hero-gradient">{t.title2}</span>
+                </motion.h1>
+
+                <motion.p
+                    className="apple-hero-sub"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
                 >
                     {t.subtitle}
                 </motion.p>
-                <div className="hero-actions">
-                    <motion.button
-                        onClick={onCtaClick}
-                        className="btn-primary"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
+
+                <motion.div
+                    className="apple-hero-actions"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                    <button onClick={onCtaClick} className="apple-cta-primary">
                         {t.ctaPrimary}
-                    </motion.button>
-                    <motion.a
-                        href="https://wa.me/905000000000?text=Merhaba,%20dijital%20dönüşüm%20için%20bilgi%20almak%20istiyorum."
+                        <span className="apple-cta-arrow">→</span>
+                    </button>
+                    <a
+                        href="https://wa.me/905413812114?text=Merhaba,%20dijital%20dönüşüm%20için%20bilgi%20almak%20istiyorum."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-secondary"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.7 }}
-                        whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
-                        whileTap={{ scale: 0.95 }}
+                        className="apple-cta-ghost"
                     >
                         {t.ctaSecondary}
-                    </motion.a>
-                </div>
+                    </a>
+                </motion.div>
 
                 {t.microStats && (
                     <motion.div
-                        className="hero-micro-stats"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        className="apple-hero-stats"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                     >
                         {t.microStats.map((stat, idx) => (
-                            <span key={idx} className="micro-stat-item">
-                                <svg className="stat-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span key={idx} className="apple-hero-stat">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 {stat}
                             </span>
                         ))}
                     </motion.div>
                 )}
             </div>
+
+            {/* Scroll indicator */}
+            <motion.div
+                className="apple-hero-scroll"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+            >
+                <div className="apple-scroll-line"></div>
+            </motion.div>
         </section>
     );
 };

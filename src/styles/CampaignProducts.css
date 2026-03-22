@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════
-   CAMPAIGN PRODUCTS — DUAL SHOWCASE
+   CAMPAIGN PRODUCTS — 3D TILT + SHIMMER
    ═══════════════════════════════════════ */
 
 .camp-section {
@@ -7,6 +7,15 @@
     background: #000;
     position: relative;
     overflow: hidden;
+}
+
+.camp-section::before {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 55, 95, 0.3), transparent);
+    margin: 0 auto 80px;
 }
 
 .camp-inner {
@@ -80,11 +89,10 @@
     background: #0a0a0a;
     padding: 56px 44px;
     overflow: hidden;
-    transition: background 0.4s;
-}
-
-.camp-card:hover {
-    background: #0e0e0e;
+    transition: transform 0.15s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    cursor: pointer;
 }
 
 .camp-card-glow {
@@ -92,14 +100,10 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(80px);
     pointer-events: none;
     opacity: 0.06;
-    transition: opacity 0.6s;
-}
-
-.camp-card:hover .camp-card-glow {
-    opacity: 0.12;
+    transition: opacity 0.4s;
 }
 
 .glow-blue {
@@ -114,9 +118,33 @@
     background: #bf5af2;
 }
 
+/* Shimmer sweep */
+.camp-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
+    animation: cardShimmer 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shimmer-purple {
+    animation-delay: -2.5s;
+    background: linear-gradient(90deg, transparent, rgba(191,90,242,0.03), transparent);
+}
+
+@keyframes cardShimmer {
+    0% { left: -100%; }
+    40% { left: 150%; }
+    100% { left: 150%; }
+}
+
 .camp-card-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Featured Card */
@@ -128,6 +156,9 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -137,7 +168,16 @@
     border: 1px solid rgba(191, 90, 242, 0.12);
     padding: 5px 14px;
     border-radius: 980px;
-    z-index: 2;
+    z-index: 3;
+}
+
+.popular-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #bf5af2;
+    box-shadow: 0 0 8px rgba(191, 90, 242, 0.6);
+    animation: campPulse 2s ease-in-out infinite;
 }
 
 /* Badge */
@@ -213,6 +253,11 @@
     font-size: 0.82rem;
     color: #d1d1d6;
     font-weight: 400;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.camp-card:hover .camp-features li {
+    transform: translateX(4px);
 }
 
 .camp-features li svg {
@@ -221,6 +266,7 @@
 
 /* CTA */
 .camp-cta {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -233,6 +279,23 @@
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
     font-family: inherit;
+    overflow: hidden;
+}
+
+.camp-cta-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmerSweep 3s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
 }
 
 .camp-cta svg {
@@ -240,7 +303,7 @@
 }
 
 .camp-cta:hover svg {
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
 .camp-cta-blue {
@@ -252,6 +315,8 @@
 .camp-cta-blue:hover {
     background: rgba(41, 151, 255, 0.14);
     border-color: rgba(41, 151, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(41, 151, 255, 0.15);
 }
 
 .camp-cta-purple {
@@ -261,8 +326,8 @@
 
 .camp-cta-purple:hover {
     background: #a344d4;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(191, 90, 242, 0.25);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(191, 90, 242, 0.3);
 }
 
 /* ─── Responsive ─── */

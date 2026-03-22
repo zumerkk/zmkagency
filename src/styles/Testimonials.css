@@ -1,18 +1,19 @@
 /* ═══════════════════════════════════════
-   TESTIMONIALS — PREMIUM SOCIAL PROOF
+   TESTIMONIALS — 3D TILT + STARS
    ═══════════════════════════════════════ */
 
 .tst-section {
-    padding: 120px 0;
+    padding: 160px 0 120px;
     background: #000;
 }
 
 .tst-section::before {
     content: '';
     display: block;
+    width: 140px;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.04), transparent);
-    margin-bottom: 120px;
+    background: linear-gradient(to right, transparent, rgba(255, 159, 10, 0.3), transparent);
+    margin: 0 auto 80px;
 }
 
 .tst-inner {
@@ -32,14 +33,14 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #2997ff;
+    color: #ff9f0a;
     margin-bottom: 16px;
 }
 
 .tst-headline {
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 800;
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
     color: #f5f5f7;
     margin-bottom: 12px;
     line-height: 1.05;
@@ -56,34 +57,37 @@
     gap: 2px;
     border-radius: 24px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.03);
 }
 
 .tst-card {
-    background: #080808;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.35s;
-    position: relative;
+    background: #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    cursor: pointer;
 }
 
 .tst-card:hover {
-    background: #0e0e0e;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
-.tst-quote-mark {
-    font-size: 3rem;
-    line-height: 1;
-    color: #2997ff;
-    opacity: 0.2;
-    font-weight: 800;
-    margin-bottom: 8px;
-    font-family: Georgia, serif;
+.tst-card-inner {
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tst-stars {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #ff9f0a;
+    margin-bottom: 20px;
 }
 
 .tst-text {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #d1d1d6;
     line-height: 1.7;
     font-style: italic;
@@ -95,20 +99,28 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .tst-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: rgba(41, 151, 255, 0.08);
-    color: #2997ff;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 159, 10, 0.1), rgba(255, 159, 10, 0.04));
+    color: #ff9f0a;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     flex-shrink: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tst-card:hover .tst-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 159, 10, 0.15);
 }
 
 .tst-name {
@@ -119,18 +131,14 @@
 }
 
 .tst-position {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: #48484a;
 }
 
 @media (max-width: 1024px) {
-    .tst-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .tst-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    .tst-grid {
-        grid-template-columns: 1fr;
-    }
+    .tst-grid { grid-template-columns: 1fr; }
 }

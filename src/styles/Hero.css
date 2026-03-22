@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════
-   HERO — PURE CINEMATIC APPLE
+   HERO — ULTRA CINEMATIC + INTERACTIVE
    ═══════════════════════════════════════ */
 
 .apple-hero {
@@ -11,9 +11,41 @@
     background: #000;
     overflow: hidden;
     isolation: isolate;
+    cursor: none;
 }
 
-/* ─── Ambient ─── */
+/* ─── Mouse-following spotlight ─── */
+.hero-spotlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: background 0.15s ease;
+}
+
+/* ─── Floating particles ─── */
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-particle {
+    position: absolute;
+    background: rgba(41, 151, 255, 0.3);
+    border-radius: 50%;
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: translateY(-100vh) scale(0.3); opacity: 0; }
+}
+
+/* ─── Ambient orbs ─── */
 .apple-hero-ambient {
     position: absolute;
     inset: 0;
@@ -31,19 +63,28 @@
 .orb-1 {
     width: 700px;
     height: 700px;
-    top: 15%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(41, 151, 255, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(41, 151, 255, 0.07) 0%, transparent 70%);
 }
 
 .orb-2 {
     width: 500px;
     height: 500px;
-    bottom: 5%;
-    right: 20%;
-    background: radial-gradient(circle, rgba(191, 90, 242, 0.04) 0%, transparent 70%);
+    bottom: 10%;
+    right: 15%;
+    background: radial-gradient(circle, rgba(191, 90, 242, 0.05) 0%, transparent 70%);
     animation-delay: -7s;
+}
+
+.orb-3 {
+    width: 400px;
+    height: 400px;
+    bottom: 30%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(255, 55, 95, 0.03) 0%, transparent 70%);
+    animation-delay: -3s;
 }
 
 @keyframes orbFloat {
@@ -60,6 +101,39 @@
     max-width: 900px;
     padding: 0 24px;
     will-change: transform, opacity;
+    cursor: auto;
+}
+
+/* Live Badge */
+.hero-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #86868b;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 6px 18px;
+    border-radius: 980px;
+    margin-bottom: 36px;
+    backdrop-filter: blur(20px);
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #30d158;
+    box-shadow: 0 0 12px rgba(48, 209, 88, 0.6);
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
 }
 
 /* Headline */
@@ -78,12 +152,12 @@
 
 .hero-line-2 {
     display: block;
-    background: linear-gradient(135deg, #2997ff 0%, #5ac8fa 35%, #bf5af2 70%, #ff375f 100%);
+    background: linear-gradient(135deg, #2997ff 0%, #5ac8fa 25%, #bf5af2 50%, #ff375f 75%, #2997ff 100%);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
+    animation: gradientShift 6s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -108,13 +182,15 @@
     gap: 14px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 56px;
 }
 
 .hero-btn-primary {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 15px 34px;
+    padding: 16px 38px;
     background: #2997ff;
     color: #fff;
     font-size: 0.92rem;
@@ -124,12 +200,30 @@
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     font-family: inherit;
+    overflow: hidden;
+}
+
+/* Shimmer sweep on CTA */
+.btn-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    animation: shimmerSweep 3s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
 }
 
 .hero-btn-primary:hover {
     background: #0077ed;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(41, 151, 255, 0.3);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(41, 151, 255, 0.35);
 }
 
 .hero-btn-primary svg {
@@ -137,13 +231,13 @@
 }
 
 .hero-btn-primary:hover svg {
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
 .hero-btn-secondary {
     display: inline-flex;
     align-items: center;
-    padding: 15px 34px;
+    padding: 16px 38px;
     color: #d1d1d6;
     font-size: 0.92rem;
     font-weight: 600;
@@ -155,56 +249,109 @@
 }
 
 .hero-btn-secondary:hover {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
     color: #fff;
     background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
 }
 
-/* Scroll Indicator */
+/* ─── Animated Stats ─── */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #f5f5f7;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #48484a;
+}
+
+.hero-stat-divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* ─── Scroll Mouse Indicator ─── */
 .hero-scroll-cue {
     position: absolute;
-    bottom: 40px;
+    bottom: 36px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: auto;
 }
 
-.scroll-cue-line {
-    width: 1px;
-    height: 48px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
-    animation: scrollPulse 3s ease-in-out infinite;
+.scroll-mouse {
+    width: 22px;
+    height: 34px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    position: relative;
 }
 
-@keyframes scrollPulse {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 0.6; }
+.scroll-wheel {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 8px;
+    border-radius: 2px;
+    background: rgba(41, 151, 255, 0.6);
+    animation: scrollWheel 2s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0% { opacity: 1; top: 6px; }
+    100% { opacity: 0; top: 20px; }
+}
+
+.scroll-text {
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2a2a2c;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
-    .apple-hero-h1 {
-        letter-spacing: -2.5px;
-        font-size: 2.8rem;
-    }
+    .apple-hero { cursor: auto; }
+    .apple-hero-h1 { letter-spacing: -2.5px; font-size: 2.8rem; }
+    .hero-stats { gap: 20px; }
+    .stat-number { font-size: 1.2rem; }
+    .hero-particles { display: none; }
 }
 
 @media (max-width: 480px) {
-    .apple-hero-content {
-        padding: 0 20px;
-    }
-
-    .apple-hero-h1 {
-        font-size: 2.3rem;
-        letter-spacing: -1.5px;
-    }
-
-    .apple-hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-btn-primary,
-    .hero-btn-secondary {
-        justify-content: center;
-    }
+    .apple-hero-content { padding: 0 20px; }
+    .apple-hero-h1 { font-size: 2.3rem; letter-spacing: -1.5px; }
+    .apple-hero-actions { flex-direction: column; align-items: stretch; }
+    .hero-btn-primary, .hero-btn-secondary { justify-content: center; }
+    .hero-stats { flex-wrap: wrap; gap: 16px; }
+    .hero-stat-divider { display: none; }
 }

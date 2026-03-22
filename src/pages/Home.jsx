@@ -50,7 +50,7 @@ const Home = ({ t }) => {
             <SolutionSelector t={t.solutionSelector} />
             <HowWeWork t={t.howWeWork} />
 
-            <LocalDominance t={t.localDominance} onCtaClick={() => navigate('/pricing')} />
+            <LocalDominance t={t.localDominance} onCtaClick={() => navigate('/services')} />
 
             <Clients t={t.clients} />
             <div id="services">

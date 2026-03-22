@@ -279,7 +279,7 @@ export const content = {
                 { q: "Kırıkkale dışına hizmet veriyor musunuz?", a: "Kesinlikle. ZMK AGENCY, Kırıkkale merkezli olsa da, dijitalin sınırları yoktur. Türkiye'nin ve dünyanın her yerine hizmet verebilecek altyapı ve vizyona sahibiz. Ankara, İstanbul ve diğer şehirlerden de müşterilerimiz mevcut." },
                 { q: "İş süreçleriniz nasıl işliyor?", a: "Kaos yok, sistem var. Önce detaylı analiz ve müşteri brifingi, sonra strateji sunumu, ardından kusursuz uygulama. Her adımda şeffaf iletişim ve canlı raporlama paneli sunuyoruz. Proje yönetimi Agile metodolojisiyle yürütülür." },
                 { q: "Neden diğer ajanslar değil de ZMK?", a: "Biz sadece 'iş yapmıyoruz', marka inşa ediyoruz. WordPress şablonlar yerine React/Next.js ile özel kodlama, gizli maliyetler yerine şeffaf fiyatlandırma, PDF raporlar yerine canlı müşteri paneli sunuyoruz. Başkalarının 'ekstra' dediği standartları biz 'temel' olarak sunuyoruz." },
-                { q: "Fiyat aralıklarınız nedir?", a: "Her ölçeğe uygun çözümlerimiz var. Esnaf paketleri 9.999₺'den, kurumsal web siteleri 12.500₺'den, 360° retainer paketleri 11.500₺/ay'dan başlıyor. Tüm paketlerimiz şeffaf ve ölçeklenebilir. Detaylar için Fiyatlar sayfamızı inceleyebilirsiniz." },
+                { q: "Nasıl teklif alabiliyorum?", a: "Her proje özeldir. Ücretsiz ön görüşme ile hedeflerinizi dinliyor ve size özel bir dijital büyüme planı sunuyoruz. Esnaftan kurumsala, her ölçekte şeffaf ve ölçeklenebilir çözümlerimiz mevcut. İletişim sayfamızdan veya WhatsApp üzerinden bize ulaşabilirsiniz." },
                 { q: "Teslim süresi ne kadar?", a: "Projenin kapsamına göre değişir: Tek sayfa web sitesi 3-5 iş günü, kurumsal web sitesi 10-15 iş günü, e-ticaret sitesi 15-25 iş günü, özel yazılım projesi 4-12 hafta. Her proje öncesi net bir zaman çizelgesi sunuyoruz." },
                 { q: "Kampanya sonrası destek sağlıyor musunuz?", a: "Evet, tüm projelerimiz sonrasında teknik destek ve bakım hizmeti sunuyoruz. Retainer paketlerde 7/24 destek dahildir. Tek seferlik projelerde ise 3 ay ücretsiz teknik destek sağlıyoruz. Ayrıca canlı müşteri panelimiz üzerinden kampanya performanslarınızı anlık takip edebilirsiniz." }
             ]
@@ -627,9 +627,9 @@ export const content = {
             title: "Dijital Kalkındırma Paketi",
             subtitle: "ZMK Spesiyel: Şehrin En Kapsamlı Dijital Büyüme Hareketi",
             description: "Esnaf ve KOBİ'lerimiz için Kırıkkale'nin pazar dinamiklerine özel kurgulanmış, en uygun fiyatlı ve en yüksek getirili 360° dijital dönüşüm paketi. Kırıkkale pazarındaki yüksek fiyatlara inat, kaliteyi ulaşılabilir kılıyoruz.",
-            price: "19.999",
-            currency: "₺",
-            period: "/ay",
+            price: null,
+            currency: null,
+            period: null,
             features: [
                 "🚀 Dönüşüm Odaklı Web Sitesi (One-Page Hediye)",
                 "📍 Google Harita Kaydı & Aylık Optimizasyon",

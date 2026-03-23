@@ -620,7 +620,7 @@ export const content = {
                 { feature: "Raporlama", standard: "Veri Yetersiz / Rapor Yok", zmk: "Canlı Panel & Performans Verisi" }
             ]
         },
-        ctaFloat: "💥 Ücretsiz Analiz Al",
+        ctaFloat: "Ücretsiz Analiz Al",
         // END MAGNUM OPUS
         specialPackage: {
             badge: "🔥 Sınırlı Kontenjan",

@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import '../styles/Testimonials.css';
 
 const partners = [
-    { name: 'Atlas Derslik', emoji: '📚' },
-    { name: 'İlan Port', emoji: '🏠' },
-    { name: 'TencereApp', emoji: '🍳' },
-    { name: 'Hira Butik', emoji: '👗' },
-    { name: 'Olimpiyat Spor Kulübü', emoji: '🏅' },
-    { name: 'Pedalset', emoji: '🚴' },
-    { name: 'Mert Nakliyat', emoji: '🚚' },
-    { name: 'Kafkas Çiğköfte', emoji: '🌯' },
-    { name: 'Tunç Kuruyemiş', emoji: '🥜' },
+    { name: 'Atlas Derslik', monogram: 'AD' },
+    { name: 'İlanPort', monogram: 'IP' },
+    { name: 'TencereApp', monogram: 'TA' },
+    { name: 'Hira Butik', monogram: 'HB' },
+    { name: 'Olimpiyat Spor Kulübü', monogram: 'OS' },
+    { name: 'Pedalset', monogram: 'PS' },
+    { name: 'Mert Nakliyat', monogram: 'MN' },
+    { name: 'Kafkas Çiğköfte', monogram: 'KÇ' },
+    { name: 'Tunç Kuruyemiş', monogram: 'TK' },
 ];
 
 const PartnerCard = ({ partner, index }) => (
@@ -24,7 +24,7 @@ const PartnerCard = ({ partner, index }) => (
         whileHover={{ y: -8, scale: 1.05 }}
     >
         <div className="partner-icon-wrap">
-            <span className="partner-emoji">{partner.emoji}</span>
+            <span className="partner-monogram">{partner.monogram}</span>
         </div>
         <span className="partner-name">{partner.name}</span>
     </motion.div>

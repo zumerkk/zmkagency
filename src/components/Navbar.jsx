@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 import logo from '../assets/ZMK AGENCY-logo.png';
 
-const Navbar = ({ t, lang, toggleLang }) => {
+const Navbar = ({ t, lang, toggleLang, onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -60,7 +60,8 @@ const Navbar = ({ t, lang, toggleLang }) => {
           <li><Link to="/portfolio" onClick={closeMobileMenu}>{t.portfolio}</Link></li>
           <li><Link to="/services" onClick={closeMobileMenu}>{t.services}</Link></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
-          <li><Link to="/esnaf-paket" onClick={closeMobileMenu}>Esnaf Paketi</Link></li>
+          <li><Link to="/esnaf-paket" onClick={closeMobileMenu} className="nav-esnaf-link">Esnaf Paketi</Link></li>
+          <li><Link to="/zmk-spesiyel" onClick={closeMobileMenu} className="nav-spesiyel-link">ZMK Spesiyel</Link></li>
           <li><Link to="/blog" onClick={closeMobileMenu}>Magazine</Link></li>
           <li><Link to="/contact" onClick={closeMobileMenu}>{t.contact}</Link></li>
           <li>
@@ -69,13 +70,12 @@ const Navbar = ({ t, lang, toggleLang }) => {
             </button>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <button
               className="apple-nav-cta"
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); if (onContactClick) onContactClick(); }}
             >
               {t.cta}
-            </Link>
+            </button>
           </li>
         </ul>
       </div>

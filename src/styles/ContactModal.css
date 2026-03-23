@@ -1,0 +1,281 @@
+/* ═══════════════════════════════════════
+   CONTACT MODAL — BIZE ULAŞIN
+   ═══════════════════════════════════════ */
+
+.cm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.cm-container {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+}
+
+.cm-rainbow-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b, #22c55e, #6366f1);
+    background-size: 200% 100%;
+    border-radius: 24px 24px 0 0;
+    animation: cmRainbow 4s linear infinite;
+}
+
+@keyframes cmRainbow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+.cm-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #86868b;
+    cursor: pointer;
+    transition: all 0.25s;
+    z-index: 1;
+}
+
+.cm-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.cm-header {
+    padding: 36px 36px 0;
+    text-align: center;
+}
+
+.cm-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cm-header p {
+    color: #86868b;
+    font-size: 0.95rem;
+}
+
+.cm-quick-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    margin-bottom: 8px;
+}
+
+.cm-quick-info a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6366f1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.cm-quick-info a:hover {
+    color: #818cf8;
+}
+
+.cm-form {
+    padding: 20px 36px 36px;
+}
+
+.cm-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.cm-field {
+    margin-bottom: 12px;
+}
+
+.cm-field label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #48484a;
+    margin-bottom: 6px;
+}
+
+.cm-field input,
+.cm-field select,
+.cm-field textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.cm-field select {
+    background-color: #0a0a0a;
+}
+
+.cm-field select option {
+    color: #000;
+    background: #fff;
+}
+
+.cm-field input::placeholder,
+.cm-field textarea::placeholder {
+    color: #3a3a3c;
+}
+
+.cm-field input:focus,
+.cm-field select:focus,
+.cm-field textarea:focus {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.cm-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.cm-submit-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    margin-top: 8px;
+}
+
+.cm-submit-btn:hover {
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.5);
+    transform: translateY(-2px);
+}
+
+.cm-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cm-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: cmSpin 0.6s linear infinite;
+}
+
+@keyframes cmSpin {
+    to { transform: rotate(360deg); }
+}
+
+.cm-error-msg {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    color: #ef4444;
+    font-size: 0.85rem;
+}
+
+/* Success State */
+.cm-success {
+    padding: 60px 36px;
+    text-align: center;
+}
+
+.cm-success-icon {
+    color: #22c55e;
+    margin-bottom: 20px;
+}
+
+.cm-success h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f5f5f7;
+    margin-bottom: 8px;
+}
+
+.cm-success p {
+    color: #86868b;
+    margin-bottom: 28px;
+}
+
+.cm-btn-secondary {
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.cm-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .cm-container {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .cm-form { padding: 16px 24px 24px; }
+    .cm-header { padding: 28px 24px 0; }
+    .cm-row { grid-template-columns: 1fr; }
+    .cm-quick-info { flex-direction: column; align-items: center; gap: 8px; }
+}

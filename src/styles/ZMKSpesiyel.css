@@ -1,0 +1,311 @@
+/* ═══════════════════════════════════════
+   ZMK SPESİYEL PAGE — PREMIUM LANDING
+   ═══════════════════════════════════════ */
+
+.zmk-spesiyel-page {
+    background: #000;
+    color: #f5f5f7;
+    min-height: 100vh;
+}
+
+/* Hero */
+.zsp-hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 140px 24px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.zsp-hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(236, 72, 153, 0.06) 40%, transparent 70%);
+    pointer-events: none;
+    animation: zspPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes zspPulse {
+    0% { transform: translate(-50%, -50%) scale(0.85); }
+    100% { transform: translate(-50%, -50%) scale(1.15); }
+}
+
+.zsp-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.zsp-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(90deg, rgba(236, 72, 153, 0.15), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(236, 72, 153, 0.25);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.zsp-hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zsp-subtitle {
+    font-size: 1.3rem;
+    color: #6366f1;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.zsp-desc {
+    font-size: 1.1rem;
+    color: #86868b;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+
+.zsp-price-hero {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 36px;
+}
+
+.zsp-currency {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.zsp-price {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.zsp-period {
+    font-size: 1.2rem;
+    color: #86868b;
+    margin-left: 8px;
+}
+
+.zsp-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    font-family: inherit;
+}
+
+.zsp-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+}
+
+/* Services */
+.zsp-services {
+    padding: 100px 24px;
+    position: relative;
+}
+
+.zsp-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.3), transparent);
+}
+
+.zsp-section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-align: center;
+    margin-bottom: 56px;
+    background: linear-gradient(135deg, #fff 0%, #a5a5b0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zsp-service-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.zsp-service-card {
+    padding: 40px 28px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.zsp-service-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(99, 102, 241, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.zsp-service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(99, 102, 241, 0.04));
+    color: #6366f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.zsp-service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f5f5f7;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+.zsp-service-card p {
+    font-size: 0.88rem;
+    color: #86868b;
+    line-height: 1.65;
+}
+
+/* Why Section */
+.zsp-why {
+    padding: 100px 24px;
+}
+
+.zsp-why-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.zsp-why-card {
+    padding: 48px 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.zsp-why-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.zsp-why-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zsp-why-label {
+    font-size: 0.85rem;
+    color: #86868b;
+}
+
+/* Final CTA */
+.zsp-final-cta {
+    padding: 100px 24px;
+}
+
+.zsp-cta-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 40px;
+    background: rgba(99, 102, 241, 0.04);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 24px;
+    position: relative;
+}
+
+.zsp-cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+}
+
+.zsp-cta-box h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, #a5a5b0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.zsp-cta-box p {
+    color: #86868b;
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .zsp-service-grid { grid-template-columns: repeat(2, 1fr); }
+    .zsp-why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .zsp-service-grid { grid-template-columns: 1fr; }
+    .zsp-why-grid { grid-template-columns: 1fr; }
+    .zsp-price { font-size: 3.5rem; }
+}

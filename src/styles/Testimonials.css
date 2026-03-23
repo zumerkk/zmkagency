@@ -119,8 +119,15 @@
     box-shadow: 0 0 30px rgba(255, 159, 10, 0.2);
 }
 
-.partner-emoji {
-    font-size: 1.8rem;
+.partner-monogram {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ff9f0a, #ffcc70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
 }
 
 .partner-name {

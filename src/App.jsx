@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppWidget from './components/WhatsAppWidget';
+import ContactModal from './components/ContactModal';
 import { content } from './translations';
 import { localSeoData } from './data/localSeoData'; // SEO Data
 import './index.css';
@@ -29,6 +30,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const ThankYou = lazy(() => import('./pages/ThankYou')); // Conversion Page
 const EsnafLanding = lazy(() => import('./pages/EsnafLanding')); // Special Landing Page
 const PillarPage = lazy(() => import('./pages/PillarPage')); // SEO Pillar Page
+const ZMKSpesiyel = lazy(() => import('./pages/ZMKSpesiyel')); // ZMK Spesiyel Page
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -41,6 +43,7 @@ function App() {
   const [lang, setLang] = useState('tr'); // Default to Turkish
   const t = content[lang];
   const location = useLocation(); // Hook for transition keys
+  const [showContactModal, setShowContactModal] = useState(false);
 
   const toggleLang = () => {
     setLang(prev => prev === 'tr' ? 'en' : 'tr');
@@ -54,7 +57,14 @@ function App() {
       <Helmet htmlAttributes={{ lang }} />
 
       <ScrollToTop />
-      {!isAdmin && <Navbar t={t.nav} lang={lang} toggleLang={toggleLang} />}
+      {!isAdmin && (
+        <Navbar
+          t={t.nav}
+          lang={lang}
+          toggleLang={toggleLang}
+          onContactClick={() => setShowContactModal(true)}
+        />
+      )}
 
       <main>
         <Suspense fallback={<PageLoader />}>
@@ -107,6 +117,7 @@ function App() {
 
               <Route path="/thank-you" element={<ThankYou />} />
               <Route path="/esnaf-paket" element={<EsnafLanding t={t} />} />
+              <Route path="/zmk-spesiyel" element={<ZMKSpesiyel t={t} />} />
 
               {/* 404 Route */}
               <Route path="*" element={<NotFound />} />
@@ -117,6 +128,11 @@ function App() {
       </main>
 
       {!isAdmin && <Footer t={t.footer} />}
+
+      {/* Contact Modal (Bize Ulaşın) */}
+      {showContactModal && (
+        <ContactModal t={t} onClose={() => setShowContactModal(false)} />
+      )}
     </div>
   );
 }

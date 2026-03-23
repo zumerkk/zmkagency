@@ -44,7 +44,7 @@ const Navbar = ({ t, lang, toggleLang, onContactClick }) => {
   };
 
   return (
-    <nav className={`apple-nav ${scrolled ? 'scrolled' : ''} ${hidden ? 'nav-hidden' : ''}`}>
+    <nav className={`apple-nav ${scrolled ? 'scrolled' : ''} ${hidden && !mobileMenuOpen ? 'nav-hidden' : ''}`}>
       <div className="apple-nav-inner">
         <Link to="/" className="apple-nav-logo" onClick={closeMobileMenu}>
           <img src={logo} alt="ZMK Agency" />

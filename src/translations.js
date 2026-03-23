@@ -247,12 +247,12 @@ export const content = {
             }
         },
         contact: {
-            title: "Konuşalım.",
-            subtitle: "Markanızı dönüştürmeye hazır mısınız? İletişime geçin.",
+            title: "Haydi Başlayalım.",
+            subtitle: "Dijital dönüşümünüz bir mesaj uzağınızda. İlk adımı siz atın, gerisini biz halledelim.",
             namePlaceholder: "Adınız",
             phonePlaceholder: "Telefon Numaranız",
-            messagePlaceholder: "Proje Detayları",
-            submit: "Gönder",
+            messagePlaceholder: "Hayalinizdeki projeyi anlatın...",
+            submit: "Projeyi Başlat",
             location: "Kırıkkale, Türkiye"
         },
         clients: {
@@ -274,7 +274,7 @@ export const content = {
             budgetOptions: ["Girişim (Başlangıç)", "İşletme (Orta)", "Kurumsal (Yüksek)", "Limitsiz"]
         },
         faq: {
-            title: "Akıllardaki Sorular.",
+            title: "Merak Ettiğiniz Her Şey.",
             items: [
                 { q: "Kırıkkale dışına hizmet veriyor musunuz?", a: "Kesinlikle. ZMK AGENCY, Kırıkkale merkezli olsa da, dijitalin sınırları yoktur. Türkiye'nin ve dünyanın her yerine hizmet verebilecek altyapı ve vizyona sahibiz. Ankara, İstanbul ve diğer şehirlerden de müşterilerimiz mevcut." },
                 { q: "İş süreçleriniz nasıl işliyor?", a: "Kaos yok, sistem var. Önce detaylı analiz ve müşteri brifingi, sonra strateji sunumu, ardından kusursuz uygulama. Her adımda şeffaf iletişim ve canlı raporlama paneli sunuyoruz. Proje yönetimi Agile metodolojisiyle yürütülür." },
@@ -285,8 +285,8 @@ export const content = {
             ]
         },
         testimonials: {
-            title: "Başarı Hikayeleri.",
-            subtitle: "Müşterilerimiz bizi anlatıyor.",
+            title: "İş Ortaklarımız.",
+            subtitle: "Vizyonumuzu paylaşan, birlikte zirveye koştuğumuz markalar.",
             items: [
                 { text: "ZMK ile çalışmak şirketimizin dijital kaderini değiştirdi. Satışlarımız ilk çeyrekte %300 arttı. Kırıkkale'de böyle bir vizyon olması inanılmaz.", author: "Ahmet Y.", position: "CEO, Yüksel İnşaat" },
                 { text: "Sadece bir web sitesi değil, yaşayan bir marka inşa ettiler. Profesyonellikleri ve 7/24 destekleri ile kendimizi hep güvende hissettik.", author: "Selin K.", position: "Kurucu, Moda Butik" },
@@ -620,7 +620,7 @@ export const content = {
                 { feature: "Raporlama", standard: "Veri Yetersiz / Rapor Yok", zmk: "Canlı Panel & Performans Verisi" }
             ]
         },
-        ctaFloat: "Hızlı Teklif Al",
+        ctaFloat: "💥 Ücretsiz Analiz Al",
         // END MAGNUM OPUS
         specialPackage: {
             badge: "🔥 Sınırlı Kontenjan",

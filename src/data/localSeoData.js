@@ -1,4 +1,85 @@
 export const localSeoData = [
+
+    {
+        slug: "kirikkale-yazilim-ajansi",
+        title: "Kırıkkale Yazılım Ajansı | Özel Yazılım & Web Uygulamaları | ZMK",
+        description: "Kırıkkale yazılım ajansı ZMK ile işinizi dijitalleştirin. Kırıkkale yazılım firmaları arasında en yenilikçi, en hızlı ve satış odaklı sistemler. Özel otomasyon, CRM ve web yazılım.",
+        heroTitle: "Sıradan Kod Değil,
+Satış Yapan Sistemler.",
+        heroSubtitle: "Kırıkkale'deki işletmenizin iş yükünü azaltan, kârını artıran ve rakiplerinize fark atan özel yazılım çözümleri. Biz sadece kod yazmıyoruz, iş modelinizi büyütüyoruz.",
+        serviceName: "Özel Yazılım & Otomasyon",
+        proof: {
+            stat1: "99.9%",
+            label1: "Kesintisiz Çalışma",
+            stat2: "10x",
+            label2: "Hızlandırılmış Süreç",
+            quote: "ZMK'nın yazdığı otomasyon sayesinde 3 personelin yaptığı işi tek tuşla hallediyoruz. Kırıkkale'de tek geçerim.",
+            author: "Mustafa B. - Üretim Tesisi"
+        },
+        workflow: [
+            { step: "01", title: "Süreç Analizi", desc: "İşleyişinizi inceliyor, darboğazları tespit ediyoruz." },
+            { step: "02", title: "Mimari", desc: "Sizi yavaşlatan sistemleri, modern ve hızlı mimariyle değiştiriyoruz." },
+            { step: "03", title: "Geliştirme", desc: "React ve Node.js gibi global standartlarda teknolojilerle kodluyoruz." },
+            { step: "04", title: "Canlıya Alım", desc: "Testleri tamamlanmış, güvenli ve 7/24 çalışan sisteminizi teslim ediyoruz." }
+        ],
+        longContent: [
+            { h2: "Neden Kırıkkale Yazılım Ajansı Olarak ZMK'yı Seçmelisiniz?", text: "Kırıkkale yazılım firmaları genellikle standart paketleri satmaya çalışır. Biz ZMK Agency olarak işletmenizin tam ihtiyacına göre terzi usulü çözümler üretiyoruz. B2B portal, CRM, ERP, stok takip sistemleri veya tamamen yenilikçi bir startup fikri... Sizi standart kalıplara hapsetmiyor, teknik jargonlarla (CI/CD, OWASP) boğmuyoruz; doğrudan ne kadar kâr edeceğinizi ve işinizin ne kadar kolaylaşacağını konuşuyoruz." },
+            { h3: "Algoritmaların Ötesinde İş Stratejisi", text: "Bir yazılımın iyi olması için sadece hatasız çalışması yetmez, aynı zamanda kullanıcının (veya müşterinizin) hayatını kolaylaştırması gerekir. Kırıkkale yazılım sektöründe ezberleri bozuyor, 'Kodu yazdık bitti' değil, 'Sistem satışları %40 artırdı' demeyi hedefliyoruz." },
+            { h2: "Hangi Yazılım Çözümlerini Sunuyoruz?", list: ["Özel Web Uygulamaları (Web Apps) — Her yerden erişilebilir, bulut tabanlı sistemler", "Müşteri İlişkileri Yönetimi (CRM) — Kırıkkale'deki müşteri ağınızı dijitalden yönetin", "Stok ve Depo Otomasyonu — Barkodlu, gerçek zamanlı takip", "E-Ticaret Altyapıları — Shopify veya tamamen sıfırdan yazılmış pazar yerleri", "API Entegrasyonları — Muhasebe programları (Logo, Mikro vb.) ile tam entegrasyon"] }
+        ],
+        faq: [
+            { q: "Yazılımlarınızın güvenliği nasıl?", a: "Bankacılık seviyesinde şifreleme ve global standartlarda sunucu mimarileri (AWS, Google Cloud) kullanıyoruz. Verileriniz güvende." },
+            { q: "Süreç boyunca iletişim nasıl?", a: "Teknik terimlerle değil, anlaşılır bir dille konuşuyoruz. 7/24 ulaşılabilir, Kırıkkale'de yüz yüze görüşebileceğiniz bir ekibiz." },
+            { q: "Kodlar bize mi ait oluyor?", a: "Proje sözleşmesine bağlı olarak tüm kaynak kodlarını ve fikri mülkiyet haklarını size devrediyoruz." }
+        ],
+        keywords: "kırıkkale yazılım ajansı, kırıkkale yazılım firmaları, kırıkkale yazılım, özel yazılım kırıkkale, kırıkkale web yazılım",
+        ogImage: "/og-images/yazilim-ajansi.jpg",
+        relatedLinks: [
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "SEO", slug: "kirikkale-seo-danismanligi" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" }
+        ]
+    },
+    {
+        slug: "kirikkale-sosyal-medya-ajansi",
+        title: "Kırıkkale Sosyal Medya Ajansı | Hesap Yönetimi & Büyüme | ZMK",
+        description: "Kırıkkale sosyal medya ajansı ZMK ile Instagram ve TikTok'ta markanızı patlatın. Takipçi değil, müşteri kazandıran stratejiler. En iyi Kırıkkale sosyal medya yönetimi.",
+        heroTitle: "Sadece Paylaşım Değil,
+Satış Yapan Sosyal Medya.",
+        heroSubtitle: "Herkes post atar, biz marka inşa ederiz. Kırıkkale'deki işletmenizin sosyal medya hesaplarını birer satış makinesine çeviriyoruz.",
+        serviceName: "Sosyal Medya & Kreatif",
+        proof: {
+            stat1: "5x",
+            label1: "Etkileşim Artışı",
+            stat2: "1M+",
+            label2: "Aylık Erişim",
+            quote: "Instagram sayfamız ZMK'ya geçtikten sonra sadece DM'den gelen siparişlerle dükkanın kirasını ödüyoruz.",
+            author: "Zeynep A. - Güzellik Merkezi"
+        },
+        workflow: [
+            { step: "01", title: "Kimlik İnşası", desc: "Sayfanızın görsel dilini ve kurumsal duruşunu baştan tasarlıyoruz." },
+            { step: "02", title: "İçerik (Reels/Video)", desc: "Trendlere uygun, dikkat çekici ve profesyonel çekimlerle Reels üretiyoruz." },
+            { step: "03", title: "Topluluk", desc: "Takipçilerinizle etkileşime giriyor, sadık bir kitle oluşturuyoruz." },
+            { step: "04", title: "Reklam", desc: "Gönderilerinizi Kırıkkale ve çevresindeki doğru hedef kitleye sponsorlu olarak gösteriyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Sosyal Medya Ajansı Ararken Nelere Dikkat Etmelisiniz?", text: "Sosyal medya yönetimi, sadece haftada 3 gün 'Günaydın' postu atmak değildir. Ne yazık ki Kırıkkale sosyal medya ajansları arasında bu vizyonsuzluk çok yaygın. Biz ZMK olarak; profesyonel ışıklar, kameralar, kurgu yeteneği ve metin yazarlığı ile gerçek bir 'Medya Şirketi' gibi çalışıyoruz." },
+            { h3: "Trendleri Takip Eden Değil, Yaratan Ekip", text: "TikTok ve Instagram Reels algoritmalarını hackliyoruz. İşletmenizin dinamiklerine uygun kurgularla milyonlarca izlenmeye ulaşmanızı sağlıyor, bu izlenmeleri gerçek Kırıkkale'li müşterilere çeviriyoruz." },
+            { h2: "Neler Yapıyoruz?", list: ["Kapsamlı İçerik Planlaması ve Takvimi", "Aylık Profesyonel Video (Reels/TikTok) ve Fotoğraf Çekimleri", "Story ve Etkileşim Yönetimi (Anketler, Soru-Cevap)", "Influencer ve Yerel İşbirlikleri Yönetimi", "Yorum, DM ve Kriz Yönetimi"] }
+        ],
+        faq: [
+            { q: "Sadece Kırıkkale merkeze mi hizmet veriyorsunuz?", a: "Tüm Kırıkkale ilçelerine ve çevre illere hizmet veriyoruz. Çekimler için bizzat işletmenize geliyoruz." },
+            { q: "Çekimleri siz mi yapıyorsunuz?", a: "Evet, son teknoloji kameralarımız, dronelarımız ve ışık sistemlerimizle profesyonel prodüksiyonu kendi bünyemizde yapıyoruz." }
+        ],
+        keywords: "kırıkkale sosyal medya ajansı, kırıkkale sosyal medya yönetimi, kırıkkale instagram ajansı, kırıkkale sosyal medya uzmanı",
+        ogImage: "/og-images/sosyal-medya.jpg",
+        relatedLinks: [
+            { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" },
+            { title: "Prodüksiyon", slug: "kirikkale-drone-cekim-tanitim-filmi" }
+        ]
+    },
+
     {
         slug: "kirikkale-reklam-ajansi",
         title: "Kırıkkale Reklam Ajansı | #1 Dijital & Kreatif Ajans | ZMK Agency",

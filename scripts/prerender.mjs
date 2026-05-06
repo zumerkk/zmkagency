@@ -42,6 +42,8 @@ const ROUTES = [
     '/services/ecommerce',
     '/services/pr',
     // Local SEO landing pages
+    '/kirikkale-yazilim-ajansi',
+    '/kirikkale-sosyal-medya-ajansi',
     '/kirikkale-reklam-ajansi',
     '/kirikkale-web-tasarim',
     '/kirikkale-dijital-pazarlama-ajansi',

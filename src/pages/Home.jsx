@@ -47,9 +47,9 @@ const Home = ({ t }) => {
     return (
         <>
             <SEO
-                title="Kırıkkale Reklam Ajansı | 360° Dijital Çözümler | ZMK AGENCY"
-                description="Kırıkkale'nin lider dijital ajansı. Marka stratejisi, web tasarım, yazılım, sosyal medya, SEO ve Google Ads ile işletmenizi büyütün."
-                keywords="kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale yazılım, kırıkkale web tasarım, kırıkkale sosyal medya, kırıkkale seo"
+                title="Kırıkkale Yazılım & Reklam Ajansı | #1 Dijital Çözümler | ZMK AGENCY"
+                description="Kırıkkale'nin #1 yazılım ve reklam ajansı. Web yazılım, mobil uygulama, SEO, sosyal medya yönetimi ve Google Ads ile işletmenizi büyütün. Ücretsiz analiz."
+                keywords="kırıkkale yazılım ajansı, kırıkkale yazılım, kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale web tasarım, kırıkkale sosyal medya ajansı, kırıkkale seo, kırıkkale reklam"
                 schema={[faqSchema, orgSchema].filter(Boolean)}
             />
 

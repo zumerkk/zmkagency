@@ -91,7 +91,7 @@ const Hero = ({ t, onCtaClick }) => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <span className="live-dot"></span>
-                    Kırıkkale'nin #1 Dijital Ajansı
+                    Kırıkkale'nin #1 Yazılım & Reklam Ajansı
                 </motion.div>
 
                 <motion.h1

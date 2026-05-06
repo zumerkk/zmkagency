@@ -5,8 +5,8 @@ import { useLocation } from 'react-router-dom';
 const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType, breadcrumbs }) => {
     const location = useLocation();
     const siteTitle = "ZMK AGENCY";
-    const finalTitle = title ? `${title} | ${siteTitle}` : "Kırıkkale Reklam Ajansı | Web Tasarım & Dijital Pazarlama | ZMK Agency";
-    const defaultDesc = "Kırıkkale'nin lider 360° Dijital Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya yönetimi, dijital dönüşüm ve kurumsal kimlik hizmetleri ile işletmenizi büyütün.";
+    const finalTitle = title ? `${title} | ${siteTitle}` : "Kırıkkale Yazılım & Reklam Ajansı | Web Tasarım & Dijital Pazarlama | ZMK Agency";
+    const defaultDesc = "Kırıkkale'nin #1 yazılım ve reklam ajansı ZMK Agency. Kırıkkale yazılım, web tasarım, sosyal medya yönetimi, SEO ve Google Ads ile işletmenizi büyütün.";
 
     // URL Construction
     const baseUrl = 'https://zmkagency.com';
@@ -112,7 +112,7 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
         <Helmet>
             <title>{finalTitle}</title>
             <meta name="description" content={description || defaultDesc} />
-            <meta name="keywords" content={keywords || "kırıkkale reklam ajansı, web tasarım kırıkkale, zmk agency, dijital pazarlama ajansı, sosyal medya yönetimi, kırıkkale yazılım firması, kurumsal kimlik, seo danışmanlığı, kırıkkale drone çekimi"} />
+            <meta name="keywords" content={keywords || "kırıkkale yazılım ajansı, kırıkkale yazılım, kırıkkale reklam ajansı, kırıkkale sosyal medya ajansı, web tasarım kırıkkale, zmk agency, dijital pazarlama, kırıkkale seo, kırıkkale reklam, kırıkkale web tasarım, kırıkkale drone çekimi"} />
 
             <link rel="canonical" href={currentUrl} />
             <link rel="alternate" hrefLang="tr" href={baseUrl + path} />

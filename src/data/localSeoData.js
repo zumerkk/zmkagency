@@ -1,4 +1,110 @@
 export const localSeoData = [
+    // ─── CRITICAL: "Kırıkkale Yazılım Ajansı" kill-page — algow'u geçmek için ───
+    {
+        slug: "kirikkale-yazilim-ajansi",
+        title: "Kırıkkale Yazılım Ajansı | Web & Mobil Yazılım | ZMK Agency",
+        description: "Kırıkkale'nin 1 numaralı yazılım ajansı ZMK Agency. Web yazılım, mobil uygulama, özel CRM ve ERP çözümleri. 50+ tamamlanan proje, React & Node.js uzmanı ekip. Ücretsiz keşif görüşmesi.",
+        heroTitle: "Kırıkkale'nin Yazılım\nDevi ZMK Agency.",
+        heroSubtitle: "Kırıkkale'de yazılım ihtiyacınız için doğru adres. React, Node.js, Flutter ile kurumsal yazılımdan mobil uygulamaya tam çözüm.",
+        serviceName: "Kırıkkale Yazılım Ajansı",
+        proof: {
+            stat1: "50+",
+            label1: "Yazılım Projesi",
+            stat2: "React",
+            label2: "& Flutter Uzmanı",
+            quote: "ZMK'nın geliştirdiği yazılım, firmamızın operasyonlarını %60 hızlandırdı.",
+            author: "Hakan K. — Toptan Gıda Firması"
+        },
+        workflow: [
+            { step: "01", title: "İş Analizi", desc: "İş süreçlerinizi ve yazılım ihtiyaçlarınızı detaylı analiz ediyoruz." },
+            { step: "02", title: "Mimari Tasarım", desc: "Ölçeklenebilir, güvenli ve hızlı bir yazılım mimarisi kuruyoruz." },
+            { step: "03", title: "Geliştirme", desc: "Agile metodoloji ile sprint sprint kodlayıp test ediyoruz." },
+            { step: "04", title: "Teslimat & Destek", desc: "Canlıya alıp 7/24 teknik destek ve bakım sağlıyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale'nin En Köklü Yazılım Ajansı", text: "ZMK Agency, Kırıkkale merkezli, React, Node.js, Python ve Flutter teknolojileriyle kurumsal yazılım geliştiren dijital bir ajans. 2021'den bu yana Kırıkkale ve çevre ilçelerdeki 50'yi aşkın firmaya özel yazılım çözümleri sunuyoruz. Kırıkkale'de yazılım arıyorsanız doğru adrestesiniz." },
+            { h3: "Kırıkkale'de Yazılım Geliştirme Süreci Nasıl İşler?", text: "Önce işletmenizin iş süreçlerini ve acı noktalarını anlıyoruz. Ardından teknik mimariyi planlıyor, sprint takvimi çıkarıyor ve sizi her adımda bilgilendiriyoruz. Teslim sonrasında 6 aylık ücretsiz bakım ve destek sunuyoruz. Kırıkkale'deki hiçbir yazılım firması bu standardı sunamaz." },
+            { h2: "Kırıkkale Yazılım Ajansı Olarak Neler Yapıyoruz?", list: [
+                "Kurumsal Web Yazılımı — React & Next.js tabanlı, SEO uyumlu, süper hızlı",
+                "Mobil Uygulama Geliştirme — iOS ve Android için Flutter & React Native",
+                "CRM Yazılımı — Müşteri ilişkileri ve satış süreçlerini dijitalleştirin",
+                "ERP Entegrasyonu — Stok, muhasebe ve lojistik süreçleri tek panelde",
+                "API Geliştirme — Mevcut sistemlerinizle entegrasyon",
+                "E-Ticaret Yazılımı — Shopify, İkas veya sıfırdan özel platform",
+                "SaaS Ürün Geliştirme — Fikrinizi ürüne dönüştürüyoruz"
+            ]},
+            { h2: "Kırıkkale'de Yazılım Fiyatları", text: "Kırıkkale'deki pek çok yazılım firması fiyat vermekten kaçınır. Biz şeffafız: Kurumsal web yazılımı 25.000₺'den, mobil uygulama 60.000₺'den, özel CRM/ERP çözümleri ise 80.000₺'den başlar. Her proje ihtiyaca göre özelleştirilir. İlk görüşme ücretsizdir." },
+            { h2: "Neden Kırıkkale'de Yazılım için ZMK'yı Seçmelisiniz?", list: [
+                "Kırıkkale'de fiziksel ofis — yüz yüze görüşme imkânı",
+                "2021'den bu yana 50+ başarılı yazılım projesi",
+                "React, Node.js, Python, Flutter — güncel teknoloji stack",
+                "Agile geliştirme — her sprint sonunda demo",
+                "Canlı proje takip paneli — anlık ilerleme görüntüleme",
+                "6 aylık ücretsiz bakım ve teknik destek",
+                "Türkiye genelinde referanslar — sadece Kırıkkale değil"
+            ]},
+            { h2: "Kırıkkale Yazılım Sektörü ve ZMK'nın Farkı", text: "Kırıkkale'de pek çok küçük yazılım firması ve freelancer bulabilirsiniz. Ancak kapsamlı bir ekiple, modern teknolojilerle ve kurumsal standartlarda yazılım geliştiren tek adres ZMK Agency'dir. Freelancer ile başlayıp yarım kalan projeler için de devralma hizmeti sunuyoruz." }
+        ],
+        faq: [
+            { q: "Kırıkkale'de yazılım için bütçem ne kadar olmalı?", a: "Tek sayfalık web yazılımları 25.000₺'den başlar. Mobil uygulamalar 60.000₺+, kurumsal sistemler 80.000₺+ ücretlendirilir. Net teklif için ücretsiz keşif görüşmesi yapıyoruz." },
+            { q: "Projem ne kadar sürede teslim edilir?", a: "Web yazılımları 2-4 hafta, mobil uygulamalar 6-10 hafta, kurumsal sistemler 8-16 hafta arasında teslim edilir. Sprint planınız başlangıçta netleştirilir." },
+            { q: "Kırıkkale dışına da yazılım hizmeti veriyor musunuz?", a: "Evet, Ankara, İstanbul ve Türkiye genelinde uzaktan yazılım geliştirme hizmeti sunuyoruz. Kırıkkale'deki ofisimizde yüz yüze görüşme de yapılabilir." },
+            { q: "Yarım kalmış bir projeyi devralabilir misiniz?", a: "Evet. Başka bir firmadan veya freelancer'dan devraldığımız projelerde önce kod analizi yapıp size detaylı rapor sunuyoruz." },
+            { q: "Yazılımın kaynak kodu bana ait mi?", a: "Evet, proje tesliminde tüm kaynak kodlar, veritabanı şemaları ve dokümantasyon müşteriye devredilir." }
+        ],
+        keywords: "kırıkkale yazılım ajansı, kırıkkale yazılım, kırıkkale yazılım firması, kırıkkale web yazılım, kırıkkale mobil uygulama, kırıkkale crm yazılımı, zmk agency yazılım, kırıkkale react geliştirici",
+        ogImage: "/og-images/yazilim-ajansi.jpg",
+        relatedLinks: [
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Dijital Ajans", slug: "kirikkale-reklam-ajansi" }
+        ]
+    },
+    // ─── "Kırıkkale Yazılım" (short-tail) kill-page ───
+    {
+        slug: "kirikkale-yazilim",
+        title: "Kırıkkale Yazılım Hizmetleri | Web, Mobil & Özel Yazılım | ZMK Agency",
+        description: "Kırıkkale'de yazılım çözümleri arıyorsanız ZMK Agency'yi arayın. Web yazılım, mobil uygulama, e-ticaret ve özel CRM yazılımı. 50+ proje deneyimi, modern teknoloji.",
+        heroTitle: "Kırıkkale'nin\nYazılım Merkezi.",
+        heroSubtitle: "Web'den mobil uygulamaya, CRM'den e-ticaret altyapısına — tüm yazılım ihtiyaçlarınız için tek adres.",
+        serviceName: "Kırıkkale Yazılım Hizmetleri",
+        proof: {
+            stat1: "50+",
+            label1: "Yazılım Projesi",
+            stat2: "Modern",
+            label2: "Teknoloji Stack",
+            quote: "ZMK'nın yazılım ekibi çok daha ilerisi için altyapı kurdu bize.",
+            author: "Start-up Kurucusu, Ankara"
+        },
+        workflow: [
+            { step: "01", title: "Keşif", desc: "Yazılım ihtiyaçlarınızı anlayıp fizibilite analizi yapıyoruz." },
+            { step: "02", title: "Tasarım", desc: "Wireframe ve prototip ile sistemi görselleştiriyoruz." },
+            { step: "03", title: "Kodlama", desc: "Modern, hızlı ve güvenli yazılım geliştiriyoruz." },
+            { step: "04", title: "Canlı & Destek", desc: "Yayına alıp bakım ve güncellemelerle yanınızda oluyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale'de Yazılım İhtiyacınız İçin ZMK Agency", text: "Kırıkkale'de işletmeniz için dijital bir çözüme ihtiyaç duyduğunuzda ZMK Agency'nin uzman ekibi hazır. Kurumsal web sitelerinden mobil uygulamalara, muhasebe entegrasyonundan e-ticaret altyapısına kadar tüm yazılım projelerinizi modern teknolojilerle hayata geçiriyoruz." },
+            { h2: "Kırıkkale'de Hangi Yazılım Çözümlerini Sunuyoruz?", list: [
+                "Web Yazılımı (React, Next.js) — 1 saniyenin altında yükleme hızı",
+                "Mobil Uygulama (Flutter, React Native) — iOS & Android",
+                "CRM Sistemi — Müşteri, teklif ve sipariş takibi",
+                "E-Ticaret Yazılımı — Kendi platformunuzda satış",
+                "API Entegrasyonları — ERP, muhasebe, kargo sistemleri",
+                "Özel Otomasyon — Manuel süreçleri otomatize edin"
+            ]}
+        ],
+        faq: [
+            { q: "Kırıkkale'de hangi yazılım firmalarıyla çalıştınız?", a: "Kırıkkale'de toptan gıda, inşaat, eğitim ve sağlık sektörlerinden 20'yi aşkın firmaya yazılım çözümü geliştirdik." },
+            { q: "Yazılım desteği ne kadar süre veriliyor?", a: "Tüm projelerimizde 6 aylık ücretsiz garanti desteği, ardından aylık bakım paketi seçeneği sunuyoruz." }
+        ],
+        keywords: "kırıkkale yazılım, kırıkkale yazılım geliştirme, kırıkkale yazılım şirketi, kırıkkale uygulama geliştirme",
+        ogImage: "/og-images/yazilim.jpg",
+        relatedLinks: [
+            { title: "Yazılım Ajansı", slug: "kirikkale-yazilim-ajansi" },
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" }
+        ]
+    },
     {
         slug: "kirikkale-reklam-ajansi",
         title: "Kırıkkale Reklam Ajansı | #1 Dijital & Kreatif Ajans | ZMK Agency",

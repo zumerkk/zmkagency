@@ -3,14 +3,13 @@ import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import CampaignProducts from '../components/CampaignProducts';
+import MarketDominance from '../components/MarketDominance';
 import Comparison from '../components/Comparison';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import FloatingCTA from '../components/FloatingCTA';
 import WizardForm from '../components/WizardForm';
-
-import { useNavigate } from 'react-router-dom';
 
 const Home = ({ t }) => {
     const [showWizard, setShowWizard] = useState(false);
@@ -32,7 +31,7 @@ const Home = ({ t }) => {
         "name": "ZMK AGENCY",
         "url": "https://zmkagency.com",
         "logo": "https://zmkagency.com/zmk-logo.png",
-        "description": "Kırıkkale merkezli 360° dijital ajans. Web tasarım, yazılım, sosyal medya, SEO ve reklam yönetimi.",
+        "description": "Kırıkkale merkezli yazılım, reklam, sosyal medya, SEO ve performans pazarlama ajansı.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5",
@@ -48,8 +47,8 @@ const Home = ({ t }) => {
         <>
             <SEO
                 title="Kırıkkale Reklam Ajansı | 360° Dijital Çözümler | ZMK AGENCY"
-                description="Kırıkkale'nin lider dijital ajansı. Marka stratejisi, web tasarım, yazılım, sosyal medya, SEO ve Google Ads ile işletmenizi büyütün."
-                keywords="kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale yazılım, kırıkkale web tasarım, kırıkkale sosyal medya, kırıkkale seo"
+                description="Kırıkkale yazılım ajansı, reklam ajansı, sosyal medya ajansı ve SEO ekibi. Web tasarım, Google Ads, Meta reklam, lokal SEO ve özel yazılım ile işletmenizi büyütün."
+                keywords="kırıkkale yazılım, kırıkkale yazılım ajansı, kırıkkale reklam, kırıkkale reklam ajansı, kırıkkale sosyal medya ajansı, kırıkkale sosyal medya yönetimi, kırıkkale web tasarım, kırıkkale seo, kırıkkale google ads"
                 schema={[faqSchema, orgSchema].filter(Boolean)}
             />
 
@@ -62,16 +61,19 @@ const Home = ({ t }) => {
             {/* 3 — KAMPANYALI ÜRÜNLER: Esnaf + Dijital Kalkındırma */}
             <CampaignProducts />
 
-            {/* 4 — NEDEN ZMK: Comparison */}
+            {/* 4 — MARKET DOMINANCE: Keyword + growth clusters */}
+            <MarketDominance />
+
+            {/* 5 — NEDEN ZMK: Comparison */}
             <Comparison t={t.comparison} />
 
-            {/* 5 — TESTIMONIALS: Social Proof */}
+            {/* 6 — TESTIMONIALS: Social Proof */}
             <Testimonials t={t.testimonials} />
 
-            {/* 6 — FAQ: Final Objections */}
+            {/* 7 — FAQ: Final Objections */}
             <FAQ t={t.faq} />
 
-            {/* 7 — CONTACT: Close the Deal */}
+            {/* 8 — CONTACT: Close the Deal */}
             <Contact t={t.contact} />
 
             {/* Floating CTA */}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import '../styles/Hero.css';
 import { motion } from 'framer-motion';
 
@@ -9,6 +9,22 @@ const Hero = ({ t, onCtaClick }) => {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
+    const particles = useMemo(() => Array.from({ length: 20 }, (_, i) => {
+        const seed = i + 1;
+        const pseudoRandom = (multiplier) => {
+            const value = Math.sin(seed * multiplier) * 10000;
+            return value - Math.floor(value);
+        };
+
+        return {
+            left: `${pseudoRandom(12.9898) * 100}%`,
+            top: `${pseudoRandom(78.233) * 100}%`,
+            animationDelay: `${pseudoRandom(37.719) * 8}s`,
+            animationDuration: `${6 + pseudoRandom(21.131) * 8}s`,
+            width: `${1 + pseudoRandom(91.17) * 2}px`,
+            height: `${1 + pseudoRandom(45.53) * 2}px`,
+        };
+    }), []);
 
     // Parallax on scroll
     useEffect(() => {
@@ -42,7 +58,7 @@ const Hero = ({ t, onCtaClick }) => {
     // Animated counters
     useEffect(() => {
         const duration = 2000;
-        const targets = [150, 98, 7];
+        const targets = [150, 98, 24];
         const startTime = Date.now();
         const interval = setInterval(() => {
             const elapsed = Date.now() - startTime;
@@ -70,15 +86,8 @@ const Hero = ({ t, onCtaClick }) => {
 
             {/* Floating particles */}
             <div className="hero-particles">
-                {Array.from({ length: 20 }, (_, i) => (
-                    <div key={i} className="hero-particle" style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animationDelay: `${Math.random() * 8}s`,
-                        animationDuration: `${6 + Math.random() * 8}s`,
-                        width: `${1 + Math.random() * 2}px`,
-                        height: `${1 + Math.random() * 2}px`,
-                    }}></div>
+                {particles.map((style, i) => (
+                    <div key={i} className="hero-particle" style={style}></div>
                 ))}
             </div>
 
@@ -91,7 +100,7 @@ const Hero = ({ t, onCtaClick }) => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <span className="live-dot"></span>
-                    Kırıkkale'nin #1 Dijital Ajansı
+                    Kırıkkale Yazılım • Reklam • SEO
                 </motion.div>
 
                 <motion.h1
@@ -153,7 +162,7 @@ const Hero = ({ t, onCtaClick }) => {
                     </div>
                     <div className="hero-stat-divider"></div>
                     <div className="hero-stat">
-                        <span className="stat-number">{count3}/24</span>
+                        <span className="stat-number">{count3}/7</span>
                         <span className="stat-label">Kesintisiz Destek</span>
                     </div>
                 </motion.div>

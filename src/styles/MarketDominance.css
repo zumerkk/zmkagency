@@ -1,0 +1,223 @@
+.md-section {
+    position: relative;
+    padding: 150px 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(48, 209, 88, 0.08), transparent 34%),
+        radial-gradient(circle at 85% 35%, rgba(41, 151, 255, 0.08), transparent 30%),
+        #000;
+    overflow: hidden;
+}
+
+.md-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 58px 58px;
+    mask-image: radial-gradient(circle at center, #000, transparent 72%);
+    pointer-events: none;
+}
+
+.md-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.md-hero-card {
+    max-width: 880px;
+    margin: 0 auto 44px;
+    padding: 48px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 34px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+    box-shadow: 0 28px 90px rgba(0,0,0,0.45);
+    text-align: center;
+}
+
+.md-eyebrow {
+    display: inline-flex;
+    color: #30d158;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.md-hero-card h2 {
+    color: #f5f5f7;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 22px;
+}
+
+.md-hero-card p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #b9b9c0;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.md-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.md-primary,
+.md-secondary,
+.md-cluster a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.md-primary {
+    padding: 14px 24px;
+    background: #30d158;
+    color: #001b0a;
+}
+
+.md-secondary {
+    padding: 14px 24px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #f5f5f7;
+}
+
+.md-primary:hover,
+.md-secondary:hover,
+.md-cluster a:hover {
+    transform: translateY(-2px);
+}
+
+.md-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.md-cluster,
+.md-roadmap {
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(10,10,10,0.78);
+    border-radius: 28px;
+    backdrop-filter: blur(18px);
+}
+
+.md-cluster {
+    padding: 30px;
+}
+
+.md-cluster-index {
+    display: inline-block;
+    color: rgba(48,209,88,0.72);
+    font-size: 0.78rem;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.md-cluster h3 {
+    color: #fff;
+    font-size: 1.28rem;
+    letter-spacing: -0.7px;
+    margin-bottom: 18px;
+}
+
+.md-cluster ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.md-cluster li {
+    color: #a9a9b0;
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.md-cluster li::before {
+    content: '→';
+    color: #30d158;
+    margin-right: 8px;
+}
+
+.md-cluster a {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(48,209,88,0.24);
+    color: #30d158;
+    background: rgba(48,209,88,0.055);
+}
+
+.md-roadmap {
+    padding: 34px;
+}
+
+.md-roadmap h3 {
+    color: #f5f5f7;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+}
+
+.md-roadmap-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.md-roadmap-item {
+    min-height: 142px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.025);
+}
+
+.md-roadmap-item span {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(48,209,88,0.12);
+    color: #30d158;
+    font-size: 0.78rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.md-roadmap-item p {
+    color: #c7c7cc;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .md-section {
+        padding: 100px 0;
+    }
+
+    .md-hero-card {
+        padding: 34px 22px;
+    }
+
+    .md-grid,
+    .md-roadmap-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -48,6 +48,10 @@ const ROUTES = [
     '/kirikkale-google-ads-yonetimi',
     '/kirikkale-sosyal-medya-yonetimi',
     '/kirikkale-yazilim-gelistirme',
+    '/kirikkale-yazilim-ajansi',
+    '/kirikkale-yazilim',
+    '/kirikkale-reklam',
+    '/kirikkale-sosyal-medya-ajansi',
     '/kirikkale-e-ticaret-otomasyon',
     '/kirikkale-seo',
     '/kirikkale-dijital-donusum-danismanligi',
@@ -118,15 +122,16 @@ function createStaticServer(port) {
         });
 
         server.listen(port, () => {
-            console.log(`📡 Static server running on http://localhost:${port}`);
-            resolve(server);
+            const address = server.address();
+            const actualPort = typeof address === 'object' && address ? address.port : port;
+            console.log(`📡 Static server running on http://localhost:${actualPort}`);
+            resolve({ server, port: actualPort });
         });
     });
 }
 
 async function prerender() {
-    const PORT = 4173;
-    const server = await createStaticServer(PORT);
+    const { server, port } = await createStaticServer(0);
 
     console.log('🚀 Starting pre-rendering...');
     console.log(`📋 ${ROUTES.length} routes to render\n`);
@@ -139,14 +144,13 @@ async function prerender() {
     let successCount = 0;
     let errorCount = 0;
 
-    // Process routes in batches of 4
-    const BATCH_SIZE = 4;
+    const BATCH_SIZE = 1;
     for (let i = 0; i < ROUTES.length; i += BATCH_SIZE) {
         const batch = ROUTES.slice(i, i + BATCH_SIZE);
         await Promise.all(batch.map(async (route) => {
             const page = await browser.newPage();
             try {
-                const url = `http://localhost:${PORT}${route}`;
+                const url = `http://localhost:${port}${route}`;
                 await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
 
                 // Wait extra time for React to render and animations to settle

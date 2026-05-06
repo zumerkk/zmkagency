@@ -809,5 +809,153 @@ export const localSeoData = [
             { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
             { title: "SEO", slug: "kirikkale-seo" }
         ]
+    },
+    {
+        slug: "kirikkale-yazilim-ajansi",
+        title: "Kırıkkale Yazılım Ajansı | Özel Yazılım, Web ve Mobil Uygulama",
+        description: "Kırıkkale yazılım ajansı ZMK Agency; özel yazılım, web uygulaması, mobil uygulama, CRM, otomasyon ve SEO uyumlu web sitesi geliştirir. Ücretsiz yazılım analizi alın.",
+        heroTitle: "Kırıkkale Yazılım\nAjansı Arayanlara.",
+        heroSubtitle: "Hazır şablonlarla değil, işletmenizin satış, operasyon ve reklam süreçlerine göre çalışan özel yazılım sistemleriyle büyütün.",
+        serviceName: "Kırıkkale Yazılım Ajansı Hizmetleri",
+        proof: {
+            stat1: "React",
+            label1: "Modern Altyapı",
+            stat2: "CRM",
+            label2: "Otomasyon",
+            quote: "Sadece site değil, işimizi yöneten bir sistem kuruldu.",
+            author: "KOBİ Dijital Dönüşüm Projesi"
+        },
+        workflow: [
+            { step: "01", title: "Süreç Analizi", desc: "Satış, stok, teklif, randevu veya operasyon süreçlerinizi çıkarıyoruz." },
+            { step: "02", title: "Yazılım Mimari Planı", desc: "Web, mobil, panel, API ve veritabanı ihtiyaçlarını netleştiriyoruz." },
+            { step: "03", title: "Geliştirme", desc: "React, Node.js ve modern bulut altyapısıyla ölçeklenebilir sistem kuruyoruz." },
+            { step: "04", title: "SEO & Reklam Entegrasyonu", desc: "Yazılımı Google Analytics, Search Console, Ads ve dönüşüm takipleriyle bağlıyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Yazılım Ajansı Seçerken Nelere Bakmalısınız?", text: "Kırıkkale'de yazılım yaptırmak isteyen işletmeler için en önemli konu sadece kod yazılması değil, yazılımın satışa, verimliliğe ve ölçülebilir büyümeye hizmet etmesidir. ZMK Agency, özel yazılımı reklam, SEO ve marka stratejisiyle birlikte ele alır." },
+            { h2: "Kırıkkale Yazılım Hizmetleri", list: ["Kurumsal web uygulaması ve yönetim paneli", "CRM, teklif ve müşteri takip sistemi", "E-ticaret ve pazaryeri entegrasyonları", "Mobil uygulama geliştirme", "Randevu, stok, sipariş ve saha operasyon otomasyonları", "Google Ads ve SEO dönüşüm takip entegrasyonları"] },
+            { h2: "Neden ZMK Agency?", text: "Bir yazılım projesi reklamdan, SEO'dan ve satış hunisinden kopuk tasarlanırsa yatırım geri dönüşü zayıflar. Biz yazılımı, işletmenizin Google'da bulunması ve gelen talebi satışa çevirmesi için uçtan uca planlarız." }
+        ],
+        faq: [
+            { q: "Kırıkkale'de özel yazılım geliştiriyor musunuz?", a: "Evet. Web uygulaması, mobil uygulama, CRM, otomasyon ve yönetim paneli geliştiriyoruz." },
+            { q: "Yazılım projesi SEO ile uyumlu olur mu?", a: "Evet. Sayfa yapısı, hız, schema, sitemap, Analytics ve Search Console entegrasyonları kurulur." },
+            { q: "Hazır paket mi özel kod mu kullanıyorsunuz?", a: "İhtiyaca göre karar veririz; pazar liderliği hedefleyen projelerde özel kod ve ölçeklenebilir mimari tercih ederiz." }
+        ],
+        keywords: "kırıkkale yazılım ajansı, kırıkkale yazılım, kırıkkale yazılım firması, kırıkkale özel yazılım, kırıkkale mobil uygulama, kırıkkale web yazılım",
+        ogImage: "/og-images/yazilim-ajansi.jpg",
+        relatedLinks: [
+            { title: "Kırıkkale Yazılım", slug: "kirikkale-yazilim" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" }
+        ]
+    },
+    {
+        slug: "kirikkale-yazilim",
+        title: "Kırıkkale Yazılım | Web Yazılım, CRM ve Mobil Uygulama",
+        description: "Kırıkkale yazılım ihtiyaçları için özel web yazılım, CRM, ERP, mobil uygulama ve otomasyon çözümleri. ZMK Agency ile hızlı, güvenli ve SEO uyumlu altyapı.",
+        heroTitle: "Kırıkkale Yazılım\nÇözümleri.",
+        heroSubtitle: "İşletmenizde zaman kaybettiren işleri otomasyona bağlayın; müşteri, teklif, sipariş ve reklam verisini tek sistemde görün.",
+        serviceName: "Kırıkkale Yazılım Çözümleri",
+        proof: {
+            stat1: "Panel",
+            label1: "Yönetim",
+            stat2: "API",
+            label2: "Entegrasyon",
+            quote: "Dağınık Excel süreçleri tek panele taşındı.",
+            author: "Yerel İşletme"
+        },
+        workflow: [
+            { step: "01", title: "İhtiyaç Haritası", desc: "Problemi ve beklenen ticari sonucu netleştiriyoruz." },
+            { step: "02", title: "Prototip", desc: "Ekranları ve kullanıcı akışını hızlıca görselleştiriyoruz." },
+            { step: "03", title: "Kodlama", desc: "Güvenli, hızlı ve sürdürülebilir altyapı kuruyoruz." },
+            { step: "04", title: "Ölçümleme", desc: "Kullanım, dönüşüm ve performans metriklerini raporluyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Yazılım Hizmeti Neleri Kapsar?", list: ["Web yazılım ve kurumsal panel", "CRM ve teklif takip yazılımı", "E-ticaret otomasyonu", "Mobil uygulama", "API ve üçüncü parti entegrasyonlar", "Bakım, destek ve güvenlik güncellemeleri"] }
+        ],
+        faq: [
+            { q: "Yazılım fiyatları nasıl belirlenir?", a: "Ekran sayısı, entegrasyon, kullanıcı rolü, panel karmaşıklığı ve teslim süresine göre net teklif çıkarılır." },
+            { q: "Teslim sonrası destek var mı?", a: "Evet. Bakım, performans izleme ve yeni özellik geliştirme desteği sunuyoruz." }
+        ],
+        keywords: "kırıkkale yazılım, yazılım kırıkkale, kırıkkale web yazılım, kırıkkale crm, kırıkkale otomasyon",
+        ogImage: "/og-images/kirikkale-yazilim.jpg",
+        relatedLinks: [
+            { title: "Yazılım Ajansı", slug: "kirikkale-yazilim-ajansi" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" }
+        ]
+    },
+    {
+        slug: "kirikkale-reklam",
+        title: "Kırıkkale Reklam | Google, Meta ve Kreatif Reklam Yönetimi",
+        description: "Kırıkkale reklam ihtiyaçlarınız için Google Ads, Meta reklam, sosyal medya içerikleri, prodüksiyon ve marka stratejisi. Reklam bütçenizi satışa çevirin.",
+        heroTitle: "Kırıkkale Reklam\nBütçeniz Boşa Gitmesin.",
+        heroSubtitle: "Sadece görünürlük değil; telefon, form, WhatsApp ve satış odaklı reklam kampanyaları kuruyoruz.",
+        serviceName: "Kırıkkale Reklam Hizmetleri",
+        proof: {
+            stat1: "ROAS",
+            label1: "Odaklı",
+            stat2: "Ads",
+            label2: "Takipli",
+            quote: "Reklam bütçemiz ilk kez ölçülebilir hale geldi.",
+            author: "Hizmet Sektörü"
+        },
+        workflow: [
+            { step: "01", title: "Reklam Audit", desc: "Mevcut hesap, hedef kitle ve teklif yapısını inceliyoruz." },
+            { step: "02", title: "Mesaj Stratejisi", desc: "Teklif, kreatif, başlık ve landing page uyumunu kuruyoruz." },
+            { step: "03", title: "Yayın", desc: "Google, Meta, YouTube ve remarketing kampanyalarını açıyoruz." },
+            { step: "04", title: "Optimizasyon", desc: "Dönüşüm, maliyet ve kalite puanı verileriyle kampanyayı büyütüyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Reklam Çalışmalarında ZMK Modeli", text: "Kırıkkale'de reklam vermek isteyen işletmeler için en büyük risk bütçenin ölçümsüz harcanmasıdır. ZMK Agency, reklamı landing page, SEO, kreatif üretim ve CRM takibiyle birlikte yönetir." },
+            { h2: "Reklam Kanalları", list: ["Google arama reklamları", "Google Haritalar görünürlüğü", "Instagram ve Facebook lead kampanyaları", "YouTube ve video reklamları", "Remarketing kampanyaları", "Dönüşüm odaklı landing page"] }
+        ],
+        faq: [
+            { q: "Kırıkkale reklam ajansı olarak hangi platformları yönetiyorsunuz?", a: "Google Ads, Meta Ads, YouTube, Instagram, Facebook, TikTok ve remarketing kampanyalarını yönetiyoruz." },
+            { q: "Reklam sonucunu nasıl ölçüyorsunuz?", a: "Form, telefon, WhatsApp, satın alma ve etkinlik dönüşümleri Analytics ve reklam panellerinde takip edilir." }
+        ],
+        keywords: "kırıkkale reklam, kırıkkale reklam ajansı, kırıkkale google reklam, kırıkkale meta reklam, kırıkkale internet reklamcılığı",
+        ogImage: "/og-images/kirikkale-reklam.jpg",
+        relatedLinks: [
+            { title: "Reklam Ajansı", slug: "kirikkale-reklam-ajansi" },
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" },
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" }
+        ]
+    },
+    {
+        slug: "kirikkale-sosyal-medya-ajansi",
+        title: "Kırıkkale Sosyal Medya Ajansı | Instagram, Reels ve Reklam Yönetimi",
+        description: "Kırıkkale sosyal medya ajansı ZMK Agency; Instagram yönetimi, Reels üretimi, Meta reklam, içerik takvimi ve marka dili ile işletmenizi görünür kılar.",
+        heroTitle: "Kırıkkale Sosyal Medya\nAjansı Değil, İçerik Motoru.",
+        heroSubtitle: "Instagram'da sadece paylaşım değil; dikkat, güven ve satış üreten içerik sistemi kuruyoruz.",
+        serviceName: "Kırıkkale Sosyal Medya Ajansı Hizmetleri",
+        proof: {
+            stat1: "Reels",
+            label1: "Üretim",
+            stat2: "Meta",
+            label2: "Reklam",
+            quote: "Instagram hesabımız ilk kez kurumsal ve düzenli görünmeye başladı.",
+            author: "Yerel Marka"
+        },
+        workflow: [
+            { step: "01", title: "Marka Dili", desc: "Renk, ton, içerik sütunları ve teklif mesajını belirliyoruz." },
+            { step: "02", title: "Çekim & Tasarım", desc: "Reels, post, story ve kampanya kreatiflerini üretiyoruz." },
+            { step: "03", title: "Yayın Takvimi", desc: "Haftalık ve aylık içerik planını disiplinli şekilde yürütüyoruz." },
+            { step: "04", title: "Reklam", desc: "En iyi içerikleri Meta reklamlarıyla potansiyel müşteriye ulaştırıyoruz." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Sosyal Medya Ajansı Ne Yapar?", text: "Sosyal medya, sadece post paylaşmak değildir. Markanın güven algısı, müşteriyle ilk temas noktası ve reklam performansının temelidir. ZMK Agency, sosyal medya yönetimini içerik, çekim, tasarım, reklam ve raporlama olarak bütüncül ele alır." },
+            { h2: "Sosyal Medya Paketlerinde Neler Var?", list: ["Aylık içerik stratejisi", "Reels ve kısa video üretimi", "Grafik tasarım ve metin yazımı", "Instagram ve Facebook reklam yönetimi", "Yorum ve mesaj yönlendirme sistemi", "Aylık performans raporu"] }
+        ],
+        faq: [
+            { q: "Kırıkkale'de çekim yapıyor musunuz?", a: "Evet. İşletme, ürün, ekip, mekan ve Reels çekimleri yapıyoruz." },
+            { q: "Sosyal medya reklamları dahil mi?", a: "Paket yapısına göre Meta reklam kurulumu ve optimizasyonu dahil edilebilir." }
+        ],
+        keywords: "kırıkkale sosyal medya ajansı, kırıkkale sosyal medya, kırıkkale sosyal medya yönetimi, kırıkkale instagram yönetimi, kırıkkale reels çekimi",
+        ogImage: "/og-images/sosyal-medya-ajansi.jpg",
+        relatedLinks: [
+            { title: "Sosyal Medya Yönetimi", slug: "kirikkale-sosyal-medya-yonetimi" },
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" },
+            { title: "Tanıtım Filmi", slug: "kirikkale-drone-cekim-tanitim-filmi" }
+        ]
     }
 ];

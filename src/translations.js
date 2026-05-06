@@ -321,6 +321,7 @@ export const content = {
             subtitle: "Maliyet değil, şirketinize değer katan stratejik yatırımlar.",
             discountTag: null,
             categories: [
+                { id: 'warfare', label: '⚔️ Pazar Fethi 2026' },
                 { id: 'local', label: '🔥 Saha Kurtları (Esnaf)' },
                 { id: 'retainer', label: '360° Retainer' },
                 { id: 'webSoftware', label: 'Web & Yazılım' },
@@ -333,6 +334,96 @@ export const content = {
             cta: "Planı Seç",
             popularTag: "En Çok Tercih Edilen",
             items: {
+                warfare: [
+                    {
+                        title: "Esnaf Express",
+                        price: "1.950",
+                        period: "/ay",
+                        description: "Tek şubeli Kırıkkale esnafı için giriş seviyesi ama öldürücü etkili dijital paket.",
+                        techSpecs: "Site + GMB + IG + FB",
+                        features: [
+                            "1 sayfa profesyonel landing site (Next.js, Lighthouse 95+)",
+                            "Google Business Profile kurulum + aylık optimizasyon",
+                            "Instagram + Facebook yönetimi (8 post/ay)",
+                            "1 profesyonel çekim günü/ay (reels + fotoğraf)",
+                            "WhatsApp Business kurulumu + auto-reply",
+                            "Aylık performans raporu (Looker Studio)",
+                            "0541 381 21 14 destek hattı"
+                        ]
+                    },
+                    {
+                        title: "Lokal Starter",
+                        price: "3.500",
+                        period: "/ay",
+                        isPopular: true,
+                        campaignBadge: "En Çok Satan",
+                        description: "Büyüyen Kırıkkale KOBİ'si için agresif lokal SEO + sosyal medya + reklam.",
+                        techSpecs: "Site + SEO + Ads + IG/FB/TikTok",
+                        features: [
+                            "5 sayfalı profesyonel site (blog dahil)",
+                            "Lokal SEO (10 anahtar kelime hedeflemesi)",
+                            "IG + FB + TikTok yönetimi (20 post + 8 reel/ay)",
+                            "Google Ads lokal kampanya (bütçe hariç)",
+                            "Meta Ads retargeting (bütçe hariç)",
+                            "Aylık 2 profesyonel çekim günü",
+                            "Rakip izleme + aylık strateji raporu"
+                        ]
+                    },
+                    {
+                        title: "Growth Pro",
+                        price: "7.500",
+                        period: "/ay",
+                        campaignBadge: "KOBİ Favorisi",
+                        description: "Kırıkkale'de lider olmaya oynayan orta ölçekli işletme için 360° dijital yönetim.",
+                        techSpecs: "Full Stack: Site + SEO + Ads + Prodüksiyon",
+                        features: [
+                            "Özel tasarım kurumsal site + blog (10+ sayfa)",
+                            "Kapsamlı SEO (30+ kelime, backlink çalışması)",
+                            "Tüm platformlar: IG + FB + TikTok + LinkedIn + YouTube",
+                            "Google Ads + Meta Ads + YouTube Ads yönetimi",
+                            "Haftalık çekim günü + aylık kurumsal video",
+                            "Email marketing (Mailchimp / Brevo) kurulumu",
+                            "Canlı dashboard (Looker Studio 7/24)",
+                            "Dedike account manager"
+                        ]
+                    },
+                    {
+                        title: "Enterprise (Fabrika/Zincir)",
+                        price: "18.500",
+                        period: "/ay",
+                        description: "Fabrika, zincir şube veya kurumsal marka için dedike ekip ve C-level raporlama.",
+                        techSpecs: "Dedike Takım + Dashboard + C-Level",
+                        features: [
+                            "Çok dilli kurumsal platform (TR+EN+AR)",
+                            "Enterprise SEO (50+ kelime, teknik audit aylık)",
+                            "Tüm platformlar + LinkedIn B2B stratejisi",
+                            "Google Ads + Meta + YouTube + TikTok + LinkedIn Ads",
+                            "Aylık 1 kurumsal tanıtım filmi (4K, drone)",
+                            "Email + SMS + Push marketing otomasyonu",
+                            "Kriz yönetimi + itibar koruma",
+                            "Aylık C-level stratejik sunum",
+                            "7/24 VIP destek hattı + 30dk müdahale SLA"
+                        ]
+                    },
+                    {
+                        title: "SEO Demolition (Lansman)",
+                        price: "25.000",
+                        period: " (Tek Seferlik)",
+                        campaignBadge: "Lansman Sprinti",
+                        description: "90 gün içinde 'Kırıkkale + sektörünüz' aramalarında ilk 3 sıraya girmek için agresif SEO kampanyası.",
+                        techSpecs: "90 Gün Sprint + Backlink + İçerik Patlaması",
+                        features: [
+                            "Kapsamlı teknik SEO audit + uygulama",
+                            "30 gün içinde 20 pillar blog yazısı üretimi",
+                            "50+ lokal + ulusal backlink çalışması",
+                            "Schema.org tam yerleşim (FAQ + Service + Review)",
+                            "Google Business Profile rescue + optimizasyon",
+                            "Core Web Vitals mükemmelleştirmesi",
+                            "Rakip SERP sabotaj analizi (etik sınırlarda)",
+                            "90 gün sonu: İlk 3'te olmazsan para iadesi garantisi"
+                        ]
+                    }
+                ],
                 local: [
                     {
                         title: "Bölgesel Hakimiyet",
@@ -919,6 +1010,7 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             subtitle: "Strategic investments that add value, not just costs.",
             discountTag: "🎉 Establishment Special – 30% Off",
             categories: [
+                { id: 'warfare', label: '⚔️ Market Conquest 2026' },
                 { id: 'retainer', label: '360° Retainer' },
                 { id: 'webSoftware', label: 'Web & Software' },
                 { id: 'marketingAds', label: 'Ads & Marketing' },
@@ -930,6 +1022,95 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
             cta: "Select Plan",
             popularTag: "Most Popular",
             items: {
+                warfare: [
+                    {
+                        title: "Local Express",
+                        price: "65",
+                        period: "/mo",
+                        description: "Entry-level digital package for single-branch local businesses.",
+                        techSpecs: "Site + GMB + IG + FB",
+                        features: [
+                            "1-page professional landing (Next.js, Lighthouse 95+)",
+                            "Google Business Profile setup + monthly optimization",
+                            "Instagram + Facebook management (8 posts/mo)",
+                            "1 pro shoot day/month (reels + photos)",
+                            "WhatsApp Business setup + auto-reply",
+                            "Monthly report (Looker Studio)"
+                        ]
+                    },
+                    {
+                        title: "Local Starter",
+                        price: "115",
+                        period: "/mo",
+                        isPopular: true,
+                        campaignBadge: "Best Seller",
+                        description: "Aggressive local SEO + social media + ads for growing SMBs.",
+                        techSpecs: "Site + SEO + Ads + IG/FB/TikTok",
+                        features: [
+                            "5-page professional site (blog included)",
+                            "Local SEO (10 keywords)",
+                            "IG + FB + TikTok (20 posts + 8 reels/mo)",
+                            "Google Ads local campaign (ad budget excluded)",
+                            "Meta Ads retargeting (ad budget excluded)",
+                            "2 pro shoot days/month",
+                            "Competitor monitoring + monthly strategy report"
+                        ]
+                    },
+                    {
+                        title: "Growth Pro",
+                        price: "250",
+                        period: "/mo",
+                        campaignBadge: "SMB Favorite",
+                        description: "360° digital management for mid-size businesses pushing for leadership.",
+                        techSpecs: "Full Stack: Site + SEO + Ads + Production",
+                        features: [
+                            "Custom corporate site + blog (10+ pages)",
+                            "Comprehensive SEO (30+ keywords, backlinks)",
+                            "All platforms: IG + FB + TikTok + LinkedIn + YouTube",
+                            "Google Ads + Meta Ads + YouTube Ads management",
+                            "Weekly shoot day + monthly corporate video",
+                            "Email marketing setup",
+                            "Live dashboard (Looker Studio 24/7)",
+                            "Dedicated account manager"
+                        ]
+                    },
+                    {
+                        title: "Enterprise",
+                        price: "615",
+                        period: "/mo",
+                        description: "Dedicated team and C-level reporting for factories, chains, and corporate brands.",
+                        techSpecs: "Dedicated Team + Dashboard + C-Level",
+                        features: [
+                            "Multilingual corporate platform",
+                            "Enterprise SEO (50+ keywords, monthly audit)",
+                            "All platforms + LinkedIn B2B strategy",
+                            "Google + Meta + YouTube + TikTok + LinkedIn Ads",
+                            "1 corporate film/month (4K, drone)",
+                            "Email + SMS + Push marketing automation",
+                            "Crisis management + reputation",
+                            "Monthly C-level strategic briefing",
+                            "24/7 VIP support + 30-min response SLA"
+                        ]
+                    },
+                    {
+                        title: "SEO Demolition (Launch)",
+                        price: "830",
+                        period: " (one-time)",
+                        campaignBadge: "Launch Sprint",
+                        description: "90-day aggressive SEO campaign to rank top 3 for your market + service keywords.",
+                        techSpecs: "90-Day Sprint + Backlinks + Content Blitz",
+                        features: [
+                            "Comprehensive technical SEO audit + implementation",
+                            "20 pillar blog posts produced in 30 days",
+                            "50+ local + national backlinks",
+                            "Full Schema.org (FAQ + Service + Review)",
+                            "Google Business Profile rescue + optimization",
+                            "Core Web Vitals perfection",
+                            "Competitor SERP analysis (ethical bounds)",
+                            "Day-90 refund guarantee if not in top 3"
+                        ]
+                    }
+                ],
                 retainer: [
                     {
                         title: "Startup Growth",

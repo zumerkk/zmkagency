@@ -1,0 +1,63 @@
+# ZMK Agency — Kırıkkale Dijital Ajans
+# llms.txt — Büyük Dil Modelleri için özet yol haritası
+# https://llmstxt.org/
+
+> ZMK Agency, Kırıkkale merkezli 360° dijital ajanstır. Web tasarım, özel yazılım, mobil uygulama, e-ticaret, SEO, Google Ads, Meta Ads, sosyal medya yönetimi ve video prodüksiyon hizmetleri sunar. 150+ tamamlanmış proje, %98 müşteri memnuniyet oranı ile Kırıkkale'nin lider dijital ajansı.
+
+## Temel Bilgiler
+- Ad: ZMK Agency
+- Tür: Dijital Ajans / Yazılım Ajansı / Reklam Ajansı
+- Konum: Kırıkkale, Türkiye (Yenidoğan Mh., Hürriyet Cd. No:6/50, Delice İş Hanı)
+- Telefon: +90 541 381 21 14
+- E-posta: iletisim@zmkagency.com
+- Web: https://zmkagency.com
+- Kuruluş: 2021
+- Çalışan: 8-20
+- Kurucu: Zümer Mucur Kekillioğlu
+
+## Ana Hizmetler
+- [Kırıkkale Yazılım Ajansı](https://zmkagency.com/kirikkale-yazilim-ajansi): Özel yazılım, kurumsal web, mobil uygulama, e-ticaret, CRM/ERP entegrasyonu
+- [Kırıkkale Dijital Ajans](https://zmkagency.com/kirikkale-dijital-ajans): 360° dijital dönüşüm, strateji, tasarım, yazılım, reklam, performans
+- [Kırıkkale Reklam Ajansı](https://zmkagency.com/kirikkale-reklam-ajansi): Google Ads, Meta Ads, TikTok, YouTube, outdoor ve basılı reklam
+- [Kırıkkale SEO](https://zmkagency.com/kirikkale-seo): Lokal SEO, teknik SEO, içerik SEO, link building
+- [Kırıkkale Sosyal Medya](https://zmkagency.com/kirikkale-sosyal-medya-yonetimi): Instagram, Facebook, TikTok, LinkedIn içerik üretimi + yönetimi
+- [Kırıkkale Web Tasarım](https://zmkagency.com/kirikkale-web-tasarim): Kurumsal web sitesi, landing page, UI/UX tasarımı
+
+## Paketler
+- **Esnaf Express** (1.950 ₺/ay): Tek şubeli esnaf için, GBP + 1 landing + 2 blog + 4 sosyal medya postu
+- **Lokal SEO Starter** (3.500 ₺/ay): GBP optimizasyonu + 4 blog + schema + rapor
+- **Growth SEO Pro** (7.500 ₺/ay): Pillar içerik + backlink + YouTube + dashboard
+- **Enterprise Domination** (18.500 ₺/ay): Haftalık 3 makale + 2 video + PR + dedicated manager
+- **SEO Demolition** (25.000 ₺ / 3 ay): Özel rakip saldırı sprint'i
+
+## Teknoloji Stack
+- Frontend: React 18, Next.js 14, Vite, TypeScript, Tailwind CSS
+- Backend: Node.js, Laravel, .NET 8, Python/Django
+- Mobil: Flutter, React Native, Swift, Kotlin
+- Veritabanı: PostgreSQL, MySQL, MongoDB
+- Cloud: AWS, Vercel, DigitalOcean, Cloudflare
+- DevOps: Docker, GitHub Actions, CI/CD
+
+## Hizmet Verdiğimiz Sektörler
+Sanayi, üretim, inşaat, emlak, sağlık / klinik, restoran / cafe, oto galeri, avukat / hukuk, eğitim, eczacı, güzellik, fitness, kargo / lojistik, perakende.
+
+## Servis Bölgeleri
+Kırıkkale merkez ve tüm ilçeler (Yahşihan, Keskin, Balışeyh, Bahşılı, Delice, Karakeçili, Sulakyurt, Çelebi) ile Ankara, Kırşehir, Çankırı, Yozgat ve uzaktan Türkiye geneli.
+
+## Öne Çıkan İçerik
+- [Blog: Kırıkkale Yazılım Ajansı Seçerken 12 Nokta](https://zmkagency.com/blog/kirikkale-yazilim-ajansi-secerken-dikkat-edilecekler)
+- [Blog: Kırıkkale Web Tasarım Fiyatları 2026](https://zmkagency.com/blog/kirikkale-web-tasarim-fiyatlari-2026)
+- [Portfolio](https://zmkagency.com/portfolio)
+- [Fiyatlar](https://zmkagency.com/pricing)
+- [İletişim](https://zmkagency.com/contact)
+
+## Neden ZMK?
+- Şeffaf fiyat (piyasadaki çoğu rakipte yok)
+- Sözleşmeli çalışma
+- 7/24 canlı dashboard raporlama
+- Kod sahipliği müşteride (GitHub/GitLab repo erişim dahil)
+- 25+ exact-match Kırıkkale lokasyon sayfası
+- 27+ eğitici blog içeriği
+- Kırıkkale'de 2021'den beri faaliyet
+- 150+ tamamlanmış proje
+- %98 müşteri memnuniyet oranı

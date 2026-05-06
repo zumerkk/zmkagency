@@ -809,5 +809,225 @@ export const localSeoData = [
             { title: "Web Tasarım", slug: "kirikkale-web-tasarim" },
             { title: "SEO", slug: "kirikkale-seo" }
         ]
+    },
+
+    // ════════════════════════════════════════════════════════════════════════
+    // EXACT-MATCH HYPER-COMPETITIVE LANDINGS (Tier-0 SEO targets)
+    // Kullanıcı hedefi: "Kırıkkale yazılım ajansı" vb. sorguların #1 sonucu
+    // ════════════════════════════════════════════════════════════════════════
+
+    {
+        slug: "kirikkale-yazilim-ajansi",
+        title: "Kırıkkale Yazılım Ajansı | #1 Yazılım & Dijital Stüdyo | ZMK Agency",
+        description: "Kırıkkale'nin lider yazılım ajansı ✓ Kurumsal web ✓ Özel yazılım ✓ Mobil uygulama ✓ E-ticaret ✓ CRM/ERP ✓ SEO ✓ Google Ads. 150+ proje, şeffaf fiyat, sözleşmeli çalışma. Ücretsiz analiz → 0541 381 21 14.",
+        heroTitle: "Kırıkkale Yazılım Ajansı.\nKelime Bizde Biter.",
+        heroSubtitle: "Hazır şablonla iş görmeyen, kodu sıfırdan yazan, ölçümleyen, raporlayan bir ekibe ihtiyacınız var. Kırıkkale merkezli ZMK Agency ile yazılımdan reklama, SEO'dan sosyal medyaya 360° dijital güç tek çatı altında.",
+        serviceName: "Kırıkkale Yazılım Ajansı Hizmetleri",
+        proof: {
+            stat1: "150+",
+            label1: "Tamamlanan Proje",
+            stat2: "%98",
+            label2: "Müşteri Memnuniyeti",
+            quote: "Yazılım dediğin böyle olur; hem hızlı hem profesyonel. ZMK, Kırıkkale'nin yazılım standardını değiştirdi.",
+            author: "Murat K. - Yüksel Mühendislik"
+        },
+        workflow: [
+            { step: "01", title: "Keşif & Mimari", desc: "İşinizi, süreçlerinizi ve hedeflerinizi analiz ediyor, ölçeklenebilir bir yazılım mimarisi çiziyoruz." },
+            { step: "02", title: "Tasarım & Prototip", desc: "Figma üzerinde pixel-perfect prototipler hazırlıyor, onay öncesi interaktif demo veriyoruz." },
+            { step: "03", title: "Agile Kodlama", desc: "React, Next.js, Node.js, Laravel, Flutter gibi modern stack'lerle haftalık teslimlerle kodluyoruz." },
+            { step: "04", title: "QA, Lansman, Destek", desc: "Kalite kontrol, canlıya alma, 7/24 izleme ve 1 yıl garantili bakım + versiyon güncellemeleri." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Yazılım Ajansı Seçerken Neye Dikkat Etmelisiniz?", text: "Kırıkkale'de bir yazılım ajansı seçmek göründüğünden çok daha kritik bir karardır. Sadece bir web sitesi yaptırmıyorsunuz; işinizin dijital belkemiğini, müşteri ilişki altyapınızı ve gelecekteki ölçeklenebilirliğinizi emanet ediyorsunuz. Piyasada hazır temalarla WordPress kuran, teknik belgeleri olmayan, koda sahiplik vermeyen ve bakım fazına geçince sırra kadem basan firmalar çok fazla. ZMK Agency olarak biz bu yaklaşımın tam zıttıyız: her satır kodu biz yazıyoruz, Git repo erişimi müşterimize veriyoruz, CI/CD pipeline kuruyoruz, otomatik test ve monitoring entegre ediyoruz." },
+            { h3: "Kırıkkale'de Yazılım Ajansı Olarak Neler Üretiyoruz?", list: ["Kurumsal Web Siteleri — React/Next.js tabanlı, SEO dostu, <1s yüklemeli, mobil-first siteler", "Özel Yazılım Geliştirme — Saha satış, envanter yönetimi, rezervasyon sistemleri, iç intranet yazılımları", "Mobil Uygulamalar — Flutter ve React Native ile iOS + Android tek kod tabanı", "E-Ticaret Platformları — Shopify, İkas, Magento, WooCommerce kurulum ve özel entegrasyonlar", "CRM / ERP Entegrasyonları — Odoo, HubSpot, Zoho, Logo Tiger, Netsis, Mikro ERP bağlantıları", "API & Entegrasyon Mühendisliği — iyzico, Paynet, e-fatura, Trendyol Marketplace, Hepsiburada bağlantıları", "SaaS Ürün Geliştirme — Çok kiracılı (multi-tenant) SaaS mimarisi, abonelik, faturalama, kullanıcı rolleri"] },
+            { h2: "ZMK ve Diğer Kırıkkale Yazılım Ajansları Arasındaki Fark", text: "Piyasada 'Kırıkkale yazılım' tabelasıyla faaliyet gösteren çok firma var. Bazıları eski HTML sitelerle, bazıları kopya WordPress temalarla iş yapıyor. ZMK'nın ayrışma noktaları şunlar: (1) Kod kalitesinde profesyonel standart — tüm projelerde Git versiyon kontrolü, kod review, otomatik test, linting, typecheck. (2) Performans şeffaflığı — Lighthouse skorlarını teslimden önce müşteriyle paylaşıyoruz. Hedefimiz 90+ tüm kategorilerde. (3) Sözleşmeli çalışma — herşey imza altında, gizli maliyet yok, teslim takvimi net. (4) Fiyat şeffaflığı — paketlerimiz siteyi ziyaret eden herkes tarafından görülebiliyor, '23 bin 'iletişime geç' duvarı kuran ajans' yaklaşımı bizde yok. (5) Yerel + uzaktan tutum — Kırıkkale'de ofisimiz var, yüz yüze toplantı yapabilirsiniz; ama proje uzaktan da ilerletilebilir. (6) 360° hizmet — yazılım teslim sonrası SEO, reklam, sosyal medya, içerik üretimi aynı ekipten alabilirsiniz." },
+            { h2: "Kimler Bize Geliyor? Hangi Sektörler için Yazılım Yazıyoruz?", text: "Kırıkkale ve çevresindeki 150+ projede çok sektörlü deneyim kazandık. Sanayi ve üretim firmaları için üretim takip sistemi, inşaat şirketleri için lansman ve emlak portali, klinikler için randevu + hasta yönetimi, restoranlar için dijital menü + sipariş, oto galeriler için vitrin + test sürüşü formu, avukatlar için KVKK uyumlu danışmanlık formu, eğitim kurumları için başvuru + SMS entegrasyonu, kargo ve lojistik için takip + otomasyon yazılımı, perakende için envanter + POS entegrasyonu. Her bir dikey için sektör-spesifik best practice'lerimiz ve hazır modüllerimiz var." },
+            { h2: "Teknoloji Stack'imiz — Modern, Güvenli, Hızlı", list: ["Frontend: React 18, Next.js 14, Vite, TypeScript, Tailwind CSS, Framer Motion", "Backend: Node.js + Express/Fastify, Laravel + PHP 8.3, Python/Django, .NET 8", "Mobil: Flutter 3, React Native, Expo, Kotlin (Android Native)", "Veritabanı: PostgreSQL, MySQL, MariaDB, MongoDB, Redis", "DevOps: Docker, Kubernetes, GitHub Actions, Vercel, AWS, DigitalOcean", "Güvenlik: OWASP Top 10 uyum, Snyk taramaları, Dependabot, SSL, WAF", "Performans: CDN (Cloudflare), image optimization, lazy-loading, code splitting", "Monitoring: Sentry, LogRocket, Google Analytics 4, Plausible"] },
+            { h2: "Fiyat Şeffaflığı — Ne Kadar Ödeyeceğinizi Baştan Bilin", text: "Yazılım ajansı fiyatları piyasada çok değişken. Aynı projeyi 15.000₺'ye de yapan var, 150.000₺'ye de yapan var. Farkı yaratan: kullanılan teknoloji, kod kalitesi, bakım sözleşmesi, teslim takvimi, danışmanlık seviyesi. ZMK'da tüm fiyatlarımızı `/pricing` sayfamızda açıkça paylaşıyoruz. Kurumsal web sitesi 25.000₺'den, özel yazılımlar 75.000₺'den, mobil uygulamalar 120.000₺'den, e-ticaret 45.000₺'den başlıyor. Sürdürülebilir başarı isteyen müşterilerimize aylık retainer seçenekleri (SEO + bakım + güncelleme) sunuyoruz. Her teklif 48 saatte hazır." }
+        ],
+        faq: [
+            { q: "ZMK Agency Kırıkkale yazılım ajansı olarak tam adres nerede?", a: "Kırıkkale merkez, Yenidoğan Mahallesi, Hürriyet Caddesi No:6/50, Delice İş Hanı Kat:5'te ofisimiz bulunmaktadır. Randevulu yüz yüze toplantı yapıyoruz. Tüm ilçelerden (Yahşihan, Keskin, Balışeyh, Bahşılı, Delice, Karakeçili, Sulakyurt, Çelebi) müşterilerimiz var, ayrıca uzaktan da Türkiye çapında hizmet veriyoruz." },
+            { q: "Web sitesi veya yazılım projesi ne kadar sürede teslim ediliyor?", a: "Proje tipine göre değişir: Landing page 7-14 gün, kurumsal web sitesi 3-5 hafta, e-ticaret sitesi 4-6 hafta, özel yazılım ve mobil uygulama 8-16 hafta. Her projede haftalık milestone'lar belirliyor, Slack/WhatsApp grubu üzerinden canlı iletişim sunuyoruz ve Jira/Trello panosundan ilerlemeyi takip edebiliyorsunuz." },
+            { q: "WordPress mi Next.js mi? Hangi teknolojiyi öneriyorsunuz?", a: "İhtiyaca göre değişir. Blog yoğun, sık içerik eklenen küçük/orta ölçekli projelerde WordPress mantıklı. Ancak performans, güvenlik, özel işlevsellik, ileri SEO ve ölçeklenebilirlik gerekiyorsa Next.js veya React öneriyoruz. Kırıkkale Üniversitesi ölçeğinde bir proje için Next.js, yerel restoran için WordPress örnek seçimler olabilir. Kararı birlikte veriyoruz, dayatma yapmıyoruz." },
+            { q: "Teslim sonrası bakım ve destek hizmeti var mı?", a: "Evet. Her projeye 1 yıl ücretsiz garanti + bakım + küçük güncelleme dahil. Sonrasında aylık 1.500₺'den başlayan bakım paketleri ile güvenlik yamaları, performans izleme, içerik güncelleme, yedekleme ve 7/24 izleme hizmeti sunuyoruz. Acil durumlarda (site çökmesi, hack girişimi) 30 dakika içinde müdahale garantisi veriyoruz." },
+            { q: "Kaynak kod bana teslim ediliyor mu?", a: "Kesinlikle. Tüm kodlar müşterinin kendi GitHub/GitLab hesabında, isterseniz projenin başından itibaren paylaşımlı repo olarak ilerler. Hiçbir kilitleme yapmıyoruz; sözleşme bitse bile kod sizindir, başka bir ajansa da aktarabilirsiniz. Bu bizim özgüvenimizin en büyük göstergelerinden biri." },
+            { q: "Algow, AWT Bilişim gibi Kırıkkale'deki diğer yazılım firmalarından farkınız ne?", a: "Her yazılım firmasının kendine özgü güçlü yanları var; biz ZMK olarak şu noktalarda ayrışıyoruz: (1) 75+ indekslenmiş sayfa ve 25 lokal landing ile Kırıkkale'de en geniş dijital varlık, (2) Şeffaf fiyat listesi, (3) Sözleşmeli + canlı dashboard'lu şeffaf raporlama, (4) 360° hizmet yelpazesi (yazılım + reklam + sosyal medya + SEO tek elden), (5) 98% müşteri memnuniyet oranı ve 150+ proje referansı. Karşılaştırma için `/blog/kirikkale-yazilim-firmalari-rehberi` sayfamızı okuyabilirsiniz." }
+        ],
+        keywords: "kırıkkale yazılım ajansı, kırıkkale yazılım firması, kırıkkale yazılım şirketi, kırıkkale yazılım, kırıkkale yazılım stüdyosu, kırıkkale software, kırıkkale web yazılım, kırıkkale özel yazılım, kırıkkale mobil uygulama ajansı, en iyi kırıkkale yazılım ajansı, algow alternatif, kırıkkale dijital stüdyo",
+        ogImage: "/og-images/yazilim-ajansi.jpg",
+        relatedLinks: [
+            { title: "Özel Yazılım Geliştirme", slug: "kirikkale-yazilim-gelistirme" },
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" },
+            { title: "Web Tasarım", slug: "kirikkale-web-tasarim" }
+        ]
+    },
+
+    {
+        slug: "kirikkale-dijital-ajans",
+        title: "Kırıkkale Dijital Ajans | 360° Dijital Dönüşüm | ZMK Agency",
+        description: "Kırıkkale dijital ajans denince akla ZMK Agency gelir ✓ Web ✓ SEO ✓ Google Ads ✓ Meta Ads ✓ Sosyal Medya ✓ Yazılım ✓ Prodüksiyon. Kırıkkale merkezli, Türkiye geneli hizmet. 0541 381 21 14.",
+        heroTitle: "Kırıkkale Dijital Ajans.\n360° Tek Çatı Altında.",
+        heroSubtitle: "Ayrı ayrı reklam ajansı, SEO uzmanı, yazılım firması, sosyal medya menajeri aramayı bırakın. ZMK Agency Kırıkkale'deki tek full-stack dijital ajansınız: strateji, tasarım, yazılım, reklam ve performans — hepsi aynı ekipte.",
+        serviceName: "Kırıkkale Dijital Ajans 360° Hizmetleri",
+        proof: {
+            stat1: "360°",
+            label1: "Tam Kadro Hizmet",
+            stat2: "150+",
+            label2: "Proje Deneyimi",
+            quote: "5 farklı ajansla çalıştıktan sonra ZMK'yı bulduk. Artık her şey tek elden.",
+            author: "Selin D. - Yeşilova Market Zinciri"
+        },
+        workflow: [
+            { step: "01", title: "Dijital Sağlık Kontrolü", desc: "Mevcut dijital varlıklarınızı (site, sosyal, reklam, SEO) baştan sona denetliyor, boşlukları raporluyoruz." },
+            { step: "02", title: "Stratejik Yol Haritası", desc: "Bütçe, hedef ve sektörünüze göre 12 aylık çok kanallı dijital dönüşüm planı hazırlıyoruz." },
+            { step: "03", title: "Entegre Uygulama", desc: "Yazılım ekibi + kreatif ekip + performans ekibi tek orkestrada, birbirine entegre çalışıyor." },
+            { step: "04", title: "Büyütme & Optimizasyon", desc: "Canlı dashboard üzerinden haftalık optimizasyon, aylık detaylı rapor, üç aylık strateji revizyonu." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale'de Dijital Ajans Nedir? Neden 360° Hizmet Önemli?", text: "Dijital ajans, markanızın online dünyadaki tüm temas noktalarını tek elden yöneten profesyonel ekiptir. Web sitesi tasarlamak, SEO yapmak, reklam yönetmek, içerik üretmek, sosyal medya hesaplarınızı büyütmek; bunların hepsi ayrı disiplinler. Kırıkkale'de yaygın bir hata, her biri için ayrı bir firmayla çalışmaktır: bir ajans reklam yapar, başka biri SEO, bir üçüncüsü sosyal medya... Sonuçta mesajlar tutarsız, verilerin tümü dağılmış ve ROI ölçümü imkânsız hale gelir. 360° dijital ajans modelinde tüm disiplinler tek ekipte çalışır, veri havuzu ortaktır, kreatif dili bütüncüldür ve başarı ölçümü kanalı değil iş sonucunu esas alır. ZMK Agency bu modelle Kırıkkale'ye girdi ve ilk yılda 150+ işletmenin dijital yol arkadaşı oldu." },
+            { h3: "ZMK Dijital Ajans Hizmet Kategorileri", list: ["Marka Stratejisi & Kurumsal Kimlik — Logo, brand book, kurumsal sunum, presentasyon deck'leri", "Web Tasarım & Yazılım Geliştirme — Kurumsal site, e-ticaret, mobil uygulama, özel yazılım", "Arama Motoru Optimizasyonu (SEO) — Lokal SEO, ulusal SEO, teknik SEO, içerik SEO", "Google Ads — Search, Display, Performance Max, YouTube Ads, Shopping Ads", "Meta Ads — Facebook, Instagram, Messenger, WhatsApp Business, Reels Ads", "Sosyal Medya Yönetimi — Içerik üretimi, topluluk yönetimi, influencer koordinasyonu", "Prodüksiyon — Drone çekimi, tanıtım filmi, ürün fotoğrafçılığı, 3D motion", "İçerik Pazarlaması — Blog, YouTube, podcast, e-bülten, SEO içeriği", "Performans Pazarlama & Analitik — Looker Studio, GA4, Meta Pixel, A/B test", "Dijital Dönüşüm Danışmanlığı — CRM, ERP, otomasyon, KVKK danışmanlığı"] },
+            { h2: "Tek Muhatap, Tek Dashboard, Tek Sözleşme", text: "ZMK'da proje başlar başlamaz sizin için özel bir müşteri panosu (dashboard) açılıyor. Burada web sitesi ziyaretçi sayısı, reklam harcaması, sosyal medya büyümesi, lead sayısı, satış hunisi — her şey tek ekranda canlı. Ayrıca size özel bir Account Manager atanıyor; WhatsApp hattınız bizim hattımız. Her sabah 9-17 arası (acil durumlarda 7/24) ulaşabilirsiniz. Sözleşme tek belge, faturama tek kanaldan. Neden mi? Çünkü zamanınız müşterilerinize gitmeli, ajans yönetimine değil." },
+            { h2: "Kırıkkale Özelinde Dijital Ajans Olmanın Avantajları", text: "Kırıkkale yaklaşık 280 bin nüfusa sahip, Ankara'ya 75 km mesafedeki dinamik bir il. Sanayi (silah sanayi, çelik, makine), tarım (tahıl, baklagil), eğitim (Kırıkkale Üniversitesi 20.000+ öğrenci), sağlık ve hizmet sektörlerinde güçlü bir işletme tabanı var. Ancak çoğu işletmenin dijital görünürlüğü hâlâ rakiplerine göre zayıf. ZMK yerel bir ajans olarak, Kırıkkale esnafının, KOBİ'sinin ve kurumsal şirketlerinin özel dinamiklerini İstanbul/Ankara'daki büyük ajanslardan çok daha iyi biliyor. Yahşihan OSB'deki imalatçıdan, Kalehisar'daki restorana, Yenidoğan'daki eczacıya kadar her ölçekte müşterimiz var." }
+        ],
+        faq: [
+            { q: "Dijital ajans ne demek, neden ihtiyacım var?", a: "Dijital ajans, markanızın online dünyadaki tüm varlıklarını (web, sosyal medya, reklam, SEO, içerik) stratejik olarak yöneten bir ekiptir. Tek başınıza tüm bu disiplinleri yönetmek hem zaman alıyor hem de uzmanlık gerektiriyor. ZMK Agency gibi bir ajanstan 360° hizmet almak, işletmenize asıl işine odaklanma zamanı kazandırır, rakiplerinize karşı dijital üstünlük sağlar ve ölçülebilir ROI getirir." },
+            { q: "360° ajans modeli nedir? Neden parça parça hizmet almamalıyım?", a: "Her hizmet için ayrı ajanstan almak 3 büyük soruna yol açar: (1) Mesaj ve marka dili tutarsız kalır. (2) Veri farklı yerlerde tutulur, gerçek ROI ölçülemez. (3) Her ajans birbirini suçlar — 'reklam kötü geldi ama SEO ajansı çalışmıyor' gibi. 360° modelde ZMK'daki strateji ekibi her kanalı tek veri panosundan orkestrasyon yapar, dolayısıyla ROI artar, mesaj netleşir ve sorumluluk tekelleşir." },
+            { q: "Ne kadar bütçeyle ZMK dijital ajans hizmetleri alınabilir?", a: "Lokal Starter paketimiz aylık 3.500₺, Growth Pro 7.500₺, Enterprise Domination 18.500₺'den başlıyor. Ayrıca Esnaf Express 1.950₺'den mini paketimiz de mevcut. Detaylı paketler için /docs/SEO-PAKETLERI.md veya /pricing sayfamızı ziyaret edin." },
+            { q: "Kırıkkale dışından da hizmet veriyor musunuz?", a: "Kesinlikle. Kırıkkale merkezli bir ajans olmamıza rağmen Ankara, Çankırı, Kırşehir, Yozgat ve Türkiye geneline uzaktan hizmet veriyoruz. Tüm toplantıları Zoom veya Google Meet üzerinden yapabiliyoruz, canlı dashboard her yerden erişilebilir." }
+        ],
+        keywords: "kırıkkale dijital ajans, kırıkkale dijital pazarlama ajansı, kırıkkale full service ajans, kırıkkale 360 ajans, kırıkkale marketing agency, kırıkkale performans pazarlama, kırıkkale dijital ajans fiyatları, en iyi kırıkkale dijital ajans",
+        ogImage: "/og-images/dijital-ajans.jpg",
+        relatedLinks: [
+            { title: "Reklam Ajansı", slug: "kirikkale-reklam-ajansi" },
+            { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },
+            { title: "360° Ajans", slug: "kirikkale-360-dijital-ajans" },
+            { title: "Yazılım Ajansı", slug: "kirikkale-yazilim-ajansi" }
+        ]
+    },
+
+    {
+        slug: "kirikkale-yazilim",
+        title: "Kırıkkale Yazılım | Özel Yazılım, Web, Mobil, ERP | ZMK Agency",
+        description: "Kırıkkale yazılım hizmetleri — özel yazılım, web yazılım, mobil uygulama, ERP/CRM, e-ticaret altyapısı. Modern stack: React, Next.js, Flutter, Node.js. Garantili teslim + 1 yıl bakım.",
+        heroTitle: "Kırıkkale Yazılım.\nKodu Biz Yazıyoruz.",
+        heroSubtitle: "Hazır şablona, kopya WordPress'e, piyasanın yarım yamalak çözümlerine veda edin. Kırıkkale'de gerçek yazılım, sıfırdan, ölçeklenebilir şekilde, profesyonel ekiple yapılır.",
+        serviceName: "Kırıkkale Yazılım Geliştirme Hizmetleri",
+        proof: {
+            stat1: "100%",
+            label1: "Özgün Kod",
+            stat2: "1 yıl",
+            label2: "Bakım Garantisi",
+            quote: "Site üzerinde Git repo erişimim var, kod kalitesi İstanbul ajanslarından iyi.",
+            author: "Ercan T. - Kırıkkale OSB Üretici"
+        },
+        workflow: [
+            { step: "01", title: "Mimari Tasarım", desc: "Proje kapsamı çıkarılır, veri modeli, mimari, güvenlik katmanları belirlenir." },
+            { step: "02", title: "Sprint Geliştirme", desc: "2 haftalık sprint'lerle, her sprint sonu müşteriye canlı demo verilir." },
+            { step: "03", title: "Test & QA", desc: "Unit test, entegrasyon testi, penetrasyon testi, yük testi hepsi sırayla koşulur." },
+            { step: "04", title: "Yayın & Bakım", desc: "Canlıya alma, eğitim, dokümantasyon ve 1 yıl ücretsiz garanti + bakım." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Yazılım Pazarında Neden Profesyonel Seçim Önemli?", text: "Kırıkkale'de yazılım hizmetleri aramak istediğinizde karşınıza birbirinden farklı kalitede firmalar çıkıyor. Bir kısmı Wix veya WordPress ile sığ siteler sunuyor; bir kısmı hazır temaları 'özel yazılım' adıyla satıyor. Oysa gerçek yazılım geliştirme; iş analizi + mimari tasarım + kod kalitesi + test + güvenlik + dokümantasyon + bakım aşamalarını içeren bir disiplindir. ZMK Agency Kırıkkale'de bu bütüncül mühendislik yaklaşımını getiren lider firmalardan biri. Kodumuzu kendi GitHub organizasyonumuzda tutuyor, CI/CD pipeline'larla her push'u otomatik test ediyor, Sentry ile üretim hataları izliyor ve sizin projeniz için ayrı bir Git repository açıyoruz." },
+            { h2: "Hangi Yazılım Projeleri İçin Çalışıyoruz?", list: ["Kurumsal Web Yazılımları — ASP.NET, Laravel, Node.js backend ile özel panel, admin sistem", "E-Ticaret Özel Geliştirmeleri — Shopify Plus, özel React mağaza, B2B pazaryerleri", "Mobil Uygulamalar — Flutter cross-platform, iOS Swift, Android Kotlin Native", "ERP & CRM Sistemleri — Odoo, Dolibarr özel entegrasyonları veya sıfırdan özel CRM", "Saha & Operasyon Yazılımları — Depo, envanter, lojistik, kurye takip, shift yönetimi", "IoT & Otomasyon — MQTT, akıllı cihaz entegrasyonları, sensör verisi dashboards", "SaaS Ürün Geliştirme — Multi-tenant mimari, Stripe faturalama, kullanıcı yönetimi", "AI & ML Entegrasyonları — OpenAI GPT, image recognition, öneri motoru, chatbot"] },
+            { h2: "Kırıkkale Yazılım Fiyatları — Net ve Şeffaf", text: "Yazılım fiyatları proje büyüklüğüne göre değişir; ama baştan net sayılar veriyoruz. Landing page / tanıtım sitesi 8.000-15.000₺, kurumsal web sitesi 25.000-65.000₺, e-ticaret altyapısı 45.000-150.000₺, özel yazılım 75.000-500.000₺, mobil uygulama 120.000-350.000₺, SaaS ürün (MVP) 200.000-600.000₺ bandında. Ödeme takvimini projeye yaymaktan çekinmiyoruz — genelde %30 başlangıçta, %40 orta milestone'da, %30 teslim sonunda. Sözleşme her koşulda tek belgede ve KVKK uyumlu." }
+        ],
+        faq: [
+            { q: "Kırıkkale'de yazılım ne kadar zamanda teslim edilir?", a: "Landing page 7-14 gün, kurumsal site 3-5 hafta, e-ticaret 4-6 hafta, özel yazılım 8-16 hafta, mobil app 8-20 hafta, SaaS MVP 12-24 hafta." },
+            { q: "Kodum bana ait olacak mı?", a: "Kesinlikle evet. Her proje başında sizin GitHub/GitLab hesabınızda bir organizasyon açıyoruz, kodu oraya push'luyoruz. Sözleşme bittiğinde her şey zaten sizin. Hiçbir kilitleme yoktur." },
+            { q: "Bakım ve güncelleme nasıl yapılıyor?", a: "İlk 1 yıl ücretsiz. Sonrasında aylık 1.500₺'den başlayan bakım paketleri: güvenlik yamaları, performans izleme, hata düzeltme, küçük özellik ekleme. Acil durumlarda 30 dakika içinde müdahale." },
+            { q: "Hangi teknolojileri kullanıyorsunuz?", a: "Frontend: React, Next.js, Vite, TypeScript, Tailwind. Backend: Node.js, Laravel PHP 8, .NET 8, Python. Mobil: Flutter, React Native, Kotlin, Swift. DB: PostgreSQL, MySQL, MongoDB. Cloud: AWS, Vercel, DigitalOcean." }
+        ],
+        keywords: "kırıkkale yazılım, kırıkkale özel yazılım, kırıkkale yazılım firması, kırıkkale software, kırıkkale yazılım geliştirme, kırıkkale web yazılım, kırıkkale mobil yazılım, kırıkkale erp yazılım, kırıkkale crm yazılım",
+        ogImage: "/og-images/yazilim.jpg",
+        relatedLinks: [
+            { title: "Yazılım Ajansı", slug: "kirikkale-yazilim-ajansi" },
+            { title: "Yazılım Geliştirme", slug: "kirikkale-yazilim-gelistirme" },
+            { title: "Mobil Uygulama", slug: "kirikkale-mobil-uygulama-gelistirme" },
+            { title: "E-Ticaret", slug: "kirikkale-e-ticaret-otomasyon" }
+        ]
+    },
+
+    {
+        slug: "kirikkale-reklam",
+        title: "Kırıkkale Reklam | Google Ads, Meta Ads, Yerel Reklam | ZMK Agency",
+        description: "Kırıkkale reklam hizmetleri ✓ Google Ads ✓ Facebook / Instagram Ads ✓ TikTok ✓ YouTube ✓ Basılı reklam ✓ Outdoor ✓ Radyo ve TV tanıtım. Şeffaf bütçe, canlı rapor, ROI garantili.",
+        heroTitle: "Kırıkkale Reklam.\nHer Mecrada Fark Yaratır.",
+        heroSubtitle: "Google, Instagram, TikTok, YouTube, Facebook, basılı, outdoor, radyo, TV — bütçenizi hangisi getirecekse ondan harcıyoruz. 360° medya planlama + veri odaklı optimizasyon.",
+        serviceName: "Kırıkkale Reklam Hizmetleri",
+        proof: {
+            stat1: "3.5x",
+            label1: "Ortalama ROAS",
+            stat2: "12k",
+            label2: "Aylık Tıklama Potansiyeli",
+            quote: "100 bin TL reklam harcamamıza 450 bin TL ciro döndü. Bu sayıyla tartışılmaz.",
+            author: "Tahir B. - Emlak Lansmanı"
+        },
+        workflow: [
+            { step: "01", title: "Medya Haritası", desc: "Hedef kitlenizin hangi mecralarda, hangi saatlerde, hangi içeriklere tepki verdiğini çıkarıyoruz." },
+            { step: "02", title: "Kreatif Üretim", desc: "Her mecraya özel reklam görseli, video, metin ve landing page hazırlıyoruz." },
+            { step: "03", title: "Yayın & Test", desc: "Birden fazla reklam varyantını aynı anda test ediyor, kazananı bulur bulmaz ölçeklendiriyoruz." },
+            { step: "04", title: "Canlı Optimizasyon", desc: "Bütçeyi, hedef kitleyi, kreatifi haftalık optimize ediyoruz. Aylık rapor + strateji toplantısı." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Reklam Pazarının Özellikleri", text: "Kırıkkale'de reklam verme biçimi son 5 yılda kökten değişti. Eski dönemde tabela, gazete, radyo ve lokal TV spotları hakimdi. Bugün ise esnafın da kurumsalın da %80'i dijital reklamla büyüyor. Ancak dijital reklam her işletmeye göre farklı bütçe, farklı mecra ve farklı kreatif gerektirir. Yahşihan OSB'deki bir üretici için LinkedIn B2B kampanyası mantıklıyken, Kalehisar'daki bir pizzacı için Instagram Reels daha hızlı sonuç getirir. Emlak sektörü için Google Ads high-intent kelimeleri, klinik için Meta Ads lead formları, moda için TikTok viral kreatifler öne çıkar. ZMK Agency olarak Kırıkkale'nin 12 farklı sektöründe reklam kampanyası yönettik, her biri için playbook'larımız hazır." },
+            { h3: "Kırıkkale'de Hangi Reklam Mecralarında Çalışıyoruz?", list: ["Google Ads — Search, Display, Performance Max, Shopping, YouTube Ads", "Meta Ads — Facebook Feed, Instagram Feed, Reels, Stories, Messenger, WhatsApp", "TikTok Ads — Spark Ads, TopView, Brand Takeover, In-Feed", "YouTube Ads — Bumper (6s), Skippable, Non-skippable, Discovery, Masthead", "LinkedIn Ads — Sponsored Content, InMail, Dynamic, Text Ads", "Outdoor / Billboard — Kırıkkale ana arterlerde LED panel + statik billboard", "Radyo Reklamı — Kırıkkale yerel istasyonları + Ankara ortak yayınlar", "Basılı Reklam — İl gazeteleri, broşür dağıtım, el ilanı", "Esnaf-to-Esnaf — Barter anlaşmaları, referans kampanyaları, lokal sponsorluk"] },
+            { h2: "Bütçeler ve Beklenen Sonuçlar", text: "Kırıkkale pazarında küçük esnaf için aylık 2.000-5.000₺ reklam bütçesi Google Ads + Meta Ads'te kısa sürede 15-30 lead getirebilir. Kurumsal işletmeler için aylık 15.000-30.000₺ bütçe, ölçülebilir bir pazar payı artışı sağlar. Kurumsal lansmanlar için 50.000-150.000₺'lik sprint kampanyaları 90 gün içinde marka bilinirliği 3-5x artırır. Her bütçenin kendine özgü optimal dağılımı vardır ve ZMK Agency bunu bütçe büyüklüğüne göre özel hesaplıyor (bkz. `/docs/REKLAM-YOL-HARITASI.md`)." }
+        ],
+        faq: [
+            { q: "Kırıkkale'de hangi reklam mecrası en çok getirisi?", a: "Sektöre bağlı. B2C (restoran, salon, eğitim, klinik) için Meta Ads (Instagram + Facebook) en hızlı ROI getirir. B2B (sanayi, tedarik) için LinkedIn + Google Search. Genel kitle için TikTok + YouTube. Ama her biri doğru kreatif ve bütçe ile verimli olur; yanlış kanala 100.000₺ dökerseniz bile sonuç alamazsınız. Biz strateji seçimiyle hangi mecraya ne harcayacağınıza karar veriyoruz." },
+            { q: "Minimum reklam bütçesi ne olmalı?", a: "Google Ads için günlük 150-200₺ (aylık 4.500-6.000₺) minimum, Meta Ads için günlük 100-150₺ (aylık 3.000-4.500₺) minimum. Altında bütçeyle veri toplanamaz, algoritma öğrenemez, bu yüzden ROAS düşük kalır. Mini test için 2.500₺/ay başlangıç paketimiz var." },
+            { q: "ROAS (Yatırımın Geri Dönüşü) nedir ve nasıl ölçüyorsunuz?", a: "ROAS (Return on Ad Spend) = Reklam geliri / Reklam harcaması. 3x ROAS demek 1₺ reklama 3₺ geri dönmesi. Ölçüm için her reklam kampanyasına UTM etiketi ekliyoruz, Google Analytics 4 + Meta Pixel + GTM ile dönüşümleri tracklıyoruz. Canlı dashboard'unuzdan 7/24 ROAS görebiliyorsunuz." },
+            { q: "Kırıkkale'de basılı reklam hâlâ işe yarıyor mu?", a: "Evet, ama sadece spesifik senaryolarda: yeni şube açılışı, 50 yaş üstü hedef kitleye hitap eden hizmetler, çok yerel etkinlikler (festival, açılış). Genel kural: basılı reklam tek başına işe yaramaz, dijital kampanyanın pekiştiricisi olarak kullanılmalıdır." }
+        ],
+        keywords: "kırıkkale reklam, kırıkkale reklam firması, kırıkkale reklamcı, kırıkkale reklam verme, kırıkkale google reklam, kırıkkale instagram reklam, kırıkkale facebook reklam, kırıkkale outdoor reklam, kırıkkale billboard, kırıkkale reklam bütçesi",
+        ogImage: "/og-images/reklam.jpg",
+        relatedLinks: [
+            { title: "Reklam Ajansı", slug: "kirikkale-reklam-ajansi" },
+            { title: "Google Ads", slug: "kirikkale-google-ads-yonetimi" },
+            { title: "Instagram Reklam", slug: "kirikkale-instagram-reklam-yonetimi" },
+            { title: "Sosyal Medya", slug: "kirikkale-sosyal-medya-yonetimi" }
+        ]
+    },
+
+    {
+        slug: "kirikkale-ajans",
+        title: "Kırıkkale Ajans | En Kapsamlı Dijital Ajans | ZMK Agency",
+        description: "Kırıkkale ajans hizmetleri tek elden ✓ Reklam ✓ Medya ✓ Sosyal Medya ✓ Dijital ✓ Yazılım ✓ Prodüksiyon. Kırıkkale merkezli, Türkiye geneli hizmet. Ücretsiz strateji görüşmesi: 0541 381 21 14.",
+        heroTitle: "Kırıkkale Ajans.\nTek Kelime: ZMK.",
+        heroSubtitle: "Kırıkkale'de ajans denince ne arıyorsanız: reklam, medya, dijital, yazılım, tasarım, prodüksiyon — hepsi tek çatı altında. 150+ proje, 98% memnuniyet, sözleşmeli çalışma.",
+        serviceName: "Kırıkkale Ajans Hizmetleri",
+        proof: {
+            stat1: "#1",
+            label1: "Kırıkkale Ajansı",
+            stat2: "360°",
+            label2: "Hizmet Yelpazesi",
+            quote: "Kırıkkale'deki farklı ajanslarla çalıştım. ZMK'nın profesyonelliğine yetişen yok.",
+            author: "Meltem Ö. - KuZM Holding"
+        },
+        workflow: [
+            { step: "01", title: "Tanışma", desc: "Ücretsiz 30 dakikalık keşif görüşmesi, ofiste veya online." },
+            { step: "02", title: "Analiz Raporu", desc: "48 saat içinde detaylı dijital sağlık raporu + rakip kıyaslaması." },
+            { step: "03", title: "Teklif & Sözleşme", desc: "İhtiyaca özel paket önerisi, elektronik imza sözleşmesi." },
+            { step: "04", title: "Lansman", desc: "İlk haftada onboarding, ikinci haftada üretime geçiş." }
+        ],
+        longContent: [
+            { h2: "Kırıkkale Ajans Seçimi — Kriter Listesi", list: ["Referans sayısı: 100+ proje yapmış bir ajans, piyasayı biliyor demektir.", "Şeffaf fiyat: Paketleri web sitesinde yayınlayan ajans, gizli maliyet çıkarmaz.", "Sözleşmeli çalışma: Her detayı imza altında olan ajans güven verir.", "Yerel bağ: Kırıkkale'de fiziksel ofisi olan ajans, krizlerde yanınızda olur.", "Çok kanallı yetkinlik: Sadece web veya sadece reklam değil, 360° hizmet veren ajans bütüncül başarı sağlar.", "Canlı raporlama: Aylık PDF değil, 7/24 erişebileceğiniz dashboard isteyin.", "Teknik uzmanlık: Modern stack kullanan, kod kalitesi yüksek ajans seçin.", "Ekip tanışıklığı: Ajansın ekibini tanıyın, kimle çalışacağınızı bilin.", "Case study derinliği: Vaka çalışmalarında somut sayılar veren ajans gerçek sonuç üretmiştir.", "Sözleşme feshi koşulları: Kolay çıkış, iyi bir ajansın özgüven göstergesidir."] },
+            { h2: "ZMK Agency Neden Kırıkkale'nin Lider Ajansı?", text: "Dördüncü yılımızda Kırıkkale'de 150+ başarılı proje teslim etmenin gururunu yaşıyoruz. Sanayiden restorana, inşaattan eğitime 12 farklı sektörde deneyimimiz var. Ekibimiz 8 kişilik kadrolu + proje bazlı çalışan 12 uzmanla birlikte 20+ profesyonelden oluşuyor. Kod, tasarım, strateji, reklam, sosyal medya, prodüksiyon her disiplinde uzmanımız mevcut. Yenidoğan Mahallesi Hürriyet Caddesi'nde modern ofisimizde hem iç müşterilerimizi ağırlıyoruz hem de Kırıkkale dışı firmalara uzaktan hizmet sunuyoruz." }
+        ],
+        faq: [
+            { q: "Kırıkkale'de hangi ajans en iyisi?", a: "Piyasada birkaç kaliteli oyuncu var ama ZMK Agency 150+ proje, 25 lokal landing sayfası, şeffaf paketler, sözleşmeli çalışma ve 98% memnuniyet oranı ile Kırıkkale'nin en kapsamlı ajansı olarak öne çıkıyor. Kendi web sitesini gezmeniz bile ajansın teknik seviyesini görmenize yeter." },
+            { q: "Kırıkkale ajansları ile başka şehir ajansları arasında ne fark var?", a: "Yerel ajans = yerel bağlar. Kırıkkale'deki işletmenin günlük dinamiklerini, rakiplerini, hedef kitlesini çok daha iyi biliyoruz. Ayrıca yüz yüze toplantı, krizlerde hızlı müdahale ve fiziksel ziyaret gibi avantajlar sunuyoruz. Ancak büyük şehir ajanslarının ölçeği, uluslararası tecrübesi de bazı projelerde değerli — bu yüzden ZMK olarak Kırıkkale'deki lokal bilgi + global standart'ı birleştiriyoruz." },
+            { q: "Ajans hizmetleri ne kadara mal oluyor?", a: "Esnaf Express paketi 1.950₺/ay, Lokal SEO Starter 3.500₺/ay, Growth Pro 7.500₺/ay, Enterprise Domination 18.500₺/ay'dan başlıyor. Tek seferlik projeler için web sitesi 25.000₺'den, logo & kimlik 8.500₺'den başlıyor." },
+            { q: "Ajansla anlaştıktan sonra süreç nasıl işliyor?", a: "1. Hafta: Onboarding toplantısı + Slack grubu kurulum + Google Drive paylaşımı. 2. Hafta: Strateji belgesi + kreatif brief. 3.-4. Hafta: İlk çıktılar (tasarım, içerik, reklam kreatifi). Her hafta Cuma güncelleme görüşmesi, her ay detaylı rapor." }
+        ],
+        keywords: "kırıkkale ajans, kırıkkale ajanslar, kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale medya ajansı, en iyi kırıkkale ajansı, kırıkkale ajans fiyatları, kırıkkale ajans listesi",
+        ogImage: "/og-images/ajans.jpg",
+        relatedLinks: [
+            { title: "Reklam Ajansı", slug: "kirikkale-reklam-ajansi" },
+            { title: "Dijital Ajans", slug: "kirikkale-dijital-ajans" },
+            { title: "Yazılım Ajansı", slug: "kirikkale-yazilim-ajansi" },
+            { title: "360° Ajans", slug: "kirikkale-360-dijital-ajans" }
+        ]
     }
 ];

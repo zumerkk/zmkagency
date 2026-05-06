@@ -67,6 +67,13 @@ const Footer = ({ t }) => {
                     <p className="apple-footer-seo-label">Kırıkkale Hizmet Bölgeleri</p>
                     <div className="apple-footer-seo-links">
                         {[
+                            // TIER-0 exact-match (SERP'te #1 hedefi)
+                            { slug: 'kirikkale-yazilim-ajansi', label: 'Yazılım Ajansı' },
+                            { slug: 'kirikkale-dijital-ajans', label: 'Dijital Ajans' },
+                            { slug: 'kirikkale-reklam', label: 'Reklam' },
+                            { slug: 'kirikkale-yazilim', label: 'Yazılım' },
+                            { slug: 'kirikkale-ajans', label: 'Ajans' },
+                            // Tier-1 (lokasyon + hizmet)
                             { slug: 'kirikkale-reklam-ajansi', label: 'Reklam Ajansı' },
                             { slug: 'kirikkale-web-tasarim', label: 'Web Tasarım' },
                             { slug: 'kirikkale-dijital-pazarlama-ajansi', label: 'Dijital Pazarlama' },

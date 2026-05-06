@@ -67,6 +67,12 @@ const ROUTES = [
     '/kirikkale-sanayi-uretim-dijital-donusum',
     '/kirikkale-ozel-okul-kolej-reklam',
     '/kirikkale-avukat-hukuk-web-tasarim',
+    // TIER-0 exact-match hyper-competitive landings (bu sayfalar Algow'u dize getirecek)
+    '/kirikkale-yazilim-ajansi',
+    '/kirikkale-dijital-ajans',
+    '/kirikkale-yazilim',
+    '/kirikkale-reklam',
+    '/kirikkale-ajans',
 ];
 
 // Simple static file server for the dist directory

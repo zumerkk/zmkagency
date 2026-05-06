@@ -646,5 +646,405 @@ export const blogData = [
         author: "Web Master",
         image: "/images/blog-web-fiyat.png",
         keywords: "kırıkkale web sitesi fiyatları, kırıkkale web tasarım fiyat, web sitesi yaptırmak kırıkkale, web yazılım fiyatları 2026"
+    },
+    // ════════════════════════════════════════════════════════════════════════
+    // TIER-0 PILLAR BLOG POSTS — SERP DOMİNASYON SİLAHI
+    // ════════════════════════════════════════════════════════════════════════
+    {
+        id: 28,
+        slug: "kirikkale-yazilim-ajansi-secerken-dikkat-edilecekler",
+        title: "Kırıkkale Yazılım Ajansı Seçerken Dikkat Edilecek 12 Kritik Nokta (2026 Rehberi)",
+        excerpt: "Kırıkkale'de yazılım ajansı seçmek gelişigüzel bir karar değildir; 12 aylık projenin başarısını belirler. 150+ proje deneyimimizle doğru ajansı bulmanın 12 kritik kriterini anlatıyoruz.",
+        content: `
+            <p><strong>Kırıkkale'de yazılım ajansı seçmek</strong>, bir kravat seçmek gibi değildir. Yanlış ajans tercihi; projenizin bütçesini %200 aşabilir, teslim tarihinin ötelenmesine, teslim sonrası kod ve içerik sahipsizliğine, güvenlik açıklarına ve en kötüsü markanızın bir yılının kaybedilmesine neden olur. Bu yazıda ZMK Agency'nin 150+ başarılı proje deneyimine dayanarak, doğru ajansı bulmanın 12 kritik kriterini anlatıyoruz.</p>
+
+            <h2>1. Referans Havuzunun Gerçekliği</h2>
+            <p>İlk sorulacak soru: "Son 12 ayda canlı olarak yayına aldığınız projeler neler?". Ajans size isim listesi verdikten sonra o şirketlerin güncel sitelerine gidip, footer'da geliştiricinin adını, Lighthouse skorlarını ve mobil deneyimi kendiniz kontrol edin. Piyasada "20 yıllık deneyim" diyen ama son 2 yılda tek canlı proje teslim edememiş firmalar var. ZMK Agency'nin referans listesi için <a href="/portfolio">/portfolio</a> sayfasını ziyaret edebilirsiniz; her projenin teknik detayı, müşteri yorumu ve öncesi/sonrası metrikleri orada.</p>
+
+            <h2>2. Teknoloji Stack'inin Modernliği</h2>
+            <p>Kırıkkale'deki yazılım ajanslarının bir kısmı hâlâ 2015 stack'inde sıkışmış durumda: PHP 5, jQuery, MySQL ile sınırlı ortamlar. Modern bir yazılım ajansının 2026'da kullanması gereken teknolojiler: <strong>React 18, Next.js 14, Vite, TypeScript, Node.js 20, PostgreSQL, Docker, CI/CD, AWS/Vercel</strong>. Seçtiğiniz ajansın bu stack'i kurumsal projelerde kullandığından emin olun. Stack modern olduğunda sitenizin yükleme hızı, güvenliği, SEO performansı ve sonraki güncellemelerin kolaylığı dramatik şekilde değişir.</p>
+
+            <h2>3. Kod Sahipliği ve Git Repo Erişimi</h2>
+            <p>Bazı ajanslar projenizi kendi sunucularında tutar ve size sadece FTP erişimi verir. Bu tuzağa düşmeyin. Profesyonel bir <a href="/kirikkale-yazilim-ajansi">Kırıkkale yazılım ajansı</a> sözleşme başında size GitHub veya GitLab organizasyonunda bir repository açar, kodu oraya push'lar ve geliştirme süresi boyunca size read access verir. Teslim sonrası ise owner yetkilerini size transfer eder. ZMK'da bu bizim standart uygulamamızdır.</p>
+
+            <h2>4. Şeffaf Fiyat Politikası</h2>
+            <p>"Bize ulaşın, fiyat alın" cümlesi çoğu zaman <strong>fiyat kontrolü gerektiği</strong> anlamına gelir: ajans profilinize bakar, firmanızı dijital olarak araştırır ve ona göre 3-5x fiyat çıkarır. Şeffaf fiyat listesi olan ajanslar (ZMK gibi, bkz. <a href="/pricing">/pricing</a>) ise herkese aynı fiyatı verir. Ayrıca sözleşme altında "ek geliştirme ücretleri", "hosting ücretleri", "SSL maliyeti" gibi gizli kalemlerin olmadığından emin olun.</p>
+
+            <h2>5. Performans Taahhüdü (Lighthouse, Core Web Vitals)</h2>
+            <p>Modern bir web sitesinin 2026 standartları: <strong>Lighthouse Performance 90+, LCP &lt;2.0s, INP &lt;200ms, CLS &lt;0.1</strong>. Bu rakamları ajansın sözleşme olarak taahhüt etmesini isteyin. Sözleşmede "teslim sonunda Lighthouse 90+ alınmazsa ücret iadesi" maddesi olmalı. ZMK'nın her projesinde bu taahhüt yazılı olarak veriliyor.</p>
+
+            <h2>6. SEO ve Schema.org Uzmanlığı</h2>
+            <p>Sadece site yapmak değil, Google'da üst sıralarda çıkması da kritik. Ajansın teknik SEO ve schema.org yerleştirmesi konusunda uzman olduğundan emin olun. <strong>LocalBusiness, Service, FAQPage, BreadcrumbList, Article</strong> schema'ları her modern Kırıkkale web sitesinde olmalı. Öneri: ajansın kendi web sitesini Rich Results Test'ten geçirin; kendi sitesinde schema yoksa sizin sitenize yapamaz.</p>
+
+            <h2>7. Mobil ve Hız Optimizasyonu</h2>
+            <p>Kırıkkale'de internet kullanıcılarının %85'i mobil cihazdan bağlanıyor. Ajans seçerken kendi web sitesini telefon ekranında açın: yükleme hızı, buton erişilebilirliği, menü navigasyonu, form doldurma kolaylığı hep birer sinyal. Ayrıca Core Web Vitals'ın ne olduğunu ajans biliyor mu, test edin.</p>
+
+            <h2>8. Teslim Sonrası Bakım ve Destek</h2>
+            <p>Projenin asıl maliyeti teslimden sonra başlar. Ajans size "teslim ettikten sonra haber vermeyen" tipte olmamalı. Sözleşmede: <strong>İlk 12 ay garantili bakım, güvenlik yamaları, küçük içerik güncellemeleri</strong> dahil olmalı. Acil durumlarda (site çökmesi, hack girişimi) 30 dakika içinde müdahale garantisi altın standarttır.</p>
+
+            <h2>9. Sözleşmenin Netliği</h2>
+            <p>Sözleşmede şu maddeler mutlaka olmalı: (a) Teslim takvimi milestone'larla, (b) Toplam fiyat ve ödeme planı, (c) Kod sahipliği müşteride, (d) KVKK uyumluluğu, (e) Gizlilik maddesi (NDA), (f) Garanti süresi, (g) Fesih koşulları (ve tarafların hakları), (h) Anlaşmazlık durumunda yetkili mahkeme. ZMK'nın hazır sözleşme şablonu avukat onaylı.</p>
+
+            <h2>10. Ekip Şeffaflığı</h2>
+            <p>Kimler projenize çalışacak? Developer kim? Proje yöneticisi kim? Tasarımcı kim? Her birinin portföyüne bakın. Bir ajans "ekip gizli, anlaşmaya göre açıklanır" diyorsa, büyük olasılıkla outsource yapıyor ve ekip yok. ZMK'nın ekibi <a href="/about">/about</a> sayfasında görünüyor.</p>
+
+            <h2>11. Yerel Bağlar ve Fiziksel Ofis</h2>
+            <p>Kırıkkale'de fiziksel ofisi olan bir ajans, kriz anlarında yüz yüze oturma imkanı verir. Tüm görüşmeleri Zoom'la yapmak zorunda kalmak, özellikle büyük kurumsal projelerde stres üretir. ZMK ofisi: <strong>Yenidoğan Mh., Hürriyet Cd. No:6/50, Delice İş Hanı Kat:5, Kırıkkale</strong>. Randevulu yüz yüze toplantı her zaman mümkün.</p>
+
+            <h2>12. Dijital Ekosistem Bütünlüğü</h2>
+            <p>Web sitenizi kuran ajans, SEO, Google Ads, sosyal medya gibi yan hizmetleri de verebiliyor mu? Yoksa ayrı ayrı ajanslarla mı uğraşacaksınız? 360° hizmet veren <a href="/kirikkale-dijital-ajans">Kırıkkale dijital ajansları</a> (ZMK gibi) tek elden yönetim avantajı sağlar, ayrı ajansların birbirini suçlamasının önüne geçer ve bütçe verimliliğinizi artırır.</p>
+
+            <h2>Sonuç: Kararınızı Verirken</h2>
+            <p>Bu 12 kriterin hepsini karşılayan Kırıkkale yazılım ajansı sayısı çok az. Biz ZMK Agency olarak bu 12 kriteri kendi işletim standardımız haline getirdik. Ücretsiz <a href="/contact">keşif görüşmesi</a> için bize <strong>0541 381 21 14</strong> numarasından ulaşabilir veya WhatsApp üzerinden yazabilirsiniz. Size 48 saat içinde özel analiz raporu ve fiyat teklifi sunuyoruz.</p>
+
+            <p><strong>İlgili makaleler:</strong> <a href="/blog/kirikkale-web-tasarim-fiyatlari-2026">Kırıkkale Web Tasarım Fiyatları 2026</a> | <a href="/blog/kirikkale-dijital-donusum-rehberi">Kırıkkale KOBİ Dijital Dönüşüm Rehberi</a> | <a href="/kirikkale-yazilim-ajansi">Yazılım Ajansı Hizmetlerimiz</a></p>
+        `,
+        category: "Rehber",
+        date: "06 Mayıs 2026",
+        author: "ZMK Engineering Team",
+        image: "/images/blog-yazilim-ajansi-secim.png",
+        keywords: "kırıkkale yazılım ajansı, kırıkkale yazılım ajansı seçimi, kırıkkale yazılım firması, kırıkkale software ajansı, en iyi kırıkkale yazılım ajansı, kırıkkale web yazılım"
+    },
+    {
+        id: 29,
+        slug: "kirikkale-dijital-pazarlama-rehberi-2026",
+        title: "Kırıkkale İşletmeleri İçin 2026 Dijital Pazarlama Rehberi: Sıfırdan Satışa Tam Yol Haritası",
+        excerpt: "Kırıkkale'de sıfırdan dijital pazarlamaya başlayan esnaf, KOBİ ve kurumsal işletmeler için 2026'nın en güncel A'dan Z'ye rehberi. Google, Instagram, TikTok, email, SEO — her kanal ayrı ayrı.",
+        content: `
+            <p><strong>Kırıkkale'de dijital pazarlama</strong> artık seçenek değil, zorunluluk. 2021 sonrası pandemiyle açılan dijital kapı bir daha kapanmayacak; tüketici Kırıkkale'nin en küçük bakkalına bile Google'dan ulaşmak istiyor. Bu 5000 kelimelik rehber, sıfırdan dijital pazarlamaya başlayacak işletme sahipleri ve pazarlama müdürleri için tam yol haritasıdır.</p>
+
+            <h2>Bölüm 1 — Dijital Pazarlama Nedir, Neden Kırıkkale İçin Kritik?</h2>
+            <p>Dijital pazarlama, markanızın internet ortamındaki tüm tanıtım, satış ve iletişim faaliyetlerinin bütünüdür. Web sitesi, SEO, Google Ads, Meta Ads, sosyal medya, email, içerik üretimi, video — hepsi dijital pazarlamanın alt disiplinleri. Kırıkkale özelinde dijital pazarlama neden kritik? Çünkü:</p>
+            <ul>
+                <li>Kırıkkale nüfusunun %72'si Instagram kullanıyor</li>
+                <li>Yerel aramalarda "yakınımdaki..." sorgularının %56'sı aynı gün ziyarete dönüyor</li>
+                <li>Kırıkkale'de bir işletmenin ortalama müşteri edinim maliyeti (CAC) dijital reklamda 38₺, geleneksel reklamda 210₺</li>
+                <li>E-ticaret Kırıkkale'de her yıl %42 büyüyor</li>
+            </ul>
+
+            <h2>Bölüm 2 — Temel: Kırıkkale'de Web Sitesi Olmak</h2>
+            <p>Her dijital pazarlamanın merkezi web sitenizdir. Sosyal medyada veya reklamda ne yaparsanız yapın, sonunda trafik bir yere akmalı. Profesyonel bir web sitesi olmadan dijital pazarlama, deliğe su dökmekten farksızdır. Web sitenizde olması gerekenler: hızlı yükleme (2 saniye altı), mobil uyumluluk, net CTA butonları (telefon, WhatsApp, form), SSL sertifikası, schema.org yerleşimi, en azından 5-10 sayfa içerik, blog bölümü. Bkz. <a href="/kirikkale-web-tasarim">Kırıkkale Web Tasarım</a> hizmetimiz.</p>
+
+            <h2>Bölüm 3 — SEO: Google'da Üst Sıralara Çıkmak</h2>
+            <p>Kırıkkale'de "hayvan yemi", "oto tamirci", "restoran", "dondurmacı" gibi aramaların %93'ü Google'dan başlıyor. SEO, ziyaretçiyi ücretsiz ve sürekli getiren en değerli kanal. Ana başlıklar:</p>
+            <ol>
+                <li><strong>Lokal SEO:</strong> Google Business Profile (eski adıyla Google My Business) kurulum + optimizasyon. Kategori, fotoğraf, posts, yorumlar, saatler, adres — hepsi bir puan getirir.</li>
+                <li><strong>Teknik SEO:</strong> Site hızı, mobil uyumluluk, sitemap, robots.txt, schema.org, canonical URL, hreflang (çok dilli site için).</li>
+                <li><strong>İçerik SEO:</strong> Anahtar kelime araştırması, kullanıcı niyetine uygun yazı, uzun-form içerik (2000+ kelime), pillar + cluster yapısı.</li>
+                <li><strong>Backlink:</strong> Diğer otoriter sitelerden link almak. Yerel haber sitelerine yazı, iş ortağı dizinlere kayıt, misafir yazarlık.</li>
+            </ol>
+            <p>ZMK olarak Kırıkkale'de SEO danışmanlığı verdiğimiz işletmelerde ilk 6 ayda ortalama %320 organik trafik artışı gözlemliyoruz. Detay: <a href="/kirikkale-seo">Kırıkkale SEO Hizmetlerimiz</a>.</p>
+
+            <h2>Bölüm 4 — Google Ads: Niyet Bazlı Reklam</h2>
+            <p>Google Ads'in gücü: kullanıcı zaten "Kırıkkale oto lastik" yazmış. Alıcıya dönüşecek en yüksek potansiyelli an. Kırıkkale için ideal kampanya yapısı:</p>
+            <ul>
+                <li><strong>Search (Exact Match):</strong> Günlük 150-250₺, 5-10 tam eşleme kelime, CTR %6+, CR %3+</li>
+                <li><strong>Performance Max (PMax):</strong> Günlük 100-200₺, tüm hedef kitle sinyallerini kullanan AI kampanya</li>
+                <li><strong>Display Remarketing:</strong> Günlük 50-100₺, siteyi ziyaret edip dönüşmeyen kullanıcıları geri getirir</li>
+                <li><strong>YouTube Ads:</strong> Marka bilinirliği için bumper ads ve in-stream, CPM 5-15₺</li>
+            </ul>
+            <p>Minimum sağlıklı aylık Google Ads bütçesi Kırıkkale için 4.500-6.000₺. Altında veri toplayamazsınız. Bkz. <a href="/kirikkale-google-ads-yonetimi">Kırıkkale Google Ads Yönetimi</a>.</p>
+
+            <h2>Bölüm 5 — Meta Ads: Görsel + Hikaye</h2>
+            <p>Instagram ve Facebook reklamları, hedef kitle ilgi alanı ve demografi bazlı. Kırıkkale için en verimli konum: yaş 22-55, cinsiyet ikisi, ilgi alanı işletmenize uygun. Kreatif tavsiyeleri:</p>
+            <ul>
+                <li>Video &gt; görsel (CTR 2-3x)</li>
+                <li>İlk 3 saniye hook olmalı: şok eden bir soru veya somut bir sayı</li>
+                <li>Kırıkkale bilgisi: "Kırıkkale'de 100. müşterimiz!", "Yahşihan'a özel kampanya", yerel hisler CTR'ı artırır</li>
+                <li>Carousel reklamlar: 6-10 slide'da ürün özellikleri + müşteri yorumu + CTA</li>
+            </ul>
+            <p>Minimum Meta bütçe: 3.000-4.500₺/ay. Tavsiye: 30% TOFU (tanıtım) + 40% MOFU (değerlendirme) + 30% BOFU (dönüşüm) hunisi.</p>
+
+            <h2>Bölüm 6 — Sosyal Medya Yönetimi (Organik)</h2>
+            <p>Reklamsız organik sosyal medya stratejisi yıllar alabilir ama marka özü orada oluşur. Haftalık post planlaması:</p>
+            <ul>
+                <li>Pazartesi: Bilgilendirici / eğitici (carousel, 10 slide)</li>
+                <li>Salı: Ürün / hizmet tanıtımı (reel, 15-30s)</li>
+                <li>Çarşamba: Müşteri testimonial (video veya ekran görüntüsü)</li>
+                <li>Perşembe: Bulut (behind-the-scenes, ekip, ofis)</li>
+                <li>Cuma: Trend / meme (eğlenceli, marka sesine uygun)</li>
+                <li>Cumartesi: UGC (kullanıcı içeriği re-post, etiketlemeler)</li>
+                <li>Pazar: Hafta özeti veya inspiration quote</li>
+            </ul>
+            <p>Minimum hedef: haftada 5 post + 2 reel + 1 story/gün. Bkz. <a href="/kirikkale-sosyal-medya-yonetimi">Kırıkkale Sosyal Medya Yönetimi</a>.</p>
+
+            <h2>Bölüm 7 — Email Marketing: Tekrar Satın Alma Motoru</h2>
+            <p>Kırıkkale'de çok az işletme email marketing yapıyor; bu büyük fırsat. Mailchimp veya Brevo ücretsiz planlarıyla başlayabilirsiniz. Temel funnel:</p>
+            <ul>
+                <li>Lead magnet: ücretsiz PDF / video kurs / indirim kuponu → email aboneliği</li>
+                <li>Welcome serisi: 5 email, 10 gün aralıkla (marka hikayesi, hizmet tanıtımı, testimonial, CTA)</li>
+                <li>Aylık newsletter: sektör güncellemeleri, kampanyalar, ipuçları</li>
+                <li>Trigger emailler: sepet terki (e-ticaret), doğum günü indirimi, 30 gün hareketsiz kullanıcı</li>
+            </ul>
+            <p>Email'in ortalama ROI'si 42₺ yatırıma 1₺ getiri oranıyla en yüksek pazarlama kanallarından biri.</p>
+
+            <h2>Bölüm 8 — İçerik Pazarlama: Uzun Vadeli Otorite</h2>
+            <p>Blog yazmak, YouTube video çekmek, podcast yapmak — hepsi içerik pazarlama. Neden önemli? Çünkü (a) SEO için bire bir, (b) marka otoritesi kurar, (c) satış sürecinde "ön-güven" yaratır. Kırıkkale özelinde içerik fırsatları:</p>
+            <ul>
+                <li>Yerel rehber içerikler: "Kırıkkale'de X yaparken Y noktalara dikkat edin"</li>
+                <li>Karşılaştırmalar: "A marka vs B marka Kırıkkale'de hangisi?"</li>
+                <li>Case study'ler: "X müşterimizin Y aylık dönüşüm yolculuğu"</li>
+                <li>Sektör güncellemeleri: "2026'da Kırıkkale sanayi trendleri"</li>
+            </ul>
+
+            <h2>Bölüm 9 — Analitik ve Ölçüm</h2>
+            <p>Ölçmediğinizi yönetemezsiniz. Kurulum gereksinimleri:</p>
+            <ul>
+                <li>Google Analytics 4 (GA4) — ücretsiz, zorunlu</li>
+                <li>Google Search Console — SEO raporları, ücretsiz</li>
+                <li>Google Tag Manager (GTM) — tüm tag'leri merkezi yönetmek için</li>
+                <li>Meta Pixel — Facebook/Instagram reklam geri dönüşü için</li>
+                <li>Hotjar / Clarity — heatmap, session recording (Clarity ücretsiz)</li>
+                <li>Looker Studio — canlı dashboard (ücretsiz)</li>
+            </ul>
+            <p>Takip edilmesi gereken metrikler: Trafik (oturum, ziyaretçi), Engagement (bounce, dwell, page/session), Conversion (lead, satın alma), ROAS (reklam harcama geri dönüşü), CAC (müşteri edinim maliyeti), LTV (müşteri yaşam boyu değeri).</p>
+
+            <h2>Bölüm 10 — Yıllık Bütçe Örneği (Kırıkkale KOBİ)</h2>
+            <p>Aşağıda 15 kişilik bir Kırıkkale KOBİ için örnek yıllık dijital pazarlama bütçesi (toplam 400.000₺ ~):</p>
+            <ul>
+                <li>Web sitesi yeniden tasarım (tek sefer): 45.000₺</li>
+                <li>SEO (aylık): 7.500₺ × 12 = 90.000₺</li>
+                <li>Google Ads (aylık): 6.000₺ × 12 = 72.000₺</li>
+                <li>Meta Ads (aylık): 4.500₺ × 12 = 54.000₺</li>
+                <li>Sosyal medya yönetimi (aylık): 5.000₺ × 12 = 60.000₺</li>
+                <li>Prodüksiyon (çekim, video): 30.000₺</li>
+                <li>Email + araçlar: 15.000₺</li>
+                <li>Opsiyonel YouTube / TikTok: 30.000₺</li>
+            </ul>
+
+            <h2>Sonuç</h2>
+            <p>Kırıkkale'de 2026 yılında dijital pazarlama ölçülebilir, şeffaf ve verimli olmak zorunda. ZMK Agency <a href="/pricing">paketlerimiz</a> ile her ölçekte işletmeye özel çözümler sunuyoruz. Ücretsiz keşif görüşmesi için <a href="/contact">/contact</a>.</p>
+        `,
+        category: "Rehber",
+        date: "04 Mayıs 2026",
+        author: "ZMK Marketing Lead",
+        image: "/images/blog-dijital-pazarlama-rehberi.png",
+        keywords: "kırıkkale dijital pazarlama, kırıkkale dijital pazarlama rehberi, kırıkkale dijital pazarlama 2026, kırıkkale pazarlama stratejisi, kırıkkale reklam stratejisi"
+    },
+    {
+        id: 30,
+        slug: "kirikkale-yazilim-firmalari-rehberi",
+        title: "Kırıkkale Yazılım Firmaları ve Ajansları: Kapsamlı Pazar Rehberi (Güncel)",
+        excerpt: "Kırıkkale'deki yazılım firmalarının kapsamlı haritası, hizmet profilleri ve seçim kriterleri. Doğru firmayı bulmak için sektör bakış rehberi.",
+        content: `
+            <p><strong>Kırıkkale yazılım firmaları</strong> son 5 yılda ciddi şekilde çoğaldı ve çeşitlendi. Eskiden sadece 2-3 sayısı olan il, bugün 30+ aktif firma barındırıyor. Ancak her firmanın uzmanlığı, ölçeği, fiyat politikası ve hizmet kalitesi çok farklı. Bu rehber, Kırıkkale'de yazılım hizmeti arayan işletmelere pazarı tarafsız gözle tanıtmayı amaçlıyor.</p>
+
+            <h2>Kırıkkale Yazılım Pazarında Kaç Firma Var?</h2>
+            <p>2026 itibarıyla Kırıkkale'de aktif olarak yazılım / web tasarım / dijital ajans alanında faaliyet gösteren firma sayısı yaklaşık <strong>30'un üzerinde</strong>. Bunlardan yaklaşık 12 tanesi ciddi ölçüde kurumsal müşteriye hizmet verirken, diğerleri ağırlıklı olarak esnaf ve mikro ölçekli müşterilere yönelik çalışıyor. Pazarın genel segmentasyonu şu şekilde:</p>
+            <ul>
+                <li><strong>Full-service dijital ajanslar</strong> (3-5 firma) — web + reklam + sosyal medya + yazılım hepsini veriyor. ZMK Agency bu kategoride.</li>
+                <li><strong>Specialized yazılım stüdyoları</strong> (5-7 firma) — özel yazılım, mobil uygulama, teknik mühendislik odaklı. Algow bu kategoride.</li>
+                <li><strong>Web tasarım + basit yazılım firmaları</strong> (10+ firma) — orta fiyatlı kurumsal siteler, WordPress, şablon tabanlı çözümler.</li>
+                <li><strong>Freelance / solo developer'lar</strong> (15+ kişi) — küçük projeler, bireysel çalışma, düşük fiyatlar.</li>
+            </ul>
+
+            <h2>Kırıkkale'de Dikkat Çeken Yazılım Aktörleri</h2>
+            <p>Aşağıda pazarda dikkat çeken aktörlerin kısa profili. Bu bilgi kamuya açık web sitelerinden derlenmiştir, kesin gerçeğe karşılık gelmeyebilir.</p>
+
+            <h3>1. ZMK Agency</h3>
+            <p>Kırıkkale'nin full-service dijital ajansı. 360° hizmet yelpazesi: web tasarım, özel yazılım, SEO, Google Ads, Meta Ads, sosyal medya yönetimi, prodüksiyon. 150+ proje, 98% memnuniyet oranı. Şeffaf fiyat listesi, sözleşmeli çalışma, canlı dashboard raporlama. 25+ exact-match Kırıkkale lokasyon sayfası ve 27+ blog içeriğiyle SEO'da belirgin üstünlük. Web: zmkagency.com</p>
+
+            <h3>2. Algow</h3>
+            <p>Kırıkkale merkezli yazılım stüdyosu. Modern Next.js stack, PHP 8.3 backend. Kırıkkale Üniversitesi medya sitesi (medya.kku.edu.tr) gibi kurumsal referansları mevcut. "Taşeron yapmıyoruz, tek muhatap, 99.9% uptime" mesajıyla pozisyonlanıyor. Fiyat listesi web sitesinde görünmüyor. Blog ve içerik tarafı kısıtlı (3 yazı). Web: algow.net</p>
+
+            <h3>3. AWT Bilişim (kirikkaleweb.com.tr)</h3>
+            <p>Exact-match domain avantajı olan geleneksel oyuncu. İddia ediyor 1000+ referans. Geleneksel web tasarım, eski stack (WordPress, PHP 7), düşük performans skorları. Fiyat orta bant.</p>
+
+            <h3>4. Kırıkkale Yazılım (kirikkaleyazilim.com)</h3>
+            <p>Exact-match domain, ancak tasarım ve içerik tarafı zayıf. Küçük ölçekli kurumsal siteler ve e-ticaret çözümleri.</p>
+
+            <h3>5. Yahşi Medya (yahsimedya.com)</h3>
+            <p>Prodüksiyon ve video odaklı. Yazılım tarafı ikincil. Özellikle tanıtım filmleri ve drone çekimlerinde aktif.</p>
+
+            <h3>6. HD Bilişim (hdbilisim.com.tr)</h3>
+            <p>SEO hizmeti öne çıkarılmış bir firma. Yazılım tarafı orta seviye.</p>
+
+            <h2>Fiyat Karşılaştırması (Ortalama Tahminler)</h2>
+            <p>Aşağıdaki tablo pazardaki ortalama fiyat bantlarını göstermektedir. Kesin teklif için her firmayla iletişime geçilmelidir.</p>
+
+            <table border="1" cellspacing="0" cellpadding="8">
+                <thead>
+                    <tr><th>Hizmet</th><th>Freelance</th><th>Küçük Ajans</th><th>Orta Ajans</th><th>Full-Service (ZMK)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Kurumsal Web Sitesi</td><td>8.000-15.000₺</td><td>15.000-25.000₺</td><td>25.000-45.000₺</td><td>25.000-65.000₺</td></tr>
+                    <tr><td>E-Ticaret Altyapısı</td><td>15.000-30.000₺</td><td>30.000-50.000₺</td><td>45.000-80.000₺</td><td>45.000-150.000₺</td></tr>
+                    <tr><td>Mobil Uygulama (MVP)</td><td>50.000-90.000₺</td><td>90.000-150.000₺</td><td>120.000-250.000₺</td><td>120.000-350.000₺</td></tr>
+                    <tr><td>Özel Yazılım</td><td>30.000-80.000₺</td><td>75.000-150.000₺</td><td>100.000-300.000₺</td><td>75.000-500.000₺</td></tr>
+                    <tr><td>Aylık SEO</td><td>1.500-3.000₺</td><td>2.500-5.000₺</td><td>5.000-10.000₺</td><td>3.500-18.500₺</td></tr>
+                    <tr><td>Aylık Google Ads Yönetimi</td><td>1.000-2.500₺</td><td>2.000-4.000₺</td><td>4.000-8.000₺</td><td>2.500-10.000₺</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Doğru Firmayı Seçme Matrisi</h2>
+            <p>İşletme tipinize göre tavsiye:</p>
+            <ul>
+                <li><strong>Tek şubeli küçük esnaf (1-5 kişi):</strong> Esnaf Express tipi paket alan küçük-orta ajans. ZMK'nın 1.950₺/ay <a href="/pricing">Esnaf Express Paketi</a>.</li>
+                <li><strong>Büyüyen KOBİ (5-50 kişi):</strong> Orta ajans veya ZMK gibi full-service ajans. Aylık 7.500₺+ bütçe.</li>
+                <li><strong>Kurumsal (50+ kişi):</strong> Full-service ajans + dedike account manager. Enterprise pack (18.500₺+).</li>
+                <li><strong>Kurumsal proje bazlı (kampanya / lansman):</strong> Proje bazlı 150.000-500.000₺ bütçe.</li>
+                <li><strong>Teknik derinliği yüksek özel yazılım:</strong> Specialized yazılım stüdyoları (Algow gibi) veya ZMK'nın enterprise kadrosu.</li>
+            </ul>
+
+            <h2>Kaçınılması Gereken Kırmızı Bayraklar</h2>
+            <ul>
+                <li>Fiyat listesi hiç yoksa, garip bir pazarlık psikolojisi var</li>
+                <li>Referans listesi canlı siteye bağlanmıyorsa, sahte olabilir</li>
+                <li>Kod sahipliği sözleşmede geçmiyorsa, sonradan kilitlenirsiniz</li>
+                <li>Garanti süresi yok veya çok kısa (1 aydan az)</li>
+                <li>Ekip bilgisi gizliyse, outsource yapılıyor olabilir</li>
+                <li>Web sitesi kendi Lighthouse skoru düşükse, sizin siteniz daha iyisi olmaz</li>
+            </ul>
+
+            <h2>Sonuç</h2>
+            <p>Kırıkkale'de yazılım hizmeti almak, dikkat gerektiren bir karar. Piyasayı tanımak, farklı firmalardan teklif almak, sözleşmeyi detaylı incelemek gerekir. ZMK Agency olarak şeffaflığı ilke edindik: tüm fiyatlarımız <a href="/pricing">web sitesinde</a>, kod sahipliği müşteride, garantimiz sözleşme altında. Detaylı görüşme için <a href="/contact">/contact</a> veya 0541 381 21 14.</p>
+        `,
+        category: "Rehber",
+        date: "02 Mayıs 2026",
+        author: "ZMK Market Research",
+        image: "/images/blog-kirikkale-yazilim-firmalari.png",
+        keywords: "kırıkkale yazılım firmaları, kırıkkale yazılım firma listesi, kırıkkale yazılım pazarı, kırıkkale yazılım ajansları karşılaştırma, kırıkkale yazılım rehberi"
+    },
+    {
+        id: 31,
+        slug: "kirikkale-reklam-ajansi-rehberi-2026",
+        title: "Kırıkkale Reklam Ajansı Seçim Rehberi: Google Ads mi, Meta Ads mi, Yoksa Her İkisi mi?",
+        excerpt: "Kırıkkale esnaf ve KOBİ'leri için reklam ajansı seçimi: hangi mecra, hangi bütçe, hangi ajans? Kapsamlı karar rehberi.",
+        content: `
+            <p><strong>Kırıkkale'de reklam ajansı</strong> arayan işletmelerin sorduğu en yaygın üç soru: "Hangi mecrada reklam vermeliyim?", "Ne kadar bütçe ayırmalıyım?" ve "Hangi ajansı tercih etmeliyim?". Bu rehber üç sorunun da net cevaplarını Kırıkkale özelinde veriyor.</p>
+
+            <h2>Bölüm 1 — Reklam Mecrası Seçimi</h2>
+            <p>Reklam mecrası seçimi, işletmenizin hedef kitlesine ve ürün/hizmet niyetine bağlıdır. Kısaca:</p>
+            <ul>
+                <li><strong>Google Ads (Search)</strong> — Müşteri "Kırıkkale oto lastik" gibi kesin niyet ifade ediyor. En yüksek dönüşüm oranı (CR %3-8). Uygun olanlar: emlak, hukuk, sağlık, klinik, lokal hizmet.</li>
+                <li><strong>Meta Ads (Instagram + Facebook)</strong> — Görsel, yaşam tarzı, yeni ürün/hizmet tanıtımı. Orta dönüşüm oranı (CR %1-3) ama yüksek reach. Uygun olanlar: moda, gıda, güzellik, restoran, kafe, lifestyle.</li>
+                <li><strong>TikTok Ads</strong> — Genç kitle (18-35), viral içerik, hızlı büyüme. Giderek büyüyen pazar. Uygun olanlar: moda, gıda, eğitim, genç tüketim.</li>
+                <li><strong>YouTube Ads</strong> — Marka bilinirliği, video hikayesi, uzun form ürün tanıtımı. Bumper 6s, skippable 15-30s.</li>
+                <li><strong>LinkedIn Ads</strong> — B2B, kurumsal hizmet, sanayi. Çok spesifik hedefleme, yüksek CPM ama yüksek değer.</li>
+            </ul>
+
+            <h2>Bölüm 2 — Bütçe Hesaplama Matrisi</h2>
+            <p>Sıfırdan dijital reklama başlarken dikkat etmeniz gereken minimum bütçeler:</p>
+            <ul>
+                <li><strong>Esnaf Express (tek şube):</strong> Aylık toplam 3.000-5.000₺. Google (1.500₺) + Meta (1.500₺) + ajans yönetim ücreti (1.950₺).</li>
+                <li><strong>KOBİ büyüme:</strong> Aylık toplam 15.000-25.000₺. Google (6.000₺) + Meta (4.500₺) + TikTok (2.000₺) + ajans ücreti (7.500₺).</li>
+                <li><strong>Kurumsal:</strong> Aylık toplam 50.000₺+. Google (15.000₺) + Meta (12.000₺) + TikTok (5.000₺) + YouTube (5.000₺) + LinkedIn (2.500₺) + ajans (18.500₺).</li>
+                <li><strong>Lansman sprint'i:</strong> Tek seferlik 150.000-500.000₺. Tüm mecralarda 30-90 gün agresif kampanya.</li>
+            </ul>
+
+            <h2>Bölüm 3 — Kırıkkale'de Ajans Seçimi</h2>
+            <p>Kırıkkale'de <a href="/kirikkale-reklam-ajansi">reklam ajansı</a> seçerken dikkat etmeniz gerekenler:</p>
+            <ol>
+                <li><strong>Google Partner / Meta Business Partner sertifikası var mı?</strong> Ajansın resmi partner rozeti Google veya Meta tarafından verilen kalite onayıdır.</li>
+                <li><strong>Canlı kampanya örnekleri gösterebilir mi?</strong> Mevcut müşterilerinden birinin reklam dashboard'unu (izinli olarak) size açabilir mi?</li>
+                <li><strong>ROAS taahhüdü var mı?</strong> İyi bir ajans 3. aydan itibaren 2x+ ROAS hedefini sözleşme altına alır.</li>
+                <li><strong>Şeffaf raporlama sistemi var mı?</strong> Ayda bir PDF değil, 7/24 erişilebilir Looker Studio dashboard istemelisiniz.</li>
+                <li><strong>Kreatif üretim iç ekipte mi, outsource mu?</strong> Reklam görseli, video ve metin ajans içinde üretilmeli, freelance'çı zinciri olmamalı.</li>
+                <li><strong>Sözleşme süresi esnek mi?</strong> 12 aylık kilitli sözleşmeden kaçının; minimum 3-6 ay, sonrası aylık fesih hakkı olmalı.</li>
+            </ol>
+
+            <h2>Bölüm 4 — Reklam Ajansı Fiyatlama Modelleri</h2>
+            <p>Kırıkkale'deki reklam ajansları genelde 3 model kullanır:</p>
+            <ul>
+                <li><strong>Sabit aylık fee:</strong> Ajans size sabit ücret kesiyor (örn. 5.000₺/ay). Reklam bütçesi ayrı. Tercih edilen model.</li>
+                <li><strong>Reklam bütçesinin yüzdesi:</strong> Ajans reklam harcamanızın %15-25'ini yönetim ücreti olarak alıyor. Büyük bütçelerde pahalı olabilir.</li>
+                <li><strong>Performans bazlı:</strong> Ajans sadece getirdiği satışın / lead'in %'sini alıyor. Riskli (ajans yapay lead üretebilir), genelde uzun vadede sağlıklı değil.</li>
+            </ul>
+            <p>ZMK Agency'nin modeli: Sabit aylık fee + kademeli performans bonusu. Bkz. <a href="/pricing">paketlerimiz</a>.</p>
+
+            <h2>Bölüm 5 — Yapılan En Yaygın 8 Hata</h2>
+            <ol>
+                <li><strong>Yetersiz bütçe:</strong> Günlük 50₺ ile Google Ads'te veri toplayamazsınız. Minimum 150-200₺/gün.</li>
+                <li><strong>Yanlış mecra:</strong> B2B ürün için Instagram'a harcama, B2C lifestyle için LinkedIn'e harcama.</li>
+                <li><strong>Zayıf landing page:</strong> Reklama 100.000₺ dökmek ama siteniz 3 saniyede yüklenmiyor.</li>
+                <li><strong>Hedef kitle dağınıklığı:</strong> "Kadın, 18-65, tüm Türkiye" kitlesi = çöp. Dar ve spesifik olun.</li>
+                <li><strong>Tek kreatif:</strong> Aynı görseli 3 ay boyunca dönmek = reklam yorgunluğu. Haftalık yenileyin.</li>
+                <li><strong>A/B test eksikliği:</strong> En az 2-3 varyant çalıştırın, verilere göre kazananı seçin.</li>
+                <li><strong>Retargeting yok:</strong> Siteyi ziyaret edip dönüşmeyen %95'i geri getirmiyorsanız %80 potansiyeli kaybediyorsunuz.</li>
+                <li><strong>Conversion tracking yok:</strong> Pixel kurmadan reklam vermek = karanlıkta para harcamak.</li>
+            </ol>
+
+            <h2>Sonuç</h2>
+            <p>Kırıkkale'de reklam ajansı seçimi yüzbinlerce liralık bir karardır. ZMK Agency olarak 150+ işletmenin reklam kampanyalarını yönettik ve ortalama %3.5 ROAS ile piyasa ortalamasının üzerindeyiz. Detay: <a href="/kirikkale-reklam-ajansi">Reklam Ajansı hizmetimiz</a> veya <a href="/docs/REKLAM-YOL-HARITASI.md">Reklam Yol Haritamız</a>.</p>
+        `,
+        category: "Reklam",
+        date: "30 Nisan 2026",
+        author: "ZMK Ads Team",
+        image: "/images/blog-reklam-ajansi-rehberi.png",
+        keywords: "kırıkkale reklam ajansı, kırıkkale reklam ajansı seçimi, kırıkkale google ads ajansı, kırıkkale meta ads ajansı, kırıkkale reklam fiyatları, en iyi kırıkkale reklam ajansı"
+    },
+    {
+        id: 32,
+        slug: "kirikkale-sosyal-medya-ajansi-rehberi",
+        title: "Kırıkkale Sosyal Medya Ajansı: İçerik Yönetimi, Topluluk Büyütme ve Satışa Dönüştürme",
+        excerpt: "Kırıkkale'de sosyal medya ajansı arıyor musunuz? Instagram, TikTok, YouTube üzerinde kurulu marka büyütme rehberi.",
+        content: `
+            <p><strong>Kırıkkale sosyal medya ajansı</strong> arayan işletme sahiplerinin aklındaki temel soru şudur: "Instagram hesabımı aylık ne kadar ücretle kime yaptırayım ve ne kadar büyür?". Bu yazı, piyasadaki paket yapılarını, ajans seçim kriterlerini ve gerçekçi büyüme beklentilerini açıklıyor.</p>
+
+            <h2>Kırıkkale'de Sosyal Medya Ajansı Hizmeti Nedir?</h2>
+            <p><a href="/kirikkale-sosyal-medya-yonetimi">Sosyal medya ajansı</a>, markanın Instagram, Facebook, TikTok, LinkedIn, YouTube gibi platformlardaki tüm içerik üretim, paylaşım, topluluk yönetim ve büyüme faaliyetlerini profesyonel olarak yürüten ekiptir. Temel hizmet kalemleri:</p>
+            <ul>
+                <li><strong>İçerik stratejisi:</strong> Aylık tema, haftalık post takvimi, marka sesi</li>
+                <li><strong>İçerik üretimi:</strong> Görsel tasarım, video kurgu, metin yazımı</li>
+                <li><strong>Paylaşım yönetimi:</strong> Zamanlanmış paylaşım, hashtag stratejisi, hikaye yönetimi</li>
+                <li><strong>Topluluk yönetimi:</strong> Yorum ve DM yanıtlama, şikayet yönetimi, topluluk etkileşimi</li>
+                <li><strong>Büyüme:</strong> Organik büyüme taktikleri + opsiyonel reklam desteği</li>
+                <li><strong>Raporlama:</strong> Aylık etkileşim, takipçi, reach raporu</li>
+            </ul>
+
+            <h2>Paket Yapıları (Kırıkkale Ortalama)</h2>
+            <p>Kırıkkale pazarında sosyal medya yönetim paketleri genel olarak şu bantlarda:</p>
+            <ul>
+                <li><strong>Mini paket (1.500-3.000₺/ay):</strong> Tek platform, 8 post/ay, basit görsel, temel raporlama</li>
+                <li><strong>Standart (3.500-6.000₺/ay):</strong> 2 platform, 16 post + 8 story/ay, özel görsel, 2 video, aylık rapor</li>
+                <li><strong>Profesyonel (6.500-12.000₺/ay):</strong> 3+ platform, 24 post + 20 story + 8 reel/ay, çekim günleri, detaylı rapor</li>
+                <li><strong>Premium / Enterprise (13.000-25.000₺/ay):</strong> Tüm platformlar, haftalık video shoot, influencer koordinasyonu, dedike AM</li>
+            </ul>
+
+            <h2>Ajans Seçim Kriterleri</h2>
+            <ol>
+                <li><strong>Kendi hesabına bak:</strong> Sosyal medya ajansının kendi Instagram hesabı zayıfsa, sizin hesabınızı büyütemez. @ hesabına gir, son 30 günün post'larını incele.</li>
+                <li><strong>Müşteri portfolyo:</strong> Mevcut hesaplar hangi seviyede büyümüş? Başlangıç ve şu anki takipçi sayılarını karşılaştır.</li>
+                <li><strong>İçerik çeşitliliği:</strong> Sadece statik görsel mi yoksa video, reel, carousel, story, canlı yayın dahil mi?</li>
+                <li><strong>Çekim ekibi:</strong> Ajans kendi fotoğrafçı/video editörüyle mi çalışıyor yoksa freelance mı?</li>
+                <li><strong>Topluluk yönetim saati:</strong> DM ve yorum yanıtlama işi günde kaç saat yapılıyor?</li>
+                <li><strong>Paylaşım onay süreci:</strong> Her post size onay için mi geliyor, yoksa serbest mi? İkisi arasında denge bulun.</li>
+                <li><strong>Kriz yönetimi:</strong> Olumsuz yorum veya marka krizi olursa 30 dakika içinde müdahale edebilir mi?</li>
+            </ol>
+
+            <h2>Sonuç Beklentileri (Gerçekçi)</h2>
+            <p>Sıfırdan bir Kırıkkale işletmesinin sosyal medya hesabını büyütmek için gerçekçi beklentiler:</p>
+            <ul>
+                <li>1. Ay: 100-300 yeni takipçi, haftalık 15-30 etkileşim</li>
+                <li>3. Ay: 500-1.500 yeni takipçi, 5-15 lead/ay</li>
+                <li>6. Ay: 1.500-4.000 yeni takipçi, 20-40 lead/ay, viral reel şansı</li>
+                <li>12. Ay: 5.000-15.000 yeni takipçi, aylık 50+ lead, ilk influencer partnership</li>
+            </ul>
+
+            <h2>Sıkça Yapılan Hatalar</h2>
+            <ul>
+                <li>Yanlış ajansla 6 ay kaybetmek (zamanı geri alamazsınız)</li>
+                <li>Sadece "güzel görsel" peşinde koşmak — hikaye ve net CTA yok</li>
+                <li>Organikten reklamsız büyüme beklemek (2026'da organic reach %1-3)</li>
+                <li>Platform zincirlemesi: tek içeriği 5 platforma atıp iddia ederek "çok platform yönettik"</li>
+                <li>Influencer seçerken sadece takipçi sayısına bakmak (engagement rate daha önemli)</li>
+            </ul>
+
+            <h2>ZMK Agency Sosyal Medya Paketleri</h2>
+            <p>Detaylı paketler <a href="/pricing">/pricing</a>'te. Özet:</p>
+            <ul>
+                <li>Esnaf Express: 1.950₺/ay (Instagram + Facebook, 8 post)</li>
+                <li>Lokal Starter: 3.500₺/ay (IG + FB + TikTok, 20 post + 8 reel)</li>
+                <li>Growth Pro: 7.500₺/ay (tüm platformlar, haftalık çekim, rapor + danışmanlık)</li>
+                <li>Enterprise: 18.500₺/ay (dedike ekip, influencer koordinasyon, aylık C-level sunum)</li>
+            </ul>
+
+            <p>Ücretsiz keşif için: <a href="/contact">/contact</a> veya 0541 381 21 14.</p>
+        `,
+        category: "Sosyal Medya",
+        date: "28 Nisan 2026",
+        author: "ZMK Social Team",
+        image: "/images/blog-sosyal-medya-ajansi.png",
+        keywords: "kırıkkale sosyal medya ajansı, kırıkkale instagram ajansı, kırıkkale tiktok ajansı, kırıkkale sosyal medya yönetimi, kırıkkale sosyal medya fiyat"
     }
 ];

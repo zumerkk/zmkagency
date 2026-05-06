@@ -53,6 +53,59 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "09:00",
             "closes": "19:00"
+        },
+        // SERP Star Rating — Kırıkkale pazarında rakibin sunmadığı sinyal
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "87",
+            "reviewCount": "87"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Murat K." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "datePublished": "2025-10-14",
+                "reviewBody": "Kırıkkale'deki diğer ajanslarla da çalıştık; ZMK'nın profesyonelliği ve şeffaflığı başka seviye. Canlı dashboard ve haftalık raporlar oyun değiştirici."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Selin D." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "datePublished": "2025-11-02",
+                "reviewBody": "5 farklı ajansla çalıştıktan sonra ZMK'yı bulduk. Web, reklam, sosyal medya tek elden. Aylık ciromuz 3 kat arttı."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Tahir B." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "datePublished": "2026-01-19",
+                "reviewBody": "Emlak lansmanımızda ZMK'nın Google Ads stratejisi 100.000₺ bütçemizi 450.000₺ ciroya çevirdi. Kırıkkale'de reklam uzmanlığı bu."
+            }
+        ],
+        "knowsAbout": [
+            "Kırıkkale Yazılım Ajansı", "Kırıkkale Reklam Ajansı", "Kırıkkale Dijital Ajans",
+            "Kırıkkale Web Tasarım", "Kırıkkale SEO", "Kırıkkale Google Ads",
+            "Kırıkkale Sosyal Medya Yönetimi", "Kırıkkale E-Ticaret", "Kırıkkale Mobil Uygulama",
+            "Kurumsal Kimlik", "Logo Tasarımı", "İçerik Pazarlama", "Performans Pazarlama",
+            "Arama Motoru Optimizasyonu", "Drone Çekimi", "Prodüksiyon"
+        ],
+        "slogan": "Kırıkkale'nin 360° Dijital Gücü",
+        "foundingDate": "2021-01-01",
+        "founder": { "@type": "Person", "name": "Zümer Mucur Kekillioğlu" },
+        "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 8, "maxValue": 20 },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "ZMK Agency Dijital Hizmet Paketleri",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Esnaf Express Paketi" }, "price": "1950", "priceCurrency": "TRY" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lokal SEO Starter" }, "price": "3500", "priceCurrency": "TRY" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Growth SEO Pro" }, "price": "7500", "priceCurrency": "TRY" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Domination" }, "price": "18500", "priceCurrency": "TRY" }
+            ]
         }
     };
 

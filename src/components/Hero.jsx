@@ -58,6 +58,9 @@ const Hero = ({ t, onCtaClick }) => {
 
     return (
         <section className="apple-hero" ref={heroRef} aria-label="Ana bölüm">
+            {/* Tech Dominance Grid */}
+            <div className="hero-grid"></div>
+
             {/* Mouse-tracking spotlight */}
             <div className="hero-spotlight" ref={spotlightRef}></div>
 
@@ -65,7 +68,6 @@ const Hero = ({ t, onCtaClick }) => {
             <div className="apple-hero-ambient">
                 <div className="apple-hero-orb orb-1"></div>
                 <div className="apple-hero-orb orb-2"></div>
-                <div className="apple-hero-orb orb-3"></div>
             </div>
 
             {/* Floating particles */}
@@ -91,14 +93,14 @@ const Hero = ({ t, onCtaClick }) => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <span className="live-dot"></span>
-                    Kırıkkale'nin #1 Dijital Ajansı
+                    {t.microStats ? t.microStats[0] : "Kırıkkale'nin #1 Ajansı"}
                 </motion.div>
 
                 <motion.h1
                     className="apple-hero-h1"
                     initial={{ opacity: 0, y: 80 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <span className="hero-line-1">{t.title1}</span>
                     <span className="hero-line-2">{t.title2}</span>
@@ -119,17 +121,17 @@ const Hero = ({ t, onCtaClick }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                    <button onClick={onCtaClick} className="hero-btn-primary" aria-label="Ücretsiz analiz al">
+                    <button onClick={onCtaClick} className="hero-btn-primary" aria-label="Hemen Hakimiyeti Al">
                         <span className="btn-shimmer"></span>
                         {t.ctaPrimary}
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </button>
                     <a
                         href="https://wa.me/905413812114?text=Merhaba,%20dijital%20dönüşüm%20için%20bilgi%20almak%20istiyorum."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hero-btn-secondary"
-                        aria-label="WhatsApp ile iletişime geç"
+                        aria-label="Strateji Toplantısı Ayarla"
                     >
                         {t.ctaSecondary}
                     </a>

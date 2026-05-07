@@ -11,12 +11,12 @@ export const content = {
             cta: "Bize Ulaşın"
         },
         hero: {
-            title1: "Sadece Tasarım Değil,",
-            title2: "Müşteri Kazandıran Sistemler.",
-            subtitle: "Standart temalara, gizli maliyetlere ve sonuçsuz reklamlara veda edin. İşletmenizi internetin bir sonraki seviyesine taşıyacak strateji, yazılım ve performans pazarlamasını tek elden yönetin.",
-            ctaPrimary: "Ücretsiz Analiz Al",
-            ctaSecondary: "WhatsApp'tan Yaz",
-            microStats: ["Sözleşmeli Süreç", "Kırıkkale Merkezli", "Tüm Türkiye'ye Hizmet", "Şeffaf Raporlama"]
+            title1: "Sadece Kod Yazmıyoruz,",
+            title2: "Pazar Liderleri Yaratıyoruz.",
+            subtitle: "Kırıkkale'nin yeni nesil dijital ajansı. Rakipleriniz teknik jargonlarla vakit kaybederken, biz sizi ciro, marka algısı ve SEO dominasyonu ile sektörün zirvesine taşıyoruz. Algoritmaları dize getiren ekibe katılın.",
+            ctaPrimary: "Hemen Hakimiyeti Al",
+            ctaSecondary: "Strateji Toplantısı Ayarla",
+            microStats: ["%100 SEO Skoru", "Ciro Odaklı Sistemler", "Kırıkkale Merkezli", "Global Teknolojiler"]
         },
         trustBadges: {
             title: "Kanıtlanmış Güvenilirlik",

@@ -182,7 +182,39 @@ async function prerender() {
     await browser.close();
     server.close();
 
-    console.log(`\n🏁 Pre-rendering complete!`);
+    // Generate sitemap.xml
+    console.log('\n🗺️ Generating sitemap.xml...');
+    const baseUrl = 'https://zmkagency.com';
+    const date = new Date().toISOString().split('T')[0];
+    
+    let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+    
+    ROUTES.forEach(route => {
+        // Priority logic: homepage is 1.0, main pages 0.9, services/seo pages 0.8
+        let priority = '0.8';
+        if (route === '/') priority = '1.0';
+        else if (['/services', '/contact', '/portfolio', '/blog'].includes(route)) priority = '0.9';
+        
+        sitemapXml += `  <url>\n`;
+        sitemapXml += `    <loc>${baseUrl}${route === '/' ? '' : route}</loc>\n`;
+        sitemapXml += `    <lastmod>${date}</lastmod>\n`;
+        sitemapXml += `    <changefreq>weekly</changefreq>\n`;
+        sitemapXml += `    <priority>${priority}</priority>\n`;
+        sitemapXml += `  </url>\n`;
+    });
+    
+    sitemapXml += `</urlset>`;
+    
+    const sitemapPath = join(DIST_DIR, 'sitemap.xml');
+    writeFileSync(sitemapPath, sitemapXml, 'utf-8');
+    console.log(`  ✅ Saved sitemap to ${sitemapPath}`);
+
+    // Update robots.txt to point to sitemap if it exists, otherwise create it
+    const robotsPath = join(DIST_DIR, 'robots.txt');
+    const robotsContent = `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
+    writeFileSync(robotsPath, robotsContent, 'utf-8');
+
+    console.log(`\n🏁 Pre-rendering and SEO generation complete!`);
     console.log(`   ✅ Success: ${successCount}/${ROUTES.length}`);
     if (errorCount > 0) {
         console.log(`   ❌ Errors: ${errorCount}`);

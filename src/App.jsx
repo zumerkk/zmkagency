@@ -74,7 +74,7 @@ function App() {
               <Route path="/vision" element={<Vision t={t} />} />
               {/* ... other routes ... */}
 
-              <Route path="/pricing" element={<Pricing t={t.pricing} wizardT={t.wizard} />} />
+              <Route path="/pricing" element={<Pricing wizardT={t.wizard} />} />
               <Route path="/contact" element={<Contact t={t} />} />
               <Route path="/portfolio" element={<PortfolioPage t={t} />} />
 

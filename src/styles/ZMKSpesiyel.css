@@ -27,7 +27,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(236, 72, 153, 0.06) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 212, 255, 0.06) 40%, transparent 70%);
     pointer-events: none;
     animation: zspPulse 8s ease-in-out infinite alternate;
 }
@@ -46,8 +46,8 @@
 .zsp-badge {
     display: inline-block;
     padding: 8px 20px;
-    background: linear-gradient(90deg, rgba(236, 72, 153, 0.15), rgba(99, 102, 241, 0.15));
-    border: 1px solid rgba(236, 72, 153, 0.25);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.15), rgba(99, 102, 241, 0.15));
+    border: 1px solid rgba(0, 212, 255, 0.25);
     border-radius: 30px;
     font-size: 0.8rem;
     font-weight: 700;
@@ -62,7 +62,7 @@
     letter-spacing: -3px;
     line-height: 1.05;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #ec4899 100%);
+    background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #00d4ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -244,7 +244,7 @@
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 8px;
-    background: linear-gradient(135deg, #6366f1, #ec4899);
+    background: linear-gradient(135deg, #6366f1, #00d4ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -278,7 +278,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+    background: linear-gradient(90deg, #6366f1, #00d4ff, #f59e0b);
 }
 
 .zsp-cta-box h2 {

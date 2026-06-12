@@ -118,8 +118,8 @@ const services = [
         headline: 'Görüntü,\nbir his bırakır.',
         tagline: 'Sinematik kalite. Profesyonel ekip. Yaratıcı vizyon.',
         icon: '▣',
-        accentColor: '#ec4899',
-        accentGlow: 'rgba(236, 72, 153, 0.15)',
+        accentColor: '#00d4ff',
+        accentGlow: 'rgba(0, 212, 255, 0.15)',
         description: 'Profesyonel ekipman, deneyimli ekip ve yaratıcı vizyon ile tanıtım filmi, reklam filmi, müzik klibi, ürün çekimi, drone çekimi ve sosyal medya içerik prodüksiyonu gerçekleştiriyoruz. Ön prodüksiyondan post-prodüksiyona kadar tüm süreçleri yönetiyoruz.',
         subServices: [
             { title: 'Tanıtım & Kurumsal Film', desc: 'Şirketinizi, ürünlerinizi ve hizmetlerinizi sinematik bir dille anlatan profesyonel tanıtım filmleri.' },
@@ -371,7 +371,7 @@ const ServiceShowcase = ({ service, index, isActive, onToggle }) => {
 };
 
 /* ─── MAIN PAGE ─── */
-const ServicesPage = ({ t, tContact }) => {
+const ServicesPage = ({ tContact }) => {
     const [activeService, setActiveService] = useState(null);
     const [openFaq, setOpenFaq] = useState(null);
     const heroRef = useRef(null);

@@ -1,418 +1,474 @@
-import React, { useState } from 'react';
-// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check } from 'lucide-react';
+import {
+    Globe, Share2, Target, TrendingUp, Clapperboard, PenTool, Code2, Smartphone,
+    Check, ArrowRight, AlertTriangle, FileCheck, Layers, BarChart3, Headphones,
+    Sparkles, Crown, Building2, MessageCircle, Star
+} from 'lucide-react';
 import '../styles/Pricing.css';
-
 
 import SEO from '../components/SEO';
 import WizardForm from '../components/WizardForm';
+import {
+    packages, webTiers, serviceCategories, extras, assurances, PERIOD_LABEL
+} from '../data/pricingData';
 
-const Pricing = ({ t, wizardT }) => {
-    // Categories: retainer, webSoftware, marketingAds, seoData, production, branding
-    const [activeCategory, setActiveCategory] = useState(t.categories?.[0]?.id || 'retainer');
+const ICONS = {
+    Globe, Share2, Target, TrendingUp, Clapperboard, PenTool, Code2, Smartphone,
+    FileCheck, Layers, BarChart3, Headphones
+};
 
-    const [roiBudget, setRoiBudget] = useState(15000); // Default budget for simulator
-    const [roiSector, setRoiSector] = useState(1.2); // Default multiplier (Service)
-    const [wizardConfig, setWizardConfig] = useState({
-        isOpen: false,
-        initialData: {},
-        source: 'Quick Quote'
-    });
+const periodSuffix = (period) =>
+    period === 'month' ? '/ay' : period === 'unit' ? '/adet' : '';
 
-    // Removed unused activeData variable since we map directly from categories now
+/* Parse "15.000₺ – 22.500₺" → [15000, 22500] for structured data */
+const parseRange = (price) => {
+    const nums = (price.match(/[\d.]+/g) || [])
+        .map(n => parseInt(n.replace(/\./g, ''), 10))
+        .filter(n => !isNaN(n));
+    return nums.length ? nums : [0];
+};
 
-    const openWizardForPlan = (plan) => {
+const Pricing = ({ wizardT }) => {
+    const [activeSection, setActiveSection] = useState('paketler');
+    const [wizardConfig, setWizardConfig] = useState({ isOpen: false, initialData: {}, source: 'Pricing' });
+    const sectionRefs = useRef({});
+
+    const navItems = [
+        { id: 'paketler', label: 'Paketler' },
+        ...serviceCategories.map(c => ({ id: c.id, label: c.title.split(' ')[0] === 'Google' ? 'SEO' : c.title.split('&')[0].replace('Hizmetleri', '').trim() })),
+        { id: 'ekstralar', label: 'Ekstralar' },
+    ];
+
+    /* Scrollspy */
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) setActiveSection(entry.target.id);
+                });
+            },
+            { rootMargin: '-30% 0px -60% 0px' }
+        );
+        Object.values(sectionRefs.current).forEach(el => el && observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
+
+    const scrollTo = (id) => {
+        const el = document.getElementById(id);
+        if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - 120;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
+    const openWizard = (title, price, periodText = '') => {
         setWizardConfig({
             isOpen: true,
             initialData: {
-                budget: `${plan.price} ${plan.period}`,
-                details: `Selected Plan: ${plan.title}`
+                budget: `${price} ${periodText}`.trim(),
+                details: `Seçilen Hizmet: ${title}`,
             },
-            source: `Pricing - ${plan.title}`
+            source: `Pricing - ${title}`,
         });
     };
 
-    // Build structured data for ALL pricing items (all categories)
-    const pricingSchema = {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        "name": "ZMK Agency Hizmet Fiyatları",
-        "description": t.subtitle,
-        "itemListElement": Object.entries(t.items).flatMap(([categoryId, plans]) =>
-            plans.map(plan => ({
-                "@type": "Offer",
-                "name": plan.title,
-                "description": plan.description,
-                "price": plan.price.replace(/[^0-9]/g, ''),
-                "priceCurrency": "TRY",
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "price": plan.price.replace(/[^0-9]/g, ''),
-                    "priceCurrency": "TRY",
-                    "unitText": plan.period
-                },
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": plan.title,
-                    "description": plan.description,
-                    "provider": {
-                        "@type": "ProfessionalService",
-                        "name": "ZMK Agency"
-                    }
-                }
-            }))
-        )
+    /* ── Structured data: full OfferCatalog ── */
+    const offerCatalogSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'OfferCatalog',
+        name: 'ZMK Agency 2026 Hizmet Listesi ve Fiyatlandırma',
+        description: 'Web tasarım, sosyal medya, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama fiyatları.',
+        itemListElement: [
+            ...packages.map(p => {
+                const range = parseRange(p.price);
+                return {
+                    '@type': 'Offer',
+                    name: p.name,
+                    description: p.description,
+                    price: range[0],
+                    priceCurrency: 'TRY',
+                    itemOffered: {
+                        '@type': 'Service',
+                        name: p.name,
+                        provider: { '@type': 'ProfessionalService', name: 'ZMK Agency' },
+                    },
+                };
+            }),
+            ...serviceCategories.flatMap(cat =>
+                cat.items.map(item => {
+                    const range = parseRange(item.price);
+                    return {
+                        '@type': range.length > 1 ? 'AggregateOffer' : 'Offer',
+                        name: item.name,
+                        ...(range.length > 1
+                            ? { lowPrice: range[0], highPrice: range[1] }
+                            : { price: range[0] }),
+                        priceCurrency: 'TRY',
+                        itemOffered: {
+                            '@type': 'Service',
+                            name: item.name,
+                            category: cat.title,
+                            provider: { '@type': 'ProfessionalService', name: 'ZMK Agency' },
+                        },
+                    };
+                })
+            ),
+        ],
     };
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://zmkagency.com" },
-            { "@type": "ListItem", "position": 2, "name": "Fiyatlar", "item": "https://zmkagency.com/pricing" }
-        ]
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://zmkagency.com' },
+            { '@type': 'ListItem', position: 2, name: 'Hizmetler & Fiyatlandırma', item: 'https://zmkagency.com/pricing' },
+        ],
     };
 
     return (
         <>
             <SEO
-                title="Kırıkkale Web Sitesi & Reklam Fiyatları 2026"
-                description="Şeffaf fiyatlandırma: kurumsal site 12.500₺, e-ticaret 35.000₺, sosyal medya yönetimi 7.500₺/ay. 31 Mart'a kadar özel kampanya."
-                keywords="kırıkkale web sitesi fiyatları, kırıkkale reklam fiyatları, kırıkkale seo fiyatları, dijital ajans fiyatları 2026"
-                schema={[pricingSchema, breadcrumbSchema]}
+                title="Hizmetler & Fiyatlandırma 2026 | Web, Sosyal Medya, Reklam, Yazılım"
+                description="ZMK Agency 2026 şeffaf fiyat listesi: kurumsal web sitesi 22.500₺'den, sosyal medya yönetimi 9.500₺/ay'dan, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama."
+                keywords="kırıkkale web sitesi fiyatları, sosyal medya yönetimi fiyatları 2026, reklam ajansı fiyat listesi, kırıkkale seo fiyatları, özel yazılım fiyatları, mobil uygulama fiyatı"
+                schema={[offerCatalogSchema, breadcrumbSchema]}
             />
-            <section className="pricing-page">
 
-                <div className="container">
-                    <div className="pricing-header">
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
+            <div className="zpr-page">
+                {/* ════════ HERO ════════ */}
+                <header className="zpr-hero">
+                    <div className="zpr-hero-glow" />
+                    <div className="zpr-hero-grid" />
+                    <div className="zpr-container">
+                        <motion.span
+                            className="zpr-eyebrow"
+                            initial={{ opacity: 0, y: 16 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
                         >
-                            {t.title}
+                            <Sparkles size={13} />
+                            ZMK AGENCY — 2026 Hizmet & Yatırım Rehberi
+                        </motion.span>
+
+                        <motion.h1
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            Hizmetler <span className="zpr-amp">&</span>{' '}
+                            <span className="zpr-h1-accent">Fiyatlandırma</span>
                         </motion.h1>
+
                         <motion.p
+                            className="zpr-hero-sub"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.6 }}
+                            transition={{ delay: 0.25, duration: 0.7 }}
                         >
-                            {t.subtitle}
+                            Biz site yapmıyoruz; işletmenizin <strong>dijital satış ve güven altyapısını</strong> kuruyoruz.
+                            Net kapsam, şeffaf fiyat, ölçülebilir sonuç.
                         </motion.p>
-                    </div>
 
-                    {/* Discount Badge */}
-                    {t.discountTag && (
                         <motion.div
-                            className="discount-badge-banner"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            style={{
-                                background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
-                                color: '#fff',
-                                padding: '12px 30px',
-                                borderRadius: '50px',
-                                fontSize: '1.1rem',
-                                fontWeight: '700',
-                                textAlign: 'center',
-                                margin: '0 auto 30px',
-                                display: 'inline-block',
-                                boxShadow: '0 4px 20px rgba(245, 158, 11, 0.4)',
-                                letterSpacing: '0.5px'
-                            }}
+                            className="zpr-hero-chips"
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
                         >
-                            {t.discountTag}
+                            <span><FileCheck size={14} /> Sözleşmeli & Faturalı</span>
+                            <span><Layers size={14} /> Şeffaf Kapsam</span>
+                            <span><BarChart3 size={14} /> Aylık Raporlama</span>
                         </motion.div>
-                    )}
+                    </div>
+                </header>
 
-                    {/* Categories */}
-                    <div className="pricing-categories">
-                        {t.categories.map((cat) => (
+                {/* ════════ STICKY NAV ════════ */}
+                <nav className="zpr-nav" aria-label="Fiyat kategorileri">
+                    <div className="zpr-nav-track">
+                        {navItems.map(item => (
                             <button
-                                key={cat.id}
-                                className={`category-btn ${activeCategory === cat.id ? 'active' : ''}`}
-                                onClick={() => setActiveCategory(cat.id)}
+                                key={item.id}
+                                className={`zpr-nav-chip ${activeSection === item.id ? 'active' : ''}`}
+                                onClick={() => scrollTo(item.id)}
                             >
-                                {cat.label}
+                                {item.label}
                             </button>
                         ))}
                     </div>
+                </nav>
 
-                    <div className="pricing-grid">
-                        <AnimatePresence mode="wait">
-                            {t.items[activeCategory]?.map((plan, idx) => (
-                                <motion.div
-                                    key={`${activeCategory}-${idx}`}
-                                    className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.95 }}
-                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
+                {/* ════════ PAKETLER ════════ */}
+                <section
+                    id="paketler"
+                    className="zpr-section"
+                    ref={el => (sectionRefs.current.paketler = el)}
+                >
+                    <div className="zpr-container">
+                        <div className="zpr-section-head">
+                            <span className="zpr-kicker"><Crown size={14} /> Öne Çıkan Paketler</span>
+                            <h2>İşletmenize Göre Hazır Sistemler</h2>
+                            <p>Tek tek hizmet seçmek istemeyenler için kurguladığımız, kendini kanıtlamış 6 paket.</p>
+                        </div>
+
+                        <div className="zpr-packages">
+                            {packages.map((pkg, i) => (
+                                <motion.article
+                                    key={pkg.id}
+                                    className={`zpr-pkg ${pkg.featured ? 'featured' : ''} ${pkg.prestige ? 'prestige' : ''} ${pkg.enterprise ? 'enterprise' : ''}`}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: '-60px' }}
+                                    transition={{ delay: (i % 3) * 0.1, duration: 0.6 }}
                                 >
-                                    {plan.isPopular && <span className="popular-tag">{t.popularTag}</span>}
-
-                                    <div className="card-header">
-                                        <h3>{plan.title}</h3>
-                                        <div className="price">
-                                            {plan.bundlePrice && (
-                                                <div style={{
-                                                    display: 'flex',
-                                                    gap: '15px',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    marginBottom: '10px',
-                                                    flexWrap: 'wrap'
-                                                }}>
-                                                    <div style={{
-                                                        background: 'rgba(16, 185, 129, 0.15)',
-                                                        border: '1px solid rgba(16, 185, 129, 0.3)',
-                                                        borderRadius: '12px',
-                                                        padding: '8px 14px',
-                                                        textAlign: 'center'
-                                                    }}>
-                                                        <div style={{ fontSize: '0.7rem', color: '#10b981', fontWeight: '600', marginBottom: '2px' }}>Paketle Birlikte</div>
-                                                        <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#10b981' }}>{t.currency}{plan.bundlePrice}</div>
-                                                    </div>
-                                                    <div style={{
-                                                        background: 'rgba(255,255,255,0.05)',
-                                                        border: '1px solid rgba(255,255,255,0.1)',
-                                                        borderRadius: '12px',
-                                                        padding: '8px 14px',
-                                                        textAlign: 'center'
-                                                    }}>
-                                                        <div style={{ fontSize: '0.7rem', color: '#888', fontWeight: '600', marginBottom: '2px' }}>Tek Başına</div>
-                                                        <div style={{ fontSize: '1.2rem', fontWeight: '800', color: '#fff' }}>{t.currency}{plan.price}</div>
-                                                    </div>
-                                                </div>
-                                            )}
-                                            {!plan.bundlePrice && (
-                                                <>
-                                                    <span className="currency">{t.currency}</span>
-                                                    {plan.price}
-                                                    <span className="period">{plan.period}</span>
-                                                </>
-                                            )}
-                                            {plan.bundlePrice && (
-                                                <span className="period">{plan.period}</span>
-                                            )}
-                                        </div>
-                                        {plan.campaignBadge && (
-                                            <div style={{
-                                                background: 'linear-gradient(135deg, #f59e0b, #ef4444)',
-                                                color: '#fff',
-                                                padding: '4px 12px',
-                                                borderRadius: '20px',
-                                                fontSize: '0.75rem',
-                                                fontWeight: '700',
-                                                display: 'inline-block',
-                                                marginTop: '8px',
-                                                letterSpacing: '0.3px'
-                                            }}>
-                                                🔥 {plan.campaignBadge}
-                                            </div>
-                                        )}
-                                        {plan.bundleNote && (
-                                            <p style={{ fontSize: '0.7rem', color: '#10b981', marginTop: '6px', fontStyle: 'italic' }}>
-                                                * {plan.bundleNote}
-                                            </p>
-                                        )}
-                                    </div>
-
-                                    <div className="target-audience" style={{
-                                        background: 'rgba(255,255,255,0.03)',
-                                        padding: '12px',
-                                        borderRadius: '8px',
-                                        marginBottom: '15px',
-                                        fontSize: '13px',
-                                        color: '#bbb',
-                                        borderLeft: '3px solid var(--text-accent)'
-                                    }}>
-                                        <strong style={{ display: 'block', color: '#fff', marginBottom: '4px' }}>🎯 Optimizasyon:</strong>
-                                        {plan.description}
-                                    </div>
-
-                                    {/* Delivery Time (Computed heuristically) */}
-                                    <div className="delivery-time" style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '8px',
-                                        fontSize: '13px',
-                                        color: '#aaa',
-                                        marginBottom: '20px'
-                                    }}>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                        Süre: {plan.period.includes('ay') ? 'Aylık Sürekli Hizmet' : (plan.price.includes('9.999') ? '3-5 İş Günü' : 'Proje Başlangıcında Belirlenir')}
-                                    </div>
-
-                                    {/* Tech Specs for Developers/CTOs */}
-                                    {plan.techSpecs && (
-                                        <div className="tech-specs">
-                                            &lt; {plan.techSpecs} /&gt;
-                                        </div>
+                                    {pkg.badge && (
+                                        <span className="zpr-pkg-badge">
+                                            {pkg.featured && <Star size={12} />}
+                                            {pkg.prestige && <Crown size={12} />}
+                                            {pkg.enterprise && <Building2 size={12} />}
+                                            {pkg.badge}
+                                        </span>
                                     )}
+                                    <span className="zpr-pkg-no">{pkg.no}</span>
+                                    <h3>{pkg.name}</h3>
+                                    <p className="zpr-pkg-audience">{pkg.audience}</p>
 
-                                    <h4 style={{ fontSize: '14px', marginBottom: '10px', color: '#fff', opacity: 0.9 }}>Neler Teslim Ediyoruz?</h4>
-                                    <ul className="features-list">
-                                        {plan.features.map((feature, fIdx) => (
-                                            <li key={fIdx}>
-                                                <Check size={18} />
-                                                <span>{feature}</span>
-                                            </li>
+                                    <div className="zpr-pkg-price">
+                                        <strong>{pkg.price}</strong>
+                                        <span>{PERIOD_LABEL[pkg.period] === 'Aylık' ? '/ ay' : PERIOD_LABEL[pkg.period]}</span>
+                                    </div>
+
+                                    <p className="zpr-pkg-desc">{pkg.description}</p>
+
+                                    <ul className="zpr-pkg-features">
+                                        {pkg.features.map((f, fi) => (
+                                            <li key={fi}><Check size={15} /><span>{f}</span></li>
                                         ))}
                                     </ul>
 
+                                    {pkg.note && (
+                                        <p className="zpr-pkg-note"><AlertTriangle size={13} /> {pkg.note}</p>
+                                    )}
+
                                     <button
-                                        className="pricing-cta"
-                                        onClick={() => openWizardForPlan(plan)}
+                                        className="zpr-pkg-cta"
+                                        onClick={() => openWizard(pkg.name, pkg.price, PERIOD_LABEL[pkg.period])}
                                     >
-                                        {t.cta}
+                                        Bu Paketi İste <ArrowRight size={16} />
                                     </button>
-                                </motion.div>
+                                </motion.article>
                             ))}
-                        </AnimatePresence>
+                        </div>
                     </div>
+                </section>
 
-                    {/* PDF Download Section */}
-                    <motion.div
-                        className="pdf-download-section"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                    >
-                        <p style={{ color: '#888', marginBottom: '20px' }}>
-                            {t.categories[0].id === 'retainer' ? "Detaylı hizmet listesi ve teknik şartnameler için:" : "For detailed service list and technical specifications:"}
-                        </p>
-                        <a href="#" className="pdf-download-btn" onClick={(e) => e.preventDefault()}>
-                            <span style={{ fontSize: '20px' }}>📄</span>
-                            {t.categories[0].id === 'retainer' ? "Fiyat Listesini İndir (PDF - 2026)" : "Download Price List (PDF - 2026)"}
-                        </a>
-                    </motion.div>
+                {/* ════════ HİZMET KATEGORİLERİ ════════ */}
+                {serviceCategories.map((cat, ci) => {
+                    const Icon = ICONS[cat.icon] || Globe;
+                    return (
+                        <section
+                            key={cat.id}
+                            id={cat.id}
+                            className={`zpr-section zpr-cat ${ci % 2 === 1 ? 'alt' : ''}`}
+                            ref={el => (sectionRefs.current[cat.id] = el)}
+                        >
+                            <div className="zpr-container">
+                                <div className="zpr-cat-head">
+                                    <div className="zpr-cat-icon"><Icon size={26} /></div>
+                                    <div>
+                                        <span className="zpr-cat-index">{String(ci + 1).padStart(2, '0')}</span>
+                                        <h2>{cat.title}</h2>
+                                        <p>{cat.tagline}</p>
+                                    </div>
+                                </div>
 
-                    {/* ROI Simulator - Market Dominance Feature */}
-                    <div className="roi-simulator glass-panel" style={{ margin: '80px 0', padding: '40px', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '28px', marginBottom: '10px' }}>{t.roi ? t.roi.title : "Yatırım Getirisi Simülatörü"}</h2>
-                        <p style={{ color: '#888', marginBottom: '40px' }}>{t.roi ? t.roi.subtitle : "Dijital pazarlamanın gücünü keşfedin. Tahmini erişim ve etkileşimi hesaplayın."}</p>
+                                {/* Web kategorisi: çapa fiyatlı 3 seviye */}
+                                {cat.id === 'web' && (
+                                    <div className="zpr-tiers">
+                                        {webTiers.map((tier, ti) => (
+                                            <motion.div
+                                                key={tier.name}
+                                                className={`zpr-tier ${tier.featured ? 'featured' : ''}`}
+                                                initial={{ opacity: 0, y: 30 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: ti * 0.12 }}
+                                            >
+                                                {tier.badge && <span className="zpr-tier-badge"><Star size={12} /> {tier.badge}</span>}
+                                                <h3>{tier.name}</h3>
+                                                <div className="zpr-tier-price">{tier.price}</div>
+                                                <p className="zpr-tier-tagline">{tier.tagline}</p>
+                                                <ul>
+                                                    {tier.features.map((f, fi) => (
+                                                        <li key={fi}><Check size={14} /><span>{f}</span></li>
+                                                    ))}
+                                                </ul>
+                                                <button
+                                                    className="zpr-tier-cta"
+                                                    onClick={() => openWizard(`${tier.name} Web Paketi`, tier.price)}
+                                                >
+                                                    Teklif Al <ArrowRight size={15} />
+                                                </button>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                )}
 
-                        <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-                            {/* Sector Selector */}
-                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
-                                <label style={{ display: 'block', marginBottom: '10px', color: '#ccc' }}>Sektörünüz:</label>
-                                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                                    {[
-                                        { id: 'ecommerce', label: 'E-Ticaret / Ürün Satışı', multiplier: 2.5 },
-                                        { id: 'service', label: 'Hizmet / Danışmanlık', multiplier: 1.2 },
-                                        { id: 'realestate', label: 'Gayrimenkul / İnşaat', multiplier: 0.8 },
-                                        { id: 'health', label: 'Sağlık / Klinik', multiplier: 1.5 }
-                                    ].map(sector => (
-                                        <button
-                                            key={sector.id}
-                                            onClick={() => setRoiSector(sector.multiplier)}
-                                            style={{
-                                                padding: '8px 15px',
-                                                borderRadius: '20px',
-                                                border: '1px solid rgba(255,255,255,0.1)',
-                                                background: roiSector === sector.multiplier ? 'var(--primary-color)' : 'transparent',
-                                                color: roiSector === sector.multiplier ? '#fff' : '#888',
-                                                cursor: 'pointer',
-                                                fontSize: '14px',
-                                                transition: 'all 0.3s'
-                                            }}
+                                {/* Reklam bütçesi uyarısı */}
+                                {cat.budgetNote && (
+                                    <div className="zpr-budget-note" role="note">
+                                        <AlertTriangle size={18} />
+                                        <div>
+                                            <strong>Önemli:</strong> {cat.budgetNote}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Fiyat listesi */}
+                                <div className="zpr-rows">
+                                    {cat.items.map((item, ii) => (
+                                        <motion.div
+                                            key={item.name}
+                                            className={`zpr-row ${item.popular ? 'popular' : ''}`}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true, margin: '-30px' }}
+                                            transition={{ delay: ii * 0.04, duration: 0.45 }}
                                         >
-                                            {sector.label}
-                                        </button>
+                                            <div className="zpr-row-name">
+                                                {item.popular && <span className="zpr-row-star"><Star size={13} /></span>}
+                                                <span>{item.name}</span>
+                                                {item.popular && <em className="zpr-row-tag">En çok tercih edilen</em>}
+                                            </div>
+                                            <div className="zpr-row-dots" aria-hidden="true" />
+                                            <div className="zpr-row-price">
+                                                <strong>{item.price}</strong>
+                                                {periodSuffix(item.period) && <span>{periodSuffix(item.period)}</span>}
+                                            </div>
+                                            <button
+                                                className="zpr-row-cta"
+                                                onClick={() => openWizard(item.name, item.price, periodSuffix(item.period))}
+                                                aria-label={`${item.name} için teklif al`}
+                                            >
+                                                Teklif Al
+                                            </button>
+                                        </motion.div>
                                     ))}
                                 </div>
+
+                                {/* Satış cümlesi */}
+                                <motion.blockquote
+                                    className="zpr-quote"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <span className="zpr-quote-mark">“</span>
+                                    <p>{cat.quote}</p>
+                                    <cite>— ZMK AGENCY</cite>
+                                </motion.blockquote>
                             </div>
-
-                            <div style={{ marginBottom: '30px', textAlign: 'left' }}>
-                                <label style={{ display: 'block', marginBottom: '10px', color: '#ccc' }}>Aylık Bütçe: <span style={{ color: '#fff', fontWeight: 'bold' }}>₺{roiBudget.toLocaleString()}</span></label>
-                                <input
-                                    type="range"
-                                    min="10000"
-                                    max="500000"
-                                    step="5000"
-                                    value={roiBudget}
-                                    onChange={(e) => setRoiBudget(Number(e.target.value))}
-                                    style={{ width: '100%', accentColor: 'var(--primary-color)', cursor: 'pointer' }}
-                                />
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginTop: '5px' }}>
-                                    <span>10.000₺</span>
-                                    <span>500.000₺+</span>
-                                </div>
-                            </div>
-
-                            <div className="roi-results" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                                <div className="roi-card" style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '10px' }}>
-                                    <h3 style={{ fontSize: '36px', color: 'var(--text-accent)', marginBottom: '5px' }}>
-                                        {Math.floor(roiBudget * (activeCategory === 'retainer' ? 1.5 : 0.05) * roiSector).toLocaleString()}
-                                    </h3>
-                                    <p style={{ fontSize: '14px', color: '#888' }}>Tahmini Erişim (Kişi)</p>
-                                </div>
-                                <div className="roi-card" style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', borderRadius: '10px' }}>
-                                    <h3 style={{ fontSize: '36px', color: '#a78bfa', marginBottom: '5px' }}>
-                                        {Math.floor(roiBudget * (activeCategory === 'retainer' ? 0.08 : 0.003) * roiSector).toLocaleString()}
-                                    </h3>
-                                    <p style={{ fontSize: '14px', color: '#888' }}>Potansiyel Etkileşim</p>
-                                </div>
-                            </div>
-                            <p style={{ fontSize: '12px', color: '#555', marginTop: '20px', fontStyle: 'italic' }}>*Veriler seçilen sektöre ve ortalama reklam maliyetlerine göre yapay zeka tarafından tahmin edilmiştir.</p>
-                        </div>
-                    </div>
-
-                    {/* Custom Quote Section */}
-                    <div className="custom-quote-section">
-                        <div className="custom-quote-content">
-                            <h2>{t.customQuote.title}</h2>
-                            <p>{t.customQuote.subtitle}</p>
-
-                            <button
-                                className="pricing-cta"
-                                style={{ marginTop: '20px', maxWidth: '300px' }}
-                                onClick={() => setWizardConfig({
-                                    isOpen: true,
-                                    initialData: {},
-                                    source: 'Pricing - Custom Quote'
-                                })}
-                            >
-                                {t.customQuote.cta || "Hızlı Teklif Alın"}
-                            </button>
-
-                            <AnimatePresence>
-                                {wizardConfig.isOpen && (
-                                    <WizardForm
-                                        t={wizardT}
-                                        onClose={() => setWizardConfig({ ...wizardConfig, isOpen: false })}
-                                        initialData={wizardConfig.initialData}
-                                        source={wizardConfig.source}
-                                    />
-                                )}
-                            </AnimatePresence>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Hidden but crawlable: All pricing data for SEO (all categories rendered as semantic HTML) */}
-                <div aria-hidden="true" style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
-                    {Object.entries(t.items).map(([categoryId, plans]) => (
-                        <section key={categoryId}>
-                            <h2>{t.categories.find(c => c.id === categoryId)?.label || categoryId}</h2>
-                            {plans.map((plan, idx) => (
-                                <article key={idx} itemScope itemType="https://schema.org/Offer">
-                                    <h3 itemProp="name">{plan.title}</h3>
-                                    <p itemProp="description">{plan.description}</p>
-                                    <p>Fiyat: <span itemProp="price">{plan.price}</span> <span itemProp="priceCurrency">TRY</span> {plan.period}</p>
-                                    {plan.bundlePrice && <p>Paketle Birlikte: {plan.bundlePrice} ₺</p>}
-                                    <ul>
-                                        {plan.features.map((f, fi) => <li key={fi}>{f}</li>)}
-                                    </ul>
-                                </article>
-                            ))}
                         </section>
-                    ))}
-                </div>
-            </section>
+                    );
+                })}
+
+                {/* ════════ EKSTRALAR ════════ */}
+                <section
+                    id="ekstralar"
+                    className="zpr-section"
+                    ref={el => (sectionRefs.current.ekstralar = el)}
+                >
+                    <div className="zpr-container">
+                        <div className="zpr-section-head">
+                            <span className="zpr-kicker"><Sparkles size={14} /> Ekstra Hizmetler</span>
+                            <h2>Küçük Dokunuşlar, Büyük Fark</h2>
+                            <p>Mevcut paketinize ekleyebileceğiniz hızlı ve etkili çözümler.</p>
+                        </div>
+
+                        <div className="zpr-extras">
+                            {extras.map((ex, i) => (
+                                <motion.button
+                                    key={ex.name}
+                                    className="zpr-extra"
+                                    onClick={() => openWizard(ex.name, ex.price)}
+                                    initial={{ opacity: 0, scale: 0.94 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: (i % 5) * 0.05 }}
+                                >
+                                    <span className="zpr-extra-name">{ex.name}</span>
+                                    <span className="zpr-extra-price">{ex.price}</span>
+                                </motion.button>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ════════ GÜVENCE ŞERİDİ ════════ */}
+                <section className="zpr-section zpr-assure-wrap">
+                    <div className="zpr-container">
+                        <div className="zpr-assure">
+                            {assurances.map(a => {
+                                const Icon = ICONS[a.icon] || FileCheck;
+                                return (
+                                    <div key={a.title} className="zpr-assure-item">
+                                        <Icon size={22} />
+                                        <h4>{a.title}</h4>
+                                        <p>{a.text}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ════════ FİNAL CTA ════════ */}
+                <section className="zpr-final">
+                    <div className="zpr-final-glow" />
+                    <div className="zpr-container">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2>Hangisi size göre, birlikte karar verelim.</h2>
+                            <p>
+                                15 dakikalık ücretsiz ön görüşmede işletmenizi dinliyor, bütçenize ve hedefinize
+                                en uygun kurguyu net rakamlarla öneriyoruz. Satış baskısı yok; yol haritası var.
+                            </p>
+                            <div className="zpr-final-actions">
+                                <button
+                                    className="zpr-final-primary"
+                                    onClick={() => setWizardConfig({ isOpen: true, initialData: {}, source: 'Pricing - Custom Quote' })}
+                                >
+                                    Özel Teklif Al <ArrowRight size={18} />
+                                </button>
+                                <a
+                                    className="zpr-final-wa"
+                                    href="https://wa.me/905413812114?text=Merhaba,%20hizmet%20ve%20fiyat%20listenizle%20ilgili%20bilgi%20almak%20istiyorum."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <MessageCircle size={18} /> WhatsApp'tan Yazın
+                                </a>
+                            </div>
+                            <p className="zpr-final-note">
+                                Fiyatlar 2026 yılı için geçerlidir; kapsam netleşince size özel sabit teklif sunulur.
+                            </p>
+                        </motion.div>
+                    </div>
+                </section>
+
+                <AnimatePresence>
+                    {wizardConfig.isOpen && (
+                        <WizardForm
+                            t={wizardT}
+                            onClose={() => setWizardConfig(prev => ({ ...prev, isOpen: false }))}
+                            initialData={wizardConfig.initialData}
+                            source={wizardConfig.source}
+                        />
+                    )}
+                </AnimatePresence>
+            </div>
         </>
     );
 };

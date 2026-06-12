@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
-import logo from '../assets/ZMK AGENCY-logo.png';
+import logo from '../assets/zmk-logo-horizontal.png';
 
 const Navbar = ({ t, lang, toggleLang, onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -59,6 +59,7 @@ const Navbar = ({ t, lang, toggleLang, onContactClick }) => {
           <li><Link to="/vision" onClick={closeMobileMenu}>{t.vision}</Link></li>
           <li><Link to="/portfolio" onClick={closeMobileMenu}>{t.portfolio}</Link></li>
           <li><Link to="/services" onClick={closeMobileMenu}>{t.services}</Link></li>
+          <li><Link to="/pricing" onClick={closeMobileMenu}>{t.pricing}</Link></li>
           <li><a href="/#agency" onClick={(e) => scrollToSection(e, 'agency')}>{t.agency}</a></li>
           <li><Link to="/esnaf-paket" onClick={closeMobileMenu} className="nav-esnaf-link">Esnaf Paketi</Link></li>
           <li><Link to="/zmk-spesiyel" onClick={closeMobileMenu} className="nav-spesiyel-link">ZMK Spesiyel</Link></li>

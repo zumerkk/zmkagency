@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEO from '../components/SEO';
 import '../styles/Portfolio.css';
@@ -21,7 +21,7 @@ const partnerWorks = [
         monogram: 'IP',
         description: 'Emlak ilan platformu: Harita entegrasyonu, gelişmiş filtreleme ve modern UI/UX tasarım.',
         tags: ['Platform', 'UX/UI', 'Maps'],
-        color: '#ec4899'
+        color: '#00d4ff'
     },
     {
         id: 'tencere-app',
@@ -91,7 +91,6 @@ const partnerWorks = [
 const PortfolioPage = ({ t }) => {
     const portfolio = t.portfolio;
     const [filter, setFilter] = useState('all');
-    const [hoveredId, setHoveredId] = useState(null);
 
     const categories = ['all', 'Marka Kimliği', 'Yazılım & UX', 'Web & Growth'];
 
@@ -145,8 +144,6 @@ const PortfolioPage = ({ t }) => {
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.4, delay: idx * 0.05 }}
                                     className="pf-card"
-                                    onMouseEnter={() => setHoveredId(item.id)}
-                                    onMouseLeave={() => setHoveredId(null)}
                                 >
                                     <div className="pf-card-glow" style={{ background: `radial-gradient(circle, ${item.color}15 0%, transparent 70%)` }} />
                                     <div className="pf-card-inner">

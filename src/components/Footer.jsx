@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
-import logo from '../assets/ZMK AGENCY-logo.png';
+import logo from '../assets/zmk-logo-stacked.png';
 
 const Footer = ({ t }) => {
     return (
@@ -44,6 +44,7 @@ const Footer = ({ t }) => {
                     <div className="apple-footer-col">
                         <h4>{t.links}</h4>
                         <ul>
+                            <li><Link to="/pricing">Hizmetler & Fiyatlar</Link></li>
                             <li><Link to="/vision">{t.vision || "Vision"}</Link></li>
                             <li><Link to="/portfolio">Referanslar</Link></li>
                             <li><Link to="/kirikkale-dijital-cozumler">Kırıkkale Dijital</Link></li>

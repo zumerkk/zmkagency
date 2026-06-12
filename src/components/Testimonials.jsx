@@ -16,6 +16,8 @@ const partners = [
     { name: 'ENTAŞ', monogram: 'EN', category: 'Sanayi', icon: '🏗️' },
     { name: 'ENTEC', monogram: 'ET', category: 'Mühendislik', icon: '⚙️' },
     { name: 'RAVEN SPORT', monogram: 'RS', category: 'Spor', icon: '🦅' },
+    { name: 'Kahvaltı Konağı', monogram: 'KK', category: 'Gastronomi', icon: '🍳' },
+    { name: 'Yuvam Apart', monogram: 'YA', category: 'Konaklama', icon: '🏠' },
 ];
 
 /* ── Animated counter ── */
@@ -82,7 +84,7 @@ const PartnerCard = ({ partner, index }) => (
 );
 
 /* ── Section ── */
-const Testimonials = ({ t }) => {
+const Testimonials = () => {
     return (
         <section className="ptr-section" id="partners" aria-label="İş Ortaklarımız">
             {/* Background layers */}
@@ -136,12 +138,12 @@ const Testimonials = ({ t }) => {
                     transition={{ delay: 0.3 }}
                 >
                     <div className="ptr-stat">
-                        <span className="ptr-stat-value"><AnimatedCounter target="13" suffix="+" /></span>
+                        <span className="ptr-stat-value"><AnimatedCounter target="15" suffix="+" /></span>
                         <span className="ptr-stat-label">Aktif İş Ortağı</span>
                     </div>
                     <div className="ptr-stat-divider" />
                     <div className="ptr-stat">
-                        <span className="ptr-stat-value"><AnimatedCounter target="8" /></span>
+                        <span className="ptr-stat-value"><AnimatedCounter target="10" /></span>
                         <span className="ptr-stat-label">Farklı Sektör</span>
                     </div>
                     <div className="ptr-stat-divider" />

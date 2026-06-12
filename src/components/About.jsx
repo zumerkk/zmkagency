@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/About.css';
-import logo from '../assets/ZMK AGENCY-logo.png';
+import logo from '../assets/zmk-logo-stacked.png';
 
 const About = ({ t }) => {
     return (

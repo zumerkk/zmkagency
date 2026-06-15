@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { MapPin, Ghost, EyeOff, Smartphone, TrendingDown, CheckCircle, ArrowRight, Star, AlertTriangle } from 'lucide-react';
+import { Ghost, EyeOff, Smartphone, TrendingDown, CheckCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import '../styles/EsnafLanding.css';
 import SEO from '../components/SEO';
 import WizardForm from '../components/WizardForm';
 
 const EsnafLanding = ({ t }) => {
-    const navigate = useNavigate();
     const content = t.esnafLanding;
     const [showWizard, setShowWizard] = React.useState(false);
 
@@ -37,7 +35,7 @@ const EsnafLanding = ({ t }) => {
         },
         "offers": {
             "@type": "Offer",
-            "price": "20000",
+            "price": content.solution.price.replace(/[^\d]/g, ''),
             "priceCurrency": "TRY",
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/LimitedAvailability",

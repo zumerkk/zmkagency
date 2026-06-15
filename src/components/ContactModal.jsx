@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, CheckCircle, AlertCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { X, ArrowRight, CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
 import { db } from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import '../styles/ContactModal.css';
 
 const ContactModal = ({ t, onClose }) => {
     const ct = t?.contact || {};
-    const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -51,10 +50,10 @@ const ContactModal = ({ t, onClose }) => {
     ];
 
     const budgetOptions = [
-        '5.000₺ - 10.000₺',
-        '10.000₺ - 25.000₺',
-        '25.000₺ - 50.000₺',
-        '50.000₺+',
+        '8.000₺ - 15.000₺',
+        '15.000₺ - 30.000₺',
+        '30.000₺ - 60.000₺',
+        '60.000₺ - 120.000₺+',
         'Sadece Proje (Tek Seferlik)'
     ];
 

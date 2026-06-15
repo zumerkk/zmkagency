@@ -33,11 +33,11 @@ const Footer = ({ t }) => {
                         <h4>{t.services}</h4>
                         <ul>
                             <li><Link to="/services/kurumsal-web-sitesi">Kurumsal Web Sitesi</Link></li>
-                            <li><Link to="/services/e-ticaret">E-Ticaret Çözümleri</Link></li>
-                            <li><Link to="/services/google-ads">Google Ads</Link></li>
-                            <li><Link to="/services/sosyal-medya">Sosyal Medya</Link></li>
+                            <li><Link to="/services/e-ticaret-cozumleri">E-Ticaret Çözümleri</Link></li>
+                            <li><Link to="/services/reklam-yonetimi-google">Google Ads</Link></li>
+                            <li><Link to="/services/reklam-yonetimi-sosyal">Sosyal Medya</Link></li>
                             <li><Link to="/services/lokal-seo">SEO Hizmeti</Link></li>
-                            <li><Link to="/services/kurumsal-kimlik">Kurumsal Kimlik</Link></li>
+                            <li><Link to="/services/marka-kurumsal">Kurumsal Kimlik</Link></li>
                         </ul>
                     </div>
 

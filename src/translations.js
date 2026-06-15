@@ -336,10 +336,10 @@ export const content = {
                 local: [
                     {
                         title: "Bölgesel Hakimiyet",
-                        price: "9.999",
+                        price: "24.500",
                         period: " (Tek Seferlik)",
                         isPopular: false,
-                        campaignBadge: "31 Mart'a kadar",
+                        campaignBadge: "Kırıkkale Esnaf Fiyatı",
                         description: "Rakiplerin önüne geçmek isteyen işletmeler için başlangıç çözümü.",
                         techSpecs: "Site + Harita + Sosyal",
                         features: [
@@ -352,7 +352,7 @@ export const content = {
                     },
                     {
                         title: "ZMK Spesiyel (Kalkındırma)",
-                        price: "19.999",
+                        price: "35.000 – 45.000",
                         period: "/ay",
                         isPopular: true,
                         campaignBadge: "Şehre Özel Fiyat",
@@ -368,7 +368,7 @@ export const content = {
                     },
                     {
                         title: "Kırıkkale Lideri",
-                        price: "21.000",
+                        price: "35.000 – 45.000",
                         period: "/ay",
                         description: "Şehrin en bilinen markası olmak için sürekli yönetim.",
                         techSpecs: "Aylık Tam Yönetim",
@@ -382,7 +382,7 @@ export const content = {
                     },
                     {
                         title: "Dijital Fabrika (Kurumsal)",
-                        price: "35.000+",
+                        price: "120.000+",
                         period: " (Proje Bazlı)",
                         description: "Fabrikalar ve büyük işletmeler için özel prodüksiyon ve tanıtım.",
                         techSpecs: "Drone + 4K Prodüksiyon",
@@ -398,7 +398,7 @@ export const content = {
                 retainer: [
                     {
                         title: "Startup Growth",
-                        price: "11.500",
+                        price: "15.000 – 20.000",
                         period: "/ay",
                         description: "Yeni girişimler için temel dijital varlık ve büyüme paketi.",
                         techSpecs: "Sosyal Medya + Temel SEO",
@@ -412,7 +412,7 @@ export const content = {
                     },
                     {
                         title: "Scale Up",
-                        price: "31.500",
+                        price: "24.000 – 29.500",
                         period: "/ay",
                         isPopular: true,
                         description: "Hızlı büyüme hedefleyen işletmeler için agresif strateji.",
@@ -428,7 +428,7 @@ export const content = {
                     },
                     {
                         title: "Market Domination",
-                        price: "49.999",
+                        price: "35.000 – 45.000",
                         period: "/ay",
                         description: "Sektör liderliği için tam kapsamlı dijital departman.",
                         techSpecs: "7/24 Dedike Ekip",
@@ -445,10 +445,10 @@ export const content = {
                 webSoftware: [
                     {
                         title: "Kurumsal Web Sitesi",
-                        price: "12.500",
-                        period: "'den itibaren",
+                        price: "20.000 – 25.000",
+                        period: " bandında",
                         isPopular: true,
-                        campaignBadge: "31 Mart'a kadar",
+                        campaignBadge: "Kırıkkale Fiyatı",
                         description: "Markanızın dijital vitrini. Hızlı, güvenli ve mobil uyumlu.",
                         techSpecs: "Next.js / React / Vercel",
                         features: [
@@ -461,9 +461,9 @@ export const content = {
                     },
                     {
                         title: "E-Ticaret Çözümleri",
-                        price: "35.000",
-                        period: "'den itibaren",
-                        campaignBadge: "31 Mart'a kadar",
+                        price: "60.000 – 120.000",
+                        period: " bandında",
+                        campaignBadge: "Kapsama Göre",
                         description: "Satış odaklı, yüksek dönüşüm oranlı online mağazalar.",
                         techSpecs: "Shopify / Custom Headless",
                         features: [
@@ -476,9 +476,9 @@ export const content = {
                     },
                     {
                         title: "Özel Yazılım / App",
-                        price: "85.000",
+                        price: "40.000",
                         period: "'den itibaren",
-                        campaignBadge: "31 Mart'a kadar",
+                        campaignBadge: "Modüler Başlangıç",
                         description: "İş süreçlerinize özel web ve mobil uygulamalar.",
                         techSpecs: "React Native / Node.js / AWS",
                         features: [
@@ -493,7 +493,7 @@ export const content = {
                 marketingAds: [
                     {
                         title: "Google Ads (SEM)",
-                        price: "7.500",
+                        price: "8.000 – 11.000",
                         period: "/ay + Bütçe",
                         description: "Arama sonuçlarında en tepede yer alın.",
                         techSpecs: "Search + Display + Shopping",
@@ -507,7 +507,7 @@ export const content = {
                     },
                     {
                         title: "Sosyal Medya Reklamları",
-                        price: "7.500",
+                        price: "7.000 – 9.000",
                         period: "/ay + Bütçe",
                         description: "Hedef kitlenize nokta atışı ulaşın.",
                         techSpecs: "Meta (Fb/Insta) + TikTok + LinkedIn",
@@ -536,7 +536,7 @@ export const content = {
                     },
                     {
                         title: "Ulusal / Global SEO",
-                        price: "19.000",
+                        price: "20.000+",
                         period: "/ay",
                         description: "Büyük ölçekli rekabet ve organik trafik artışı.",
                         techSpecs: "Technical + Content + Off-page",
@@ -552,8 +552,8 @@ export const content = {
                 production: [
                     {
                         title: "Tanıtım Filmi",
-                        price: "3.500",
-                        period: "'den itibaren",
+                        price: "20.000 – 60.000",
+                        period: " bandında",
                         description: "Markanızı sinematik bir dille anlatın.",
                         techSpecs: "4K Cinema Line + Drone",
                         features: [
@@ -566,8 +566,8 @@ export const content = {
                     },
                     {
                         title: "Ürün Fotoğrafçılığı",
-                        price: "1.500",
-                        period: "'den itibaren",
+                        price: "5.000 – 15.000",
+                        period: " bandında",
                         description: "E-ticaret ve katalog için profesyonel kareler.",
                         techSpecs: "Stüdyo / Dış Çekim",
                         features: [
@@ -581,9 +581,9 @@ export const content = {
                 branding: [
                     {
                         title: "Kurumsal Kimlik",
-                        price: "22.500",
-                        bundlePrice: "4.750",
-                        period: "'den itibaren",
+                        price: "18.000 – 40.000",
+                        bundlePrice: "12.000",
+                        period: " bandında",
                         description: "Markanızın yüzünü profesyonelce tasarlayın.",
                         bundleNote: "360° Retainer veya Yazılım paketi ile birlikte alındığında",
                         techSpecs: "Vector + Print Ready",
@@ -627,9 +627,9 @@ export const content = {
             title: "Dijital Kalkındırma Paketi",
             subtitle: "ZMK Spesiyel: Şehrin En Kapsamlı Dijital Büyüme Hareketi",
             description: "Esnaf ve KOBİ'lerimiz için Kırıkkale'nin pazar dinamiklerine özel kurgulanmış, en uygun fiyatlı ve en yüksek getirili 360° dijital dönüşüm paketi. Kırıkkale pazarındaki yüksek fiyatlara inat, kaliteyi ulaşılabilir kılıyoruz.",
-            price: null,
-            currency: null,
-            period: null,
+            price: "35.000 – 45.000",
+            currency: "₺",
+            period: "/ay",
             features: [
                 "🚀 Dönüşüm Odaklı Web Sitesi (One-Page Hediye)",
                 "📍 Google Harita Kaydı & Aylık Optimizasyon",
@@ -688,10 +688,10 @@ Web sitesinin kesintisiz veya hatasız çalışacağını garanti etmeyiz. Tekno
                 ]
             },
             solution: {
-                badge: "🔥 31 Mart'a kadar kampanya",
+                badge: "Kırıkkale Esnaf Fırsatı",
                 title: "Bölgesel Hakimiyet Paketi",
-                price: "9.999₺",
-                originalPrice: null,
+                price: "24.500₺",
+                originalPrice: "29.500₺",
                 period: "(Tek Seferlik)",
                 description: "Sadece bir web sitesi değil, eksiksiz bir dijital dükkan kurulumu.",
                 features: [

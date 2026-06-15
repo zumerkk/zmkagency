@@ -441,19 +441,19 @@ export const blogData = [
                 </tr>
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
                     <td style="padding:12px;">Kurumsal Web Sitesi</td>
-                    <td style="text-align:right; padding:12px;">9.000₺ – 25.000₺</td>
+                    <td style="text-align:right; padding:12px;">20.000₺ – 45.000₺</td>
                 </tr>
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
                     <td style="padding:12px;">E-Ticaret Sitesi</td>
-                    <td style="text-align:right; padding:12px;">20.000₺ – 80.000₺</td>
+                    <td style="text-align:right; padding:12px;">60.000₺ – 120.000₺</td>
                 </tr>
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
                     <td style="padding:12px;">Mobil Uygulama</td>
-                    <td style="text-align:right; padding:12px;">50.000₺ – 200.000₺+</td>
+                    <td style="text-align:right; padding:12px;">90.000₺ – 320.000₺+</td>
                 </tr>
                 <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
                     <td style="padding:12px;">Özel Yazılım / SaaS</td>
-                    <td style="text-align:right; padding:12px;">85.000₺ – 500.000₺+</td>
+                    <td style="text-align:right; padding:12px;">40.000₺ – 120.000₺+</td>
                 </tr>
             </table>
 
@@ -565,7 +565,7 @@ export const blogData = [
             </ul>
 
             <h3>Ölçüm ve Optimizasyon</h3>
-            <p>Her kampanyanın CPC (tıklama başına maliyet), CPL (lead başına maliyet) ve ROAS (reklam harcama getirisi) metriklerini takip edin. <a href="/services/sosyal-medya">ZMK Agency olarak</a> aylık detaylı raporlarla şeffaf sonuçlar sunuyoruz.</p>
+            <p>Her kampanyanın CPC (tıklama başına maliyet), CPL (lead başına maliyet) ve ROAS (reklam harcama getirisi) metriklerini takip edin. <a href="/services/reklam-yonetimi-sosyal">ZMK Agency olarak</a> aylık detaylı raporlarla şeffaf sonuçlar sunuyoruz.</p>
 
             <h2>Sonuç</h2>
             <p>Instagram reklamları doğru yapıldığında Kırıkkale'deki işletmenizi kısa sürede büyütür. Yanlış yapıldığında ise bütçeniz boşa gider. Profesyonel yönetim için <a href="/contact">bize ulaşın</a>.</p>
@@ -586,16 +586,16 @@ export const blogData = [
 
             <h2>2026 Kırıkkale Web Sitesi Fiyat Tablosu</h2>
 
-            <h3>🌐 Kurumsal Web Sitesi: 12.500₺'den başlayan</h3>
+            <h3>🌐 Kurumsal Web Sitesi: 20.000₺'den başlayan</h3>
             <p>5-10 sayfalık, markanızı tanıtan ve iletişim formu içeren profesyonel web sitesi. <strong>Dahil olanlar:</strong> Özel tasarım, mobil uyumluluk, SEO altyapısı, SSL, hosting (1 yıl), CMS paneli.</p>
 
-            <h3>🛒 E-Ticaret Sitesi: 35.000₺'den başlayan</h3>
+            <h3>🛒 E-Ticaret Sitesi: 60.000₺'den başlayan</h3>
             <p>Ürün yönetimi, ödeme entegrasyonu (iyzico, PayTR), kargo takibi ve pazaryeri bağlantısı dahil. Trendyol, N11 entegrasyonları ekstra talep edilebilir.</p>
 
-            <h3>📱 Mobil Uygulama: 85.000₺'den başlayan</h3>
+            <h3>📱 Mobil Uygulama: 90.000₺'den başlayan</h3>
             <p>iOS ve Android'e tek kod tabanından uygulama. React Native ile hızlı geliştirme ve düşük maliyet.</p>
 
-            <h3>🎯 Landing Page / Tek Sayfa: 5.000₺'den başlayan</h3>
+            <h3>🎯 Landing Page / Tek Sayfa: 12.000₺'den başlayan</h3>
             <p>Kampanya, etkinlik veya ürün lansmanı için tek sayfalık, dönüşüm odaklı mini site.</p>
 
             <h2>WordPress vs Modern Teknolojiler</h2>

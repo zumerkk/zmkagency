@@ -21,7 +21,7 @@ const ICONS = {
 const periodSuffix = (period) =>
     period === 'month' ? '/ay' : period === 'unit' ? '/adet' : '';
 
-/* Parse "15.000₺ – 22.500₺" → [15000, 22500] for structured data */
+/* Parse "20.000₺ – 25.000₺" → [20000, 25000] for structured data */
 const parseRange = (price) => {
     const nums = (price.match(/[\d.]+/g) || [])
         .map(n => parseInt(n.replace(/\./g, ''), 10))
@@ -130,7 +130,7 @@ const Pricing = ({ wizardT }) => {
         <>
             <SEO
                 title="Hizmetler & Fiyatlandırma 2026 | Web, Sosyal Medya, Reklam, Yazılım"
-                description="ZMK Agency 2026 şeffaf fiyat listesi: kurumsal web sitesi 22.500₺'den, sosyal medya yönetimi 9.500₺/ay'dan, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama."
+                description="ZMK Agency 2026 Kırıkkale fiyat listesi: kurumsal web sitesi 20.000₺'den, sosyal medya yönetimi 8.000₺/ay'dan, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama."
                 keywords="kırıkkale web sitesi fiyatları, sosyal medya yönetimi fiyatları 2026, reklam ajansı fiyat listesi, kırıkkale seo fiyatları, özel yazılım fiyatları, mobil uygulama fiyatı"
                 schema={[offerCatalogSchema, breadcrumbSchema]}
             />
@@ -233,6 +233,7 @@ const Pricing = ({ wizardT }) => {
                                     <p className="zpr-pkg-audience">{pkg.audience}</p>
 
                                     <div className="zpr-pkg-price">
+                                        {pkg.previousPrice && <small className="zpr-old-price">{pkg.previousPrice}</small>}
                                         <strong>{pkg.price}</strong>
                                         <span>{PERIOD_LABEL[pkg.period] === 'Aylık' ? '/ ay' : PERIOD_LABEL[pkg.period]}</span>
                                     </div>
@@ -295,6 +296,7 @@ const Pricing = ({ wizardT }) => {
                                             >
                                                 {tier.badge && <span className="zpr-tier-badge"><Star size={12} /> {tier.badge}</span>}
                                                 <h3>{tier.name}</h3>
+                                                {tier.previousPrice && <small className="zpr-tier-old">{tier.previousPrice}</small>}
                                                 <div className="zpr-tier-price">{tier.price}</div>
                                                 <p className="zpr-tier-tagline">{tier.tagline}</p>
                                                 <ul>
@@ -335,14 +337,20 @@ const Pricing = ({ wizardT }) => {
                                             transition={{ delay: ii * 0.04, duration: 0.45 }}
                                         >
                                             <div className="zpr-row-name">
-                                                {item.popular && <span className="zpr-row-star"><Star size={13} /></span>}
-                                                <span>{item.name}</span>
-                                                {item.popular && <em className="zpr-row-tag">En çok tercih edilen</em>}
+                                                <div className="zpr-row-titleline">
+                                                    {item.popular && <span className="zpr-row-star"><Star size={13} /></span>}
+                                                    <span>{item.name}</span>
+                                                    {item.popular && <em className="zpr-row-tag">En çok tercih edilen</em>}
+                                                </div>
+                                                {item.note && <small className="zpr-row-note">{item.note}</small>}
                                             </div>
                                             <div className="zpr-row-dots" aria-hidden="true" />
                                             <div className="zpr-row-price">
-                                                <strong>{item.price}</strong>
-                                                {periodSuffix(item.period) && <span>{periodSuffix(item.period)}</span>}
+                                                {item.previousPrice && <small className="zpr-old-price">{item.previousPrice}</small>}
+                                                <div className="zpr-row-price-main">
+                                                    <strong>{item.price}</strong>
+                                                    {periodSuffix(item.period) && <span>{periodSuffix(item.period)}</span>}
+                                                </div>
                                             </div>
                                             <button
                                                 className="zpr-row-cta"

@@ -7,9 +7,9 @@ import '../styles/PillarPage.css';
 
 /* ─── FAQ DATA ─── */
 const pillarFaq = [
-    { q: 'Kırıkkale\'de yazılım yaptırmak ne kadara mal olur?', a: 'Kurumsal web sitesi 12.500₺\'den, e-ticaret siteleri 35.000₺\'den, özel yazılım projeleri ise 85.000₺\'den başlar. Esnaf paketi kapsamında temel web sitesi 9.999₺\'ye elde edilebilir. ZMK Agency olarak şeffaf fiyat politikası uyguluyoruz.' },
+    { q: 'Kırıkkale\'de yazılım yaptırmak ne kadara mal olur?', a: 'Basit kurumsal web sitesi 20.000₺ - 25.000₺, e-ticaret projeleri 60.000₺\'den, basit panel / CRM çözümleri ise 40.000₺\'den başlar. ZMK Agency olarak şeffaf ve kapsamı net fiyat politikası uyguluyoruz.' },
     { q: 'Kırıkkale\'de en iyi reklam ajansı hangisi?', a: 'ZMK Agency, Kırıkkale\'nin ilk ve tek 360° dijital reklam ajansıdır. Web tasarım, sosyal medya, Google Ads, SEO, prodüksiyon ve kurumsal kimlik hizmetlerini tek çatı altında sunuyoruz. 50+ referans ile Kırıkkale\'nin en fazla müşteri memnuniyetine sahip ajansıyız.' },
-    { q: 'Reklam bütçem düşük, yine de çalışabilir miyiz?', a: 'Kesinlikle. Esnaf Paketi ile 9.999₺ gibi uygun bir fiyatla dijital dünyaya adım atabilirsiniz. Google Ads ve sosyal medya reklamları için minimum 5.000₺/ay bütçe öneriyoruz, ancak her bütçeye uygun planlarımız mevcuttur.' },
+    { q: 'Reklam bütçem düşük, yine de çalışabilir miyiz?', a: 'Kesinlikle. Temel sosyal medya paketi 8.000₺ - 10.000₺/ay, Meta reklam yönetimi 7.000₺ - 9.000₺/ay bandındadır. Reklam bütçesi ayrıca planlanır ve her bütçeye uygun ölçeklenebilir kurgu çıkarırız.' },
     { q: 'SEO ne kadar sürede sonuç verir?', a: 'Lokal SEO (Google Haritalar) genellikle 4-8 haftada görünür sonuçlar verir. Organik arama sıralamaları için 3-6 aylık bir süreç gereklidir. Kırıkkale gibi yerel pazarlarda rekabet düşük olduğu için sonuçlar genellikle daha hızlı gelir.' },
     { q: 'Kırıkkale dışından hizmet alabilir miyim?', a: 'Evet, ZMK Agency Kırıkkale merkezli olsa da Türkiye geneli ve uluslararası müşterilere hizmet vermektedir. Uzaktan proje yönetimi altyapımız ile lokasyondan bağımsız çalışıyoruz.' },
     { q: 'Hangi teknolojileri kullanıyorsunuz?', a: 'React, Next.js, Node.js, Python ve Flutter gibi modern teknolojiler kullanıyoruz. Altyapılarımız Vercel ve AWS üzerinde barındırılmaktadır. AI destekli araçlarımızla veri odaklı çözümler sunuyoruz.' }
@@ -17,15 +17,15 @@ const pillarFaq = [
 
 /* ─── SERVICE LINKS FOR INTERNAL LINKING ─── */
 const serviceLinks = [
-    { title: 'Kurumsal Web Sitesi', slug: '/services/kurumsal-web-sitesi', desc: 'SEO uyumlu, mobil öncelikli modern web siteleri', price: '12.500₺' },
-    { title: 'E-Ticaret Çözümleri', slug: '/services/e-ticaret', desc: 'Stok yönetimi ve pazaryeri entegrasyonlu mağazalar', price: '35.000₺' },
-    { title: 'Özel Yazılım / App', slug: '/services/ozel-yazilim', desc: 'iOS, Android ve web uygulamaları', price: '85.000₺' },
-    { title: 'Google Ads Yönetimi', slug: '/services/google-ads', desc: 'Dönüşüm odaklı arama reklamları', price: '7.500₺/ay' },
-    { title: 'Sosyal Medya Reklamları', slug: '/services/sosyal-medya', desc: 'Facebook, Instagram, TikTok kampanyaları', price: '7.500₺/ay' },
+    { title: 'Kurumsal Web Sitesi', slug: '/services/kurumsal-web-sitesi', desc: 'SEO uyumlu, mobil öncelikli modern web siteleri', price: '20.000₺+' },
+    { title: 'E-Ticaret Çözümleri', slug: '/services/e-ticaret-cozumleri', desc: 'Stok yönetimi ve pazaryeri entegrasyonlu mağazalar', price: '60.000₺+' },
+    { title: 'Özel Yazılım / App', slug: '/services/ozel-yazilim-app', desc: 'iOS, Android ve web uygulamaları', price: '40.000₺+' },
+    { title: 'Google Ads Yönetimi', slug: '/services/reklam-yonetimi-google', desc: 'Dönüşüm odaklı arama reklamları', price: '8.000₺/ay' },
+    { title: 'Sosyal Medya Reklamları', slug: '/services/reklam-yonetimi-sosyal', desc: 'Facebook, Instagram, TikTok kampanyaları', price: '7.000₺/ay' },
     { title: 'Lokal SEO', slug: '/services/lokal-seo', desc: 'Google Haritalar\'da ilk sıraya çıkın', price: '8.000₺/ay' },
-    { title: 'Ulusal SEO', slug: '/services/ulusal-seo', desc: 'Organik trafiğinizi katlayın', price: '19.000₺/ay' },
-    { title: 'Tanıtım Filmi', slug: '/services/tanitim-filmi', desc: '4K çekim ve drone görüntüleri', price: '3.500₺' },
-    { title: 'Kurumsal Kimlik', slug: '/services/kurumsal-kimlik', desc: 'Logo, kartvizit ve marka kiti', price: '22.500₺' }
+    { title: 'Ulusal SEO', slug: '/services/ulusal-global-seo', desc: 'Organik trafiğinizi katlayın', price: '20.000₺/ay+' },
+    { title: 'Tanıtım Filmi', slug: '/services/tanitim-filmi', desc: '4K çekim ve drone görüntüleri', price: '20.000₺+' },
+    { title: 'Kurumsal Kimlik', slug: '/services/marka-kurumsal', desc: 'Logo, kartvizit ve marka kiti', price: '18.000₺+' }
 ];
 
 /* ─── LOCAL LANDING LINKS ─── */
@@ -176,7 +176,7 @@ const PillarPage = ({ t }) => {
                         <li>🎯 CMS (içerik yönetim sistemi) ile kolay güncelleme</li>
                     </ul>
                     <p>
-                        Detaylı bilgi için: <Link to="/services/kurumsal-web-sitesi" className="pillar-inline-link">Kurumsal Web Sitesi</Link> | <Link to="/services/e-ticaret" className="pillar-inline-link">E-Ticaret Çözümleri</Link> | <Link to="/services/ozel-yazilim" className="pillar-inline-link">Özel Yazılım / App</Link>
+                        Detaylı bilgi için: <Link to="/services/kurumsal-web-sitesi" className="pillar-inline-link">Kurumsal Web Sitesi</Link> | <Link to="/services/e-ticaret-cozumleri" className="pillar-inline-link">E-Ticaret Çözümleri</Link> | <Link to="/services/ozel-yazilim-app" className="pillar-inline-link">Özel Yazılım / App</Link>
                     </p>
 
                     <h3>Mobil Uygulama Geliştirme</h3>
@@ -202,7 +202,7 @@ const PillarPage = ({ t }) => {
                         Instagram, Facebook, TikTok ve LinkedIn'de markanızın sesini profesyonelce yönetiyoruz. İçerik üretimi, topluluk yönetimi ve hedefli reklamlarla Kırıkkale'deki potansiyel müşterilerinize ulaşıyoruz.
                     </p>
                     <p>
-                        Detaylı bilgi: <Link to="/services/google-ads" className="pillar-inline-link">Google Ads Yönetimi</Link> | <Link to="/services/sosyal-medya" className="pillar-inline-link">Sosyal Medya Reklamları</Link> | <Link to="/kirikkale-dijital-pazarlama-ajansi" className="pillar-inline-link">Kırıkkale Dijital Pazarlama</Link>
+                        Detaylı bilgi: <Link to="/services/reklam-yonetimi-google" className="pillar-inline-link">Google Ads Yönetimi</Link> | <Link to="/services/reklam-yonetimi-sosyal" className="pillar-inline-link">Sosyal Medya Reklamları</Link> | <Link to="/kirikkale-dijital-pazarlama-ajansi" className="pillar-inline-link">Kırıkkale Dijital Pazarlama</Link>
                     </p>
                 </section>
 
@@ -221,7 +221,7 @@ const PillarPage = ({ t }) => {
                         <div className="pillar-col-card">
                             <h4>🌍 Ulusal SEO</h4>
                             <p>Teknik audit, içerik stratejisi, otoriter backlink inşası. Türkiye genelinde organik trafiğinizi katlayın.</p>
-                            <Link to="/services/ulusal-seo" className="pillar-inline-link">19.000₺/ay →</Link>
+                            <Link to="/services/ulusal-global-seo" className="pillar-inline-link">20.000₺/ay+ →</Link>
                         </div>
                     </div>
                     <p>
@@ -236,7 +236,7 @@ const PillarPage = ({ t }) => {
                         4K tanıtım filmleri, drone çekimleri, ürün fotoğrafçılığı ve komple kurumsal kimlik tasarımı. Kırıkkale'deki işletmenizin profesyonel imajını inşa ediyoruz.
                     </p>
                     <p>
-                        <Link to="/services/tanitim-filmi" className="pillar-inline-link">Tanıtım Filmi (3.500₺)</Link> | <Link to="/services/kurumsal-kimlik" className="pillar-inline-link">Kurumsal Kimlik (22.500₺)</Link> | <Link to="/kirikkale-drone-cekim-tanitim-filmi" className="pillar-inline-link">Drone Çekimi</Link>
+                        <Link to="/services/tanitim-filmi" className="pillar-inline-link">Tanıtım Filmi (20.000₺+)</Link> | <Link to="/services/marka-kurumsal" className="pillar-inline-link">Kurumsal Kimlik (18.000₺+)</Link> | <Link to="/kirikkale-drone-cekim-tanitim-filmi" className="pillar-inline-link">Drone Çekimi</Link>
                     </p>
                 </section>
 

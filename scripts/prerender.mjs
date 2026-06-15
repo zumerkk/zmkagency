@@ -28,19 +28,20 @@ const ROUTES = [
     '/portfolio',
     '/blog',
     '/esnaf-paket',
-    // Service detail pages
-    '/services/software',
-    '/services/web-seo',
-    '/services/social-media',
-    '/services/production',
-    '/services/brand',
-    '/services/data',
-    '/services/printing',
-    '/services/drone',
-    '/services/3d-motion',
-    '/services/consulting',
-    '/services/ecommerce',
-    '/services/pr',
+    '/zmk-spesiyel',
+    // Service detail pages (kanonik slug'lar — NewServiceDetail veri tablosuyla eşleşir)
+    '/services/kurumsal-web-sitesi',
+    '/services/e-ticaret-cozumleri',
+    '/services/ozel-yazilim-app',
+    '/services/reklam-yonetimi-google',
+    '/services/reklam-yonetimi-sosyal',
+    '/services/lokal-seo',
+    '/services/ulusal-global-seo',
+    '/services/tanitim-filmi',
+    '/services/urun-fotografciligi',
+    '/services/marka-kurumsal',
+    '/services/360-retainer-startup-growth',
+    '/services/360-retainer-market-domination',
     // Local SEO landing pages
     '/kirikkale-reklam-ajansi',
     '/kirikkale-web-tasarim',
@@ -89,13 +90,18 @@ function createStaticServer(port) {
             '.ttf': 'font/ttf',
         };
 
+        // Snapshot the clean SPA shell BEFORE any route gets prerendered.
+        // Routes write over dist/*.html as they render; serving those snapshots
+        // as the fallback would leak the previous route's title/meta into later ones.
+        const spaShell = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');
+
         const server = createServer((req, res) => {
             let url = req.url.split('?')[0];
             let filePath = join(DIST_DIR, url);
 
-            // Try to serve the file directly
+            // Try to serve real static assets directly (never prerendered .html)
             try {
-                if (existsSync(filePath) && !filePath.endsWith('/')) {
+                if (existsSync(filePath) && !filePath.endsWith('/') && !filePath.endsWith('.html')) {
                     const ext = '.' + filePath.split('.').pop();
                     const contentType = mime[ext] || 'application/octet-stream';
                     const content = readFileSync(filePath);
@@ -105,16 +111,9 @@ function createStaticServer(port) {
                 }
             } catch (e) { /* fall through */ }
 
-            // For all other requests, serve index.html (SPA fallback)
-            const indexPath = join(DIST_DIR, 'index.html');
-            if (existsSync(indexPath)) {
-                const content = readFileSync(indexPath, 'utf-8');
-                res.writeHead(200, { 'Content-Type': 'text/html' });
-                res.end(content);
-            } else {
-                res.writeHead(404);
-                res.end('Not found');
-            }
+            // For all route requests, serve the clean SPA shell
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(spaShell);
         });
 
         server.listen(port, () => {
@@ -128,19 +127,33 @@ async function prerender() {
     const PORT = 4173;
     const server = await createStaticServer(PORT);
 
+    // Default title from the clean shell — used to detect when Helmet has flushed
+    const shellHtml = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');
+    const defaultTitle = (shellHtml.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
+
     console.log('🚀 Starting pre-rendering...');
     console.log(`📋 ${ROUTES.length} routes to render\n`);
 
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            // Parallel tabs: keep rAF/timers alive in background pages,
+            // otherwise react-helmet-async never flushes <title>/<meta>
+            '--disable-background-timer-throttling',
+            '--disable-backgrounding-occluded-windows',
+            '--disable-renderer-backgrounding'
+        ]
     });
 
     let successCount = 0;
     let errorCount = 0;
 
     // Process routes in batches of 4
-    const BATCH_SIZE = 4;
+    // Sequential rendering: parallel tabs starve react-helmet's commit cycle,
+    // so <title>/<meta> stay stale. One page at a time flushes instantly.
+    const BATCH_SIZE = 1;
     for (let i = 0; i < ROUTES.length; i += BATCH_SIZE) {
         const batch = ROUTES.slice(i, i + BATCH_SIZE);
         await Promise.all(batch.map(async (route) => {
@@ -152,6 +165,16 @@ async function prerender() {
                 // Wait extra time for React to render and animations to settle
                 await page.waitForSelector('#root', { timeout: 10000 });
                 await new Promise(r => setTimeout(r, 2000));
+
+                // Wait for react-helmet to flush the route's own <title>
+                // (only '/' legitimately keeps the default title)
+                if (route !== '/' && defaultTitle) {
+                    await page.waitForFunction(
+                        (def) => document.title && document.title !== def,
+                        { timeout: 8000 },
+                        defaultTitle
+                    ).catch(() => console.warn(`  ⚠️ ${route}: Helmet title not flushed, default kept`));
+                }
 
                 // Get the fully rendered HTML
                 const html = await page.content();

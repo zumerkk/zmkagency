@@ -17,7 +17,7 @@ const SolutionSelector = ({ t }) => {
     const handleAction = (id) => {
         if (id === 'esnaf') navigate('/esnaf-paket');
         else if (id === 'kurumsal') navigate('/services');
-        else if (id === 'yazilim') navigate('/services/software');
+        else if (id === 'yazilim') navigate('/services/ozel-yazilim-app');
         else navigate('/pricing');
     };
 

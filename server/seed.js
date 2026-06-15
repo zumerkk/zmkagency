@@ -20,16 +20,16 @@ async function seed() {
 
     // ========== HIZMETLER ==========
     const services = [
-        { name: 'Kurumsal Web Sitesi', description: 'Profesyonel kurumsal web sitesi tasarımı ve geliştirmesi', scope: 'Tasarım + Kodlama + SEO + Hosting kurulumu', duration: '15-25 iş günü', unitPrice: 35000, currency: 'TRY', kdvRate: 20, category: 'Web', order: 1, isActive: true },
+        { name: 'Kurumsal Web Sitesi', description: 'Profesyonel kurumsal web sitesi tasarımı ve geliştirmesi', scope: 'Tasarım + Kodlama + SEO + Hosting kurulumu', duration: '15-25 iş günü', unitPrice: 25000, currency: 'TRY', kdvRate: 20, category: 'Web', order: 1, isActive: true },
         { name: 'Tek Sayfa Web Sitesi', description: 'Landing page / tek sayfa web sitesi', scope: 'Tasarım + Kodlama + Form entegrasyonu', duration: '5-10 iş günü', unitPrice: 12000, currency: 'TRY', kdvRate: 20, category: 'Web', order: 2, isActive: true },
         { name: 'E-Ticaret Sitesi', description: 'Tam kapsamlı e-ticaret çözümü', scope: 'Platform kurulumu + Tasarım + Ödeme entegrasyonu + Kargo', duration: '30-45 iş günü', unitPrice: 65000, currency: 'TRY', kdvRate: 20, category: 'Web', order: 3, isActive: true },
         { name: 'Meta Reklam Yönetimi', description: 'Facebook/Instagram reklam kampanya yönetimi', scope: 'Strateji + Kreatif + Kampanya yönetimi + Raporlama', duration: 'Aylık', unitPrice: 8000, currency: 'TRY', kdvRate: 20, category: 'Reklam', order: 4, isActive: true },
-        { name: 'Google Ads Yönetimi', description: 'Google arama ve görüntülü reklam yönetimi', scope: 'Anahtar kelime araştırması + Kampanya + Optimizasyon', duration: 'Aylık', unitPrice: 7500, currency: 'TRY', kdvRate: 20, category: 'Reklam', order: 5, isActive: true },
-        { name: 'TikTok Reklam Yönetimi', description: 'TikTok reklam kampanya yönetimi', scope: 'İçerik stratejisi + Kampanya + Raporlama', duration: 'Aylık', unitPrice: 6000, currency: 'TRY', kdvRate: 20, category: 'Reklam', order: 6, isActive: true },
-        { name: 'Dijital Dönüşüm Danışmanlığı', description: 'İş süreçlerinin dijitalleştirilmesi', scope: 'Analiz + Çözüm önerisi + Entegrasyon (ikas, Akınsoft vb.)', duration: 'Proje bazlı', unitPrice: 25000, currency: 'TRY', kdvRate: 20, category: 'Danışmanlık', order: 7, isActive: true },
-        { name: 'SEO Optimizasyonu', description: 'Arama motoru optimizasyonu', scope: 'Teknik SEO + İçerik + Backlink + Google My Business', duration: 'Aylık', unitPrice: 5000, currency: 'TRY', kdvRate: 20, category: 'SEO', order: 8, isActive: true },
-        { name: 'Harita Optimizasyonu', description: 'Google Maps / yerel SEO çalışması', scope: 'GMB optimizasyonu + Yerel dizin kayıtları + Yorum yönetimi', duration: 'Aylık', unitPrice: 3000, currency: 'TRY', kdvRate: 20, category: 'SEO', order: 9, isActive: true },
-        { name: 'İçerik Üretimi', description: 'Sosyal medya ve blog içerik üretimi', scope: 'Görsel tasarım + Copywriting + Planlama', duration: 'Aylık', unitPrice: 6500, currency: 'TRY', kdvRate: 20, category: 'İçerik', order: 10, isActive: true },
+        { name: 'Google Ads Yönetimi', description: 'Google arama ve görüntülü reklam yönetimi', scope: 'Anahtar kelime araştırması + Kampanya + Optimizasyon', duration: 'Aylık', unitPrice: 8500, currency: 'TRY', kdvRate: 20, category: 'Reklam', order: 5, isActive: true },
+        { name: 'TikTok Reklam Yönetimi', description: 'TikTok reklam kampanya yönetimi', scope: 'İçerik stratejisi + Kampanya + Raporlama', duration: 'Aylık', unitPrice: 7000, currency: 'TRY', kdvRate: 20, category: 'Reklam', order: 6, isActive: true },
+        { name: 'Dijital Dönüşüm Danışmanlığı', description: 'İş süreçlerinin dijitalleştirilmesi', scope: 'Analiz + Çözüm önerisi + Entegrasyon (ikas, Akınsoft vb.)', duration: 'Proje bazlı', unitPrice: 40000, currency: 'TRY', kdvRate: 20, category: 'Danışmanlık', order: 7, isActive: true },
+        { name: 'SEO Optimizasyonu', description: 'Arama motoru optimizasyonu', scope: 'Teknik SEO + İçerik + Backlink + Google My Business', duration: 'Aylık', unitPrice: 10000, currency: 'TRY', kdvRate: 20, category: 'SEO', order: 8, isActive: true },
+        { name: 'Harita Optimizasyonu', description: 'Google Maps / yerel SEO çalışması', scope: 'GMB optimizasyonu + Yerel dizin kayıtları + Yorum yönetimi', duration: 'Aylık', unitPrice: 8000, currency: 'TRY', kdvRate: 20, category: 'SEO', order: 9, isActive: true },
+        { name: 'İçerik Üretimi', description: 'Sosyal medya ve blog içerik üretimi', scope: 'Görsel tasarım + Copywriting + Planlama', duration: 'Aylık', unitPrice: 8000, currency: 'TRY', kdvRate: 20, category: 'İçerik', order: 10, isActive: true },
     ];
 
     console.log('📦 Hizmetler ekleniyor...');
@@ -78,10 +78,10 @@ async function seed() {
             clientId: clientIds[0].id, clientName: 'GM Danışmanlık',
             quoteNumber: 'ZMK-2026-0001', year: 2026,
             items: [
-                { serviceId: serviceIds[0].id, serviceName: 'Kurumsal Web Sitesi', description: 'Tam kapsamlı kurumsal web sitesi', quantity: 1, unitPrice: 35000, kdvRate: 20, total: 35000 },
-                { serviceId: serviceIds[7].id, serviceName: 'SEO Optimizasyonu', description: '3 aylık SEO paketi', quantity: 3, unitPrice: 5000, kdvRate: 20, total: 15000 },
+                { serviceId: serviceIds[0].id, serviceName: 'Kurumsal Web Sitesi', description: 'Tam kapsamlı kurumsal web sitesi', quantity: 1, unitPrice: 25000, kdvRate: 20, total: 25000 },
+                { serviceId: serviceIds[7].id, serviceName: 'SEO Optimizasyonu', description: '3 aylık SEO paketi', quantity: 3, unitPrice: 10000, kdvRate: 20, total: 30000 },
             ],
-            subtotal: 50000, kdvTotal: 10000, grandTotal: 60000,
+            subtotal: 55000, kdvTotal: 11000, grandTotal: 66000,
             currency: 'TRY', paymentTerms: 'Sözleşme ile %50, teslimde %50', validUntil: '2026-03-15', status: 'Kabul Edildi',
         },
         {

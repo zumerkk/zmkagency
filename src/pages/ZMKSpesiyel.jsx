@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Zap, Globe, BarChart2, Camera, MapPin } from 'lucide-react';
 import SEO from '../components/SEO';
 import WizardForm from '../components/WizardForm';
-import '../styles/SpecialPackage.css';
+import '../styles/ZMKSpesiyel.css';
 
 const ZMKSpesiyel = ({ t }) => {
     const sp = t.specialPackage;
     const [showWizard, setShowWizard] = React.useState(false);
+    const packagePrice = `${sp?.currency || '₺'}${sp?.price || '35.000 – 45.000'}${sp?.period || '/ay'}`;
 
     const services = [
         { icon: Globe, title: 'Dönüşüm Odaklı Web Sitesi', desc: 'One-Page formatında, hızlı yüklenen, SEO uyumlu ve mobil öncelikli profesyonel web sitesi.' },
@@ -20,7 +21,7 @@ const ZMKSpesiyel = ({ t }) => {
     return (
         <>
             <SEO
-                title="ZMK Spesiyel - Dijital Kalkındırma Paketi | ZMK Agency"
+                title="ZMK Spesiyel — Dijital Kalkındırma Paketi"
                 description="Kırıkkale esnafına özel 360° dijital dönüşüm paketi. Web sitesi, Google Ads, sosyal medya, harita optimizasyonu hepsi bir arada."
                 keywords="kırıkkale dijital paket, esnaf dijital dönüşüm, zmk spesiyel, kırıkkale reklam paketi"
             />
@@ -43,7 +44,7 @@ const ZMKSpesiyel = ({ t }) => {
 
                             <div className="zsp-price-hero">
                                 <span className="zsp-currency">{sp?.currency || '₺'}</span>
-                                <span className="zsp-price">{sp?.price || '19.999'}</span>
+                                <span className="zsp-price">{sp?.price || '35.000 – 45.000'}</span>
                                 <span className="zsp-period">{sp?.period || '/ay'}</span>
                             </div>
 
@@ -100,7 +101,7 @@ const ZMKSpesiyel = ({ t }) => {
                         </motion.h2>
                         <div className="zsp-why-grid">
                             {[
-                                { num: '19.999₺', label: 'Aylık, tüm dahil hizmet bedeli' },
+                                { num: packagePrice, label: 'Aylık, tüm dahil hizmet bedeli' },
                                 { num: '5+', label: 'Kapsamlı hizmet tek pakette' },
                                 { num: '%100', label: 'Kırıkkale pazarına özel strateji' },
                                 { num: '7/24', label: 'Destek ve performans takibi' }
@@ -144,7 +145,7 @@ const ZMKSpesiyel = ({ t }) => {
                 <WizardForm
                     t={t.wizard}
                     onClose={() => setShowWizard(false)}
-                    initialData={{ type: ['Dijital Kalkındırma'], budget: '19.999₺/ay', details: 'ZMK Spesiyel Paketi Başvurusu' }}
+                    initialData={{ type: ['Dijital Kalkındırma'], budget: packagePrice, details: 'ZMK Spesiyel Paketi Başvurusu' }}
                     source="ZMK Spesiyel Page"
                 />
             )}

@@ -203,9 +203,10 @@ const Contact = ({ t }) => {
                                         required
                                     >
                                         <option value="" disabled>Seçiniz...</option>
-                                        <option value="10.000₺ - 25.000₺" style={{ color: '#000' }}>10.000₺ - 25.000₺</option>
-                                        <option value="25.000₺ - 50.000₺" style={{ color: '#000' }}>25.000₺ - 50.000₺</option>
-                                        <option value="50.000₺ - 100.000₺+" style={{ color: '#000' }}>50.000₺ - 100.000₺+</option>
+                                        <option value="8.000₺ - 15.000₺" style={{ color: '#000' }}>8.000₺ - 15.000₺</option>
+                                        <option value="15.000₺ - 30.000₺" style={{ color: '#000' }}>15.000₺ - 30.000₺</option>
+                                        <option value="30.000₺ - 60.000₺" style={{ color: '#000' }}>30.000₺ - 60.000₺</option>
+                                        <option value="60.000₺ - 120.000₺+" style={{ color: '#000' }}>60.000₺ - 120.000₺+</option>
                                         <option value="Sadece Proje (Tek Seferlik)" style={{ color: '#000' }}>Sadece Proje (Tek Seferlik)</option>
                                     </select>
                                 </div>

@@ -18,7 +18,7 @@ const serviceDetails = {
             { q: 'İçeriklerimi kendim güncelleyebilir miyim?', a: 'Evet, kullanımı kolay CMS paneli ile içeriklerinizi kolayca güncelleyebilirsiniz.' },
             { q: 'Bakım ve destek dahil mi?', a: 'İlk 3 ay teknik destek ve güncelleme dahildir. Sonrası için uygun bakım paketlerimiz mevcuttur.' }
         ],
-        price: '12.500₺'
+        price: '20.000₺ – 25.000₺'
     },
     'e-ticaret-cozumleri': {
         title: 'E-Ticaret Çözümleri',
@@ -30,7 +30,7 @@ const serviceDetails = {
             { q: 'Hangi e-ticaret altyapılarını kullanıyorsunuz?', a: 'Shopify, İkas ve custom headless çözümler sunuyoruz. İhtiyacınıza göre en uygununu belirleriz.' },
             { q: 'Pazaryeri entegrasyonu dahil mi?', a: 'Evet, Trendyol, N11 ve diğer pazaryeri entegrasyonları proje kapsamına dahildir.' }
         ],
-        price: '35.000₺'
+        price: '60.000₺ – 120.000₺'
     },
     'ozel-yazilim-app': {
         title: 'Özel Yazılım / App',
@@ -42,7 +42,7 @@ const serviceDetails = {
             { q: 'Hem iOS hem Android\'e çıkabilir mi?', a: 'Evet, React Native ile tek kod tabanından her iki platformda da yayınlanır.' },
             { q: 'Kaynak kodları bize mi ait?', a: 'Evet, proje tamamlandığında tüm kaynak kodları size teslim edilir.' }
         ],
-        price: '85.000₺'
+        price: '40.000₺+'
     },
     'lokal-seo': {
         title: 'Lokal SEO Paketi',
@@ -54,7 +54,7 @@ const serviceDetails = {
             { q: 'Ne kadar sürede sonuç alırım?', a: 'Google Haritalar\'da 4-8 hafta içinde görünür iyileşme beklenir. SEO organik sonuçlar için 2-4 ay.' },
             { q: 'Sadece Kırıkkale için mi?', a: 'Hayır, Türkiye\'nin her ili ve ilçesi için lokal SEO çalışması yapıyoruz.' }
         ],
-        price: '8.000₺/ay'
+        price: '8.000₺ – 16.000₺/ay'
     },
     'ulusal-global-seo': {
         title: 'Ulusal / Global SEO',
@@ -66,7 +66,7 @@ const serviceDetails = {
             { q: 'Garanti veriyor musunuz?', a: 'SEO\'da Google algoritması değişkendir, kesin sıra garantisi veremeyiz. Ancak veriye dayalı stratejilerle en yüksek etkiyi sağlıyoruz.' },
             { q: 'İçerik üretimi dahil mi?', a: 'Evet, aylık SEO odaklı blog yazıları ve sayfa optimizasyonları paket kapsamındadır.' }
         ],
-        price: '19.000₺/ay'
+        price: '20.000₺/ay+'
     },
     'tanitim-filmi': {
         title: 'Tanıtım Filmi',
@@ -78,7 +78,7 @@ const serviceDetails = {
             { q: 'Drone çekimi dahil mi?', a: 'Evet, paketin içinde drone çekimi ve hava görüntüleri dahildir.' },
             { q: 'Kaç revizyon hakkımız var?', a: '2 revizyon turunu ücretsiz sunuyoruz. Ek revizyonlar için ayrı fiyatlandırma yapılır.' }
         ],
-        price: '3.500₺'
+        price: '20.000₺ – 60.000₺'
     },
     'urun-fotografciligi': {
         title: 'Ürün Fotoğrafçılığı',
@@ -90,7 +90,7 @@ const serviceDetails = {
             { q: 'Kaç ürün çekimi dahil?', a: 'Paket detayı görüşmede belirlenir. Ürün bazlı ve paket fiyatlandırma seçenekleri mevcuttur.' },
             { q: 'Stüdyoda mı yoksa dış mekanda mı çekiyorsunuz?', a: 'Her iki seçenek de mümkündür. İhtiyacınıza göre mekan belirleriz.' }
         ],
-        price: '1.500₺'
+        price: '5.000₺ – 15.000₺'
     },
     'reklam-yonetimi-google': {
         title: 'Google Ads (SEM) Yönetimi',
@@ -99,10 +99,10 @@ const serviceDetails = {
         includes: ['Anahtar Kelime Analizi', 'Rakip Analizi', 'Dönüşüm Kurulumu', 'Negatif Kelime Optimizasyonu', 'A/B Testleri', 'Aylık Performans Raporu'],
         delivery: 'Aylık sürekli yönetim',
         faq: [
-            { q: 'Reklam bütçesi dahil mi?', a: 'Hayır, 7.500₺ yönetim ücretine ek olarak Google\'a ödenecek reklam bütçesi ayrıdır.' },
+            { q: 'Reklam bütçesi dahil mi?', a: 'Hayır, 8.000₺ - 11.000₺ yönetim ücretine ek olarak Google\'a ödenecek reklam bütçesi ayrıdır.' },
             { q: 'Minimum reklam bütçesi ne kadar olmalı?', a: 'Sektöre göre değişir, ancak etkili sonuçlar için aylık minimum 5.000-10.000₺ arası öneriyoruz.' }
         ],
-        price: '7.500₺/ay'
+        price: '8.000₺ – 11.000₺/ay'
     },
     'reklam-yonetimi-sosyal': {
         title: 'Sosyal Medya Reklamları',
@@ -114,7 +114,7 @@ const serviceDetails = {
             { q: 'Kreatif görselleri siz mi hazırlıyorsunuz?', a: 'Evet, reklam tasarımları ve video kreatifler paket kapsamındadır.' },
             { q: 'Hangi platformlarda yönetim yapıyorsunuz?', a: 'Meta (Facebook/Instagram), TikTok, LinkedIn ve Pinterest reklam yönetimi yapıyoruz.' }
         ],
-        price: '7.500₺/ay'
+        price: '7.000₺ – 9.000₺/ay'
     },
     '360-retainer-startup-growth': {
         title: '360° Startup Growth',
@@ -126,7 +126,7 @@ const serviceDetails = {
             { q: 'Minimum kaç ay anlaşma gerekli?', a: 'Dijital pazarlamada sonuçlar zamana yayıldığından minimum 3 aylık anlaşma öneriyoruz.' },
             { q: 'Hangi sosyal medya platformlarını yönetiyorsunuz?', a: 'Instagram ve Facebook varsayılan olarak dahildir. Ek platform talepleri ayrıca değerlendirilir.' }
         ],
-        price: '29.999₺/ay'
+        price: '15.000₺ – 20.000₺/ay'
     },
     '360-retainer-market-domination': {
         title: '360° Market Domination',
@@ -138,7 +138,7 @@ const serviceDetails = {
             { q: 'Dedike bir ekip atanıyor mu?', a: 'Evet, markanıza özel account manager, stratejist ve içerik ekibi atanır.' },
             { q: 'Kriz yönetimi ne demek?', a: 'Olumsuz bir durum anında hızlı aksiyon alarak markanızın itibarını koruyoruz. 7/24 müdahale kapasitesi mevcuttur.' }
         ],
-        price: '49.999₺/ay'
+        price: '35.000₺ – 45.000₺/ay'
     },
     'marka-kurumsal': {
         title: 'Marka & Kurumsal Kimlik',
@@ -150,14 +150,32 @@ const serviceDetails = {
             { q: 'Kaç logo alternatifi sunuyorsunuz?', a: '3 farklı konsept sunuyoruz. Seçilen konsept üzerinde 3 revizyon hakkınız vardır.' },
             { q: 'Brand Book nedir?', a: 'Logonuzun, renklerinizin ve tipografinizin nasıl kullanılacağını anlatan kurumsal kimlik kılavuzudur.' }
         ],
-        price: '22.500₺',
-        bundlePrice: '4.750₺',
-        bundleNote: '360° Retainer veya Yazılım paketi ile birlikte alındığında'
+        price: '18.000₺ – 40.000₺',
+        bundlePrice: '12.000₺',
+        bundleNote: '360° paket veya yazılım projesiyle birlikte alındığında başlangıç marka seti'
     }
 };
 
+const firstPriceValue = (price = '') => {
+    const match = price.match(/[\d.]+/);
+    return match ? match[0].replace(/\./g, '') : undefined;
+};
+
+// Eski / alternatif slug'ları kanonik hizmet slug'ına yönlendirir.
+// Footer, PillarPage, SolutionSelector ve indekslenmiş eski URL'ler bu sayede çalışır.
+const slugAliases = {
+    'e-ticaret': 'e-ticaret-cozumleri',
+    'google-ads': 'reklam-yonetimi-google',
+    'sosyal-medya': 'reklam-yonetimi-sosyal',
+    'kurumsal-kimlik': 'marka-kurumsal',
+    'ozel-yazilim': 'ozel-yazilim-app',
+    'software': 'ozel-yazilim-app',
+    'ulusal-seo': 'ulusal-global-seo',
+};
+
 const NewServiceDetail = ({ tContact }) => {
-    const { slug } = useParams();
+    const { slug: rawSlug } = useParams();
+    const slug = slugAliases[rawSlug] || rawSlug;
     const service = serviceDetails[slug];
 
     useEffect(() => {
@@ -190,7 +208,7 @@ const NewServiceDetail = ({ tContact }) => {
         },
         "offers": {
             "@type": "Offer",
-            "price": service.price.replace(/[^\d]/g, ''),
+            "price": firstPriceValue(service.price),
             "priceCurrency": "TRY",
             "url": `https://zmkagency.com/services/${slug}`
         }
@@ -230,6 +248,7 @@ const NewServiceDetail = ({ tContact }) => {
                 title={`${service.title} | Kırıkkale ${service.title.includes('SEO') ? 'SEO Hizmeti' : 'Dijital Hizmet'}`}
                 description={service.value.substring(0, 155)}
                 keywords={`kırıkkale ${service.title.toLowerCase()}, ${service.title.toLowerCase()} fiyatları, zmk agency ${service.title.toLowerCase()}`}
+                canonical={`https://zmkagency.com/services/${slug}`}
                 schema={schemas}
             />
             <div className="services-page-wrapper">

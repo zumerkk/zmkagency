@@ -32,7 +32,7 @@ export const localSeoData = [
             { q: "Hangi sektörlerle çalışıyorsunuz?", a: "İnşaat, sağlık, yeme-içme, e-ticaret, üretim, eğitim, hukuk, emlak ve otomotiv başta olmak üzere Kırıkkale ve çevresindeki vizyoner tüm işletmelerle çalışıyoruz." },
             { q: "Süreç nasıl başlıyor?", a: "Önce ücretsiz bir strateji görüşmesi yapıyoruz. Hedeflerinizi dinleyip, sektörünüzü ve rakiplerinizi analiz edip size en uygun yol haritasını çiziyoruz. Ardından teklif onaylandığında hemen uygulamaya geçiyoruz." },
             { q: "Kırıkkale dışından da hizmet alabilir miyim?", a: "Kesinlikle. ZMK Agency Kırıkkale merkezli olsa da Ankara, İstanbul ve Türkiye genelindeki işletmelere de dijital hizmet sunmaktayız. Uzaktan çalışma altyapımız mevcuttur." },
-            { q: "Minimum bütçe ne kadar?", a: "Esnaf ve küçük işletmeler için 20.000₺'den başlayan 'Bölgesel Hakimiyet' paketimiz mevcuttur. Kurumsal projeler ise ihtiyaca göre özelleştirilir. İlk görüşme her zaman ücretsizdir." }
+            { q: "Minimum bütçe ne kadar?", a: "Esnaf ve küçük işletmeler için 20.000₺ - 25.000₺ bandında başlayan web ve görünürlük paketlerimiz mevcuttur. Sosyal medya yönetimi 8.000₺/ay'dan başlar; ilk görüşme her zaman ücretsizdir." }
         ],
         keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, en iyi reklam ajansı kırıkkale, zmk agency iletişim, kurumsal kimlik kırıkkale, kırıkkale reklam, kırıkkale ajans",
         ogImage: "/og-images/reklam-ajansi.jpg",
@@ -74,7 +74,7 @@ export const localSeoData = [
             { q: "SEO hizmeti dahil mi?", a: "Evet, tüm web projelerimizde temel teknik SEO (Hız, Meta etiketleri, Sitemap, robots.txt, Schema markup) standart olarak sunulur." },
             { q: "Yönetim paneli var mı?", a: "Evet, sitenizi kolayca güncelleyebileceğiniz, size özel ve kullanımı kolay bir yönetim paneli sunuyoruz." },
             { q: "Web sitesi ne kadar sürede teslim edilir?", a: "Tek sayfalık siteler 1-2 hafta, kurumsal siteler 3-4 hafta, e-ticaret projeleri 4-6 hafta içinde tamamlanır." },
-            { q: "Kırıkkale web tasarım fiyatları ne kadar?", a: "Tek sayfalık tanıtım siteleri 25.000₺'den, kurumsal web siteleri 40.000₺'den başlar. Esnaf paketi ise 20.000₺'dir. Detaylı teklif için bizi arayın." }
+            { q: "Kırıkkale web tasarım fiyatları ne kadar?", a: "Tek sayfalık tanıtım siteleri 12.000₺ - 18.000₺, basit kurumsal web siteleri 20.000₺ - 25.000₺, web yenileme işleri ise 15.000₺ - 30.000₺ bandındadır. Detaylı teklif için bizi arayın." }
         ],
         keywords: "kırıkkale web tasarım, kırıkkale web yazılım, kırıkkale internet sitesi yapanlar, kırıkkale e-ticaret paketleri, mobil uyumlu web sitesi kırıkkale, kırıkkale web sitesi fiyatları",
         ogImage: "/og-images/web-tasarim.jpg",

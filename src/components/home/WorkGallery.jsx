@@ -13,9 +13,8 @@ import { featuredWorks, disciplineLabels } from '../../data/workData';
  * grid tells the reader every project is equally important, which is never
  * true and reads as filler.
  *
- * Media slots are labelled placeholders until real project imagery exists.
- * The moment `image` is present on a work entry it renders instead, with the
- * aspect ratio already reserved so nothing shifts.
+ * The six approved references and their imagery come from workData, keeping
+ * the homepage showcase and the portfolio index in the same editorial order.
  */
 const WorkGallery = () => (
   <section className="zmk-chapter zmk-chapter--obsidian chapter-work zmk-grain" aria-labelledby="work-title">

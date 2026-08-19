@@ -18,10 +18,8 @@ const FILTERS = [
 /**
  * /calismalar — the portfolio.
  *
- * The previous version rendered nine equally sized cards, each with a monogram
- * tile and its own hardcoded accent colour (indigo, cyan, amber, violet, green,
- * teal, orange, red, purple). That per-item colour scatter was the single
- * strongest "generated template" signal on the site.
+ * The portfolio is deliberately limited to the six approved references. Each
+ * project uses the same editorial system and a dedicated project visual.
  *
  * Now it uses the same large case blocks as the homepage gallery: one shared
  * palette, and a hierarchy — whichever project leads the current filter gets a

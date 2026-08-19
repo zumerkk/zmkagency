@@ -1,0 +1,67 @@
+/* ==========================================================================
+   /hizmetler — one chapter per service, coloured by its discipline.
+   ========================================================================== */
+
+.service-chapter__head { max-width: 64ch; margin-bottom: var(--s9); }
+.service-chapter__n { color: var(--pillar-accent, var(--gold)); margin-bottom: var(--s5); }
+.service-chapter__title { color: var(--fg); }
+
+.service-chapter__tagline {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 500;
+  color: var(--pillar-accent, var(--gold));
+  margin: var(--s5) 0 var(--s5);
+}
+
+.service-chapter__desc { margin: 0; }
+
+/* ---- Sub-services -------------------------------------------------------- */
+.service-subs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s7) var(--s8);
+  padding-top: var(--s7);
+  border-top: 1px solid var(--line);
+}
+
+.service-sub__n { color: var(--pillar-accent, var(--gold)); display: block; margin-bottom: var(--s3); }
+
+.service-sub__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0 0 var(--s3);
+}
+
+.service-sub__desc { font-size: var(--fs-sm); line-height: 1.65; color: var(--fg-muted); margin: 0; }
+
+/* ---- Capability lists ----------------------------------------------------
+   Platforms, tooling, techniques. Rendered as tight micro-type columns so a
+   long list reads as a spec sheet rather than another card grid. */
+.service-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--s6) var(--s7);
+  margin-top: var(--s8);
+  padding-top: var(--s6);
+  border-top: 1px solid var(--line);
+}
+
+.service-spec__label { color: var(--fg-faint); margin-bottom: var(--s4); }
+
+.service-spec__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.service-spec__list li {
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--fg-muted);
+}

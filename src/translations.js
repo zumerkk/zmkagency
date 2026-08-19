@@ -50,7 +50,7 @@ export const content = {
             ]
         },
         vision: {
-            title: "Kırıkkale'nin Teknoloji Merkezi.",
+            title: "Hakkımızda",
             subtitle: "Bugünü değil, Kırıkkale'nin dijital geleceğini inşa ediyoruz.",
             p1: "ZMK AGENCY olarak, Kırıkkale'de standartları yeniden belirliyoruz. Bizim için teknoloji ve reklam, sadece bir iş değil, şehrimizin markalarını dünyaya açan bir köprüdür.",
             p2: "Sıradan sosyal medya postları veya hazır web siteleri değil; işletmenizin cirosunu artıran, Kırıkkale ve ötesinde size pazar liderliği kazandıran stratejiler üretiyoruz.",
@@ -247,7 +247,7 @@ export const content = {
             }
         },
         contact: {
-            title: "Haydi Başlayalım.",
+            title: "İletişim",
             subtitle: "Dijital dönüşümünüz bir mesaj uzağınızda. İlk adımı siz atın, gerisini biz halledelim.",
             namePlaceholder: "Adınız",
             phonePlaceholder: "Telefon Numaranız",

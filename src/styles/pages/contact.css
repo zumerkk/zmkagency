@@ -1,0 +1,99 @@
+/* ==========================================================================
+   /iletisim
+   ========================================================================== */
+
+.contact-form-wrap { min-width: 0; }
+.contact-form__title { color: var(--fg); margin-bottom: var(--s3); }
+.contact-form__hint { font-size: var(--fs-sm); color: var(--fg-muted); margin: 0 0 var(--s7); }
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s5);
+}
+
+.field { display: flex; flex-direction: column; gap: var(--s3); min-width: 0; }
+.field--full { grid-column: 1 / -1; }
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: var(--s4);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--fg);
+  background: var(--obsidian);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  transition: border-color var(--dur-ui) var(--ease-out), background var(--dur-ui) var(--ease-out);
+}
+
+.field textarea { min-height: 140px; resize: vertical; line-height: 1.6; }
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover { border-color: var(--line-strong); }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--carbon);
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* The native dropdown list is drawn by the OS, so its options need a colour
+   that works on the platform's own light popup — not the page's dark ground. */
+.field select option { color: #101214; background: #ffffff; }
+
+.contact-form__submit { grid-column: 1 / -1; justify-self: start; }
+.contact-form__submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.form-status { grid-column: 1 / -1; margin: 0; font-size: var(--fs-sm); line-height: 1.6; }
+.form-status__ok { color: var(--gold); }
+.form-status__err { color: #ff8f8f; }
+
+/* ---- Side column --------------------------------------------------------- */
+.contact-side { min-width: 0; }
+.contact-side__title { color: var(--fg); margin-bottom: var(--s6); }
+.contact-detail__address { font-style: normal; line-height: 1.6; }
+
+.contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5);
+  list-style: none;
+  margin: var(--s7) 0 0;
+  padding: 0;
+}
+
+.contact-social a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  text-decoration: none;
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.contact-social a:hover { color: var(--gold); }
+
+@media (max-width: 640px) {
+  .contact-form { grid-template-columns: 1fr; }
+  .contact-form__submit { width: 100%; justify-self: stretch; }
+}

@@ -8,6 +8,18 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Fonts.
+       Previously loaded via @import at the top of index.css, which serialises
+       the request: the browser had to download and parse the CSS bundle before
+       it could even discover the font stylesheet. Requesting it here in the
+       HTML head lets it start immediately, and preconnect opens the connection
+       to the font CDN in parallel. Only the weights actually used are asked
+       for — the old import pulled nine Outfit weights and five Inter. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
+
   <!-- Pre-paint fallback title only. ALL SEO meta (description, canonical, hreflang,
        OG, Twitter) is owned per-page by react-helmet-async via the <SEO> component and
        baked into each route by the prerender step — kept here would duplicate every tag. -->

@@ -3,7 +3,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
 import { Lock } from 'lucide-react';
-import '../../styles/Pricing.css'; // Reusing premium styles
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -104,7 +103,7 @@ const Login = () => {
                         </div>
                     )}
 
-                    <button type="submit" className="pricing-cta" style={{ marginTop: '10px', width: '100%', background: '#fff', color: '#000' }}>
+                    <button type="submit" className="zmk-btn" style={{ marginTop: '10px', width: '100%', background: '#fff', color: '#000' }}>
                         Giriş Yap
                     </button>
                 </form>

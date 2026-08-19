@@ -1,38 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts are loaded from index.html with preconnect so they do not sit behind
+   this bundle's download. Do not re-add an @import url(...) here. */
+@import './styles/tokens.css';
 
+/* ==========================================================================
+   LEGACY ALIAS LAYER
+   The pre-V2 components reference these variable names. Repointing the names
+   at V2 tokens re-skins every legacy route at once — obsidian grounds, ivory
+   type, gold accent — without touching 27 stylesheets.
+
+   Critically: --text-accent and --text-accent-alt used to be sky blue
+   (#2997ff / #00d4ff). They now resolve to gold, which is what pulls the
+   whole legacy surface off the SaaS palette.
+
+   New work must use the V2 token names directly. Do not add to this block.
+   ========================================================================== */
 :root {
-  /* Ultra Premium Dark Palette - Deep Space & Neon */
-  --bg-primary: #000000;
-  --bg-secondary: #050505;
-  --bg-tertiary: #0a0a0c;
+  --bg-primary: var(--obsidian);
+  --bg-secondary: var(--carbon);
+  --bg-tertiary: var(--graphite);
 
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-accent: #2997ff; /* ZMK Royal Blue — new logo */
-  --text-accent-alt: #00d4ff; /* Ice Cyan — logo gloss highlight */
+  --text-primary: var(--fg);
+  --text-secondary: var(--fg-muted);
+  --text-accent: var(--gold);
+  --text-accent-alt: var(--gold-light);
 
-  --border-subtle: rgba(255, 255, 255, 0.05);
-  --glass-bg: rgba(10, 10, 12, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --border-subtle: var(--line);
+  --glass-bg: rgba(11, 13, 15, 0.62);
+  --glass-border: var(--line);
 
-  /* Typography */
-  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-main: var(--font-display);
 
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
-  --spacing-section: 140px;
+  --spacing-xs: var(--s1);
+  --spacing-sm: var(--s2);
+  --spacing-md: var(--s4);
+  --spacing-lg: var(--s5);
+  --spacing-xl: var(--s6);
+  --spacing-2xl: var(--s7);
+  --spacing-3xl: var(--s8);
+  --spacing-section: var(--chapter-y);
 
-  /* Animation */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: 0.2s var(--ease-out);
-  --transition-normal: 0.4s var(--ease-out);
+  --transition-fast: var(--dur-micro) var(--ease-out);
+  --transition-normal: var(--dur-ui) var(--ease-out);
+}
+
+/* Legacy radius normalisation. The old surface is full of 24px/99px
+   rounded rectangles and pills, which is a large part of the template feel.
+   Pull them back to the architectural scale globally, then let deliberate
+   compositions opt back in. */
+.glass-panel { border-radius: var(--r-md) !important; }
+
+.primary-btn, .btn-primary, .btn-secondary,
+.filter-btn, .pf-tag, .hero-btn-primary, .hero-btn-secondary {
+  border-radius: var(--r-sm) !important;
 }
 
 * {
@@ -47,12 +66,33 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: var(--lh-body);
   overflow-x: hidden;
-  background-image:
-    radial-gradient(circle at 15% 50%, rgba(41, 151, 255, 0.035), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(0, 212, 255, 0.025), transparent 25%);
 }
+
+/* Visible keyboard focus everywhere. Mouse users never see it. */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Skip link — first tab stop on every page. */
+.zmk-skip-link {
+  position: absolute;
+  left: var(--s4);
+  top: var(--s4);
+  z-index: var(--z-overlay);
+  padding: var(--s3) var(--s5);
+  border-radius: var(--r-sm);
+  background: var(--ivory);
+  color: var(--obsidian);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  transform: translateY(-200%);
+  transition: transform var(--dur-ui) var(--ease-out);
+}
+
+.zmk-skip-link:focus-visible { transform: translateY(0); }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-main);
@@ -67,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--iron);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -76,8 +116,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection */
 ::selection {
-  background: var(--text-accent);
-  color: #000;
+  background: var(--gold);
+  color: var(--obsidian);
 }
 
 html {

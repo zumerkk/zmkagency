@@ -1,115 +1,111 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Confetti from 'react-confetti';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { useWindowSize } from 'react-use'; // You might need to install 'react-use' or implement a hook, but basic confetti works without size too usually or defaults to window. Assuming standard window usage or just removing size prop if strict.
-// Actually standard react-confetti uses window size by default or we can pass width/height.
-// To serve as a conversion point, we can trigger a GTM event here on mount.
+import SEO from '../components/SEO';
+import PageHero from '../components/ui/PageHero';
+import Reveal from '../components/ui/Reveal';
+import { Button, ArrowRight } from '../components/ui';
+import siteConfig from '../config/siteConfig';
+import '../styles/home.css';
+import '../styles/page.css';
 
+/**
+ * Conversion confirmation page.
+ *
+ * The GTM `conversion_lead` event is unchanged — this page is a tracked
+ * conversion point and the event name must keep matching the tag configuration.
+ *
+ * Viewport size is now read in an effect instead of during render. Reading
+ * `window.innerWidth` in the render body crashes the prerender step, which runs
+ * this component in Node before a window exists; it also produced a wrong size
+ * on the first paint after hydration.
+ */
 const ThankYou = () => {
-    const navigate = useNavigate();
-    const { width, height } = { width: window.innerWidth, height: window.innerHeight };
+  const [size, setSize] = useState({ width: 0, height: 0 });
 
-    useEffect(() => {
-        // Trigger GTM Conversion Event
-        if (window.dataLayer) {
-            window.dataLayer.push({
-                'event': 'conversion_lead',
-                'conversion_type': 'contact_form'
-            });
+  useEffect(() => {
+    // Trigger the GTM conversion event.
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'conversion_lead',
+        conversion_type: 'contact_form',
+      });
+    }
+
+    const measure = () => setSize({ width: window.innerWidth, height: window.innerHeight });
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
+
+  // Respect reduced-motion: confetti is decorative and can be disorienting.
+  const reduced = typeof window !== 'undefined'
+    && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+  return (
+    <>
+      <SEO
+        title="Teşekkürler"
+        description="Mesajınız bize ulaştı. En kısa sürede dönüş yapacağız."
+        noindex
+      />
+
+      {size.width > 0 && !reduced && (
+        <Confetti
+          width={size.width}
+          height={size.height}
+          recycle={false}
+          numberOfPieces={180}
+          colors={['#d8a428', '#f0c04a', '#a8761a', '#f6f4ef']}
+          style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 1 }}
+        />
+      )}
+
+      <PageHero
+        label="Teşekkürler"
+        lines={['Mesajınız', <span className="zmk-gold" key="2">bize ulaştı.</span>]}
+        lead="En kısa sürede size dönüş yapacağız. Acil bir konuysa doğrudan arayabilir veya WhatsApp'tan yazabilirsiniz."
+        actions={
+          <>
+            <Button href={siteConfig.contact.whatsapp}>WhatsApp'tan Yaz</Button>
+            <Button to="/calismalar" variant="ghost">Çalışmalarımızı İncele</Button>
+          </>
         }
-    }, []);
+      />
 
-    return (
-        <section className="thank-you-page" style={{
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: '#000',
-            color: '#fff',
-            textAlign: 'center',
-            position: 'relative',
-            overflow: 'hidden'
-        }}>
-            <Confetti width={width} height={height} recycle={false} numberOfPieces={200} />
+      <section className="zmk-chapter zmk-chapter--carbon zmk-chapter--tight">
+        <div className="zmk-container">
+          <Reveal className="page-head">
+            <p className="zmk-micro">Bu arada</p>
+            <h2 className="zmk-h2 r-up">Beklerken göz atabilirsiniz</h2>
+          </Reveal>
 
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                style={{ zIndex: 10, maxWidth: '600px', padding: '20px' }}
-            >
-                <div style={{ marginBottom: '30px', display: 'inline-block', padding: '20px', background: 'rgba(74, 222, 128, 0.1)', borderRadius: '50%' }}>
-                    <CheckCircle size={64} color="#4ade80" />
-                </div>
+          <Reveal className="local-related">
+            <Link className="local-related__item r-up" to="/hizmetler">
+              <span className="local-related__title">Hizmetler</span>
+              <span className="local-related__cue" aria-hidden="true"><ArrowRight /></span>
+            </Link>
+            <Link className="local-related__item r-up" to="/zmk-360">
+              <span className="local-related__title">ZMK 360</span>
+              <span className="local-related__cue" aria-hidden="true"><ArrowRight /></span>
+            </Link>
+            <Link className="local-related__item r-up" to="/blog">
+              <span className="local-related__title">Magazine</span>
+              <span className="local-related__cue" aria-hidden="true"><ArrowRight /></span>
+            </Link>
+          </Reveal>
 
-                <h1 style={{ fontSize: '3rem', marginBottom: '20px', background: 'linear-gradient(to right, #4ade80, #22c55e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                    Tebrikler!
-                </h1>
-
-                <p style={{ fontSize: '1.2rem', color: '#ccc', marginBottom: '40px', lineHeight: '1.6' }}>
-                    Başvurunuz başarıyla alındı. Uzman ekibimiz analizini hazırlayıp sizinle iletişime geçecek.
-                </p>
-
-                <div style={{
-                    background: 'rgba(255,255,255,0.05)',
-                    padding: '30px',
-                    borderRadius: '16px',
-                    marginBottom: '40px',
-                    border: '1px solid rgba(255,255,255,0.1)'
-                }}>
-                    <h3 style={{ fontSize: '1.2rem', marginBottom: '15px', color: '#fff' }}>Biz size dönüş yapana kadar:</h3>
-                    <p style={{ color: '#aaa', marginBottom: '20px' }}>2026 yılı için hazırladığımız dijital büyüme rehberine göz atmak ister misiniz?</p>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => navigate('/magazine')}
-                        style={{
-                            padding: '12px 24px',
-                            background: 'var(--text-accent, #25D366)',
-                            color: '#000',
-                            border: 'none',
-                            borderRadius: '8px',
-                            fontSize: '1rem',
-                            fontWeight: 'bold',
-                            cursor: 'pointer',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '8px'
-                        }}
-                    >
-                        Ücretsiz Rehberleri Oku <ArrowRight size={18} />
-                    </motion.button>
-                </div>
-
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => navigate('/')}
-                    style={{
-                        padding: '12px 24px',
-                        background: 'transparent',
-                        color: '#fff',
-                        border: '1px solid rgba(255,255,255,0.2)',
-                        borderRadius: '8px',
-                        fontSize: '1rem',
-                        cursor: 'pointer',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                    }}
-                >
-                    Ana Sayfaya Dön
-                </motion.button>
-            </motion.div>
-
-            {/* Background Gradients */}
-            <div style={{ position: 'absolute', top: '-10%', left: '-10%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(74,222,128,0.2) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-            <div style={{ position: 'absolute', bottom: '-10%', right: '-10%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(74,222,128,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }}></div>
-        </section>
-    );
+          <Reveal className="r-up notfound-contact">
+            <p>
+              <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phoneDisplay}</a>
+              {' · '}
+              <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default ThankYou;

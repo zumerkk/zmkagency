@@ -1,7 +1,7 @@
 export const localSeoData = [
     {
         slug: "kirikkale-reklam-ajansi",
-        title: "Kırıkkale Reklam Ajansı | #1 Dijital & Kreatif Ajans | ZMK Agency",
+        title: "Kırıkkale Reklam Ajansı | Dijital & Kreatif Ajans | ZMK Agency",
         description: "Kırıkkale'nin 1 numaralı 360° reklam ajansı ✓ Web tasarım ✓ Sosyal medya ✓ Google Ads ✓ Prodüksiyon ✓ SEO — 50+ referans, ölçülebilir ROI. Ücretsiz strateji görüşmesi için hemen arayın.",
         heroTitle: "Kırıkkale'de Markanızla\nEfsaneleşin.",
         heroSubtitle: "Sıradan bir reklam ajansı değiliz. Kırıkkale'deki işletmenizin dijital kaderini değiştirecek stratejik ortağınızız.",
@@ -34,7 +34,7 @@ export const localSeoData = [
             { q: "Kırıkkale dışından da hizmet alabilir miyim?", a: "Kesinlikle. ZMK Agency Kırıkkale merkezli olsa da Ankara, İstanbul ve Türkiye genelindeki işletmelere de dijital hizmet sunmaktayız. Uzaktan çalışma altyapımız mevcuttur." },
             { q: "Minimum bütçe ne kadar?", a: "Esnaf ve küçük işletmeler için 20.000₺ - 25.000₺ bandında başlayan web ve görünürlük paketlerimiz mevcuttur. Sosyal medya yönetimi 8.000₺/ay'dan başlar; ilk görüşme her zaman ücretsizdir." }
         ],
-        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, en iyi reklam ajansı kırıkkale, zmk agency iletişim, kurumsal kimlik kırıkkale, kırıkkale reklam, kırıkkale ajans",
+        keywords: "kırıkkale reklam ajansı, kırıkkale dijital ajans, kırıkkale reklamcı telefon, zmk agency iletişim, kurumsal kimlik kırıkkale, kırıkkale reklam, kırıkkale ajans",
         ogImage: "/og-images/reklam-ajansi.jpg",
         relatedLinks: [
             { title: "Dijital Pazarlama", slug: "kirikkale-dijital-pazarlama-ajansi" },

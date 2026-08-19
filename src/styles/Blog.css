@@ -54,7 +54,7 @@
 
 .blog-header .highlight {
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(135deg, #6366f1, #00d4ff);
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -134,7 +134,7 @@
 }
 
 .blog-cat-btn.active {
-    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    background: linear-gradient(135deg, var(--gold), #4f46e5);
     border-color: transparent;
     color: #fff;
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
@@ -242,7 +242,7 @@
 }
 
 .read-more {
-    color: #6366f1;
+    color: var(--gold);
     font-weight: 600;
     display: inline-flex;
     align-items: center;

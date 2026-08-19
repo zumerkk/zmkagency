@@ -1,288 +1,302 @@
-/* ═══════════════════════════════════════
-   NAVBAR — APPLE-STYLE ULTRA MINIMAL
-   ═══════════════════════════════════════ */
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
 
-.apple-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 56px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                background 0.3s;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  transition: transform var(--dur-ui) var(--ease-out),
+              background var(--dur-ui) var(--ease-out),
+              border-color var(--dur-ui) var(--ease-out),
+              backdrop-filter var(--dur-ui) var(--ease-out);
+  border-bottom: 1px solid transparent;
 }
 
-.apple-nav.scrolled {
-    background: rgba(0, 0, 0, 0.92);
+/* Smoked glass once the page has moved. */
+.nav.is-scrolled {
+  background: rgba(6, 7, 8, 0.72);
+  backdrop-filter: saturate(150%) blur(18px);
+  -webkit-backdrop-filter: saturate(150%) blur(18px);
+  border-bottom-color: var(--line);
 }
 
-.apple-nav.nav-hidden {
-    transform: translateY(-100%);
+.nav.is-hidden { transform: translateY(-100%); }
+
+/* While the overlay is open the bar itself must stay clear of it. */
+.nav.is-menu-open {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  z-index: calc(var(--z-menu) + 1);
 }
 
-.apple-nav-inner {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s6);
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding: var(--s4) var(--gutter);
 }
 
-/* Logo */
-.apple-nav-logo img {
-    height: 34px;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.94;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: drop-shadow(0 0 0px transparent);
+.nav__logo { display: flex; align-items: center; flex-shrink: 0; }
+
+.nav__logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+  transition: opacity var(--dur-micro) var(--ease-out);
 }
 
-.apple-nav-logo:hover img {
-    opacity: 1;
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 14px rgba(41, 151, 255, 0.45));
+.nav__logo:hover img { opacity: 0.75; }
+
+/* ---- Desktop links ------------------------------------------------------- */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--s6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Links */
-.apple-nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
+.nav__links a {
+  position: relative;
+  display: block;
+  padding-block: var(--s2);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color var(--dur-micro) var(--ease-out);
 }
 
-.apple-nav-links a,
-.apple-nav-links button.apple-nav-lang {
-    font-size: 13px;
-    font-weight: 400;
-    color: #d1d1d6;
-    letter-spacing: 0;
-    text-decoration: none;
-    transition: color 0.25s;
-    position: relative;
-    padding-bottom: 2px;
+/* Underline wipes in from the left rather than fading — a small precision cue. */
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-ui) var(--ease-out);
 }
 
-.apple-nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 1.5px;
-    background: linear-gradient(90deg, #2997ff, #00d4ff);
-    border-radius: 1px;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+.nav__links a:hover { color: var(--fg); }
+.nav__links a:hover::after { transform: scaleX(1); }
+.nav__links a[aria-current='page'] { color: var(--fg); }
+.nav__links a[aria-current='page']::after { transform: scaleX(1); background: var(--line-strong); }
+
+/* ---- Right cluster ------------------------------------------------------- */
+.nav__end { display: flex; align-items: center; gap: var(--s4); }
+
+.nav__lang {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.1em;
+  color: var(--fg-faint);
+  background: none;
+  border: 0;
+  padding: var(--s2);
+  cursor: pointer;
+  transition: color var(--dur-micro) var(--ease-out);
 }
 
-.apple-nav-links a:hover {
-    color: #f5f5f7;
+.nav__lang:hover { color: var(--fg); }
+
+.nav__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s3) var(--s5);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--obsidian);
+  background: var(--ivory);
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--dur-ui) var(--ease-out);
 }
 
-.apple-nav-links a:hover::after {
-    width: 100%;
+.nav__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--dur-ui) var(--ease-out);
 }
 
-/* Don't show underline on CTA and special links */
-.apple-nav-links .apple-nav-cta::after,
-.apple-nav-links .nav-esnaf-link::after,
-.apple-nav-links .nav-spesiyel-link::after {
-    display: none;
+.nav__cta:hover::before { transform: scaleY(1); }
+.nav__cta svg { transition: transform var(--dur-micro) var(--ease-out); }
+.nav__cta:hover svg { transform: translateX(3px); }
+
+/* ---- Toggle -------------------------------------------------------------- */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
 
-/* Lang Toggle */
-.apple-nav-lang {
-    font-size: 12px;
-    font-weight: 500;
-    color: #86868b;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    transition: color 0.25s;
-    font-family: inherit;
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  margin-inline: auto;
+  background: var(--fg);
+  transition: transform var(--dur-ui) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
 }
 
-.apple-nav-lang:hover {
-    color: #f5f5f7;
+.nav__toggle.is-open span:first-child { transform: translateY(3.75px) rotate(45deg); }
+.nav__toggle.is-open span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+
+@media (max-width: 1080px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: flex; }
 }
 
-/* CTA Button */
-.apple-nav-cta {
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    color: #fff !important;
-    background: linear-gradient(135deg, rgba(41, 151, 255, 0.32), rgba(0, 212, 255, 0.18));
-    padding: 8px 20px !important;
-    border-radius: 980px;
-    border: 1px solid rgba(41, 151, 255, 0.3);
-    transition: all 0.3s ease !important;
-    cursor: pointer;
-    font-family: inherit;
-    text-decoration: none;
-    box-shadow: 0 0 0 rgba(41, 151, 255, 0);
+@media (max-width: 560px) {
+  .nav__cta { display: none; }
+  .nav__inner { padding-block: var(--s3); }
 }
 
-.apple-nav-cta:hover {
-    background: linear-gradient(135deg, rgba(41, 151, 255, 0.5), rgba(0, 212, 255, 0.3)) !important;
-    color: #fff !important;
-    box-shadow: 0 4px 20px rgba(41, 151, 255, 0.35);
-    transform: translateY(-1px);
+/* ==========================================================================
+   FULL-VIEWPORT MENU
+   ========================================================================== */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-menu);
+  background: var(--obsidian);
+  opacity: 0;
+  pointer-events: none;
+  /* Wipes down from the top edge — the same directional grammar as the
+     button fills and the nav underline. */
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--dur-ui) var(--ease-out), opacity var(--dur-micro) linear;
 }
 
-/* Esnaf Paketi — Green */
-.nav-esnaf-link {
-    color: #4ade80 !important;
-    font-weight: 600 !important;
-}
-.nav-esnaf-link:hover {
-    color: #22c55e !important;
+.menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  clip-path: inset(0 0 0 0);
 }
 
-/* ZMK Spesiyel — Indigo */
-.nav-spesiyel-link {
-    color: #818cf8 !important;
-    font-weight: 600 !important;
-}
-.nav-spesiyel-link:hover {
-    color: #6366f1 !important;
-}
-
-/* Hamburger (2-line Apple style) */
-.apple-nav-hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-    z-index: 1002;
-    position: relative;
-    -webkit-tap-highlight-color: transparent;
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding: calc(var(--s10) + var(--s2)) var(--gutter) var(--s8);
+  overflow-y: auto;
 }
 
-.apple-nav-hamburger span {
-    display: block;
-    width: 18px;
-    height: 1.5px;
-    background: #d1d1d6;
-    border-radius: 1px;
-    transition: all 0.3s ease;
-    transform-origin: center;
+.menu__nav ul { list-style: none; margin: 0; padding: 0; }
+
+.menu__nav li {
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out);
 }
 
-.apple-nav-hamburger.active span:first-child {
-    transform: translateY(3.75px) rotate(45deg);
+.menu.is-open .menu__nav li { opacity: 1; transform: none; }
+
+.menu__nav a {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s5);
+  padding-block: clamp(var(--s4), 2.2vh, var(--s5));
+  text-decoration: none;
 }
 
-.apple-nav-hamburger.active span:last-child {
-    transform: translateY(-3.75px) rotate(-45deg);
+.menu__n {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  color: var(--gold);
 }
 
-/* ─── MOBILE ─── */
-@media (max-width: 768px) {
-    .apple-nav {
-        height: 44px;
-    }
+.menu__label {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 7vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  transition: color var(--dur-micro) var(--ease-out);
+}
 
-    .apple-nav-hamburger {
-        display: flex;
-    }
+.menu__nav a:hover .menu__label { color: var(--gold); }
 
-    .apple-nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        height: 100dvh;
-        background: #000;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        padding: 60px 24px 40px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        transform: translateY(-100%);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
-                    opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-        z-index: 1001;
-    }
+.menu__foot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+  margin-top: var(--s8);
+  opacity: 0;
+  transition: opacity var(--dur-ui) var(--ease-out) 340ms;
+}
 
-    .apple-nav-links.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: all;
-    }
+.menu.is-open .menu__foot { opacity: 1; }
+.menu__cta { width: 100%; }
 
-    .apple-nav-links li {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.4s ease;
-        width: 100%;
-        text-align: center;
-    }
+.menu__contact { display: flex; flex-direction: column; gap: var(--s2); }
 
-    .apple-nav-links.open li {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.menu__contact a {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color var(--dur-micro) var(--ease-out);
+}
 
-    .apple-nav-links.open li:nth-child(1) { transition-delay: 0.05s; }
-    .apple-nav-links.open li:nth-child(2) { transition-delay: 0.08s; }
-    .apple-nav-links.open li:nth-child(3) { transition-delay: 0.11s; }
-    .apple-nav-links.open li:nth-child(4) { transition-delay: 0.14s; }
-    .apple-nav-links.open li:nth-child(5) { transition-delay: 0.17s; }
-    .apple-nav-links.open li:nth-child(6) { transition-delay: 0.2s; }
-    .apple-nav-links.open li:nth-child(7) { transition-delay: 0.23s; }
-    .apple-nav-links.open li:nth-child(8) { transition-delay: 0.26s; }
-    .apple-nav-links.open li:nth-child(9) { transition-delay: 0.29s; }
-    .apple-nav-links.open li:nth-child(10) { transition-delay: 0.32s; }
-    .apple-nav-links.open li:nth-child(11) { transition-delay: 0.35s; }
+.menu__contact a:hover { color: var(--fg); }
 
-    .apple-nav-links a {
-        font-size: 22px;
-        font-weight: 600;
-        letter-spacing: -0.3px;
-        padding: 10px 0;
-        display: block;
-        color: #f5f5f7;
-    }
+.menu__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5);
+  list-style: none;
+  margin: 0;
+  padding-top: var(--s5);
+  border-top: 1px solid var(--line);
+}
 
-    .apple-nav-links a::after {
-        display: none;
-    }
+.menu__social a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  text-decoration: none;
+  transition: color var(--dur-micro) var(--ease-out);
+}
 
-    .apple-nav-links .apple-nav-cta {
-        font-size: 16px !important;
-        padding: 12px 32px !important;
-        margin-top: 16px;
-        display: inline-block;
-    }
+.menu__social a:hover { color: var(--gold); }
 
-    .apple-nav-links .apple-nav-lang {
-        font-size: 16px;
-        padding: 10px 0;
-        color: #a1a1a6;
-    }
+@media (min-width: 1081px) {
+  .menu { display: none; }
 }

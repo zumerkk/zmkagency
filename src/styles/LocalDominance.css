@@ -74,7 +74,7 @@
     align-items: center;
     gap: 8px;
     padding: 16px 32px;
-    background: #2997ff;
+    background: var(--gold);
     color: #fff;
     font-size: 0.95rem;
     font-weight: 600;
@@ -161,7 +161,7 @@
     width: auto;
     height: auto;
     background: none;
-    color: #2997ff;
+    color: var(--gold);
 }
 
 .pin.p1 {

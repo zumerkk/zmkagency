@@ -1,0 +1,178 @@
+/* ==========================================================================
+   /calismalar — WORK INDEX
+   Page-scoped. Chapters, case blocks, the sector list, the discipline index
+   and the closing CTA are all reused from tokens.css / page.css / home.css —
+   this file only adds what the index itself needs: the hero meta rule, the
+   editorial filter row and the lead entry's split meta.
+   No raw colours: every value below resolves to a token.
+   ========================================================================== */
+
+/* ---- Hero meta ----------------------------------------------------------
+   Three counts, all derived from workData — not claims, just the size of the
+   index the reader is about to scroll. */
+.work-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5) var(--s8);
+  list-style: none;
+  margin: var(--s8) 0 0;
+  padding-top: var(--s5);
+  border-top: 1px solid var(--line);
+}
+
+.work-hero__meta li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s3);
+}
+
+.work-hero__meta-n {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: var(--track-heading);
+  color: var(--gold);
+}
+
+/* ---- Filter — an editorial text row, never pills ------------------------- */
+.work-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--s7);
+  margin-bottom: var(--s5);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.work-filter__item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 52px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg-faint);
+  background: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: color var(--dur-ui) var(--ease-out);
+}
+
+/* The active state is a hairline under the word — the same grammar as
+   .zmk-cta, so the page keeps one vocabulary for "this is selected". */
+.work-filter__item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-ui) var(--ease-out);
+}
+
+.work-filter__item:hover { color: var(--fg); }
+.work-filter__item[aria-pressed='true'] { color: var(--fg); }
+.work-filter__item[aria-pressed='true']::after { transform: scaleX(1); }
+.work-filter__item:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+.work-filter__n {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: var(--track-micro);
+  color: var(--fg-faint);
+  transition: color var(--dur-ui) var(--ease-out);
+}
+
+.work-filter__item[aria-pressed='true'] .work-filter__n { color: var(--gold); }
+
+.work-index__status {
+  margin: 0 0 var(--s8);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* ---- Case blocks --------------------------------------------------------
+   The blocks themselves are .work-case from home.css. There is no case-study
+   route yet, so an entry is an <article>, not a link — which means the hover
+   states that home.css hangs off .work-case__link have to be re-anchored. */
+.work-index__gallery .work-case:hover .work-case__placeholder,
+.work-index__gallery .work-case:hover .work-case__img { transform: scale(1.03); }
+
+.work-index__tags { margin: 0; }
+
+.work-index__delivery {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
+.work-index__delivery-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-right: var(--s3);
+}
+
+/* The lead entry earns a two-column meta: narrative left, index data right. */
+.work-index__gallery .work-case--lead .work-case__meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  column-gap: var(--s9);
+  row-gap: var(--s4);
+  align-items: start;
+}
+
+.work-index__gallery .work-case--lead .work-case__sector,
+.work-index__gallery .work-case--lead .work-case__name { grid-column: 1 / -1; }
+
+.work-index__gallery .work-case--lead .work-case__summary {
+  grid-column: 1;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  margin-bottom: 0;
+  max-width: 48ch;
+}
+
+.work-index__gallery .work-case--lead .work-index__tags { grid-column: 2; }
+
+.work-index__empty {
+  margin: 0;
+  padding-block: var(--s9);
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-lead);
+  color: var(--fg-muted);
+}
+
+/* ---- Chapter feet -------------------------------------------------------- */
+.work-index__foot { margin-top: var(--s8); }
+
+@media (max-width: 760px) {
+  .work-index__gallery .work-case--lead .work-case__meta { grid-template-columns: 1fr; }
+
+  .work-index__gallery .work-case--lead .work-case__summary,
+  .work-index__gallery .work-case--lead .work-index__tags { grid-column: 1; }
+}
+
+@media (max-width: 600px) {
+  .work-filter { gap: 0 var(--s6); }
+  .work-filter__item { font-size: var(--fs-body); }
+  .work-hero__meta { gap: var(--s4) var(--s7); }
+}

@@ -109,7 +109,7 @@
 .glow-blue {
     top: -100px;
     right: -100px;
-    background: #2997ff;
+    background: var(--gold);
 }
 
 .glow-purple {
@@ -193,7 +193,7 @@
 }
 
 .badge-blue {
-    color: #2997ff;
+    color: var(--gold);
     background: rgba(41, 151, 255, 0.06);
     border: 1px solid rgba(41, 151, 255, 0.1);
 }
@@ -215,7 +215,7 @@
 }
 
 .camp-gradient-blue {
-    background: linear-gradient(135deg, #2997ff, #5ac8fa);
+    background: linear-gradient(135deg, var(--gold), #5ac8fa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -308,7 +308,7 @@
 
 .camp-cta-blue {
     background: rgba(41, 151, 255, 0.08);
-    color: #2997ff;
+    color: var(--gold);
     border: 1px solid rgba(41, 151, 255, 0.15);
 }
 

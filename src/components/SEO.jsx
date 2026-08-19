@@ -2,11 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType, breadcrumbs }) => {
+const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType, breadcrumbs, noindex }) => {
     const location = useLocation();
     const siteTitle = "ZMK AGENCY";
     const finalTitle = title ? `${title} | ${siteTitle}` : "Kırıkkale Reklam Ajansı | Web Tasarım & Dijital Pazarlama | ZMK Agency";
-    const defaultDesc = "Kırıkkale'nin lider 360° Dijital Reklam ve Yazılım Ajansı. Web tasarım, sosyal medya yönetimi, dijital dönüşüm ve kurumsal kimlik hizmetleri ile işletmenizi büyütün.";
+    // No "lider"/"en iyi" self-claims: they are unverifiable and this string is
+    // the fallback description for every page that does not set its own.
+    const defaultDesc = "ZMK AGENCY; marka, yazılım, dijital pazarlama ve prodüksiyonu tek merkezde birleştirir. Kırıkkale merkezli, Türkiye çapında çalışan büyüme ve teknoloji ortağınız.";
 
     // URL Construction
     const baseUrl = 'https://zmkagency.com';
@@ -113,6 +115,10 @@ const SEO = ({ title, description, keywords, schema, canonical, ogImage, ogType,
             <title>{finalTitle}</title>
             <meta name="description" content={description || defaultDesc} />
             <meta name="keywords" content={keywords || "kırıkkale reklam ajansı, web tasarım kırıkkale, zmk agency, dijital pazarlama ajansı, sosyal medya yönetimi, kırıkkale yazılım firması, kurumsal kimlik, seo danışmanlığı, kırıkkale drone çekimi"} />
+
+            {/* Legal/utility pages opt out of indexing — they have no search
+                value and would otherwise consume crawl budget. */}
+            {noindex && <meta name="robots" content="noindex, follow" />}
 
             <link rel="canonical" href={currentUrl} />
             <link rel="alternate" hrefLang="tr" href={baseUrl + path} />

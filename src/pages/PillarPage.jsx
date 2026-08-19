@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import PageHero from '../components/ui/PageHero';
+import { Button } from '../components/ui';
 import Contact from '../components/Contact';
+import '../styles/home.css';
+import '../styles/page.css';
 import '../styles/PillarPage.css';
 
 /* ─── FAQ DATA ─── */
 const pillarFaq = [
     { q: 'Kırıkkale\'de yazılım yaptırmak ne kadara mal olur?', a: 'Basit kurumsal web sitesi 20.000₺ - 25.000₺, e-ticaret projeleri 60.000₺\'den, basit panel / CRM çözümleri ise 40.000₺\'den başlar. ZMK Agency olarak şeffaf ve kapsamı net fiyat politikası uyguluyoruz.' },
-    { q: 'Kırıkkale\'de en iyi reklam ajansı hangisi?', a: 'ZMK Agency, Kırıkkale\'nin ilk ve tek 360° dijital reklam ajansıdır. Web tasarım, sosyal medya, Google Ads, SEO, prodüksiyon ve kurumsal kimlik hizmetlerini tek çatı altında sunuyoruz. 50+ referans ile Kırıkkale\'nin en fazla müşteri memnuniyetine sahip ajansıyız.' },
+    { q: 'Kırıkkale\'de en iyi reklam ajansı hangisi?', a: 'Bu soruya objektif bir cevap yok; doğru soru "hangi ajans benim işime uygun" olmalı. ZMK Agency; web tasarım, sosyal medya, Google Ads, SEO, prodüksiyon ve kurumsal kimlik hizmetlerini tek çatı altında sunar. Yani markanızı, yazılımınızı ve reklamınızı ayrı ayrı tedarikçilere anlatmak zorunda kalmazsınız.' },
     { q: 'Reklam bütçem düşük, yine de çalışabilir miyiz?', a: 'Kesinlikle. Temel sosyal medya paketi 8.000₺ - 10.000₺/ay, Meta reklam yönetimi 7.000₺ - 9.000₺/ay bandındadır. Reklam bütçesi ayrıca planlanır ve her bütçeye uygun ölçeklenebilir kurgu çıkarırız.' },
     { q: 'SEO ne kadar sürede sonuç verir?', a: 'Lokal SEO (Google Haritalar) genellikle 4-8 haftada görünür sonuçlar verir. Organik arama sıralamaları için 3-6 aylık bir süreç gereklidir. Kırıkkale gibi yerel pazarlarda rekabet düşük olduğu için sonuçlar genellikle daha hızlı gelir.' },
     { q: 'Kırıkkale dışından hizmet alabilir miyim?', a: 'Evet, ZMK Agency Kırıkkale merkezli olsa da Türkiye geneli ve uluslararası müşterilere hizmet vermektedir. Uzaktan proje yönetimi altyapımız ile lokasyondan bağımsız çalışıyoruz.' },
@@ -87,46 +91,32 @@ const PillarPage = ({ t }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="pillar-page-wrapper"
+            className="pillar-guide"
         >
             <SEO
                 title="Kırıkkale Yazılım & Reklam Ajansı | 360° Dijital Çözümler"
-                description="Kırıkkale'de yazılım, reklam, SEO, web tasarım ve sosyal medya hizmetleri. 50+ referans, ölçülebilir sonuçlar. Kapsamlı rehber."
+                description="Kırıkkale'de yazılım, reklam, SEO, web tasarım, sosyal medya ve prodüksiyon hizmetleri. Tek ajans, dört disiplin. Kapsamlı rehber."
                 keywords="kırıkkale yazılım, kırıkkale reklam, kırıkkale reklam ajansı, kırıkkale dijital pazarlama, kırıkkale web sitesi, kırıkkale seo, kırıkkale sosyal medya yönetimi"
                 schema={[articleSchema, faqSchema, breadcrumbSchema]}
             />
 
-            {/* ─── HERO ─── */}
-            <section className="pillar-hero">
-                <div className="container">
-                    <motion.div
-                        className="pillar-hero-badge"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                    >
-                        Kırıkkale'nin Dijital Referans Noktası
-                    </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        Kırıkkale Dijital Çözümler:<br />Yazılım & Reklam
-                    </motion.h1>
-                    <motion.p
-                        className="pillar-hero-sub"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
-                    >
-                        Kırıkkale'de işletmenizi dijitalde zirveye taşıyacak tüm hizmetler, fiyatlar ve stratejiler — tek bir rehberde.
-                    </motion.p>
-                </div>
-            </section>
+            <PageHero
+                label="Kırıkkale Rehberi"
+                crumbs={[{ label: 'Ana Sayfa', to: '/' }, { label: 'Kırıkkale Dijital Çözümler' }]}
+                lines={['Kırıkkale dijital çözümler:', <span className="zmk-gold" key="2">yazılım & reklam.</span>]}
+                lead="Kırıkkale'de işletmenizi dijitalde görünür kılacak tüm hizmetler, fiyatlar ve stratejiler — tek bir rehberde."
+                actions={
+                    <>
+                        <Button to="/iletisim">Projeni Konuşalım</Button>
+                        <Button to="/hizmetler" variant="ghost">Hizmetleri İncele</Button>
+                    </>
+                }
+            />
 
-            <div className="container pillar-content">
+            <section className="zmk-chapter zmk-chapter--carbon">
+            <div className="zmk-container zmk-container--narrow pillar-content">
                 {/* ─── SECTION 1: OVERVIEW ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale'de Dijital Dönüşüm Neden Kaçınılmaz?</h2>
                     <p>
                         Kırıkkale, Ankara'ya sadece 80 km mesafede, hızla büyüyen bir Anadolu şehri. Merkez, Yahşihan, Keskin, Balışeyh, Bahşılı ve Delice ilçeleriyle güçlü bir ticaret ağına sahip. Ancak şehirdeki işletmelerin büyük çoğunluğu hâlâ dijitalde yeterince görünür değil.
@@ -140,7 +130,7 @@ const PillarPage = ({ t }) => {
                 </section>
 
                 {/* ─── SECTION 2: SERVICES GRID (Internal Links) ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale'de Sunduğumuz Dijital Hizmetler</h2>
                     <p>İşletmenizin ihtiyacına en uygun hizmeti seçin. Her biri Kırıkkale pazarına özel optimize edilmiştir.</p>
                     <div className="pillar-services-grid">
@@ -154,12 +144,12 @@ const PillarPage = ({ t }) => {
                         ))}
                     </div>
                     <p style={{ textAlign: 'center', marginTop: '24px' }}>
-                        <Link to="/services" className="pillar-inline-link">Tüm hizmetleri görüntüle →</Link>
+                        <Link to="/hizmetler" className="pillar-guide__link">Tüm hizmetleri görüntüle →</Link>
                     </p>
                 </section>
 
                 {/* ─── SECTION 3: YAZILIM ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale'de Yazılım Hizmetleri</h2>
                     <p>
                         Kırıkkale'de yazılım ihtiyaçlarınız için doğru adres ZMK Agency. Hazır şablonlar yerine, işletmenize özel React, Next.js ve Node.js tabanlı modern yazılım çözümleri geliştiriyoruz.
@@ -168,7 +158,7 @@ const PillarPage = ({ t }) => {
                     <p>
                         Kurumsal web sitesi, e-ticaret platformu veya özel web uygulaması — hangi ihtiyacınız olursa olsun, SEO uyumlu, mobil öncelikli ve ışık hızında yüklenen siteler oluşturuyoruz. WordPress'in yavaşlığından ve güvenlik açıklarından kurtulun, modern teknolojilerle fark yaratın.
                     </p>
-                    <ul className="pillar-feature-list">
+                    <ul className="local-article__list">
                         <li>🚀 1 saniyenin altında yükleme hızı</li>
                         <li>📱 %100 mobil uyumlu (responsive) tasarım</li>
                         <li>🔒 SSL sertifikası ve hosting dahil</li>
@@ -176,7 +166,7 @@ const PillarPage = ({ t }) => {
                         <li>🎯 CMS (içerik yönetim sistemi) ile kolay güncelleme</li>
                     </ul>
                     <p>
-                        Detaylı bilgi için: <Link to="/services/kurumsal-web-sitesi" className="pillar-inline-link">Kurumsal Web Sitesi</Link> | <Link to="/services/e-ticaret-cozumleri" className="pillar-inline-link">E-Ticaret Çözümleri</Link> | <Link to="/services/ozel-yazilim-app" className="pillar-inline-link">Özel Yazılım / App</Link>
+                        Detaylı bilgi için: <Link to="/services/kurumsal-web-sitesi" className="pillar-guide__link">Kurumsal Web Sitesi</Link> | <Link to="/services/e-ticaret-cozumleri" className="pillar-guide__link">E-Ticaret Çözümleri</Link> | <Link to="/services/ozel-yazilim-app" className="pillar-guide__link">Özel Yazılım / App</Link>
                     </p>
 
                     <h3>Mobil Uygulama Geliştirme</h3>
@@ -186,7 +176,7 @@ const PillarPage = ({ t }) => {
                 </section>
 
                 {/* ─── SECTION 4: REKLAM ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale'de Reklam ve Dijital Pazarlama</h2>
                     <p>
                         Geleneksel tabela ve broşür reklamcılığı artık tek başına yeterli değil. <strong>Kırıkkale'de reklam</strong> demek, artık Google Ads, sosyal medya kampanyaları ve SEO anlamına geliyor.
@@ -202,12 +192,12 @@ const PillarPage = ({ t }) => {
                         Instagram, Facebook, TikTok ve LinkedIn'de markanızın sesini profesyonelce yönetiyoruz. İçerik üretimi, topluluk yönetimi ve hedefli reklamlarla Kırıkkale'deki potansiyel müşterilerinize ulaşıyoruz.
                     </p>
                     <p>
-                        Detaylı bilgi: <Link to="/services/reklam-yonetimi-google" className="pillar-inline-link">Google Ads Yönetimi</Link> | <Link to="/services/reklam-yonetimi-sosyal" className="pillar-inline-link">Sosyal Medya Reklamları</Link> | <Link to="/kirikkale-dijital-pazarlama-ajansi" className="pillar-inline-link">Kırıkkale Dijital Pazarlama</Link>
+                        Detaylı bilgi: <Link to="/services/reklam-yonetimi-google" className="pillar-guide__link">Google Ads Yönetimi</Link> | <Link to="/services/reklam-yonetimi-sosyal" className="pillar-guide__link">Sosyal Medya Reklamları</Link> | <Link to="/kirikkale-dijital-pazarlama-ajansi" className="pillar-guide__link">Kırıkkale Dijital Pazarlama</Link>
                     </p>
                 </section>
 
                 {/* ─── SECTION 5: SEO ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale SEO: Google'da 1. Sayfaya Çıkın</h2>
                     <p>
                         Reklam bütçesi harcamadan, organik aramalardan kalıcı müşteri kazanın. <strong>Kırıkkale SEO</strong> hizmetimizle Google Haritalar'da ve organik aramalarda üst sıralara çıkmanızı sağlıyoruz.
@@ -216,27 +206,27 @@ const PillarPage = ({ t }) => {
                         <div className="pillar-col-card">
                             <h4>🗺️ Lokal SEO</h4>
                             <p>Google My Business optimizasyonu, yerel backlink çalışması, yorum yönetimi. Kırıkkale'deki müşteriler sizi haritada ilk görür.</p>
-                            <Link to="/services/lokal-seo" className="pillar-inline-link">8.000₺/ay →</Link>
+                            <Link to="/services/lokal-seo" className="pillar-guide__link">8.000₺/ay →</Link>
                         </div>
                         <div className="pillar-col-card">
                             <h4>🌍 Ulusal SEO</h4>
                             <p>Teknik audit, içerik stratejisi, otoriter backlink inşası. Türkiye genelinde organik trafiğinizi katlayın.</p>
-                            <Link to="/services/ulusal-global-seo" className="pillar-inline-link">20.000₺/ay+ →</Link>
+                            <Link to="/services/ulusal-global-seo" className="pillar-guide__link">20.000₺/ay+ →</Link>
                         </div>
                     </div>
                     <p>
-                        Daha fazla: <Link to="/kirikkale-seo" className="pillar-inline-link">Kırıkkale SEO Hizmetleri</Link> | <Link to="/kirikkale-seo-danismanligi" className="pillar-inline-link">SEO Danışmanlığı</Link>
+                        Daha fazla: <Link to="/kirikkale-seo" className="pillar-guide__link">Kırıkkale SEO Hizmetleri</Link> | <Link to="/kirikkale-seo-danismanligi" className="pillar-guide__link">SEO Danışmanlığı</Link>
                     </p>
                 </section>
 
                 {/* ─── SECTION 6: PRODUCTION ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Prodüksiyon & Kurumsal Kimlik</h2>
                     <p>
                         4K tanıtım filmleri, drone çekimleri, ürün fotoğrafçılığı ve komple kurumsal kimlik tasarımı. Kırıkkale'deki işletmenizin profesyonel imajını inşa ediyoruz.
                     </p>
                     <p>
-                        <Link to="/services/tanitim-filmi" className="pillar-inline-link">Tanıtım Filmi (20.000₺+)</Link> | <Link to="/services/marka-kurumsal" className="pillar-inline-link">Kurumsal Kimlik (18.000₺+)</Link> | <Link to="/kirikkale-drone-cekim-tanitim-filmi" className="pillar-inline-link">Drone Çekimi</Link>
+                        <Link to="/services/tanitim-filmi" className="pillar-guide__link">Tanıtım Filmi (20.000₺+)</Link> | <Link to="/services/marka-kurumsal" className="pillar-guide__link">Kurumsal Kimlik (18.000₺+)</Link> | <Link to="/kirikkale-drone-cekim-tanitim-filmi" className="pillar-guide__link">Drone Çekimi</Link>
                     </p>
                 </section>
 
@@ -268,7 +258,7 @@ const PillarPage = ({ t }) => {
                 </section>
 
                 {/* ─── SECTION 8: LOCAL LINKS ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Kırıkkale Dijital Hizmet Sayfalarımız</h2>
                     <p>Her hizmetimiz için Kırıkkale'ye özel optimize edilmiş detaylı sayfalarımızı keşfedin:</p>
                     <div className="pillar-local-grid">
@@ -281,7 +271,7 @@ const PillarPage = ({ t }) => {
                 </section>
 
                 {/* ─── SECTION 9: FAQ ─── */}
-                <section className="pillar-section">
+                <section className="local-article">
                     <h2>Sık Sorulan Sorular</h2>
                     <div className="pillar-faq-list">
                         {pillarFaq.map((item, index) => (
@@ -309,18 +299,19 @@ const PillarPage = ({ t }) => {
                     <h2>Kırıkkale'de Dijital Büyümenin Zamanı Geldi</h2>
                     <p>İşletmenize özel ücretsiz strateji görüşmesi için hemen bize ulaşın. İlk adımı atın, gerisini biz halledelim.</p>
                     <div className="pillar-cta-buttons">
-                        <Link to="/contact" className="pillar-btn pillar-btn-primary">Ücretsiz Teklif Al</Link>
+                        <Link to="/iletisim" className="pillar-btn pillar-btn-primary">Ücretsiz Teklif Al</Link>
                         <a href="https://wa.me/905413812114" target="_blank" rel="noopener noreferrer" className="pillar-btn pillar-btn-secondary">
                             💬 WhatsApp'tan Yaz
                         </a>
-                        <Link to="/pricing" className="pillar-btn pillar-btn-outline">Fiyatları Görüntüle</Link>
+                        <Link to="/fiyatlar" className="pillar-btn pillar-btn-outline">Fiyatları Görüntüle</Link>
                     </div>
                 </section>
             </div>
+            </section>
 
             {/* ─── CONTACT ─── */}
             {t && t.contact && (
-                <section style={{ paddingBottom: '80px' }}>
+                <section className="zmk-chapter zmk-chapter--obsidian">
                     <Contact t={t.contact} />
                 </section>
             )}

@@ -1,111 +1,159 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from './ui';
+import siteConfig from '../config/siteConfig';
+import { pillars } from '../data/capabilities';
 import '../styles/Footer.css';
-import logo from '../assets/zmk-logo-stacked.png';
 
-const Footer = ({ t }) => {
-    return (
-        <footer className="apple-footer">
-            <div className="apple-footer-inner">
-                {/* Top section — columns */}
-                <div className="apple-footer-grid">
-                    <div className="apple-footer-col apple-footer-brand">
-                        <img src={logo} alt="ZMK Agency" className="apple-footer-logo" />
-                        <p className="apple-footer-desc">{t.aboutText}</p>
-                        {/* NAP — Local SEO */}
-                        <div itemScope itemType="https://schema.org/LocalBusiness" className="apple-footer-nap">
-                            <meta itemProp="name" content="ZMK Agency" />
-                            <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                                <span itemProp="streetAddress">Delice İş Hanı, Yenidoğan, Hürriyet Cd. No: 6/50 Kat:5</span><br />
-                                <span itemProp="addressLocality">Kırıkkale</span>, <span itemProp="postalCode">71200</span> <span itemProp="addressCountry">TR</span>
-                            </div>
-                            <div className="apple-footer-nap-row">
-                                <a href="tel:+905413812114" itemProp="telephone">0541 381 21 14</a>
-                            </div>
-                            <div className="apple-footer-nap-row">
-                                <a href="mailto:iletisim@zmkagency.com" itemProp="email">iletisim@zmkagency.com</a>
-                            </div>
-                            <div className="apple-footer-nap-hours">Pzt–Cmt: 09:00–19:00</div>
-                        </div>
-                    </div>
+const NAVIGATION = [
+  { to: '/calismalar', label: 'Çalışmalar' },
+  { to: '/hizmetler', label: 'Hizmetler' },
+  { to: '/zmk-360', label: 'ZMK 360' },
+  { to: '/fiyatlar', label: 'Fiyatlar' },
+  { to: '/hakkimizda', label: 'Hakkımızda' },
+  { to: '/blog', label: 'Magazine' },
+  { to: '/iletisim', label: 'İletişim' },
+];
 
-                    <div className="apple-footer-col">
-                        <h4>{t.services}</h4>
-                        <ul>
-                            <li><Link to="/services/kurumsal-web-sitesi">Kurumsal Web Sitesi</Link></li>
-                            <li><Link to="/services/e-ticaret-cozumleri">E-Ticaret Çözümleri</Link></li>
-                            <li><Link to="/services/reklam-yonetimi-google">Google Ads</Link></li>
-                            <li><Link to="/services/reklam-yonetimi-sosyal">Sosyal Medya</Link></li>
-                            <li><Link to="/services/lokal-seo">SEO Hizmeti</Link></li>
-                            <li><Link to="/services/marka-kurumsal">Kurumsal Kimlik</Link></li>
-                        </ul>
-                    </div>
+/**
+ * Local SEO landing pages.
+ *
+ * These were previously 25 low-contrast links sitting directly in the footer,
+ * which flattened the whole composition into keyword soup. They still need to
+ * be crawlable, so they live in a collapsed list below the legal rule —
+ * present in the DOM for crawlers and reachable for users, without competing
+ * with the brand statement above.
+ */
+const LOCAL_LINKS = [
+  ['kirikkale-reklam-ajansi', 'Reklam Ajansı'],
+  ['kirikkale-web-tasarim', 'Web Tasarım'],
+  ['kirikkale-dijital-pazarlama-ajansi', 'Dijital Pazarlama'],
+  ['kirikkale-google-ads-yonetimi', 'Google Ads'],
+  ['kirikkale-sosyal-medya-yonetimi', 'Sosyal Medya'],
+  ['kirikkale-yazilim-gelistirme', 'Özel Yazılım'],
+  ['kirikkale-e-ticaret-otomasyon', 'E-Ticaret'],
+  ['kirikkale-seo', 'SEO'],
+  ['kirikkale-dijital-donusum-danismanligi', 'Dijital Dönüşüm'],
+  ['kirikkale-instagram-reklam-yonetimi', 'Instagram Reklam'],
+  ['kirikkale-360-dijital-ajans', '360° Ajans'],
+  ['kirikkale-mobil-uygulama-gelistirme', 'Mobil Uygulama'],
+  ['kirikkale-kurumsal-kimlik-tasarimi', 'Kurumsal Kimlik'],
+  ['kirikkale-drone-cekim-tanitim-filmi', 'Drone Çekimi'],
+  ['kirikkale-dijital-menu-tasarim', 'Dijital Menü'],
+  ['kirikkale-emlak-cekimi-reklam', 'Emlak Medya'],
+  ['kirikkale-oto-galeri-dijital-pazarlama', 'Oto Galeri'],
+  ['kirikkale-grafik-tasarim-matbaa', 'Matbaa & Grafik'],
+  ['kirikkale-seo-danismanligi', 'SEO Danışmanlığı'],
+  ['kirikkale-saglik-turizmi-dijital-pazarlama', 'Sağlık & Klinik'],
+  ['kirikkale-insaat-emlak-reklam-ajansi', 'İnşaat Lansman'],
+  ['kirikkale-sanayi-uretim-dijital-donusum', 'Sanayi Dijital'],
+  ['kirikkale-ozel-okul-kolej-reklam', 'Eğitim & Kolej'],
+  ['kirikkale-avukat-hukuk-web-tasarim', 'Hukuk Web'],
+  ['kirikkale-siyasi-dijital-danismanlik', 'Siyasi Danışmanlık'],
+];
 
-                    <div className="apple-footer-col">
-                        <h4>{t.links}</h4>
-                        <ul>
-                            <li><Link to="/pricing">Hizmetler & Fiyatlar</Link></li>
-                            <li><Link to="/vision">{t.vision || "Vision"}</Link></li>
-                            <li><Link to="/portfolio">Referanslar</Link></li>
-                            <li><Link to="/kirikkale-dijital-cozumler">Kırıkkale Dijital</Link></li>
-                            <li><Link to="/blog">Blog</Link></li>
-                            <li><a href="/#agency">Agency</a></li>
-                            <li><Link to="/contact">İletişim</Link></li>
-                        </ul>
-                    </div>
+/**
+ * Footer.
+ *
+ * Opens with the brand statement at display scale — the footer is the last
+ * thing a visitor reads, so it should close the argument rather than trail off
+ * into small print. Every contact value comes from siteConfig, which is now
+ * the only place they are defined.
+ */
+const Footer = () => {
+  const [localOpen, setLocalOpen] = useState(false);
+  const year = new Date().getFullYear();
 
-                    <div className="apple-footer-col">
-                        <h4>{t.legal}</h4>
-                        <ul>
-                            <li><Link to="/legal/privacy">{t.privacy}</Link></li>
-                            <li><Link to="/legal/terms">{t.terms}</Link></li>
-                        </ul>
-                    </div>
-                </div>
+  return (
+    <footer className="footer zmk-grain">
+      <div className="zmk-container footer__inner">
+        <div className="footer__statement">
+          <p className="zmk-micro footer__brand">{siteConfig.name}</p>
+          <p className="footer__tagline">
+            Markanızın <span className="zmk-gold">büyüme departmanı.</span>
+          </p>
+          <Link to="/iletisim" className="zmk-cta footer__cta">
+            Projeni Konuşalım <ArrowRight />
+          </Link>
+        </div>
 
-                {/* SEO spider links */}
-                <div className="apple-footer-seo">
-                    <p className="apple-footer-seo-label">Kırıkkale Hizmet Bölgeleri</p>
-                    <div className="apple-footer-seo-links">
-                        {[
-                            { slug: 'kirikkale-reklam-ajansi', label: 'Reklam Ajansı' },
-                            { slug: 'kirikkale-web-tasarim', label: 'Web Tasarım' },
-                            { slug: 'kirikkale-dijital-pazarlama-ajansi', label: 'Dijital Pazarlama' },
-                            { slug: 'kirikkale-google-ads-yonetimi', label: 'Google Ads' },
-                            { slug: 'kirikkale-sosyal-medya-yonetimi', label: 'Sosyal Medya' },
-                            { slug: 'kirikkale-yazilim-gelistirme', label: 'Özel Yazılım' },
-                            { slug: 'kirikkale-e-ticaret-otomasyon', label: 'E-Ticaret' },
-                            { slug: 'kirikkale-seo', label: 'SEO Uzmanı' },
-                            { slug: 'kirikkale-dijital-donusum-danismanligi', label: 'Dijital Dönüşüm' },
-                            { slug: 'kirikkale-instagram-reklam-yonetimi', label: 'Instagram Reklam' },
-                            { slug: 'kirikkale-360-dijital-ajans', label: '360° Ajans' },
-                            { slug: 'kirikkale-mobil-uygulama-gelistirme', label: 'Mobil Uygulama' },
-                            { slug: 'kirikkale-kurumsal-kimlik-tasarimi', label: 'Kurumsal Kimlik' },
-                            { slug: 'kirikkale-drone-cekim-tanitim-filmi', label: 'Drone Çekimi' },
-                            { slug: 'kirikkale-siyasi-dijital-danismanlik', label: 'Siyasi Danışmanlık' },
-                            { slug: 'kirikkale-dijital-menu-tasarim', label: 'Dijital Menü' },
-                            { slug: 'kirikkale-emlak-cekimi-reklam', label: 'Emlak Medya' },
-                            { slug: 'kirikkale-oto-galeri-dijital-pazarlama', label: 'Oto Galeri' },
-                            { slug: 'kirikkale-grafik-tasarim-matbaa', label: 'Matbaa & Grafik' },
-                            { slug: 'kirikkale-seo-danismanligi', label: 'İleri SEO' },
-                            { slug: 'kirikkale-saglik-turizmi-dijital-pazarlama', label: 'Sağlık & Klinik' },
-                            { slug: 'kirikkale-insaat-emlak-reklam-ajansi', label: 'İnşaat Lansman' },
-                            { slug: 'kirikkale-sanayi-uretim-dijital-donusum', label: 'Sanayi Dijital' },
-                            { slug: 'kirikkale-ozel-okul-kolej-reklam', label: 'Eğitim & Kolej' },
-                            { slug: 'kirikkale-avukat-hukuk-web-tasarim', label: 'Hukuk Web' }
-                        ].map(link => (
-                            <Link key={link.slug} to={`/${link.slug}`}>{link.label}</Link>
-                        ))}
-                    </div>
-                </div>
+        <div className="footer__cols">
+          <nav className="footer__col" aria-labelledby="f-disciplines">
+            <h2 className="zmk-micro footer__col-title" id="f-disciplines">Disiplinler</h2>
+            <ul>
+              {pillars.map((pillar) => (
+                <li key={pillar.id}><Link to={`/${pillar.slug}`}>{pillar.title}</Link></li>
+              ))}
+            </ul>
+          </nav>
 
-                {/* Bottom */}
-                <div className="apple-footer-bottom">
-                    <p>{t.copyright}</p>
-                </div>
-            </div>
-        </footer>
-    );
+          <nav className="footer__col" aria-labelledby="f-nav">
+            <h2 className="zmk-micro footer__col-title" id="f-nav">Menü</h2>
+            <ul>
+              {NAVIGATION.map((item) => (
+                <li key={item.to}><Link to={item.to}>{item.label}</Link></li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="footer__col footer__col--contact">
+            <h2 className="zmk-micro footer__col-title">İletişim</h2>
+            <ul>
+              <li><a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phoneDisplay}</a></li>
+              <li><a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></li>
+              <li>
+                <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </li>
+            </ul>
+
+            <address className="footer__address">
+              {siteConfig.address.street}<br />
+              {siteConfig.address.postalCode} {siteConfig.address.locality}
+            </address>
+            <p className="footer__hours">{siteConfig.hours.display}</p>
+          </div>
+
+          <div className="footer__col">
+            <h2 className="zmk-micro footer__col-title">Takip</h2>
+            <ul>
+              {siteConfig.social.map((s) => (
+                <li key={s.label}>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer__bottom">
+          <p className="footer__copy">© {year} {siteConfig.legalName}. Tüm hakları saklıdır.</p>
+          <ul className="footer__legal">
+            <li><Link to="/legal/privacy">Gizlilik Politikası</Link></li>
+            <li><Link to="/legal/terms">Kullanım Koşulları</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer__local">
+          <button
+            type="button"
+            className="footer__local-toggle"
+            onClick={() => setLocalOpen((open) => !open)}
+            aria-expanded={localOpen}
+            aria-controls="footer-local-links"
+          >
+            Kırıkkale hizmet sayfaları
+            <span className={`footer__local-chevron ${localOpen ? 'is-open' : ''}`} aria-hidden="true" />
+          </button>
+
+          <ul id="footer-local-links" className="footer__local-links" hidden={!localOpen}>
+            {LOCAL_LINKS.map(([slug, label]) => (
+              <li key={slug}><Link to={`/${slug}`}>{label}</Link></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

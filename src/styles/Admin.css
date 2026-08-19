@@ -13,8 +13,8 @@
     --admin-accent: #dc2626;
     --admin-accent-hover: #ef4444;
     --admin-accent-soft: rgba(220, 38, 38, 0.12);
-    --admin-success: #22c55e;
-    --admin-warning: #f59e0b;
+    --admin-success: var(--gold);
+    --admin-warning: var(--gold-light);
     --admin-danger: #ef4444;
     --admin-info: #3b82f6;
     --admin-sidebar-width: 260px;

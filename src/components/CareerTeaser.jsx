@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-const CareerTeaser = ({ t }) => {
+const CareerTeaser = () => {
     return (
         <section className="career-teaser" style={{ padding: '120px 0', borderTop: '1px solid var(--border-subtle)', background: 'linear-gradient(to top, #050505, #000)' }}>
             <div className="container">

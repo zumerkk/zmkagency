@@ -333,7 +333,7 @@
 }
 
 .pillar-btn-secondary {
-    background: #25D366;
+    background: var(--gold);
     color: #fff;
     border: none;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Home, RefreshCw } from 'lucide-react';
-import '../styles/Pricing.css'; // Reusing premium styles
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -44,7 +43,7 @@ class ErrorBoundary extends React.Component {
                     </p>
                     <button
                         onClick={() => window.location.href = '/'}
-                        className="pricing-cta"
+                        className="zmk-btn"
                         style={{ display: 'inline-flex', gap: '10px', alignItems: 'center' }}
                     >
                         <Home size={20} /> Return Home

@@ -43,7 +43,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #6366f1, #00d4ff, #f59e0b);
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold-light));
 }
 
 .wizard-header {
@@ -62,7 +62,7 @@
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #6366f1, #00d4ff);
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     border-radius: 2px;
 }
@@ -101,7 +101,7 @@
 }
 
 .wizard-option.selected {
-    border-color: #6366f1;
+    border-color: var(--gold);
     background: rgba(99, 102, 241, 0.08);
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
     color: #fff;
@@ -116,7 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6366f1;
+    color: var(--gold);
     transition: all 0.2s ease;
     flex-shrink: 0;
 }
@@ -127,14 +127,14 @@
 
 .wizard-option.selected .checkbox,
 .wizard-option.selected .radio {
-    border-color: #6366f1;
+    border-color: var(--gold);
     background: rgba(99, 102, 241, 0.15);
 }
 
 .dot {
     width: 10px;
     height: 10px;
-    background: #6366f1;
+    background: var(--gold);
     border-radius: 50%;
 }
 
@@ -155,7 +155,7 @@
 .wizard-input:focus,
 .contact-inputs input:focus {
     outline: none;
-    border-color: #6366f1;
+    border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
 }
 
@@ -230,7 +230,7 @@
 }
 
 .wizard-btn.finish {
-    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    background: linear-gradient(135deg, var(--gold) 0%, #4f46e5 100%);
     color: #fff;
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }

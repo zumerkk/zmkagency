@@ -21,11 +21,20 @@ const DIST_DIR = join(__dirname, '..', 'dist');
 // All routes to pre-render
 const ROUTES = [
     '/',
-    '/vision',
-    '/services',
-    '/pricing',
-    '/contact',
-    '/portfolio',
+    // Canonical Turkish routes. The old English paths (/vision, /services,
+    // /pricing, /contact, /portfolio) are intentionally NOT listed: they are
+    // 301 redirects in vercel.json, so prerendering them would create indexable
+    // duplicates of pages that should only exist at one URL.
+    '/hakkimizda',
+    '/hizmetler',
+    '/fiyatlar',
+    '/iletisim',
+    '/calismalar',
+    '/marka',
+    '/dijital',
+    '/yazilim',
+    '/studio',
+    '/zmk-360',
     '/blog',
     '/esnaf-paket',
     '/zmk-spesiyel',
@@ -175,6 +184,33 @@ async function prerender() {
                         defaultTitle
                     ).catch(() => console.warn(`  ⚠️ ${route}: Helmet title not flushed, default kept`));
                 }
+
+                // Scroll the full page before serialising.
+                //
+                // Scroll-revealed sections are hidden until an
+                // IntersectionObserver fires. Serialising without scrolling
+                // would bake `opacity: 0` into the static HTML for everything
+                // below the fold. This also forces lazy-loaded images to
+                // resolve so their markup is captured.
+                await page.evaluate(async () => {
+                    // The site sets `html { scroll-behavior: smooth }`. Left on,
+                    // every scrollTo below would start an animation that the next
+                    // call retargets, so the page would never actually traverse
+                    // and the reveals would never fire. Force instant scrolling.
+                    const root = document.documentElement;
+                    const previous = root.style.scrollBehavior;
+                    root.style.scrollBehavior = 'auto';
+
+                    const step = window.innerHeight * 0.8;
+                    const height = () => root.scrollHeight;
+                    for (let y = 0; y < height(); y += step) {
+                        window.scrollTo(0, y);
+                        await new Promise((r) => setTimeout(r, 120));
+                    }
+                    window.scrollTo(0, 0);
+                    root.style.scrollBehavior = previous;
+                });
+                await new Promise((r) => setTimeout(r, 600));
 
                 // Get the fully rendered HTML
                 const html = await page.content();

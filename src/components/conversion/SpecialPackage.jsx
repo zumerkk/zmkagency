@@ -42,7 +42,7 @@ const SpecialPackage = ({ t }) => {
                             {t.cta}
                             <span>→</span>
                         </a>
-                        <Link to="/services" className="apple-sp-cta-ghost">
+                        <Link to="/hizmetler" className="apple-sp-cta-ghost">
                             {t.secondaryCta}
                         </Link>
                     </div>

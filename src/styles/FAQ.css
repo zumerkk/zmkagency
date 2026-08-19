@@ -51,7 +51,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #6366f1;
+    color: var(--gold);
     margin-bottom: 16px;
     padding: 6px 16px;
     border-radius: 30px;
@@ -124,7 +124,7 @@
 }
 
 .faq-item.open .faq-toggle {
-    color: #6366f1;
+    color: var(--gold);
     background: rgba(99, 102, 241, 0.15);
     transform: rotate(45deg);
 }

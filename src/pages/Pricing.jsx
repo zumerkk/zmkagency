@@ -1,484 +1,273 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-    Globe, Share2, Target, TrendingUp, Clapperboard, PenTool, Code2, Smartphone,
-    Check, ArrowRight, AlertTriangle, FileCheck, Layers, BarChart3, Headphones,
-    Sparkles, Crown, Building2, MessageCircle, Star
-} from 'lucide-react';
-import '../styles/Pricing.css';
-
+import React, { useState } from 'react';
 import SEO from '../components/SEO';
+import Reveal from '../components/ui/Reveal';
+import PageHero from '../components/ui/PageHero';
+import { DisplayHeading, Button, TextCTA } from '../components/ui';
 import WizardForm from '../components/WizardForm';
 import {
-    packages, webTiers, serviceCategories, extras, assurances, PERIOD_LABEL
+  packages, webTiers, serviceCategories, extras, assurances, PERIOD_LABEL,
 } from '../data/pricingData';
+import siteConfig from '../config/siteConfig';
+import '../styles/home.css';
+import '../styles/page.css';
+import '../styles/pages/pricing.css';
 
-const ICONS = {
-    Globe, Share2, Target, TrendingUp, Clapperboard, PenTool, Code2, Smartphone,
-    FileCheck, Layers, BarChart3, Headphones
+/** Parse "20.000₺ – 25.000₺" → "20000" for Offer schema. */
+const lowPrice = (price = '') => {
+  const match = price.match(/[\d.]+/);
+  return match ? match[0].replace(/\./g, '') : undefined;
 };
 
-const periodSuffix = (period) =>
-    period === 'month' ? '/ay' : period === 'unit' ? '/adet' : '';
-
-/* Parse "20.000₺ – 25.000₺" → [20000, 25000] for structured data */
-const parseRange = (price) => {
-    const nums = (price.match(/[\d.]+/g) || [])
-        .map(n => parseInt(n.replace(/\./g, ''), 10))
-        .filter(n => !isNaN(n));
-    return nums.length ? nums : [0];
-};
-
+/**
+ * /fiyatlar — pricing.
+ *
+ * Every figure on this page comes from src/data/pricingData.js and is rendered
+ * verbatim. No price is computed, rounded, formatted or hardcoded here; that
+ * file stays the single source of truth so a price can never drift between the
+ * page, the schema and the proposal.
+ *
+ * Presentation was rebuilt: the previous version used SaaS-style comparison
+ * cards with per-tier accent colours. It now reads as an editorial rate card —
+ * price rows with the strikethrough previous price kept where the data has one.
+ */
 const Pricing = ({ wizardT }) => {
-    const [activeSection, setActiveSection] = useState('paketler');
-    const [wizardConfig, setWizardConfig] = useState({ isOpen: false, initialData: {}, source: 'Pricing' });
-    const sectionRefs = useRef({});
+  const [showWizard, setShowWizard] = useState(false);
 
-    const navItems = [
-        { id: 'paketler', label: 'Paketler' },
-        ...serviceCategories.map(c => ({ id: c.id, label: c.title.split(' ')[0] === 'Google' ? 'SEO' : c.title.split('&')[0].replace('Hizmetleri', '').trim() })),
-        { id: 'ekstralar', label: 'Ekstralar' },
-    ];
+  const offerSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: 'ZMK Agency Hizmet ve Fiyat Listesi',
+    itemListElement: serviceCategories.flatMap((cat) =>
+      cat.items.map((item) => ({
+        '@type': 'Offer',
+        name: item.name,
+        ...(lowPrice(item.price) && {
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            price: lowPrice(item.price),
+            priceCurrency: 'TRY',
+          },
+        }),
+        itemOffered: { '@type': 'Service', name: item.name, description: item.note },
+      }))
+    ),
+  };
 
-    /* Scrollspy */
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) setActiveSection(entry.target.id);
-                });
-            },
-            { rootMargin: '-30% 0px -60% 0px' }
-        );
-        Object.values(sectionRefs.current).forEach(el => el && observer.observe(el));
-        return () => observer.disconnect();
-    }, []);
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: `${siteConfig.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Fiyatlar', item: `${siteConfig.url}/fiyatlar` },
+    ],
+  };
 
-    const scrollTo = (id) => {
-        const el = document.getElementById(id);
-        if (el) {
-            const y = el.getBoundingClientRect().top + window.scrollY - 120;
-            window.scrollTo({ top: y, behavior: 'smooth' });
+  return (
+    <>
+      <SEO
+        title="Hizmetler & Fiyatlandırma 2026 | Web, Sosyal Medya, Reklam, Yazılım"
+        description="ZMK Agency 2026 Kırıkkale fiyat listesi: kurumsal web sitesi 20.000₺'den, sosyal medya yönetimi 8.000₺/ay'dan, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama."
+        keywords="kırıkkale web tasarım fiyatları, sosyal medya yönetimi fiyat, reklam ajansı fiyat listesi, kurumsal kimlik fiyat"
+        schema={offerSchema}
+        breadcrumbs={breadcrumbs}
+      />
+
+      <PageHero
+        label="Fiyatlar"
+        crumbs={[{ label: 'Ana Sayfa', to: '/' }, { label: 'Fiyatlar' }]}
+        lines={['Net kapsam,', <span className="zmk-gold" key="2">net fiyat.</span>]}
+        lead="Neyin dahil olduğu baştan bellidir. Aşağıdaki aralıklar başlangıç fiyatlarıdır; kesin teklif kapsam netleştikten sonra verilir."
+        actions={
+          <>
+            <Button onClick={() => setShowWizard(true)}>Teklif Al</Button>
+            <Button to="/zmk-360" variant="ghost">ZMK 360'ı İncele</Button>
+          </>
         }
-    };
+      />
 
-    const openWizard = (title, price, periodText = '') => {
-        setWizardConfig({
-            isOpen: true,
-            initialData: {
-                budget: `${price} ${periodText}`.trim(),
-                details: `Seçilen Hizmet: ${title}`,
-            },
-            source: `Pricing - ${title}`,
-        });
-    };
+      {/* Featured packages */}
+      <section className="zmk-chapter zmk-chapter--carbon">
+        <div className="zmk-container">
+          <Reveal className="page-head">
+            <p className="zmk-micro">Paketler</p>
+            <h2 className="zmk-h2 r-up">Öne çıkan paketler</h2>
+          </Reveal>
 
-    /* ── Structured data: full OfferCatalog ── */
-    const offerCatalogSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'OfferCatalog',
-        name: 'ZMK Agency 2026 Hizmet Listesi ve Fiyatlandırma',
-        description: 'Web tasarım, sosyal medya, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama fiyatları.',
-        itemListElement: [
-            ...packages.map(p => {
-                const range = parseRange(p.price);
-                return {
-                    '@type': 'Offer',
-                    name: p.name,
-                    description: p.description,
-                    price: range[0],
-                    priceCurrency: 'TRY',
-                    itemOffered: {
-                        '@type': 'Service',
-                        name: p.name,
-                        provider: { '@type': 'ProfessionalService', name: 'ZMK Agency' },
-                    },
-                };
-            }),
-            ...serviceCategories.flatMap(cat =>
-                cat.items.map(item => {
-                    const range = parseRange(item.price);
-                    return {
-                        '@type': range.length > 1 ? 'AggregateOffer' : 'Offer',
-                        name: item.name,
-                        ...(range.length > 1
-                            ? { lowPrice: range[0], highPrice: range[1] }
-                            : { price: range[0] }),
-                        priceCurrency: 'TRY',
-                        itemOffered: {
-                            '@type': 'Service',
-                            name: item.name,
-                            category: cat.title,
-                            provider: { '@type': 'ProfessionalService', name: 'ZMK Agency' },
-                        },
-                    };
-                })
-            ),
-        ],
-    };
+          <Reveal className="price-packages">
+            {packages.map((pkg, i) => (
+              <article className="price-pkg r-up" key={pkg.id} style={{ transitionDelay: `${i * 80}ms` }}>
+                <p className="zmk-micro price-pkg__n">{pkg.no}</p>
+                <h3 className="price-pkg__name">{pkg.name}</h3>
+                <p className="price-pkg__audience">{pkg.audience}</p>
 
-    const breadcrumbSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://zmkagency.com' },
-            { '@type': 'ListItem', position: 2, name: 'Hizmetler & Fiyatlandırma', item: 'https://zmkagency.com/pricing' },
-        ],
-    };
+                <p className="price-pkg__price">
+                  {pkg.previousPrice && <s className="price-pkg__was">{pkg.previousPrice}</s>}
+                  <span className="price-pkg__now">{pkg.price}</span>
+                  {pkg.period && <span className="price-pkg__period">{PERIOD_LABEL[pkg.period]}</span>}
+                </p>
 
-    return (
-        <>
-            <SEO
-                title="Hizmetler & Fiyatlandırma 2026 | Web, Sosyal Medya, Reklam, Yazılım"
-                description="ZMK Agency 2026 Kırıkkale fiyat listesi: kurumsal web sitesi 20.000₺'den, sosyal medya yönetimi 8.000₺/ay'dan, reklam yönetimi, SEO, çekim, kurumsal kimlik, özel yazılım ve mobil uygulama."
-                keywords="kırıkkale web sitesi fiyatları, sosyal medya yönetimi fiyatları 2026, reklam ajansı fiyat listesi, kırıkkale seo fiyatları, özel yazılım fiyatları, mobil uygulama fiyatı"
-                schema={[offerCatalogSchema, breadcrumbSchema]}
+                {pkg.description && <p className="price-pkg__desc">{pkg.description}</p>}
+
+                {pkg.features?.length > 0 && (
+                  <ul className="price-pkg__features">
+                    {pkg.features.map((f) => <li key={f}>{f}</li>)}
+                  </ul>
+                )}
+
+                <Button onClick={() => setShowWizard(true)} variant="ghost" className="price-pkg__cta">
+                  Teklif Al
+                </Button>
+              </article>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Web tiers */}
+      {webTiers?.length > 0 && (
+        <section className="zmk-chapter zmk-chapter--obsidian">
+          <div className="zmk-container">
+            <Reveal className="page-head">
+              <p className="zmk-micro">Web</p>
+              <h2 className="zmk-h2 r-up">Web sitesi seviyeleri</h2>
+            </Reveal>
+
+            <Reveal className="price-tiers">
+              {webTiers.map((tier, i) => (
+                <article className="price-tier r-up" key={tier.name} style={{ transitionDelay: `${i * 80}ms` }}>
+                  <h3 className="price-tier__name">{tier.name}</h3>
+                  <p className="price-tier__price">
+                    {tier.previousPrice && <s className="price-pkg__was">{tier.previousPrice}</s>}
+                    <span className="price-pkg__now">{tier.price}</span>
+                  </p>
+                  <p className="price-tier__tagline">{tier.tagline}</p>
+                  <ul className="price-tier__features">
+                    {tier.features.map((f) => <li key={f}>{f}</li>)}
+                  </ul>
+                </article>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Full rate card, by category */}
+      {serviceCategories.map((cat, index) => (
+        <section
+          className={`zmk-chapter ${index % 2 === 0 ? 'zmk-chapter--carbon' : 'zmk-chapter--obsidian'}`}
+          key={cat.id}
+          id={cat.id}
+          aria-labelledby={`cat-${cat.id}`}
+        >
+          <div className="zmk-container">
+            <Reveal className="page-head">
+              <p className="zmk-micro">{String(index + 1).padStart(2, '0')} — Fiyat listesi</p>
+              <h2 className="zmk-h2 r-up" id={`cat-${cat.id}`}>{cat.title}</h2>
+              {cat.tagline && <p className="zmk-lead r-up">{cat.tagline}</p>}
+            </Reveal>
+
+            <Reveal className="price-table">
+              {cat.items.map((item, i) => (
+                <div className={`price-row r-up ${item.popular ? 'is-popular' : ''}`} key={item.name} style={{ transitionDelay: `${i * 40}ms` }}>
+                  <div className="price-row__id">
+                    <h3 className="price-row__name">
+                      {item.name}
+                      {item.popular && <span className="price-row__badge">Çok tercih edilen</span>}
+                    </h3>
+                    {item.note && <p className="price-row__note">{item.note}</p>}
+                  </div>
+
+                  <div className="price-row__price">
+                    {item.previousPrice && <s className="price-pkg__was">{item.previousPrice}</s>}
+                    <span className="price-pkg__now">{item.price}</span>
+                    {item.period && <span className="price-pkg__period">{PERIOD_LABEL[item.period]}</span>}
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+
+            {cat.quote && (
+              <Reveal className="price-quote r-up">
+                <p>{cat.quote}</p>
+              </Reveal>
+            )}
+          </div>
+        </section>
+      ))}
+
+      {/* Extras */}
+      {extras?.length > 0 && (
+        <section className="zmk-chapter zmk-chapter--graphite">
+          <div className="zmk-container">
+            <Reveal className="page-head">
+              <p className="zmk-micro">Ek işler</p>
+              <h2 className="zmk-h2 r-up">Tek seferlik ek hizmetler</h2>
+            </Reveal>
+
+            <Reveal className="price-table">
+              {extras.map((extra, i) => (
+                <div className="price-row r-up" key={extra.name} style={{ transitionDelay: `${i * 35}ms` }}>
+                  <div className="price-row__id">
+                    <h3 className="price-row__name">{extra.name}</h3>
+                  </div>
+                  <div className="price-row__price">
+                    <span className="price-pkg__now">{extra.price}</span>
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Assurances */}
+      {assurances?.length > 0 && (
+        <section className="zmk-chapter zmk-chapter--obsidian">
+          <div className="zmk-container">
+            <Reveal className="page-head">
+              <p className="zmk-micro">Çalışma şeklimiz</p>
+              <h2 className="zmk-h2 r-up">Sürpriz maliyet yok</h2>
+            </Reveal>
+
+            <Reveal className="price-assurances">
+              {assurances.map((a, i) => (
+                <div className="price-assurance r-up" key={a.title} style={{ transitionDelay: `${i * 70}ms` }}>
+                  <h3 className="price-assurance__title">{a.title}</h3>
+                  <p className="price-assurance__text">{a.text}</p>
+                </div>
+              ))}
+            </Reveal>
+
+            <Reveal className="r-up" style={{ marginTop: 'var(--s8)' }}>
+              <TextCTA to="/zmk-360">Aylık bütünleşik model: ZMK 360</TextCTA>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {/* Closing */}
+      <section className="zmk-chapter zmk-chapter--ivory chapter-closing">
+        <div className="zmk-container">
+          <Reveal className="chapter-closing__inner">
+            <DisplayHeading
+              as="h2"
+              className="chapter-closing__title"
+              lines={['Kapsamı netleştirelim,', <span className="zmk-dim" key="2">kesin teklifi verelim.</span>]}
             />
-
-            <div className="zpr-page">
-                {/* ════════ HERO ════════ */}
-                <header className="zpr-hero">
-                    <div className="zpr-hero-glow" />
-                    <div className="zpr-hero-grid" />
-                    <div className="zpr-container">
-                        <motion.span
-                            className="zpr-eyebrow"
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                        >
-                            <Sparkles size={13} />
-                            ZMK AGENCY — 2026 Hizmet & Yatırım Rehberi
-                        </motion.span>
-
-                        <motion.h1
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                        >
-                            Hizmetler <span className="zpr-amp">&</span>{' '}
-                            <span className="zpr-h1-accent">Fiyatlandırma</span>
-                        </motion.h1>
-
-                        <motion.p
-                            className="zpr-hero-sub"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.25, duration: 0.7 }}
-                        >
-                            Biz site yapmıyoruz; işletmenizin <strong>dijital satış ve güven altyapısını</strong> kuruyoruz.
-                            Net kapsam, şeffaf fiyat, ölçülebilir sonuç.
-                        </motion.p>
-
-                        <motion.div
-                            className="zpr-hero-chips"
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4 }}
-                        >
-                            <span><FileCheck size={14} /> Sözleşmeli & Faturalı</span>
-                            <span><Layers size={14} /> Şeffaf Kapsam</span>
-                            <span><BarChart3 size={14} /> Aylık Raporlama</span>
-                        </motion.div>
-                    </div>
-                </header>
-
-                {/* ════════ STICKY NAV ════════ */}
-                <nav className="zpr-nav" aria-label="Fiyat kategorileri">
-                    <div className="zpr-nav-track">
-                        {navItems.map(item => (
-                            <button
-                                key={item.id}
-                                className={`zpr-nav-chip ${activeSection === item.id ? 'active' : ''}`}
-                                onClick={() => scrollTo(item.id)}
-                            >
-                                {item.label}
-                            </button>
-                        ))}
-                    </div>
-                </nav>
-
-                {/* ════════ PAKETLER ════════ */}
-                <section
-                    id="paketler"
-                    className="zpr-section"
-                    ref={el => (sectionRefs.current.paketler = el)}
-                >
-                    <div className="zpr-container">
-                        <div className="zpr-section-head">
-                            <span className="zpr-kicker"><Crown size={14} /> Öne Çıkan Paketler</span>
-                            <h2>İşletmenize Göre Hazır Sistemler</h2>
-                            <p>Tek tek hizmet seçmek istemeyenler için kurguladığımız, kendini kanıtlamış 6 paket.</p>
-                        </div>
-
-                        <div className="zpr-packages">
-                            {packages.map((pkg, i) => (
-                                <motion.article
-                                    key={pkg.id}
-                                    className={`zpr-pkg ${pkg.featured ? 'featured' : ''} ${pkg.prestige ? 'prestige' : ''} ${pkg.enterprise ? 'enterprise' : ''}`}
-                                    initial={{ opacity: 0, y: 40 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: '-60px' }}
-                                    transition={{ delay: (i % 3) * 0.1, duration: 0.6 }}
-                                >
-                                    {pkg.badge && (
-                                        <span className="zpr-pkg-badge">
-                                            {pkg.featured && <Star size={12} />}
-                                            {pkg.prestige && <Crown size={12} />}
-                                            {pkg.enterprise && <Building2 size={12} />}
-                                            {pkg.badge}
-                                        </span>
-                                    )}
-                                    <span className="zpr-pkg-no">{pkg.no}</span>
-                                    <h3>{pkg.name}</h3>
-                                    <p className="zpr-pkg-audience">{pkg.audience}</p>
-
-                                    <div className="zpr-pkg-price">
-                                        {pkg.previousPrice && <small className="zpr-old-price">{pkg.previousPrice}</small>}
-                                        <strong>{pkg.price}</strong>
-                                        <span>{PERIOD_LABEL[pkg.period] === 'Aylık' ? '/ ay' : PERIOD_LABEL[pkg.period]}</span>
-                                    </div>
-
-                                    <p className="zpr-pkg-desc">{pkg.description}</p>
-
-                                    <ul className="zpr-pkg-features">
-                                        {pkg.features.map((f, fi) => (
-                                            <li key={fi}><Check size={15} /><span>{f}</span></li>
-                                        ))}
-                                    </ul>
-
-                                    {pkg.note && (
-                                        <p className="zpr-pkg-note"><AlertTriangle size={13} /> {pkg.note}</p>
-                                    )}
-
-                                    <button
-                                        className="zpr-pkg-cta"
-                                        onClick={() => openWizard(pkg.name, pkg.price, PERIOD_LABEL[pkg.period])}
-                                    >
-                                        Bu Paketi İste <ArrowRight size={16} />
-                                    </button>
-                                </motion.article>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* ════════ HİZMET KATEGORİLERİ ════════ */}
-                {serviceCategories.map((cat, ci) => {
-                    const Icon = ICONS[cat.icon] || Globe;
-                    return (
-                        <section
-                            key={cat.id}
-                            id={cat.id}
-                            className={`zpr-section zpr-cat ${ci % 2 === 1 ? 'alt' : ''}`}
-                            ref={el => (sectionRefs.current[cat.id] = el)}
-                        >
-                            <div className="zpr-container">
-                                <div className="zpr-cat-head">
-                                    <div className="zpr-cat-icon"><Icon size={26} /></div>
-                                    <div>
-                                        <span className="zpr-cat-index">{String(ci + 1).padStart(2, '0')}</span>
-                                        <h2>{cat.title}</h2>
-                                        <p>{cat.tagline}</p>
-                                    </div>
-                                </div>
-
-                                {/* Web kategorisi: çapa fiyatlı 3 seviye */}
-                                {cat.id === 'web' && (
-                                    <div className="zpr-tiers">
-                                        {webTiers.map((tier, ti) => (
-                                            <motion.div
-                                                key={tier.name}
-                                                className={`zpr-tier ${tier.featured ? 'featured' : ''}`}
-                                                initial={{ opacity: 0, y: 30 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                viewport={{ once: true }}
-                                                transition={{ delay: ti * 0.12 }}
-                                            >
-                                                {tier.badge && <span className="zpr-tier-badge"><Star size={12} /> {tier.badge}</span>}
-                                                <h3>{tier.name}</h3>
-                                                {tier.previousPrice && <small className="zpr-tier-old">{tier.previousPrice}</small>}
-                                                <div className="zpr-tier-price">{tier.price}</div>
-                                                <p className="zpr-tier-tagline">{tier.tagline}</p>
-                                                <ul>
-                                                    {tier.features.map((f, fi) => (
-                                                        <li key={fi}><Check size={14} /><span>{f}</span></li>
-                                                    ))}
-                                                </ul>
-                                                <button
-                                                    className="zpr-tier-cta"
-                                                    onClick={() => openWizard(`${tier.name} Web Paketi`, tier.price)}
-                                                >
-                                                    Teklif Al <ArrowRight size={15} />
-                                                </button>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {/* Reklam bütçesi uyarısı */}
-                                {cat.budgetNote && (
-                                    <div className="zpr-budget-note" role="note">
-                                        <AlertTriangle size={18} />
-                                        <div>
-                                            <strong>Önemli:</strong> {cat.budgetNote}
-                                        </div>
-                                    </div>
-                                )}
-
-                                {/* Fiyat listesi */}
-                                <div className="zpr-rows">
-                                    {cat.items.map((item, ii) => (
-                                        <motion.div
-                                            key={item.name}
-                                            className={`zpr-row ${item.popular ? 'popular' : ''}`}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true, margin: '-30px' }}
-                                            transition={{ delay: ii * 0.04, duration: 0.45 }}
-                                        >
-                                            <div className="zpr-row-name">
-                                                <div className="zpr-row-titleline">
-                                                    {item.popular && <span className="zpr-row-star"><Star size={13} /></span>}
-                                                    <span>{item.name}</span>
-                                                    {item.popular && <em className="zpr-row-tag">En çok tercih edilen</em>}
-                                                </div>
-                                                {item.note && <small className="zpr-row-note">{item.note}</small>}
-                                            </div>
-                                            <div className="zpr-row-dots" aria-hidden="true" />
-                                            <div className="zpr-row-price">
-                                                {item.previousPrice && <small className="zpr-old-price">{item.previousPrice}</small>}
-                                                <div className="zpr-row-price-main">
-                                                    <strong>{item.price}</strong>
-                                                    {periodSuffix(item.period) && <span>{periodSuffix(item.period)}</span>}
-                                                </div>
-                                            </div>
-                                            <button
-                                                className="zpr-row-cta"
-                                                onClick={() => openWizard(item.name, item.price, periodSuffix(item.period))}
-                                                aria-label={`${item.name} için teklif al`}
-                                            >
-                                                Teklif Al
-                                            </button>
-                                        </motion.div>
-                                    ))}
-                                </div>
-
-                                {/* Satış cümlesi */}
-                                <motion.blockquote
-                                    className="zpr-quote"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <span className="zpr-quote-mark">“</span>
-                                    <p>{cat.quote}</p>
-                                    <cite>— ZMK AGENCY</cite>
-                                </motion.blockquote>
-                            </div>
-                        </section>
-                    );
-                })}
-
-                {/* ════════ EKSTRALAR ════════ */}
-                <section
-                    id="ekstralar"
-                    className="zpr-section"
-                    ref={el => (sectionRefs.current.ekstralar = el)}
-                >
-                    <div className="zpr-container">
-                        <div className="zpr-section-head">
-                            <span className="zpr-kicker"><Sparkles size={14} /> Ekstra Hizmetler</span>
-                            <h2>Küçük Dokunuşlar, Büyük Fark</h2>
-                            <p>Mevcut paketinize ekleyebileceğiniz hızlı ve etkili çözümler.</p>
-                        </div>
-
-                        <div className="zpr-extras">
-                            {extras.map((ex, i) => (
-                                <motion.button
-                                    key={ex.name}
-                                    className="zpr-extra"
-                                    onClick={() => openWizard(ex.name, ex.price)}
-                                    initial={{ opacity: 0, scale: 0.94 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: (i % 5) * 0.05 }}
-                                >
-                                    <span className="zpr-extra-name">{ex.name}</span>
-                                    <span className="zpr-extra-price">{ex.price}</span>
-                                </motion.button>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* ════════ GÜVENCE ŞERİDİ ════════ */}
-                <section className="zpr-section zpr-assure-wrap">
-                    <div className="zpr-container">
-                        <div className="zpr-assure">
-                            {assurances.map(a => {
-                                const Icon = ICONS[a.icon] || FileCheck;
-                                return (
-                                    <div key={a.title} className="zpr-assure-item">
-                                        <Icon size={22} />
-                                        <h4>{a.title}</h4>
-                                        <p>{a.text}</p>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </section>
-
-                {/* ════════ FİNAL CTA ════════ */}
-                <section className="zpr-final">
-                    <div className="zpr-final-glow" />
-                    <div className="zpr-container">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <h2>Hangisi size göre, birlikte karar verelim.</h2>
-                            <p>
-                                15 dakikalık ücretsiz ön görüşmede işletmenizi dinliyor, bütçenize ve hedefinize
-                                en uygun kurguyu net rakamlarla öneriyoruz. Satış baskısı yok; yol haritası var.
-                            </p>
-                            <div className="zpr-final-actions">
-                                <button
-                                    className="zpr-final-primary"
-                                    onClick={() => setWizardConfig({ isOpen: true, initialData: {}, source: 'Pricing - Custom Quote' })}
-                                >
-                                    Özel Teklif Al <ArrowRight size={18} />
-                                </button>
-                                <a
-                                    className="zpr-final-wa"
-                                    href="https://wa.me/905413812114?text=Merhaba,%20hizmet%20ve%20fiyat%20listenizle%20ilgili%20bilgi%20almak%20istiyorum."
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <MessageCircle size={18} /> WhatsApp'tan Yazın
-                                </a>
-                            </div>
-                            <p className="zpr-final-note">
-                                Fiyatlar 2026 yılı için geçerlidir; kapsam netleşince size özel sabit teklif sunulur.
-                            </p>
-                        </motion.div>
-                    </div>
-                </section>
-
-                <AnimatePresence>
-                    {wizardConfig.isOpen && (
-                        <WizardForm
-                            t={wizardT}
-                            onClose={() => setWizardConfig(prev => ({ ...prev, isOpen: false }))}
-                            initialData={wizardConfig.initialData}
-                            source={wizardConfig.source}
-                        />
-                    )}
-                </AnimatePresence>
+            <div className="chapter-closing__foot r-up">
+              <div className="chapter-closing__actions">
+                <Button onClick={() => setShowWizard(true)}>Teklif Al</Button>
+                <Button href={siteConfig.contact.whatsapp} variant="ghost">WhatsApp'tan Ulaş</Button>
+              </div>
+              <p className="chapter-closing__note">{siteConfig.hours.note}</p>
             </div>
-        </>
-    );
+          </Reveal>
+        </div>
+      </section>
+
+      {showWizard && <WizardForm t={wizardT} onClose={() => setShowWizard(false)} />}
+    </>
+  );
 };
 
 export default Pricing;

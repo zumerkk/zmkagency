@@ -1,127 +1,190 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Search } from 'lucide-react';
 import SEO from '../components/SEO';
+import Reveal from '../components/ui/Reveal';
+import PageHero from '../components/ui/PageHero';
+import { DisplayHeading, Button, ArrowRight } from '../components/ui';
 import { blogData } from '../data/blogData';
-import '../styles/Blog.css';
+import siteConfig from '../config/siteConfig';
+import '../styles/home.css';
+import '../styles/page.css';
+import '../styles/pages/blog.css';
 
-const Blog = ({ t }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [activeCategory, setActiveCategory] = useState('Tümü');
+/**
+ * /blog — ZMK Magazine index.
+ *
+ * Rebuilt as an editorial index: the newest post leads with a large media
+ * block, the rest are dense rows. Search and category filtering are unchanged.
+ *
+ * Post images are 500–700 KB PNGs. Only the lead post loads eagerly; every
+ * other image is lazy with an explicit aspect ratio so the list cannot shift
+ * as they arrive.
+ */
+const Blog = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('Tümü');
 
-    // Extract unique categories
-    const categories = useMemo(() => {
-        const cats = ['Tümü', ...new Set(blogData.map(p => p.category))];
-        return cats;
-    }, []);
+  const categories = useMemo(
+    () => ['Tümü', ...new Set(blogData.map((p) => p.category))],
+    []
+  );
 
-    // Filter posts
-    const filteredPosts = useMemo(() => {
-        return blogData.filter(post => {
-            const matchesSearch = searchTerm === '' ||
-                post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                post.keywords.toLowerCase().includes(searchTerm.toLowerCase());
-            const matchesCategory = activeCategory === 'Tümü' || post.category === activeCategory;
-            return matchesSearch && matchesCategory;
-        });
-    }, [searchTerm, activeCategory]);
+  const filteredPosts = useMemo(() => {
+    const q = searchTerm.trim().toLowerCase();
+    return blogData.filter((post) => {
+      const matchesSearch =
+        q === '' ||
+        post.title.toLowerCase().includes(q) ||
+        post.excerpt.toLowerCase().includes(q) ||
+        post.keywords.toLowerCase().includes(q);
+      const matchesCategory = activeCategory === 'Tümü' || post.category === activeCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, activeCategory]);
 
-    // Sort: newest first
-    const sortedPosts = useMemo(() => {
-        return [...filteredPosts].reverse();
-    }, [filteredPosts]);
+  const [lead, ...rest] = filteredPosts;
 
-    return (
-        <div className="blog-page">
-            <SEO
-                title="Kırıkkale Dijital Pazarlama Blog | ZMK Magazine"
-                description="Kırıkkale'deki işletmeler için dijital pazarlama, SEO, sosyal medya, web tasarım ve yazılım trendleri. ZMK Agency uzman içerikleri."
-                keywords="kırıkkale dijital pazarlama blog, kırıkkale seo rehberi, kırıkkale web tasarım blog"
-            />
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'ZMK Magazine',
+    url: `${siteConfig.url}/blog`,
+    publisher: { '@type': 'Organization', '@id': `${siteConfig.url}/#organization` },
+    blogPost: blogData.slice(0, 10).map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      author: { '@type': 'Organization', name: post.author },
+      url: `${siteConfig.url}/blog/${post.slug}`,
+    })),
+  };
 
-            <header className="blog-header">
-                <div className="container">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        ZMK <span className="highlight">MAGAZINE</span>.
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                    >
-                        Dijital dünyanın nabzını tutun. Kırıkkale ve ötesinden trendler, rehberler ve stratejiler.
-                    </motion.p>
+  return (
+    <>
+      <SEO
+        title="Kırıkkale Dijital Pazarlama Blog | ZMK Magazine"
+        description="Dijital pazarlama, SEO, web tasarım ve yazılım üzerine ZMK Agency içerikleri. Kırıkkale ve Türkiye geneli işletmeler için pratik rehberler."
+        keywords="dijital pazarlama blog, seo rehberi, kırıkkale dijital pazarlama, web tasarım blog"
+        schema={blogSchema}
+      />
+
+      <PageHero
+        label="ZMK Magazine"
+        crumbs={[{ label: 'Ana Sayfa', to: '/' }, { label: 'Magazine' }]}
+        lines={['Dijitalde ne oluyor,', <span className="zmk-dim" key="2">ne işe yarıyor.</span>]}
+        lead="Pazarlama, SEO, yazılım ve marka üzerine yazdıklarımız. Teorik değil, sahada işe yarayan tarafı."
+      />
+
+      <section className="zmk-chapter zmk-chapter--carbon">
+        <div className="zmk-container">
+          {/* Filter row */}
+          <Reveal className="blog-filter r-up">
+            <div className="blog-filter__search">
+              <label className="zmk-sr-only" htmlFor="blog-search">Yazılarda ara</label>
+              <input
+                id="blog-search"
+                type="search"
+                placeholder="Yazılarda ara…"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+
+            <div className="blog-filter__cats" role="group" aria-label="Kategoriye göre filtrele">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  className={`work-filter__btn ${activeCategory === cat ? 'is-active' : ''}`}
+                  onClick={() => setActiveCategory(cat)}
+                  aria-pressed={activeCategory === cat}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </Reveal>
+
+          {filteredPosts.length === 0 && (
+            <p className="blog-empty">Aramanıza uygun yazı bulunamadı.</p>
+          )}
+
+          {/* Lead post */}
+          {lead && (
+            <Reveal className="blog-lead">
+              <Link to={`/blog/${lead.slug}`} className="blog-lead__link">
+                <div className="blog-lead__media r-media">
+                  <img
+                    src={lead.image}
+                    alt=""
+                    className="r-scale"
+                    width="1200" height="630"
+                    loading="eager" fetchPriority="high" decoding="sync"
+                  />
                 </div>
-            </header>
+                <div className="blog-lead__meta">
+                  <p className="zmk-micro blog-meta">
+                    {lead.category} · {lead.date}
+                  </p>
+                  <h2 className="blog-lead__title">{lead.title}</h2>
+                  <p className="blog-lead__excerpt">{lead.excerpt}</p>
+                  <span className="zmk-cta blog-lead__cue">Yazıyı oku <ArrowRight /></span>
+                </div>
+              </Link>
+            </Reveal>
+          )}
 
-            {/* Search & Filter Bar */}
-            <section className="blog-filter-section container">
-                <div className="blog-search-wrapper">
-                    <Search size={18} className="search-icon" />
-                    <input
-                        type="text"
-                        placeholder="Blog yazılarında ara..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="blog-search-input"
-                    />
-                </div>
-                <div className="blog-categories">
-                    {categories.map(cat => (
-                        <button
-                            key={cat}
-                            className={`blog-cat-btn ${activeCategory === cat ? 'active' : ''}`}
-                            onClick={() => setActiveCategory(cat)}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
-            </section>
-
-            <section className="blog-grid-section container">
-                {sortedPosts.length === 0 && (
-                    <div className="blog-no-results">
-                        <p>Aramanızla eşleşen yazı bulunamadı.</p>
-                    </div>
-                )}
-                <div className="blog-grid">
-                    {sortedPosts.map((post, index) => (
-                        <motion.article
-                            key={post.id}
-                            className="blog-card"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: Math.min(index * 0.05, 0.3) }}
-                        >
-                            <div className="card-image-wrapper">
-                                <img src={post.image} alt={post.title} className="card-image" loading="lazy" />
-                                <span className="card-category">{post.category}</span>
-                            </div>
-                            <div className="card-content">
-                                <div className="card-meta">
-                                    <span><Calendar size={14} /> {post.date}</span>
-                                    <span><User size={14} /> {post.author}</span>
-                                </div>
-                                <h2>{post.title}</h2>
-                                <p>{post.excerpt}</p>
-                                <Link to={`/blog/${post.slug}`} className="read-more">
-                                    Devamını Oku <ArrowRight size={16} />
-                                </Link>
-                            </div>
-                        </motion.article>
-                    ))}
-                </div>
-            </section>
+          {/* The rest, as an index */}
+          {rest.length > 0 && (
+            <ul className="blog-index">
+              {rest.map((post, i) => (
+                <li key={post.slug}>
+                  <Reveal className="blog-row r-up" delay={Math.min(i, 6) * 50}>
+                    <Link to={`/blog/${post.slug}`} className="blog-row__link">
+                      <div className="blog-row__thumb">
+                        <img
+                          src={post.image}
+                          alt=""
+                          width="400" height="225"
+                          loading="lazy" decoding="async"
+                        />
+                      </div>
+                      <div className="blog-row__body">
+                        <p className="zmk-micro blog-meta">{post.category} · {post.date}</p>
+                        <h3 className="blog-row__title">{post.title}</h3>
+                        <p className="blog-row__excerpt">{post.excerpt}</p>
+                      </div>
+                      <span className="blog-row__cue" aria-hidden="true"><ArrowRight /></span>
+                    </Link>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-    );
+      </section>
+
+      <section className="zmk-chapter zmk-chapter--ivory chapter-closing">
+        <div className="zmk-container">
+          <Reveal className="chapter-closing__inner">
+            <DisplayHeading
+              as="h2"
+              className="chapter-closing__title"
+              lines={['Okumak yerine', <span className="zmk-dim" key="2">uygulayalım mı?</span>]}
+            />
+            <div className="chapter-closing__foot r-up">
+              <div className="chapter-closing__actions">
+                <Button to="/iletisim">Projeni Konuşalım</Button>
+                <Button href={siteConfig.contact.whatsapp} variant="ghost">WhatsApp'tan Ulaş</Button>
+              </div>
+              <p className="chapter-closing__note">{siteConfig.hours.note}</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Blog;

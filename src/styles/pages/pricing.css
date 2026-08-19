@@ -1,0 +1,206 @@
+/* ==========================================================================
+   /fiyatlar — editorial rate card
+   ========================================================================== */
+
+/* ---- Shared price typography --------------------------------------------- */
+.price-pkg__was {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--fg-faint);
+  text-decoration-thickness: 1px;
+}
+
+.price-pkg__now {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+}
+
+.price-pkg__period {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-top: var(--s1);
+}
+
+/* ---- Featured packages --------------------------------------------------- */
+.price-packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+}
+
+.price-pkg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  padding: var(--s7) var(--s6) var(--s8);
+  background: var(--carbon);
+}
+
+.price-pkg__n { color: var(--gold); }
+
+.price-pkg__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.price-pkg__audience { font-size: var(--fs-xs); color: var(--fg-faint); margin: 0; }
+.price-pkg__price { margin: var(--s4) 0; }
+.price-pkg__desc { font-size: var(--fs-sm); line-height: 1.6; color: var(--fg-muted); margin: 0; }
+
+.price-pkg__features {
+  list-style: none;
+  margin: var(--s4) 0 var(--s6);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.price-pkg__features li {
+  position: relative;
+  padding-left: var(--s5);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+
+.price-pkg__features li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.62em;
+  width: 8px; height: 1px;
+  background: var(--gold);
+}
+
+.price-pkg__cta { margin-top: auto; width: 100%; }
+
+/* ---- Web tiers ----------------------------------------------------------- */
+.price-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--s7) var(--col-gap);
+}
+
+.price-tier { padding-top: var(--s5); border-top: 1px solid var(--line); }
+
+.price-tier__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0 0 var(--s4);
+}
+
+.price-tier__price { margin: 0 0 var(--s4); }
+.price-tier__tagline { font-size: var(--fs-sm); line-height: 1.6; color: var(--fg-muted); margin: 0 0 var(--s5); }
+
+.price-tier__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.price-tier__features li {
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--fg-muted);
+  padding-block: var(--s2);
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---- Rate card rows ------------------------------------------------------ */
+.price-table { border-top: 1px solid var(--line); }
+
+.price-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 240px);
+  gap: var(--s5);
+  align-items: start;
+  padding-block: var(--s5);
+  border-bottom: 1px solid var(--line);
+  transition: background var(--dur-ui) var(--ease-out);
+}
+
+.price-row:hover { background: rgba(246, 244, 239, 0.02); }
+
+.price-row__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0 0 var(--s2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s3);
+}
+
+.price-row__badge {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(216, 164, 40, 0.35);
+  border-radius: var(--r-xs);
+  padding: 2px var(--s2);
+}
+
+.price-row__note { font-size: var(--fs-sm); line-height: 1.55; color: var(--fg-muted); margin: 0; max-width: 62ch; }
+.price-row__price { text-align: right; }
+
+.price-quote {
+  margin-top: var(--s7);
+  padding-left: var(--s6);
+  border-left: 1px solid var(--gold);
+}
+
+.price-quote p {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--fg);
+  margin: 0;
+  max-width: 70ch;
+}
+
+/* ---- Assurances ---------------------------------------------------------- */
+.price-assurances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--s6) var(--col-gap);
+}
+
+.price-assurance { padding-top: var(--s5); border-top: 1px solid var(--line); }
+
+.price-assurance__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0 0 var(--s3);
+}
+
+.price-assurance__text { font-size: var(--fs-sm); line-height: 1.6; color: var(--fg-muted); margin: 0; }
+
+@media (max-width: 700px) {
+  .price-row { grid-template-columns: 1fr; gap: var(--s3); }
+  .price-row__price { text-align: left; }
+}

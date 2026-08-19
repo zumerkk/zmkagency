@@ -1,10 +1,29 @@
 {
-    "buildCommand": "npm run build:no-prerender",
+    "buildCommand": "npm run build:vercel",
     "outputDirectory": "dist",
+    "trailingSlash": false,
+    "redirects": [
+        { "source": "/vision", "destination": "/hakkimizda", "permanent": true },
+        { "source": "/pricing", "destination": "/fiyatlar", "permanent": true },
+        { "source": "/contact", "destination": "/iletisim", "permanent": true },
+        { "source": "/portfolio", "destination": "/calismalar", "permanent": true },
+        { "source": "/services", "destination": "/hizmetler", "permanent": true }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/assets/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
         }
     ]
 }

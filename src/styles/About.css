@@ -108,7 +108,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #2997ff;
+    color: var(--gold);
     margin-bottom: 16px;
 }
 
@@ -151,7 +151,7 @@
 .about-social-link:hover {
     background: rgba(41, 151, 255, 0.08);
     border-color: rgba(41, 151, 255, 0.2);
-    color: #2997ff;
+    color: var(--gold);
 }
 
 /* ─── Responsive ─── */

@@ -1,110 +1,157 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Calendar, User, Tag, Share2 } from 'lucide-react';
 import SEO from '../components/SEO';
+import Reveal from '../components/ui/Reveal';
+import PageHero from '../components/ui/PageHero';
+import { DisplayHeading, Button, ArrowRight } from '../components/ui';
 import { blogData } from '../data/blogData';
-import '../styles/Blog.css'; // Utilizing existing styles + inline for detail specific
+import siteConfig from '../config/siteConfig';
+import '../styles/home.css';
+import '../styles/page.css';
+import '../styles/pages/blog.css';
 
+/**
+ * /blog/:slug — article.
+ *
+ * The body is author-written HTML injected with dangerouslySetInnerHTML, which
+ * is unchanged: the source is our own data file, not user input. All of its
+ * typography now comes from the `.article-body` descendant rules in blog.css
+ * instead of inline styles, so articles inherit the site's reading measure.
+ */
 const BlogDetail = () => {
-    const { slug } = useParams();
-    const post = blogData.find(p => p.slug === slug);
+  const { slug } = useParams();
+  const post = blogData.find((p) => p.slug === slug);
 
-    if (!post) {
-        return <Navigate to="/blog" replace />; // Or 404
-    }
+  if (!post) return <Navigate to="/blog" replace />;
 
-    return (
-        <>
-            <SEO
-                title={`${post.title} | ZMK Magazine`}
-                description={post.excerpt}
-                keywords={post.keywords}
-                ogType="article"
-                ogImage={post.image}
+  const index = blogData.findIndex((p) => p.slug === slug);
+  const next = blogData[(index + 1) % blogData.length];
+  const related = blogData
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image?.startsWith('http') ? post.image : `${siteConfig.url}${post.image}`,
+    datePublished: post.date,
+    keywords: post.keywords,
+    author: { '@type': 'Organization', name: post.author },
+    publisher: { '@type': 'Organization', '@id': `${siteConfig.url}/#organization` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteConfig.url}/blog/${post.slug}` },
+  };
+
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: `${siteConfig.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Magazine', item: `${siteConfig.url}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${siteConfig.url}/blog/${post.slug}` },
+    ],
+  };
+
+  return (
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.keywords}
+        ogType="article"
+        ogImage={post.image}
+        schema={articleSchema}
+        breadcrumbs={breadcrumbs}
+      />
+
+      <PageHero
+        label={`${post.category} · ${post.date}`}
+        crumbs={[
+          { label: 'Ana Sayfa', to: '/' },
+          { label: 'Magazine', to: '/blog' },
+          { label: post.title },
+        ]}
+        lines={[post.title]}
+        lead={post.excerpt}
+      />
+
+      {/* Hero image */}
+      <section className="zmk-chapter zmk-chapter--carbon zmk-chapter--tight">
+        <div className="zmk-container zmk-container--narrow">
+          <Reveal className="article-hero r-media">
+            <img
+              src={post.image}
+              alt=""
+              width="1200" height="630"
+              loading="eager" fetchPriority="high" decoding="sync"
             />
+          </Reveal>
+        </div>
+      </section>
 
-            <article className="blog-detail-page" style={{ paddingTop: '120px', paddingBottom: '80px', minHeight: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
-                {/* Hero / Header Image */}
-                <div className="container" style={{ maxWidth: '900px' }}>
-                    <Link to="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', marginBottom: '30px', textDecoration: 'none' }}>
-                        <ArrowLeft size={20} /> Blog'a Dön
-                    </Link>
+      {/* Body */}
+      <section className="zmk-chapter zmk-chapter--carbon">
+        <div className="zmk-container zmk-container--narrow">
+          <Reveal
+            className="article-body r-up"
+            /* Source is our own data file, not user input. */
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <span className="detail-category" style={{
-                            background: 'var(--accent-primary)',
-                            color: 'white',
-                            padding: '6px 16px',
-                            borderRadius: '20px',
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            display: 'inline-block',
-                            marginBottom: '20px'
-                        }}>
-                            {post.category}
-                        </span>
+          <Reveal className="article-cta r-up">
+            <h2 className="article-cta__title">
+              Rehberi okudunuz. <span className="zmk-gold">Uygulayalım mı?</span>
+            </h2>
+            <p className="article-cta__text">
+              Stratejiyi hayata geçirecek ekibe ihtiyacınız varsa, mevcut durumu birlikte
+              değerlendirelim.
+            </p>
+            <Button to="/iletisim">Projeni Konuşalım</Button>
+          </Reveal>
+        </div>
+      </section>
 
-                        <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', lineHeight: '1.2', marginBottom: '30px' }}>
-                            {post.title}
-                        </h1>
+      {/* Related + next */}
+      <section className="zmk-chapter zmk-chapter--obsidian">
+        <div className="zmk-container">
+          <Reveal className="page-head">
+            <p className="zmk-micro">Devamı</p>
+            <h2 className="zmk-h2 r-up">Bunlar da ilginizi çekebilir</h2>
+          </Reveal>
 
-                        <div className="detail-meta" style={{ display: 'flex', gap: '20px', color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
-                            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Calendar size={16} /> {post.date}</span>
-                            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><User size={16} /> {post.author}</span>
-                        </div>
+          <Reveal className="local-related">
+            {(related.length ? related : [next]).map((p, i) => (
+              <Link className="local-related__item r-up" to={`/blog/${p.slug}`} key={p.slug} style={{ transitionDelay: `${i * 60}ms` }}>
+                <span className="local-related__title">{p.title}</span>
+                <span className="local-related__cue" aria-hidden="true"><ArrowRight /></span>
+              </Link>
+            ))}
+          </Reveal>
+        </div>
+      </section>
 
-                        <div className="detail-image" style={{ borderRadius: '24px', overflow: 'hidden', marginBottom: '50px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
-                            <img src={post.image} alt={post.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                        </div>
-
-                        <div
-                            className="detail-content"
-                            dangerouslySetInnerHTML={{ __html: post.content }}
-                            style={{
-                                fontSize: '18px',
-                                lineHeight: '1.8',
-                                color: '#e0e0e0',
-                                marginBottom: '40px'
-                            }}
-                        />
-
-                        {/* LEAD MAGNET / CTA */}
-                        <div style={{
-                            background: 'linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(0, 0, 0, 0.8))',
-                            border: '1px solid rgba(37, 211, 102, 0.3)',
-                            borderRadius: '24px',
-                            padding: '40px',
-                            textAlign: 'center',
-                            marginTop: '60px',
-                            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-                        }}>
-                            <h3 style={{ fontSize: '24px', color: '#fff', marginBottom: '15px' }}>Zamanınızı Uygulamaya Değil, İşinizi Büyütmeye Ayırın</h3>
-                            <p style={{ color: '#ccc', marginBottom: '25px', fontSize: '16px', lineHeight: '1.6' }}>Rehberi okudunuz, ancak stratejiyi kusursuz bir şekilde hayata geçirecek profesyonel bir ekibe mi ihtiyacınız var? Sizin için "Saha Kurtları" olarak devreye girelim.</p>
-                            <Link to="/contact" style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '10px',
-                                padding: '15px 30px',
-                                background: '#25D366',
-                                color: '#000',
-                                borderRadius: '12px',
-                                fontWeight: 'bold',
-                                fontSize: '16px',
-                                textDecoration: 'none'
-                            }}>
-                                Ücretsiz Proje Analizi İsteyin
-                            </Link>
-                        </div>
-                    </motion.div>
-                </div>
-            </article>
-        </>
-    );
+      {/* Closing */}
+      <section className="zmk-chapter zmk-chapter--ivory chapter-closing">
+        <div className="zmk-container">
+          <Reveal className="chapter-closing__inner">
+            <DisplayHeading
+              as="h2"
+              className="chapter-closing__title"
+              lines={['Sıradaki adımı', <span className="zmk-dim" key="2">birlikte planlayalım.</span>]}
+            />
+            <div className="chapter-closing__foot r-up">
+              <div className="chapter-closing__actions">
+                <Button to="/iletisim">Projeni Konuşalım</Button>
+                <Button href={siteConfig.contact.whatsapp} variant="ghost">WhatsApp'tan Ulaş</Button>
+              </div>
+              <p className="chapter-closing__note">{siteConfig.hours.note}</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default BlogDetail;

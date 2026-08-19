@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs",
     "build:no-prerender": "vite build",
+    "_comment:build:vercel": "Prerendering needs Puppeteer's Chromium, which can fail to download on a CI image. Never let that take the whole deploy down — the site still works as an SPA without it, so the prerender step is allowed to fail loudly and continue.",
+    "build:vercel": "vite build && (node scripts/prerender.mjs || echo '::warning:: prerender skipped — deploying SPA shell only')",
     "lint": "eslint .",
     "preview": "vite preview"
   },

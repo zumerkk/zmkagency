@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Contact.css';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { serverTimestamp } from 'firebase/firestore';
+import { recordLead } from '../lib/recordLead';
+import siteConfig from '../config/siteConfig';
 import { MapPin, Mail, Phone, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Contact = ({ t }) => {
@@ -13,6 +14,7 @@ const Contact = ({ t }) => {
     });
     const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
     const [focusedField, setFocusedField] = useState(null);
+    const submitting = useRef(false);
 
     const handleInput = (e) => {
         const { name, value } = e.target;
@@ -21,23 +23,27 @@ const Contact = ({ t }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (submitting.current) return;
+        submitting.current = true;
         setStatus('loading');
 
         try {
-            await addDoc(collection(db, 'leads'), {
+            await recordLead({
                 name: formData.name,
                 phone: formData.phone,
                 message: formData.message,
                 type: 'Contact Form',
                 status: 'New',
                 timestamp: serverTimestamp()
-            });
+            }, 'contact_section');
             setStatus('success');
             setFormData({ name: '', phone: '', message: '' });
             setTimeout(() => setStatus(''), 5000);
         } catch (error) {
             console.error("Error adding document: ", error);
             setStatus('error');
+        } finally {
+            submitting.current = false;
         }
     };
 
@@ -88,13 +94,23 @@ const Contact = ({ t }) => {
                             </div>
                         </a>
 
-                        <a href="https://wa.me/905413812114" target="_blank" rel="noopener noreferrer" className="info-card">
+                        <a href={`tel:${siteConfig.contact.phone}`} className="info-card">
                             <div className="info-icon">
                                 <Phone size={24} />
                             </div>
                             <div className="info-text">
-                                <h4>Telefon / WhatsApp</h4>
-                                <p>+90 541 381 21 14</p>
+                                <h4>Telefon</h4>
+                                <p>{siteConfig.contact.phoneDisplay}</p>
+                            </div>
+                        </a>
+
+                        <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer" className="info-card">
+                            <div className="info-icon">
+                                <Phone size={24} />
+                            </div>
+                            <div className="info-text">
+                                <h4>WhatsApp Business</h4>
+                                <p>{siteConfig.contact.whatsappDisplay}</p>
                             </div>
                         </a>
 

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, CheckCircle, AlertCircle, Phone, Mail } from 'lucide-react';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { serverTimestamp } from 'firebase/firestore';
+import { recordLead } from '../lib/recordLead';
 import '../styles/ContactModal.css';
 
 const ContactModal = ({ t, onClose }) => {
@@ -15,6 +15,7 @@ const ContactModal = ({ t, onClose }) => {
         message: ''
     });
     const [status, setStatus] = useState('');
+    const submitting = useRef(false);
 
     const handleInput = (e) => {
         const { name, value } = e.target;
@@ -23,19 +24,23 @@ const ContactModal = ({ t, onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (submitting.current) return;
+        submitting.current = true;
         setStatus('loading');
         try {
-            await addDoc(collection(db, 'leads'), {
+            await recordLead({
                 ...formData,
                 type: 'Contact Modal (Bize Ulaşın)',
                 status: 'New',
                 timestamp: serverTimestamp()
-            });
+            }, 'contact_modal');
             setStatus('success');
             setFormData({ name: '', phone: '', service: '', budget: '', message: '' });
         } catch (error) {
             console.error("Error adding document: ", error);
             setStatus('error');
+        } finally {
+            submitting.current = false;
         }
     };
 

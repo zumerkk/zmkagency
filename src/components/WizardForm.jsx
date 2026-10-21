@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Check, Sparkles, X, Loader2 } from 'lucide-react';
 import '../styles/WizardForm.css';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { serverTimestamp } from 'firebase/firestore';
+import { recordLead } from '../lib/recordLead';
 
 const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard' }) => {
     const [step, setStep] = useState(initialData.budget ? 3 : 1); // Skip to details if budget (plan) is pre-selected
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const submitting = useRef(false);
     const [formData, setFormData] = useState({
         type: initialData.type || [],
         budget: initialData.budget || '',
@@ -40,9 +41,11 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
     const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
 
     const handleFinish = async () => {
+        if (submitting.current) return;
+        submitting.current = true;
         setIsSubmitting(true);
         try {
-            await addDoc(collection(db, 'leads'), {
+            await recordLead({
                 name: formData.name,
                 phone: formData.contact,
                 message: `Bütçe: ${formData.budget} \nDetaylar: ${formData.details}`,
@@ -51,7 +54,7 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
                 type: source, // Dynamic source
                 status: 'New',
                 timestamp: serverTimestamp()
-            });
+            }, 'quote_wizard');
             setIsSuccess(true);
             setTimeout(() => {
                 onClose();
@@ -61,6 +64,7 @@ const WizardForm = ({ t, onClose, initialData = {}, source = 'Quick Quote Wizard
                 window.location.href = '/thank-you';
             }, 2000);
         } catch (error) {
+            submitting.current = false;
             console.error("Error submitting wizard: ", error);
             // Handle error state if needed, for now just log
         } finally {

@@ -1,6 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import siteConfig from '../config/siteConfig';
 import '../styles/CampaignProducts.css';
 
 const CampaignCard = ({ children, featured, className = '' }) => {
@@ -162,7 +163,7 @@ const CampaignProducts = () => {
                                 </li>
                             </ul>
                             <a
-                                href="https://wa.me/905413812114?text=Merhaba,%20Dijital%20Kalkındırma%20Paketi%20hakkında%20bilgi%20almak%20istiyorum."
+                                href={`${siteConfig.contact.whatsapp}?text=Merhaba,%20Dijital%20Kalkındırma%20Paketi%20hakkında%20bilgi%20almak%20istiyorum.`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="camp-cta camp-cta-purple"

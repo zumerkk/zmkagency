@@ -21,7 +21,8 @@ export const siteConfig = {
     phone: '+905413812114',
     phoneDisplay: '0541 381 21 14',
     email: 'iletisim@zmkagency.com',
-    whatsapp: 'https://wa.me/905413812114',
+    whatsapp: 'https://wa.me/905360491376',
+    whatsappDisplay: '0536 049 13 76',
   },
 
   address: {

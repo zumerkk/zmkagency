@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import PageHero from '../components/ui/PageHero';
 import { Button } from '../components/ui';
 import Contact from '../components/Contact';
+import siteConfig from '../config/siteConfig';
 import '../styles/home.css';
 import '../styles/page.css';
 import '../styles/PillarPage.css';
@@ -300,7 +301,7 @@ const PillarPage = ({ t }) => {
                     <p>İşletmenize özel ücretsiz strateji görüşmesi için hemen bize ulaşın. İlk adımı atın, gerisini biz halledelim.</p>
                     <div className="pillar-cta-buttons">
                         <Link to="/iletisim" className="pillar-btn pillar-btn-primary">Ücretsiz Teklif Al</Link>
-                        <a href="https://wa.me/905413812114" target="_blank" rel="noopener noreferrer" className="pillar-btn pillar-btn-secondary">
+                        <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer" className="pillar-btn pillar-btn-secondary">
                             💬 WhatsApp'tan Yaz
                         </a>
                         <Link to="/fiyatlar" className="pillar-btn pillar-btn-outline">Fiyatları Görüntüle</Link>

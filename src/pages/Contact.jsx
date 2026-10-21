@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import SEO from '../components/SEO';
 import Reveal from '../components/ui/Reveal';
 import PageHero from '../components/ui/PageHero';
 import { ArrowRight } from '../components/ui';
-import { db } from '../firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { serverTimestamp } from 'firebase/firestore';
+import { recordLead } from '../lib/recordLead';
 import siteConfig from '../config/siteConfig';
 import '../styles/home.css';
 import '../styles/page.css';
@@ -30,7 +30,7 @@ const EMPTY_FORM = { name: '', phone: '', service: '', budget: '', message: '' }
 /**
  * /iletisim — the conversion page.
  *
- * Submit behaviour is unchanged: the lead still goes to the same Firestore
+ * Lead storage is unchanged: the lead still goes to the same Firestore
  * `leads` collection with the same shape and `type: 'Contact Page Form'`, so
  * the admin dashboard keeps working.
  *
@@ -46,6 +46,7 @@ const Contact = ({ t }) => {
   const contactData = t.contact || t;
   const [formData, setFormData] = useState(EMPTY_FORM);
   const [status, setStatus] = useState(''); // '' | 'loading' | 'success' | 'error'
+  const submitting = useRef(false);
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -54,22 +55,25 @@ const Contact = ({ t }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (status === 'loading') return; // guard against double submit
+    if (submitting.current) return;
+    submitting.current = true;
     setStatus('loading');
 
     try {
-      await addDoc(collection(db, 'leads'), {
+      await recordLead({
         ...formData,
         type: 'Contact Page Form',
         status: 'New',
         timestamp: serverTimestamp(),
-      });
+      }, 'contact_page');
       setStatus('success');
       setFormData(EMPTY_FORM);
       setTimeout(() => setStatus(''), 5000);
     } catch (error) {
       console.error('Error adding document: ', error);
       setStatus('error');
+    } finally {
+      submitting.current = false;
     }
   };
 

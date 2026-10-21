@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import siteConfig from '../../config/siteConfig';
 import '../../styles/SpecialPackage.css';
 
 const SpecialPackage = ({ t }) => {
@@ -38,7 +39,7 @@ const SpecialPackage = ({ t }) => {
                     </div>
 
                     <div className="apple-sp-actions">
-                        <a href="https://wa.me/905413812114" target="_blank" rel="noopener noreferrer" className="apple-sp-cta-primary">
+                        <a href={siteConfig.contact.whatsapp} target="_blank" rel="noopener noreferrer" className="apple-sp-cta-primary">
                             {t.cta}
                             <span>→</span>
                         </a>

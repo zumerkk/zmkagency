@@ -12,8 +12,8 @@ import '../styles/page.css';
 /**
  * Conversion confirmation page.
  *
- * The GTM `conversion_lead` event is unchanged — this page is a tracked
- * conversion point and the event name must keep matching the tag configuration.
+ * Lead tracking belongs to the successful Firestore write. Opening or
+ * refreshing this page must never count as another inquiry.
  *
  * Viewport size is now read in an effect instead of during render. Reading
  * `window.innerWidth` in the render body crashes the prerender step, which runs
@@ -24,14 +24,6 @@ const ThankYou = () => {
   const [size, setSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    // Trigger the GTM conversion event.
-    if (window.dataLayer) {
-      window.dataLayer.push({
-        event: 'conversion_lead',
-        conversion_type: 'contact_form',
-      });
-    }
-
     const measure = () => setSize({ width: window.innerWidth, height: window.innerHeight });
     measure();
     window.addEventListener('resize', measure);
